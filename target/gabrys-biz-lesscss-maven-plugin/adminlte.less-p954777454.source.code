@@ -1,0 +1,61 @@
+/*!
+ *   AdminLTE v2.3.7
+ *   Author: Almsaeed Studio
+ *	 Website: Almsaeed Studio <http://almsaeedstudio.com>
+ *   License: Open source - MIT
+ *           Please visit http://opensource.org/licenses/MIT for more information
+!*/
+//google fonts
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
+//Bootstrap Variables & Mixins
+//The core bootstrap code have not been modified. These files
+//are included only for reference.
+@import (less) "mixins.less-n817101591.source.code";
+@import (less) "variables.less-p939943996.source.code";
+//MISC
+//----
+@import (less) "core.less-p1108069149.source.code";
+@import (less) "variables.less-n952692677.source.code";
+@import (less) "mixins.less-p1628534090.source.code";
+//COMPONENTS
+//-----------
+@import (less) "header.less-p1880845231.source.code";
+@import (less) "sidebar.less-p1650266166.source.code";
+@import (less) "sidebar-mini.less-p1646104372.source.code";
+@import (less) "control-sidebar.less-p2109846438.source.code";
+@import (less) "dropdown.less-p1660541803.source.code";
+@import (less) "forms.less-n170692093.source.code";
+@import (less) "progress-bars.less-p1287339890.source.code";
+@import (less) "small-box.less-p1666959981.source.code";
+@import (less) "boxes.less-n322772807.source.code";
+@import (less) "info-box.less-p86648880.source.code";
+@import (less) "timeline.less-n1537021637.source.code";
+@import (less) "buttons.less-n961008847.source.code";
+@import (less) "callout.less-p1545424866.source.code";
+@import (less) "alerts.less-p644948453.source.code";
+@import (less) "navs.less-n567746132.source.code";
+@import (less) "products.less-n2122339848.source.code";
+@import (less) "table.less-p1799138756.source.code";
+@import (less) "labels.less-p1655604605.source.code";
+@import (less) "direct-chat.less-p1827338070.source.code";
+@import (less) "users-list.less-n932146119.source.code";
+@import (less) "carousel.less-p2022029180.source.code";
+@import (less) "modal.less-p1858626117.source.code";
+@import (less) "social-widgets.less-p640337453.source.code";
+//PAGES
+//------
+@import (less) "mailbox.less-p1328556510.source.code";
+@import (less) "lockscreen.less-p2015400101.source.code";
+@import (less) "login_and_register.less-p707649051.source.code";
+@import (less) "404_500_errors.less-p1208297280.source.code";
+@import (less) "invoice.less-p545264389.source.code";
+@import (less) "profile.less-n1583580663.source.code";
+//Plugins
+//--------
+@import (less) "bootstrap-social.less-p297633712.source.code";
+@import (less) "fullcalendar.less-n1509932113.source.code";
+@import (less) "select2.less-n1730725604.source.code";
+//Miscellaneous
+//-------------
+@import (less) "miscellaneous.less-n1212244316.source.code";
+@import (less) "print.less-n852514235.source.code";

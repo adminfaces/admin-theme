@@ -1,0 +1,58 @@
+/* messages */
+
+.ui-messages > div {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+}
+.ui-messages-error {
+  border-color: #d73925 !important;
+  background-color: #dd4b39 !important;
+}
+.ui-messages-warn {
+  border-color: #e08e0b !important;
+  background-color: #f39c12 !important;
+}
+.ui-messages-info {
+  border-color: #00acd6 !important;
+  background-color: #00c0ef !important;
+}
+.ui-messages ul {
+  margin: 0 !important;
+}
+.ui-messages span.ui-messages-info-icon,
+.ui-messages span.ui-messages-warn-icon,
+.ui-messages span.ui-messages-error-icon {
+  display: none;
+}
+.ui-messages-warn-summary,
+.ui-messages-error-summary,
+.ui-messages-info-summary {
+  margin-left: 0 !important;
+  font-weight: 600 !important;
+}
+
+div.ui-message-icon-only {
+  width: 24px;
+  height: 24px;
+}
+
+.ui-message-info, .ui-message-error, .ui-message-warn, .ui-message-fatal {
+  padding: 3px 3px;
+}
+
+.ui-messages ul {
+  text-align: center;
+}
+
+.ui-messages .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}
+
+span.ui-message-error-icon {
+  margin-left: -2px;
+}
+

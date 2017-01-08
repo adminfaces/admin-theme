@@ -1,0 +1,13 @@
+//All skins in one file
+@import (less) "skin-blue.less-n546298047.source.code";
+@import (less) "skin-blue-light.less-p1834178648.source.code";
+@import (less) "skin-black.less-n337530860.source.code";
+@import (less) "skin-black-light.less-n1975404821.source.code";
+@import (less) "skin-green.less-p962278288.source.code";
+@import (less) "skin-green-light.less-n1999524505.source.code";
+@import (less) "skin-red.less-n1048404542.source.code";
+@import (less) "skin-red-light.less-n1053218279.source.code";
+@import (less) "skin-yellow.less-n1786929561.source.code";
+@import (less) "skin-yellow-light.less-n2057807106.source.code";
+@import (less) "skin-purple.less-n104871905.source.code";
+@import (less) "skin-purple-light.less-p353524406.source.code";

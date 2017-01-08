@@ -1,0 +1,162 @@
+/* button */
+/*
+ * jQuery UI Button 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Button#theming
+ */
+.ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
+  font-weight: 500;
+}
+
+
+button.ui-button {
+  padding: 4px 12px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.74857143;
+  text-align: center;
+  /* white-space: nowrap;*/
+  white-space: normal;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f4f4f4 none;
+  box-shadow: none;
+  text-shadow: none!important;
+  color: #444;
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
+
+  &.btn{
+    padding: 5px 12px;
+  }
+}
+button.ui-state-hover,
+button.ui-state-focus {
+  border: 1px solid #adadad;
+  background: #e6e6e6;
+  font-weight: normal;
+}
+
+
+button.ui-button-text-only .ui-button-text {
+  padding: 0;
+  padding-left: .3em!important;
+  padding-right: .3em!important;
+}
+
+button.ui-button-text-icon-left .ui-button-text, .ui-button-text-icon-right .ui-button-text {
+  padding: .2em 1.5em .2em 1.5em;
+}
+
+button.ui-button .ui-button-text {
+  display: inline-block;
+  line-height: 1.32857143;
+}
+
+button.ui-state-default {
+  background-image: none!important;
+}
+
+
+/* split button */
+
+.ui-splitbutton {
+  border-radius: 4px; /* rounded corners */
+}
+
+.ui-splitbutton .ui-button.ui-splitbutton-menubutton {
+  overflow: hidden;
+  padding: 4px 0px;
+  border: 0;
+}
+
+.ui-splitbutton {
+  &.btn-primary > button {
+    .btn-primary;
+  }
+
+  &.btn-success > button {
+    .btn-success;
+  }
+
+  &.btn-danger > button {
+    .btn-danger;
+  }
+  &.btn-info > button {
+    .btn-info;
+  }
+  &.btn-default > button {
+    .btn-default;
+  }
+  &.btn-warning > button {
+    .btn-warning;
+  }
+
+}
+
+.ui-splitbutton.btn-block > button {
+  display: block;
+  width: 100%;
+}
+
+
+.ui-splitbutton-menubutton span {
+  display: none!important;
+}
+
+/* adds fa-caret-down to split button so it can be render as bootstrap button style (e.g btn-primary)*/
+.ui-splitbutton-menubutton:before {
+  font-family: FontAwesome;
+  position:relative;
+  top:0;
+  overflow: hidden;
+  content: "\f0d7"!important;
+}
+
+/* ButtonSet */
+.ui-selectbooleanbutton.ui-button.ui-state-default,
+.ui-selectonebutton .ui-button.ui-state-default,
+.ui-selectmanybutton .ui-button.ui-state-default {
+  border: 1px solid #d6d6d6; background: #ffffff; font-weight: normal; color: #555555;
+}
+
+.ui-selectbooleanbutton.ui-button.ui-state-hover,.ui-selectbooleanbutton.ui-button.ui-state-focus,
+.ui-selectonebutton .ui-button.ui-state-hover,.ui-selectonebutton .ui-button.ui-state-focus,
+.ui-selectmanybutton .ui-button.ui-state-hover,.ui-selectmanybutton .ui-button.ui-state-focus {
+  border: 1px solid #c0c0c0; background: #eeeeee; font-weight: normal; color: #212121;
+}
+
+.ui-selectbooleanbutton.ui-button.ui-state-active,
+.ui-selectonebutton .ui-button.ui-state-active,
+.ui-selectmanybutton .ui-button.ui-state-active {
+  border: 1px solid #156090; background: #186ba0; color: #FFFFFF;
+}
+
+.ui-selectbooleanbutton.ui-button.ui-state-default .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+}
+
+.ui-selectbooleanbutton.ui-button.ui-state-hover.ui-icon,
+.ui-selectbooleanbutton.ui-button.ui-state-focus .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+}
+
+.ui-selectbooleanbutton.ui-button.ui-state-active .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}

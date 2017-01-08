@@ -1,0 +1,21 @@
+/* Menus */
+.ui-tabmenu li.ui-state-active {
+  border: 1px solid #156090;
+  background: #186ba0;
+  color: #FFFFFF;
+}
+
+.ui-tabmenu li.ui-state-active .ui-menuitem-text {
+  color: #FFFFFF;
+}
+
+.ui-tabmenu li.ui-state-active .ui-menuitem-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}
+
+/* SlideMenu */
+.ui-slidemenu .ui-menu-child {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,137 @@
+/* datatable */
+
+.ui-datatable th {
+    font-weight: 600;
+}
+.ui-datatable th.ui-state-default{
+    background: #ebedf0;
+    border-color: #d9d9d9;
+}
+.ui-datatable th.ui-state-hover{
+    background: #e8e8e8;
+    border-color: #d9d9d9;
+}
+.ui-datatable th.ui-state-active{
+    background: #E6E6E6;
+}/* datatable */
+ .ui-datatable th {
+   font-weight: 600;
+ }
+ .ui-datatable th.ui-state-default{
+   border-color: #ccc !important;
+ }
+ .ui-datatable th.ui-state-hover{
+   background: #d3d5d8;
+   border-color: #d9d9d9;
+ }
+ .ui-datatable th.ui-state-active{
+   background: #E6E6E6;
+ }
+ .ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+
+ }
+ .ui-datatable-odd {
+   background-color:#f9f9f9;
+ }
+ .ui-datatable-rowordering.ui-state-active {
+   background: #14a4ff none repeat scroll 0 0;
+ }
+ .ui-datatable tbody > tr.ui-widget-content {
+   border-color: #d9d9d9;
+ }
+ .ui-datatable .ui-selection-column .ui-radiobutton-box.ui-state-active,
+ .ui-datatable .ui-selection-column .ui-chkbox-box.ui-state-active {
+   background-color: #ffffff;
+ }
+ .ui-datatable .ui-selection-column .ui-radiobutton-box .ui-icon,
+ .ui-datatable .ui-selection-column .ui-chkbox-box .ui-icon {
+   background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+ }
+
+ /*.*/
+ .ui-datatable tr.ui-state-hover {
+   background-color: #f5f5f5;
+ }
+ .ui-datatable table tbody td {
+   padding: 10px 10px !important;
+ }
+ .ui-datatable table {
+   border-collapse: collapse!important;
+   width: 100%!important;
+   table-layout: fixed!important;
+ }
+ /* table header fix */
+ th[role="columnheader"].ui-state-default {
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+   background-color: #f5f5f5;
+   border-color: #ccc;
+   background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+   background-repeat: repeat-x;
+   background-repeat-x: repeat;
+   background-repeat-y: no-repeat;
+   border: 1px solid #cccccc;
+   border-radius: 4px;
+ }
+
+ th[role="columnheader"].ui-state-active, th[role="columnheader"].ui-state-focus {
+   background-color: #e6e6e6;
+   background-color: #d9d9d9 \9;
+   background-image: none;
+   outline: 0;
+   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+ }
+
+/* paginator border */
+div.ui-paginator {
+    border: 1px solid #ddd !important;
+}
+/* datatable paginator */
+
+div.ui-paginator {
+    border: 1px solid #ddd !important;
+}
+
+.ui-paginator .ui-paginator-page, .ui-paginator .ui-paginator-pages, .ui-paginator .ui-paginator-next, .ui-paginator .ui-paginator-last, .ui-paginator .ui-paginator-first, .ui-paginator .ui-paginator-prev, .ui-paginator .ui-paginator-current, .ui-paginator select{
+    background: #fafafa;
+    font-weight: 400;
+    display: inline-block;
+    zoom: 1;
+    margin-left: 1px;
+    padding: 2px 8px;
+    margin-right: 1px;
+    line-height: 1.42857143;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+}
+
+
+.ui-paginator .ui-paginator-pages a {
+    color: #666!important;
+    margin-right: 2px;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+
+.ui-paginator .ui-paginator-page.ui-state-active {
+    background: @light-blue;
+    color: #fff!important;
+    border-color: @light-blue;
+}
+
+span.ui-paginator-current {
+    font-weight: 600!important;
+}
+
+
+div.ui-chkbox span.ui-icon-check {
+    position: relative;
+    right: 1px;
+    bottom: 1px;
+}

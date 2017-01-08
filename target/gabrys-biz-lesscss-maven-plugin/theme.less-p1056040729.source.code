@@ -1,0 +1,27 @@
+/* PrimeFaces Admin theme based on Omega: https://github.com/primefaces/primefaces/tree/master/src/main/resources/META-INF/resources/primefaces-omega*/
+@import (less) "adminlte.less-p954777454.source.code";
+@import (less) "all-skins.less-n1513089407.source.code";
+@import (less) "variables.less-n1362704725.source.code";
+@import (less) "accordion.less-p1624219837.source.code";
+@import (less) "buttons.less-n768697948.source.code";
+@import (less) "ckbox-radio.less-n339600876.source.code";
+@import (less) "containers.less-p1746180983.source.code";
+@import (less) "datascroller.less-n1860288411.source.code";
+@import (less) "datatable.less-p775696673.source.code";
+@import (less) "datepicker.less-n1546691571.source.code";
+@import (less) "dialog.less-p310985985.source.code";
+@import (less) "growl.less-n278364948.source.code";
+@import (less) "icons.less-p1473426731.source.code";
+@import (less) "interactions.less-n2028694584.source.code";
+@import (less) "inputs.less-p878075136.source.code";
+@import (less) "menus.less-p1542179217.source.code";
+@import (less) "messages.less-p1238862589.source.code";
+@import (less) "misc.less-n895222691.source.code";
+@import (less) "panels.less-n1861289030.source.code";
+@import (less) "resizable.less-n1684674246.source.code";
+@import (less) "selectonemenu.less-p1241790300.source.code";
+@import (less) "slider.less-p229449992.source.code";
+@import (less) "tabview.less-p1906404619.source.code";
+@import (less) "timeline.less-p129648936.source.code";
+@import (less) "tree.less-n1639969557.source.code";
+@import (less) "treetable.less-p49697813.source.code";

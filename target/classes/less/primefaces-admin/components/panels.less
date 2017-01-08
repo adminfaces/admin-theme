@@ -1,0 +1,94 @@
+/* Panel */
+
+.ui-panel.ui-widget {
+  padding: 0;
+}
+
+.ui-panel.ui-widget .ui-panel-titlebar.ui-corner-all {
+  -moz-border-radius-bottom-left: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -khtml-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-bottom-right: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -khtml-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.ui-panel.ui-widget .ui-panel-titlebar {
+  border-width: 0 0 1px 0;
+}
+
+.ui-panel-titlebar {
+  border: none;
+}
+
+.ui-panel.with-border > div {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.ui-panel .ui-panel-title {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1;
+  color: #444;
+  padding: 8px 5px;
+
+}
+
+.ui-panel .ui-panel-content {
+  padding: 10px 10px;
+}
+
+
+.ui-panel {
+
+  &.box-default {
+    border-radius: 3px;
+    border-top: 3px solid  @gray;
+  }
+
+  &.box-primary {
+    border-radius: 3px;
+    border-top: 3px solid @light-blue;
+  }
+
+  &.box-danger {
+    border-radius: 3px;
+    border-top: 3px solid @red;
+  }
+
+  &.box-warning {
+    border-radius: 3px;
+    border-top: 3px solid @yellow;
+  }
+
+  &.box-success {
+    border-radius: 3px;
+    border-top: 3px solid @green;
+  }
+
+  &.box-info {
+    border-radius: 3px;
+    border-top: 3px solid @aqua;
+  }
+}
+
+
+/* PanelMenu */
+.ui-panelmenu .ui-panelmenu-header.ui-state-active,
+.ui-panelmenu .ui-panelmenu-header.ui-state-active a {
+  background: #1f89ce;
+  color: #ffffff;
+  border-color: #168dd9;
+}
+
+.ui-panelmenu .ui-panelmenu-header.ui-state-active .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}
+
+/* ScrollPanel */
+.ui-scrollpanel .ui-scrollpanel-drag {
+  background-color: #dcdcdc;
+}
