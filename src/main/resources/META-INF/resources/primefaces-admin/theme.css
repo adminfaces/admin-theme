@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
-/* PrimeFaces Admin theme based on Omega: https://github.com/primefaces/primefaces/tree/master/src/main/resources/META-INF/resources/primefaces-omega*/
 /*!
  *   AdminLTE v2.3.7
  *   Author: Almsaeed Studio
@@ -2308,6 +2307,27 @@ a:focus {
 .btn-outline:active {
   color: rgba(255, 255, 255, 0.7);
   border-color: rgba(255, 255, 255, 0.7);
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }
 .btn-link {
   -webkit-box-shadow: none;
@@ -7497,6 +7517,25 @@ button.ui-button {
 button.ui-button.btn {
   padding: 5px 12px;
 }
+button.ui-button.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  /* reference to admin-lte/buttons.less */
+}
+button.ui-button.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+button.ui-button.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
 button.ui-state-hover,
 button.ui-state-focus {
   border: 1px solid #adadad;
@@ -7664,7 +7703,8 @@ button.ui-state-default {
 }
 /* Component containers
 ----------------------------------*/
-.ui-widget {
+.ui-widget,
+div.wrapper {
   font-family: "Source Sans Pro", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .ui-widget .ui-widget {
