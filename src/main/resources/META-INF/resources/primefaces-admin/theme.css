@@ -48,7 +48,7 @@ body {
   position: relative;
 }
 .layout-boxed {
-  background: url("#{resource['image/boxed-bg.jpg']}") repeat fixed;
+  background: url("#{resource['primefaces-admin:images/boxed-bg.jpg']}") repeat fixed;
 }
 /*
  * Content Wrapper - contains the main content
@@ -8905,11 +8905,11 @@ button.ui-datepicker-trigger .ui-button {
 }
 .ui-icon-triangle-1-e {
   top: 4px;
-  background: url("#{resource['primefaces-bootstrap:images/ui-icon-arrow-right.png']}") initial !important;
+  background: url("#{resource['primefaces-admin:images/ui-icon-arrow-right.png']}") initial !important;
 }
 .ui-icon-triangle-1-s {
   top: 4px;
-  background: url("#{resource['primefaces-bootstrap:images/ui-icon-arrow-down.png']}") initial !important;
+  background: url("#{resource['primefaces-admin:images/ui-icon-arrow-down.png']}") initial !important;
 }
 .ui-icon {
   overflow: visible;
