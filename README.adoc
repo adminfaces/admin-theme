@@ -1,6 +1,27 @@
 = Admin Theme
+:page-layout: base
+:toc: preamble
+:source-language: java
+:icons: font
+:linkattrs:
+:sectanchors:
+:sectlink:
+:numbered:
+:imagesdir: img
+:doctype: book
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
 
-This project is a http://primefaces.org/themes[Primefaces^] admin theme based on https://almsaeedstudio.com/themes/AdminLTE/index2.html[Admin LTE^] and http://getbootstrap.com[Bootstrap^].
+[quote]
+____
+When Bootstrap and JSF gets united!
+____
+
+
+This project is a http://primefaces.org/themes[Primefaces^] `admin` theme based on https://almsaeedstudio.com/themes/AdminLTE/index2.html[Admin LTE^] and http://getbootstrap.com[Bootstrap^].
 
 
 == Introduction
@@ -21,7 +42,7 @@ This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as 
 </dependency>
 ----
 +
-NOTE: It is not in maven centra yet
+NOTE: It is not in maven central yet
 
 . Add these context-param in your web.xml:
 
@@ -37,3 +58,7 @@ NOTE: It is not in maven centra yet
 ----
 
 TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add this project to your classpath neither the web.xml entries
+
+== Demo
+
+See https://github.com/adminfaces/admin-showcase[Admin Showcase^].
