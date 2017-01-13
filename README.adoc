@@ -1,3 +1,39 @@
 = Admin Theme
 
 This project is a http://primefaces.org/themes[Primefaces^] admin theme based on https://almsaeedstudio.com/themes/AdminLTE/index2.html[Admin LTE^] and http://getbootstrap.com[Bootstrap^].
+
+
+== Introduction
+
+This theme is a `~300kb` containing Admin LTE and Bootstrap css as well customized Primefaces components to make them look like Admin LTE and Bootstrap.
+
+
+== Usage
+
+. Just add it to your application classpath:
++
+[source,xml]
+----
+<dependency>
+    <groupId>com.github.adminfaces</groupId>
+    <artifactId>admin-theme</artifactId>
+    <version>0.1-SNAPSHOT</version>
+</dependency>
+----
++
+NOTE: It is not in maven centra yet
+
+. Add these context-param in your web.xml:
+
+----
+<context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>admin</param-value>
+</context-param>
+<context-param>
+    <param-name>primefaces.FONT_AWESOME</param-name>
+    <param-value>true</param-value>
+</context-param>
+----
+
+TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add this project to your classpath neither the web.xml entries
