@@ -5,7 +5,7 @@ This project is a http://primefaces.org/themes[Primefaces^] admin theme based on
 
 == Introduction
 
-This theme is a `~300kb` containing Admin LTE and Bootstrap css as well customized Primefaces components to make them look like Admin LTE and Bootstrap.
+This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as customized Primefaces components to make them look like Admin LTE and Bootstrap.
 
 
 == Usage
