@@ -17,7 +17,7 @@
 
 [quote]
 ____
-When Bootstrap and JSF gets united!
+When Bootstrap and JSF get united!
 ____
 
 
