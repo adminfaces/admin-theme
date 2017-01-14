@@ -1,58 +1,59 @@
-.ui-growl-item {
-  background-color: #A6D7EB!important;
-  border: 1px solid #005070;
+
+div.ui-growl-item-container.ui-growl-error, div.ui-growl-item-container.ui-growl-fatal {
+  color: #ffffff;
+  background-color: #EF5350;
+  border-color: #EF5350;
 }
 
-.ui-growl{
+div.ui-growl {
   padding: 0 0 0 0;
-  width: 20% !important;
-  background-color: #D5F1FC!important;
-  margin-top: 80px;
+  width: 20%;
   position: absolute;
   left: 40%;
-  top: 80px;
   opacity: 1;
   font-size: 1.2em;
   text-align: center;
   font-weight: 500;
 }
 
-.ui-growl .ui-growl-item-container{
+div.ui-growl .ui-growl-item-container {
   opacity: 1;
-  border: 1px solid #ebccd1;
-
 }
 
-.ui-growl .ui-growl-item-container .ui-growl-message{
-  float: left;
-  padding-bottom: 5px;
+div.ui-growl .ui-growl-item-container .ui-growl-message {
+  text-align: center;
+  padding-bottom: 0px;
   padding-right: 0;
   padding-top: 0;
-  width: calc(100% - 50px);
+  width: 100%;
+  border: 0;
 }
 
-/* growl and messages*/
+/* growl */
 
-.ui-growl-info,
-.ui-messages .ui-messages-info,
-.ui-message.ui-message-info{
-  color: #ffffff;
-  background-color: #9CCC65;
-  border-color: #9CCC65;
+div.ui-growl-item {
+  background-color: #A6D7EB;
+  border: 1px solid #6fabc3;
 }
 
-.ui-growl-warn,
-.ui-messages .ui-messages-warn,
-.ui-message.ui-message-warn{
+div.ui-growl-info > div.ui-growl-item {
   color: #ffffff;
-  background-color: #FFA726;
-  border-color: #FFA726;
+  background-color: @aqua;
+  border-color: #00acd6;
 }
 
-.ui-growl-error,.ui-growl-fatal,
-.ui-messages .ui-messages-error, .ui-message.ui-message-error,
-.ui-messages .ui-messages-fatal, .ui-message.ui-message-fatal {
+div.ui-growl-warn  > div.ui-growl-item {
   color: #ffffff;
-  background-color: #EF5350;
-  border-color: #EF5350;
+  background-color: @yellow;
+  border-color: #e08e0b;
+}
+
+div.ui-growl-error > div.ui-growl-item , div.ui-growl-fatal > div.ui-growl-item {
+  color: #ffffff;
+  border-color: #d73925;
+  background-color: @red;
+}
+
+span.ui-growl-image {
+  display: none;
 }
