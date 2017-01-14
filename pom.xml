@@ -124,6 +124,12 @@
                     </plugin>
                 </plugins>
             </build>
+            <distributionManagement>
+                <repository>
+                    <id>bintray</id>
+                    <url>https://api.bintray.com/maven/rmpestano/adminfaces/admin-theme</url>
+                </repository>
+            </distributionManagement>
 
         </profile>
 
