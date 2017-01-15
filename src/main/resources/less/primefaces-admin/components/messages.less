@@ -47,9 +47,13 @@ div.ui-messages-info-summary {
   font-weight: 600 ;
 }
 
-div.ui-message-icon-only {
+span.ui-message-info-icon, span.ui-message-warn-icon, span.ui-message-error-icon, span.ui-message-fatal-icon {
   width: 24px;
-  height: 24px;
+}
+
+div.ui-message-icon-only {
+  width: 30px;
+  height: 30px;
 }
 
 div.ui-message-info, div.ui-message-error, div.ui-message-warn, div.ui-message-fatal {
@@ -62,9 +66,23 @@ div.ui-messages ul {
 
 div.ui-messages .ui-icon {
   background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+  content: "\f06a"
 }
 
 span.ui-message-error-icon {
-  margin-left: -1px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  background-image: none;
 }
 
+
+span.ui-message-error-icon:before {
+  font-family: FontAwesome;
+  color: #fff;
+  position: relative;
+  font-size: 22px;
+  top: -5px;
+  overflow: hidden;
+  content: "\f06a"!important;
+}
