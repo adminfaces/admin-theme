@@ -8,16 +8,27 @@
   color: white;
   font-size: 16px;
 }
+
+
+div.ui-message-error {
+  background-color: lighten(@red,10%);
+  color: #fff;
+}
+
+div.ui-messages-fatal {
+  border-color: darken(@dark-red, 10%);
+  background-color: @dark-red;
+}
 div.ui-messages-error {
-  border-color: #d73925;
+  border-color: darken(@red, 10%);
   background-color: @red;
 }
 div.ui-messages-warn {
-  border-color: #e08e0b;
+  border-color: darken(@yellow, 10%);
   background-color: @yellow ;
 }
 div.ui-messages-info {
-  border-color: #00acd6;
+  border-color: darken(@aqua, 10%);
   background-color: @aqua;
 }
 .ui-messages ul {
@@ -25,6 +36,7 @@ div.ui-messages-info {
 }
 .ui-messages span.ui-messages-info-icon,
 .ui-messages span.ui-messages-warn-icon,
+.ui-messages span.ui-messages-fatal-icon,
 .ui-messages span.ui-messages-error-icon {
   display: none;
 }
@@ -53,6 +65,6 @@ div.ui-messages .ui-icon {
 }
 
 span.ui-message-error-icon {
-  margin-left: -2px;
+  margin-left: -1px;
 }
 

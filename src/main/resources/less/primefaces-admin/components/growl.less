@@ -1,10 +1,4 @@
 
-div.ui-growl-item-container.ui-growl-error, div.ui-growl-item-container.ui-growl-fatal {
-  color: #ffffff;
-  background-color: #EF5350;
-  border-color: #EF5350;
-}
-
 div.ui-growl {
   padding: 0 0 0 0;
   width: 20%;
@@ -14,6 +8,7 @@ div.ui-growl {
   font-size: 1.2em;
   text-align: center;
   font-weight: 500;
+  z-index: 9999!important;
 }
 
 div.ui-growl .ui-growl-item-container {
@@ -39,19 +34,25 @@ div.ui-growl-item {
 div.ui-growl-info > div.ui-growl-item {
   color: #ffffff;
   background-color: @aqua;
-  border-color: #00acd6;
+  border-color: darken(@aqua, 10%);;
 }
 
-div.ui-growl-warn  > div.ui-growl-item {
+div.ui-growl-warn > div.ui-growl-item {
   color: #ffffff;
   background-color: @yellow;
-  border-color: #e08e0b;
+  border-color: darken(@yellow, 10%);;
 }
 
-div.ui-growl-error > div.ui-growl-item , div.ui-growl-fatal > div.ui-growl-item {
+div.ui-growl-error > div.ui-growl-item {
   color: #ffffff;
-  border-color: #d73925;
+  border-color: darken(@red, 10%);
   background-color: @red;
+}
+
+div.ui-growl-fatal > div.ui-growl-item {
+  color: #ffffff;
+  border-color: darken(@dark-red, 10%);
+  background-color: @dark-red;
 }
 
 span.ui-growl-image {
