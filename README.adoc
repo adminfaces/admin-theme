@@ -7,7 +7,6 @@
 :sectanchors:
 :sectlink:
 :numbered:
-:imagesdir: img
 :doctype: book
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -21,13 +20,13 @@ When Bootstrap and JSF get united!
 ____
 
 
+image:messages.png[]
+
 This project is a http://primefaces.org/themes[Primefaces^] `admin` theme based on https://almsaeedstudio.com/themes/AdminLTE/index2.html[Admin LTE^] and http://getbootstrap.com[Bootstrap^].
 
 
 
 == Introduction
-
-image:messages.png[]
 
 This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as customized Primefaces components to make them look like Admin LTE and Bootstrap.
 
