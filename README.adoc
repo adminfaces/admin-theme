@@ -21,7 +21,10 @@ When Bootstrap and JSF get united!
 ____
 
 
+image:messages.png[]
+
 This project is a http://primefaces.org/themes[Primefaces^] `admin` theme based on https://almsaeedstudio.com/themes/AdminLTE/index2.html[Admin LTE^] and http://getbootstrap.com[Bootstrap^].
+
 
 
 == Introduction
