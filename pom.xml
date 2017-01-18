@@ -8,7 +8,7 @@
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
         <version>9</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.github.adminfaces</groupId>
@@ -19,7 +19,7 @@
     <url>https://github.com/adminfaces/admin-theme</url>
 
     <description>
-       Brings Bootstrap to JSF application.
+        Brings Bootstrap to JSF application.
     </description>
 
     <developers>
@@ -44,9 +44,9 @@
     </scm>
 
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <compressCss>true</compressCss>
     </properties>
 
     <build>
@@ -71,12 +71,14 @@
                     <execution>
                         <id>primefaces</id>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/resources/less/primefaces-admin</sourceDirectory>
-                            <outputDirectory>${project.basedir}/src/main/resources/META-INF/resources/primefaces-admin</outputDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/resources/less/primefaces-admin
+                            </sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/resources/META-INF/resources/primefaces-admin
+                            </outputDirectory>
                             <includes>
                                 <include>theme.less</include>
                             </includes>
-                            <compress>true</compress>
+                            <compress>${compressCss}</compress>
                         </configuration>
                         <goals>
                             <goal>compile</goal>
@@ -124,13 +126,25 @@
                     </plugin>
                 </plugins>
             </build>
-            <distributionManagement>
-                <repository>
-                    <id>bintray</id>
-                    <url>https://api.bintray.com/maven/rmpestano/adminfaces/admin-theme</url>
-                </repository>
-            </distributionManagement>
+        </profile>
 
+        <profile>
+            <id>dev</id>
+            <properties>
+                <compressCss>false</compressCss>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>3.0.2</version>
+                        <configuration>
+                            <classifier>dev</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
     </profiles>
@@ -140,5 +154,9 @@
             <id>snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+           <id>central</id>
+           <url>https://oss.sonatype.org/content/repositories/releases</url>
+        </repository>
     </distributionManagement>
 </project>
