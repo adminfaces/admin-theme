@@ -40,6 +40,7 @@ This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as 
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
     <version>0.1-SNAPSHOT</version>
+<!--<classifier>dev</classifier> uncompressed theme.css-->
 </dependency>
 ----
 +
