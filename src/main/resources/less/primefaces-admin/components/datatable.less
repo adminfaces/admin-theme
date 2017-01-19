@@ -36,8 +36,8 @@
   background: #E6E6E6;
 }
 
-.ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+body .ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
 
 }
 
@@ -123,17 +123,21 @@ body .ui-paginator {
     text-decoration: none;
     border-radius: 0;
     outline: 0;
+    box-shadow: none;
+    a.ui-state-hover {
+      background: #e6e6e6;
+    }
   }
   .ui-paginator-page, .ui-paginator-pages, .ui-paginator-current {
     padding: 6px 12px;
   }
 
-  .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next {
+  .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next, select {
     padding: 6px 8px;
   }
 
-  select {
-     padding: 7px 8px;
+  .ui-paginator-prev {
+    margin-right: 0px;
   }
 
 }
