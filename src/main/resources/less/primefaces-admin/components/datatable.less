@@ -53,14 +53,28 @@ body .ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
   border-color: #d9d9d9;
 }
 
-.ui-datatable .ui-selection-column .ui-radiobutton-box.ui-state-active,
-.ui-datatable .ui-selection-column .ui-chkbox-box.ui-state-active {
-  background-color: #ffffff;
+body .ui-datatable .ui-selection-column {
+
+  .ui-radiobutton-box.ui-state-active, .ui-chkbox-box.ui-state-active {
+    background-color: #ffffff;
+  }
+
+  .ui-radiobutton-box .ui-icon, .ui-chkbox-box .ui-icon {
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+  }
+
 }
 
-.ui-datatable .ui-selection-column .ui-radiobutton-box .ui-icon,
-.ui-datatable .ui-selection-column .ui-chkbox-box .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+body .ui-datatable {
+  td.ui-selection-column, th.ui-selection-column {
+    @media (max-width: @screen-xs-max) {
+      width: 10% !important;
+    }
+    @media (max-width: @screen-sm-max) {
+      width: 8% !important;
+    }
+
+  }
 }
 
 /*.*/
@@ -137,7 +151,7 @@ body .ui-paginator {
   }
 
   .ui-paginator-prev {
-    margin-right: 0px;
+    margin-right: 1px;
   }
 
 }
