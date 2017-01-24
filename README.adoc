@@ -64,13 +64,9 @@ NOTE: At the moment only snapshots are available on maven central. Add the follo
     <param-name>primefaces.THEME</param-name>
     <param-value>admin</param-value>
 </context-param>
-<context-param>
-    <param-name>primefaces.FONT_AWESOME</param-name>
-    <param-value>true</param-value>
-</context-param>
 ----
 
-TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add this project to your classpath neither the web.xml entries
+TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add this project to your classpath neither the web.xml entry.
 
 == Demo
 
