@@ -16,8 +16,9 @@
 
 [quote]
 ____
-When Bootstrap meets JSF!
+One (Bootstrap) theme to rule them all!
 ____
+
 
 
 This project is a http://primefaces.org/themes[Primefaces^] `admin` theme based on https://almsaeedstudio.com/themes/AdminLTE/index2.html[Admin LTE^] and http://getbootstrap.com[Bootstrap^].

@@ -46,9 +46,17 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <font-awesome.version>4.7.0</font-awesome.version>
         <compressCss>true</compressCss>
     </properties>
 
+    <dependencies>
+          <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>font-awesome</artifactId>
+            <version>${font-awesome.version}</version>
+        </dependency>
+    </dependencies>
     <build>
         <finalName>admin-theme</finalName>
 
