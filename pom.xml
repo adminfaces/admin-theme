@@ -19,7 +19,7 @@
     <url>https://github.com/adminfaces/admin-theme</url>
 
     <description>
-        Brings Bootstrap to JSF application.
+        Brings Bootstrap to JSF applications.
     </description>
 
     <developers>
@@ -55,6 +55,7 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
+                <filtering>true</filtering>
                 <excludes>
                     <exclude>**/*.less</exclude>
                     <exclude>**/*bootstrap.css</exclude>
