@@ -9,7 +9,6 @@
   font-size: 16px;
 }
 
-
 div.ui-message-error {
   background-color: @red;
   color: #fff;
@@ -20,32 +19,38 @@ div.ui-messages-fatal {
   border-color: darken(@dark-red, 10%);
   background-color: @dark-red;
 }
+
 div.ui-messages-error {
   border-color: darken(@red, 10%);
   background-color: @red;
 }
+
 div.ui-messages-warn {
   border-color: darken(@yellow, 10%);
-  background-color: @yellow ;
+  background-color: @yellow;
 }
+
 div.ui-messages-info {
   border-color: darken(@aqua, 10%);
   background-color: @aqua;
 }
+
 .ui-messages ul {
   margin: 0 !important;
 }
+
 .ui-messages span.ui-messages-info-icon,
 .ui-messages span.ui-messages-warn-icon,
 .ui-messages span.ui-messages-fatal-icon,
 .ui-messages span.ui-messages-error-icon {
   display: none;
 }
+
 div.ui-messages-warn-summary,
 div.ui-messages-error-summary,
 div.ui-messages-info-summary {
-  margin-left: 0 ;
-  font-weight: 600 ;
+  margin-left: 0;
+  font-weight: 600;
 }
 
 span.ui-message-info-icon, span.ui-message-warn-icon, span.ui-message-error-icon, span.ui-message-fatal-icon {
@@ -75,44 +80,36 @@ span.ui-message-error-icon {
   margin-right: 0;
   margin-top: 0;
   background-image: none;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    position: relative;
+    font-size: 22px;
+    top: -5px;
+    overflow: hidden;
+    content: "\f06a" !important;
+  }
 }
 
-
-span.ui-message-error-icon:before {
-  font-family: FontAwesome;
-  color: #fff;
-  position: relative;
-  font-size: 22px;
-  top: -5px;
-  overflow: hidden;
-  content: "\f06a"!important;
-}
-
-span.ui-icon-close {
-  background-image: none!important;
+div.ui-messages span.ui-icon-close {
+  background-image: none !important;
   display: inline;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline !important;
+    position: relative;
+    font-size: 13px;
+    margin-left: 5px;
+    top: -5px;
+    overflow: hidden;
+    content: "\f00d" !important;
+  }
 }
-
-span.ui-icon-close:hover {
-  background: #A4A4A4!important;
-}
-
-span.ui-icon-close:before {
-  font-family: FontAwesome;
-  color: #fff;
-  display: inline!important;
-  position: relative;
-  font-size: 13px;
-  margin-left: 5px;
-  top: -5px;
-  overflow: hidden;
-  content: "\f00d"!important;
-}
-
 
 div.ui-messages .ui-messages-close {
-    width: 20px;
-    margin-right: -10px;
-    height: 0;
-    margin-top: -10px;
+  width: 20px;
+  margin-right: -10px;
+  height: 0;
+  margin-top: -10px;
 }
