@@ -20,14 +20,14 @@ body .ui-tabs > ul > li > a {
 }
 
 .ui-tabs.ui-tabs-top .ui-tabs-nav.ui-widget-header {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid @tabview-border-color;
 }
 
 .ui-tabs.ui-tabs-top {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid @tabview-border-color;
 }
 .ui-tabs.ui-tabs-top .ui-tabs-nav.ui-widget-header li.ui-state-active {
-  border-color: #f4f4f4 #f4f4f4 transparent #f4f4f4;
+  border-color: @tabview-border-color @tabview-border-color transparent @tabview-border-color;
 }
 .ui-tabs.ui-tabs-top .ui-tabs-nav.ui-widget-header li {
   border-radius: 4px 4px 0 0;
@@ -36,13 +36,13 @@ body .ui-tabs > ul > li > a {
   margin-bottom: -1px;
 }
 .ui-tabs.ui-tabs-bottom .ui-tabs-nav.ui-widget-header {
-  border-top: 1px solid #f4f4f4;
+  border-top: 1px solid @tabview-border-color;
 }
 .ui-tabs.ui-tabs-bottom {
-  border-top: 1px solid #f4f4f4;
+  border-top: 1px solid @tabview-border-color;
 }
 .ui-tabs.ui-tabs-bottom .ui-tabs-nav.ui-widget-header li.ui-state-active {
-  border-color: transparent #f4f4f4 #f4f4f4 #f4f4f4;
+  border-color: transparent @tabview-border-color @tabview-border-color @tabview-border-color;
 }
 .ui-tabs.ui-tabs-bottom .ui-tabs-nav.ui-widget-header li {
   border-radius: 0 0 4px 4px;
@@ -51,13 +51,13 @@ body .ui-tabs > ul > li > a {
   margin-top: -1px;
 }
 .ui-tabs.ui-tabs-left .ui-tabs-nav.ui-widget-header {
-  border-right: 1px solid #f4f4f4;
+  border-right: 1px solid @tabview-border-color;
 }
 .ui-tabs.ui-tabs-left {
-  border-right: 1px solid #f4f4f4;
+  border-right: 1px solid @tabview-border-color;
 }
 .ui-tabs.ui-tabs-left .ui-tabs-nav.ui-widget-header li.ui-state-active {
-  border-color: #f4f4f4 transparent #f4f4f4 #f4f4f4;
+  border-color: @tabview-border-color transparent @tabview-border-color @tabview-border-color;
 }
 .ui-tabs.ui-tabs-left .ui-tabs-nav.ui-widget-header li {
   border-radius: 4px 0 0 4px;
@@ -66,10 +66,10 @@ body .ui-tabs > ul > li > a {
   margin-right: -1px;
 }
 .ui-tabs.ui-tabs-right .ui-tabs-nav.ui-widget-header {
-  border-left: 1px solid #f4f4f4;
+  border-left: 1px solid @tabview-border-color;
 }
 .ui-tabs.ui-tabs-right {
-  border-left: 1px solid #f4f4f4;
+  border-left: 1px solid @tabview-border-color;
 }
 
 .ui-tabs .ui-tabs-nav li {
@@ -77,7 +77,7 @@ body .ui-tabs > ul > li > a {
 }
 
 .ui-tabs.ui-tabs-right .ui-tabs-nav.ui-widget-header li.ui-state-active {
-  border-color: #f4f4f4 #f4f4f4 #f4f4f4 transparent;
+  border-color: @tabview-border-color @tabview-border-color @tabview-border-color transparent;
 }
 .ui-tabs.ui-tabs-right .ui-tabs-nav.ui-widget-header li {
   border-radius: 0 4px 4px 0;
