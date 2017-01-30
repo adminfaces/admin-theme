@@ -36,7 +36,7 @@ button.ui-button {
   background: @btn-background-color none;
   box-shadow: none;
   text-shadow: none!important;
-  color: #444;
+  color: @admin-text-color;
   -webkit-transition: background-color .2s;
   -moz-transition: background-color .2s;
   -o-transition: background-color .2s;
@@ -171,7 +171,7 @@ button.btn-fatal {
 .ui-selectbooleanbutton.ui-button.ui-state-default,
 .ui-selectonebutton .ui-button.ui-state-default,
 .ui-selectmanybutton .ui-button.ui-state-default {
-  border: 1px solid #d6d6d6; background: #ffffff; font-weight: normal; color: #555555;
+  border: 1px solid @input-border-color; background: #ffffff; font-weight: normal; color: #555555;
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-hover,.ui-selectbooleanbutton.ui-button.ui-state-focus,
@@ -183,7 +183,7 @@ button.btn-fatal {
 .ui-selectbooleanbutton.ui-button.ui-state-active,
 .ui-selectonebutton .ui-button.ui-state-active,
 .ui-selectmanybutton .ui-button.ui-state-active {
-  border: 1px solid #156090; background: #186ba0; color: #FFFFFF;
+  border: 1px solid darken(@light-blue, 5%); background: @light-blue; color: #FFFFFF;
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-default .ui-icon {

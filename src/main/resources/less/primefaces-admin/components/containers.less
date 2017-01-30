@@ -7,10 +7,14 @@
 .ui-widget .ui-widget {
   font-size: @font-size-base;
 }
+
 .ui-widget label {
-  font-weight: 600;
+  font-weight: 500; /* some components use label (e.g checkbox) and we don't want them to be bold, only output labels */
 }
 
+.ui-widget .ui-outputlabel {
+  font-weight: 600;
+}
 
 
 .ui-widget-content {
@@ -34,5 +38,5 @@
 }
 
 .ui-widget-content, .ui-state-default, .ui-widget-header .ui-state-default {
-  color: #444;
+  color: @admin-text-color;
 }

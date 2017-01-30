@@ -1,6 +1,6 @@
 /*  SelectOneMenu */
 
-div.ui-selectonemenu .ui-selectonemenu-trigger,div.ui-selectonemenu-trigger .ui-state-focus,
+div.ui-selectonemenu .ui-selectonemenu-trigger, div.ui-selectonemenu-trigger .ui-state-focus,
 div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
   border-color: #ffffff;
 }
@@ -11,30 +11,30 @@ div.ui-selectonemenu-trigger {
     background: #eeeeee;
   }
 }
-  .ui-selectcheckboxmenu.ui-state-focus .ui-selectcheckboxmenu-label,
-  .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label.ui-state-hover {
-    background-color: #ffffff;
+
+.ui-selectcheckboxmenu.ui-state-focus .ui-selectcheckboxmenu-label,
+.ui-selectcheckboxmenu .ui-selectcheckboxmenu-label.ui-state-hover {
+  background-color: #ffffff;
+}
+
+div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu {
+  height: 34px;
+  display: block;
+  border-color: #d2d6de;
+  border-radius: 0;
+  min-width: 150px; /* primefaces adds min-width: 328px; when on ui-state-exception */
+
+  > .ui-selectonemenu-trigger {
+    width: 30px;
+    padding: 3px 6px;
+    border-radius: 0;
   }
 
-  .ui-selectonemenu {
-    height: 34px;
-    display: block !important;
-    border-color: #d2d6de !important;
-    border-radius: 0 !important;
-    min-width: 150px!important; /* primefaces adds min-width: 328px; when on ui-state-exception */
+  > .ui-selectonemenu-label {
+    padding: 6px;
   }
-  .ui-selectonemenu-trigger {
-    width: 30px !important;
-    padding: 3px 6px !important;
-    border-radius: 0 !important;
-  }
+}
 
-  .ui-selectonemenu-label {
-    padding: 6px !important;
-  }
-
-
-/*
-.ui-selectonemenu-trigger {
-  border-radius: 0 !important;
-}*/
+ul.ui-selectlistbox-list > li.ui-selectlistbox-item {
+  padding: 3px 6px;
+}
