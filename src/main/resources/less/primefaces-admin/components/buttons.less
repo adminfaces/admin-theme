@@ -54,6 +54,13 @@ button.ui-button {
   &.btn-xs {
     .btn-xs;
   }
+  &.btn-flat {
+    .border-radius(0);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px;
+  }
 
    &:active {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
@@ -144,6 +151,13 @@ button.btn-fatal {
   }
   &.btn-warning > button {
     .btn-warning;
+  }
+  &.btn-flat {
+    .border-radius(0);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px;
   }
 
 }
