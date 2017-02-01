@@ -41,13 +41,15 @@
 
 
 .ui-dialog.ui-widget-content .ui-dialog-titlebar {
-  padding: 9px 15px;
+  padding-left: 15px;
   border-bottom: 1px solid #eee;
 }
 
-.ui-dialog .ui-dialog-title {
+.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
   float: left;
-  font-size: 24px;
+  font-size: 18px;
+  color: @admin-text-color;
+  margin: 0.3em 16px 0.3em 0px;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
@@ -149,4 +151,8 @@ a.ui-dialog-titlebar-close {
 
 a.ui-dialog-titlebar-icon > span.ui-icon-closethick:before {
   top: -20px;
+}
+
+a.ui-dialog-titlebar-icon {
+  box-shadow: none!important;
 }
