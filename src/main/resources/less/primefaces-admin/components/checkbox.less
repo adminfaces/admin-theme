@@ -1,0 +1,32 @@
+/* checkbox */
+
+.ui-state-highlight .ui-chkbox-box .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_2e83ff_256x240.png']}");
+}
+
+
+div.ui-chkbox-box {
+  &.ui-state-hover, &.ui-state-focus {
+    background: @hover-color;
+  }
+}
+
+.ui-chkbox-box.ui-state-active,
+.ui-chkbox-box.ui-state-focus.ui-state-active {
+  border: 1px solid @light-blue;
+  background: @light-blue;
+  color: #FFFFFF;
+}
+
+.ui-chkbox-box.ui-state-active .ui-icon {
+  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}
+
+
+div.ui-chkbox label {
+  font-weight: 500;
+}
+
+.ui-widget-header span.ui-chkbox-icon {
+  opacity: 1;
+}
