@@ -5,11 +5,15 @@ div.ui-growl {
   min-width: 120px;
   position: absolute;
   left: 40%;
-  opacity: .95!important;
+  opacity: .95;
   font-size: 1.2em;
   text-align: center;
   font-weight: 500;
   z-index: 9999 !important;
+
+  .ui-growl-item-container {
+     opacity: .95;
+  }
 
   @media (max-width: 633px) {
     left: 37% !important;
@@ -93,7 +97,7 @@ span.ui-growl-image {
     content: "\f00d" !important;
   }
   &:hover:before {
-    color: #696969 !important;
+    color: @hover-icon-color;
     opacity: 1;
   }
 }

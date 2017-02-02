@@ -17,7 +17,14 @@ div.ui-dialog {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
-  z-index: 9998!important;
+  z-index: 9998 !important;
+
+  .ui-dialog-content {
+    padding: 15px;
+  }
+  a.ui-dialog-titlebar-icon {
+    padding: 1px !important;
+  }
 }
 
 .ui-dialog .ui-dialog-titlebar {
@@ -31,15 +38,10 @@ div.ui-dialog {
   border-radius: 0;
 }
 
-.ui-dialog-content {
-  padding: 15px !important;
-}
-
 .ui-dialog.ui-widget-content .ui-dialog-titlebar-close {
   margin-top: 10px;
   padding: 1px !important;
 }
-
 
 .ui-dialog.ui-widget-content .ui-dialog-titlebar {
   padding-left: 15px;
@@ -160,5 +162,5 @@ a.ui-dialog-titlebar-icon > span.ui-icon-closethick:before {
 }
 
 a.ui-dialog-titlebar-icon {
-  box-shadow: none!important;
+  box-shadow: none !important;
 }
