@@ -5,7 +5,7 @@ div.ui-growl {
   min-width: 120px;
   position: absolute;
   left: 40%;
-  opacity: .95;
+  opacity: .95!important;
   font-size: 1.2em;
   text-align: center;
   font-weight: 500;
@@ -75,6 +75,25 @@ span.ui-growl-image {
   display: none;
 }
 
-div.ui-growl-icon-close:hover {
-  color: #696969 !important;
+.ui-growl div.ui-growl-icon-close {
+  background-image: none !important;
+  display: inline!important;
+  text-indent: 0;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline !important;
+    top: 0px;
+    right: 3px;
+    cursor: pointer;
+    position: absolute;
+    font-size: @font-awesome-icon-size;
+    margin-left: 5px;
+    overflow: hidden;
+    content: "\f00d" !important;
+  }
+  &:hover:before {
+    color: #696969 !important;
+    opacity: 1;
+  }
 }
