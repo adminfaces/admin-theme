@@ -9,10 +9,27 @@ div.ui-growl {
   font-size: 1.2em;
   text-align: center;
   font-weight: 500;
-  z-index: 9999!important;
+  z-index: 9999 !important;
+
+  @media (max-width: 633px) {
+    left: 37% !important;
+  }
+  @media (max-width: 561px) {
+    left: 35% !important;
+  }
+
+  @media (max-width: 455px) {
+    left: 33% !important;
+  }
+
+  @media (max-width: 341px) {
+    left: 30% !important;
+  }
+  @media (max-width: 273px) {
+    left: 25% !important;
+  }
+
 }
-
-
 
 div.ui-growl .ui-growl-item-container .ui-growl-message {
   text-align: center;
@@ -59,5 +76,5 @@ span.ui-growl-image {
 }
 
 div.ui-growl-icon-close:hover {
-    color: #696969!important;
- }
+  color: #696969 !important;
+}
