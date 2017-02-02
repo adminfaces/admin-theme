@@ -7,21 +7,55 @@
  *
  * http://docs.jquery.com/UI/Accordion#theming
  */
-.ui-accordion .ui-accordion-header a { display: block; font-size: 1em; padding: .5em .5em .5em .7em; font-weight: 600; }
+.ui-accordion .ui-accordion-header a {
+  display: block;
+  font-size: 1em;
+  padding: .5em .5em .5em .7em;
+  font-weight: 600;
+}
+
 .ui-accordion .ui-accordion-header {
   border: 1px solid @default-border-color;
   background: #f6f7f9;
+  &.ui-state-active {
+    background: #ffffff;
+    border-left: 0px none;
+    border-right: 0px none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top: 3px solid  @tabview-border-top-color;
+
+    &.box-default {
+      border-top: 3px solid  @gray;
+    }
+    &.box-danger {
+      border-top: 3px solid @red;
+    }
+
+    &.box-fatal {
+      border-top: 3px solid @dark-red;
+    }
+
+    &.box-warning {
+      border-top: 3px solid @yellow;
+    }
+
+    &.box-success {
+      border-top: 3px solid @green;
+    }
+
+    &.box-info {
+      border-top: 3px solid @aqua;
+    }
+
+    &.no-color {
+      border-top: 1px solid @hover-color;
+    }
+  }
+
 }
 
 .ui-accordion .ui-accordion-header.ui-state-hover {
   background: #ededf0;
-}
-
-.ui-accordion .ui-accordion-header.ui-state-active {
-  background: #ffffff;
-  border-left: 0px none;
-  border-right: 0px none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
 }
