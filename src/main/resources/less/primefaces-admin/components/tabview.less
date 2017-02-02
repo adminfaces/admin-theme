@@ -1,7 +1,15 @@
 /* TabView */
 
 body .ui-tabs.ui-tabs-top .ui-tabs-nav.ui-widget-header li.ui-state-active {
-   border-top: 3px solid @light-blue;
+   border-top: 3px solid @tabview-border-top-color;
+}
+
+body .ui-tabs.ui-tabs-left .ui-tabs-nav.ui-widget-header li.ui-state-active {
+  border-top: 3px solid @tabview-border-top-color;
+}
+
+body .ui-tabs.ui-tabs-right .ui-tabs-nav.ui-widget-header li.ui-state-active {
+  border-top: 3px solid @tabview-border-top-color;
 }
 
 body .ui-tabs .ui-tabs-nav li {
@@ -11,8 +19,15 @@ body .ui-tabs .ui-tabs-nav li {
   }
 }
 
+
 body .ui-tabs li:hover {
   background: transparent;
+}
+
+body .ui-tabs ul.ui-tabs-nav li {
+   @media (max-width: 342px) {
+    width: 100% !important;
+  }
 }
 
 body .ui-tabs > ul > li > a {
