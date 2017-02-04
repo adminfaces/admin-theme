@@ -4,24 +4,22 @@
   background-image: url("#{resource['primefaces-admin:images/ui-icons_2e83ff_256x240.png']}");
 }
 
-
 div.ui-chkbox-box {
   &.ui-state-hover, &.ui-state-focus {
     background: @hover-color;
   }
 }
 
-.ui-chkbox-box.ui-state-active,
-.ui-chkbox-box.ui-state-focus.ui-state-active {
+div.ui-chkbox-box.ui-state-active,
+div.ui-chkbox-box.ui-state-focus.ui-state-active {
   border: 1px solid @light-blue;
-  background: @light-blue;
+  background: @light-blue!important;
   color: #FFFFFF;
 }
 
 .ui-chkbox-box.ui-state-active .ui-icon {
   background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
 }
-
 
 div.ui-chkbox {
   label {
@@ -30,6 +28,9 @@ div.ui-chkbox {
   .ui-chkbox-box {
     width: 18px;
     height: 18px;
+  }
+  .ui-chkbox-label {
+    margin-top: -1px;
   }
 }
 
