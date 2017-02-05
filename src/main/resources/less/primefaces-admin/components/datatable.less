@@ -96,6 +96,44 @@ body .ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-footer {
   background-color: #f8f8f8;
 }
 
+body .ui-datatable {
+
+  &.box-default .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid  @gray;
+  }
+
+  &.box-primary .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid @light-blue;
+  }
+
+  &.box-danger .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid @red;
+  }
+
+  &.box-fatal .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid @dark-red;
+  }
+
+  &.box-warning .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid @yellow;
+  }
+
+  &.box-success .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid @green;
+  }
+
+  &.box-info .ui-datatable-header {
+    border-radius: 3px;
+    border-top: 3px solid @aqua;
+  }
+}
+
 th[role="columnheader"].ui-state-default {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   background-color: #f5f5f5;
