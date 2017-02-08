@@ -5,10 +5,30 @@
 @hover-color: #eeeeee;
 @font-awesome-icon-size:13.3px;
 @hover-icon-color: #696969;
+@default-border-color: #e2e2e2;
 
 /* components */
 
-@default-border-color: #e2e2e2;
+
+/* button */
+@btn-background-color:@box-border-color;
+
+/*checkbox */
+@checkboxmenu-border-color: @hover-color;
+
+/* calendar */
+@calendar-zindex: (@dialog-zindex + 1);
+
+/* datatable*/
+@datatable-header-color: #f8f8f8;
+@datatable-row-hover-color:#f5f5f5;
+
+
+/* datagrid */
+@datatagrid-header-color: @datatable-header-color;
+
+/* dialog */
+@dialog-zindex: 9998;
 
 /* input */
 @input-border-color: @gray;
@@ -16,28 +36,11 @@
 /* panel */
 @panel-border-bottom-color: @hover-color; /* bootstrap border: #e5e5e5 */
 
-
-/* tabview */
-@tabview-border-color: @hover-color;
-@tabview-border-top-color: @light-blue;
-
-/* button */
-
-@btn-background-color:@box-border-color;
-
-/*checkbox */
-
-@checkboxmenu-border-color: @hover-color;
-
-/* datatable*/
-
-@datatable-header-color: #f8f8f8;
-@datatable-row-hover-color:#f5f5f5;
-
 /* picklist */
 
 @picklist-header-color: #f8f8f8;
 
-/* datagrid */
 
-@datatagrid-header-color: #f8f8f8;
+/* tabview */
+@tabview-border-color: @hover-color;
+@tabview-border-top-color: @light-blue;
