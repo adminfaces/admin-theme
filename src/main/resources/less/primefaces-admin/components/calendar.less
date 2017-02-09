@@ -168,13 +168,17 @@ body .ui-datepicker {
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset;
 }
-.ui-datepicker-current-day a {
-  background: @light-blue !important;
-  filter: none !important;
-  color: #FFFFFF !important;
+body .ui-datepicker td.ui-datepicker-current-day  {
+  a.ui-state-active, a.ui-state-default, a.ui-state-hover {
+    background: @calendar-selected-background-color;
+    filter: none;
+    color: @calendar-selected-color;
+  }
 }
-.ui-datepicker-today a.ui-state-highlight {
-  text-shadow: 1px 1px 1px #156090;
+body .ui-datepicker-today a.ui-state-highlight {
+  text-shadow: none;
+  color: #222;
+  text-decoration: underline;
 }
 .ui-datepicker td a.ui-state-default.ui-state-hover {
   background: @hover-color;
