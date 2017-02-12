@@ -35,6 +35,15 @@ body .ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
 
 }
 
+body .ui-datatable tbody > tr > td > a {
+  cursor: pointer;
+  color: @light-blue;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 .ui-datatable-odd {
   background-color: #f9f9f9;
 }
@@ -123,19 +132,19 @@ body .ui-datatable {
 
 body .ui-datatable {
   th[role="columnheader"].ui-state-default {
-  background-color: #f5f5f5;
-  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
-  background-image: linear-gradient(top, #ffffff, #eeeeee);
-  border: 1px solid #e6e6e6;
-  box-shadow: none!important;
-  outline: 0!important;
-  border-radius: 0;
-  &.ui-sortable-column.ui-state-active {
-    background-image: -webkit-linear-gradient(top, #ffffff, #e2e2e2);
+    background-color: #f5f5f5;
+    background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
     background-image: linear-gradient(top, #ffffff, #eeeeee);
+    border: 1px solid #e6e6e6;
+    box-shadow: none !important;
+    outline: 0 !important;
+    border-radius: 0;
+    &.ui-sortable-column.ui-state-active {
+      background-image: -webkit-linear-gradient(top, #ffffff, #e2e2e2);
+      background-image: linear-gradient(top, #ffffff, #eeeeee);
 
+    }
   }
- }
 }
 
 /* datatable paginator */
@@ -204,7 +213,6 @@ div.ui-chkbox span.ui-icon-check {
   bottom: 1px;
 }
 
-
 th .ui-column-customfilter {
   .ui-selectonemenu, .ui-selectcheckboxmenu {
     background-color: #fff;
@@ -212,6 +220,6 @@ th .ui-column-customfilter {
 }
 
 th .ui-sortable-column wrap {
-  border-left:0!important;
-  border-right:0!important;
+  border-left: 0 !important;
+  border-right: 0 !important;
 }
