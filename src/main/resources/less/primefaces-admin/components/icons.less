@@ -893,3 +893,11 @@ a.ui-spinner-up, a.ui-spinner-down {
     background-color: @hover-color;
   }
 }
+
+a {
+  &.ui-dialog-titlebar-icon, &.ui-panel-titlebar-icon {
+    &:active {
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+  }
+}
