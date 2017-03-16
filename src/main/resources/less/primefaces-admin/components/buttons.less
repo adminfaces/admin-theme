@@ -61,15 +61,45 @@ button.ui-button {
     border-width: 1px;
   }
 
-  &:active {
-    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  &:hover {
+    background-color: darken(@btn-background-color, 5%) !important;
   }
-
   &:focus {
+    background-color: darken(@btn-background-color, 8%) !important;
     outline: none;
   }
+  &:active {
+    background-color: darken(@btn-background-color, 15%) !important;
+  }
+
+  &.btn-primary {
+    .btn-interactions(@light-blue);
+  }
+
+  &.btn-danger {
+    .btn-interactions(@red);
+  }
+
+  &.btn-fatal {
+    .btn-interactions(@dark-red);
+  }
+
+  &.btn-warning {
+    .btn-interactions(@yellow);
+  }
+
+  &.btn-success {
+    .btn-interactions(@green);
+  }
+
+  &.btn-teal {
+    .btn-interactions(@admin-teal);
+  }
+
+  &.btn-info {
+    .btn-interactions(@aqua);
+  }
+
 }
 
 button.ui-state-hover,
@@ -111,9 +141,7 @@ button, a {
     color: #fff !important;
     background-color: @dark-red !important;;
     border-color: darken(@dark-red, 5%) !important;;
-    &:hover, &:active, &.hover {
-      background-color: darken(@dark-red, 5%) !important;;
-    }
+    .btn-interactions(@dark-red);
   }
 }
 
@@ -122,9 +150,7 @@ button, a {
     color: #fff !important;
     background-color: @admin-teal !important;;
     border-color: darken(@admin-teal, 5%) !important;;
-    &:hover, &:active, &.hover {
-      background-color: darken(@admin-teal, 5%) !important;;
-    }
+    .btn-interactions(@admin-teal);
   }
 }
 
@@ -146,23 +172,35 @@ button, a {
 .ui-splitbutton {
   &.btn-primary > button {
     .btn-primary;
+    .btn-interactions(@light-blue);
   }
 
   &.btn-success > button {
     .btn-success;
+    .btn-interactions(@green);
   }
 
   &.btn-danger > button {
     .btn-danger;
+    .btn-interactions(@red);
+  }
+  &.btn-fatal > button {
+    color: #fff !important;
+    background-color: @dark-red !important;;
+    border-color: darken(@dark-red, 5%) !important;;
+    .btn-interactions(@dark-red);
   }
   &.btn-info > button {
     .btn-info;
+    .btn-interactions(@aqua);
   }
   &.btn-default > button {
     .btn-default;
+    .btn-interactions(#f4f4f4);
   }
   &.btn-warning > button {
     .btn-warning;
+    .btn-interactions(@yellow);
   }
   &.btn-flat {
     .border-radius(0);
@@ -230,4 +268,4 @@ button, a {
 
 .ui-selectbooleanbutton.ui-button.ui-state-active .ui-icon {
   background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
-  }
+}

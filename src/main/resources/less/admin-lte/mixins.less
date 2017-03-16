@@ -73,6 +73,18 @@
   border-radius: @radius;
 }
 
+.btn-interactions(@bg-color) {
+  &:hover {
+    background-color: darken(@bg-color, 5%) !important;
+  }
+  &:focus {
+    background-color: darken(@bg-color, 10%) !important;
+  }
+  &:active {
+    background-color: darken(@bg-color, 15%) !important;
+  }
+}
+
 //Different radius each side
 .border-radius(@top-left;
 @top-right
@@ -108,7 +120,7 @@
   @stop 100%);
   background: -o-linear-gradient(@stop,
   @start);
-  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @stop, @start));
 }
 
 //Added 2.1.0
