@@ -83,6 +83,18 @@
   &:active {
     background-color: darken(@bg-color, 15%) !important;
   }
+
+  &.ui-state-disabled {
+    &:hover {
+      background-color: darken(@bg-color, 0%) !important;
+    }
+    &:focus {
+      background-color: darken(@bg-color, 0%) !important;
+    }
+    &:active {
+      background-color: darken(@bg-color, 0%) !important;
+    }
+  }
 }
 
 //Different radius each side
