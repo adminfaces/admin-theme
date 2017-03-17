@@ -109,3 +109,11 @@ span.ui-growl-image {
     -webkit-transform: scale3d(0.9, 0.9, 1);
   }
 }
+
+@media (max-width: @screen-xs) {
+  .ui-growl div.ui-growl-icon-close {
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
+    }
+  }
+}

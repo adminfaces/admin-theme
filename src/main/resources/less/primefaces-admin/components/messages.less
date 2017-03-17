@@ -113,6 +113,14 @@ div.ui-messages span.ui-icon-close {
   }
 }
 
+@media (max-width: @screen-xs) {
+  div.ui-messages span.ui-icon-close {
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
+    }
+  }
+}
+
 div.ui-messages .ui-messages-close {
   width: 20px;
   margin-right: -10px;
@@ -121,5 +129,5 @@ div.ui-messages .ui-messages-close {
 }
 
 a.ui-messages-close:active {
-    -webkit-transform: scale3d(0.9, 0.9, 1);
- }
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+}
