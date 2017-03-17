@@ -72,6 +72,9 @@ button.ui-button {
     outline: none;
   }
 
+  &.btn-default {
+    .btn-interactions(@btn-background-color);
+  }
 
   &.btn-primary {
     .btn-interactions(@light-blue);
@@ -191,7 +194,7 @@ button, a {
   }
   &.btn-default > button {
     .btn-default;
-    .btn-interactions(#f4f4f4);
+    .btn-interactions(@btn-background-color);
   }
   &.btn-warning > button {
     .btn-warning;
