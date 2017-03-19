@@ -16,7 +16,7 @@
 
 [quote]
 ____
-One (Bootstrap) theme to rule them all!
+A PrimeFaces theme to rule them all!
 ____
 
 image:https://maven-badges.herokuapp.com/maven-central/com.github.adminfaces/admin-theme/badge.svg["Maven Central",link="http://search.maven.org/#search|ga|1|admin-theme"]
