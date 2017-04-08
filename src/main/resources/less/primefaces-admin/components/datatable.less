@@ -139,11 +139,15 @@ body .ui-datatable {
     box-shadow: none !important;
     outline: 0 !important;
     border-radius: 0;
+    position: relative;
     &.ui-sortable-column.ui-state-active {
       background-image: -webkit-linear-gradient(top, #ffffff, #e2e2e2);
       background-image: linear-gradient(top, #ffffff, #eeeeee);
 
     }
+  }
+  td[role="gridcell"] {
+    position: relative;
   }
 }
 
