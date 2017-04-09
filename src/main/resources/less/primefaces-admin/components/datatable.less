@@ -102,7 +102,7 @@ body .ui-datatable {
   .border-bottom-radius(0);
   .border-top-radius(3px);
   &.box-default .ui-datatable-header {
-    border-top: 3px solid @gray;
+    border-top: 3px solid  @gray;
   }
 
   &.box-primary .ui-datatable-header {
@@ -138,14 +138,15 @@ body .ui-datatable {
     border: 1px solid #e6e6e6;
     box-shadow: none !important;
     outline: 0 !important;
-    border-radius: 0;
     position: relative;
+    border-radius: 0;
     &.ui-sortable-column.ui-state-active {
       background-image: -webkit-linear-gradient(top, #ffffff, #e2e2e2);
       background-image: linear-gradient(top, #ffffff, #eeeeee);
 
     }
   }
+
   td[role="gridcell"] {
     position: relative;
     a {
@@ -154,12 +155,14 @@ body .ui-datatable {
   }
 }
 
+
 /* datatable paginator */
 
 body div.ui-datatable div.ui-paginator {
   border: 1px solid #e2e2e2;
   border-bottom: none;
   span.ui-paginator-pages {
+    overflow: hidden;
     padding: 6px 12px;
     line-height: 1.42857143;
   }
@@ -168,6 +171,7 @@ body div.ui-datatable div.ui-paginator {
 body .ui-paginator {
   .ui-paginator-page, .ui-paginator-pages, .ui-paginator-current, select, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next {
     background: #fff;
+    position: relative;
     font-weight: 400;
     display: inline-block;
     zoom: 1;

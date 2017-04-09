@@ -1,20 +1,27 @@
-.ui-autocomplete button.ui-autocomplete-dropdown {
-  border-left: 0;
-  border-right: 0;
-  background-color: transparent;
-  .border-left-radius(0px);
-  &.ui-state-hover, .ui-state-focus {
-    background: @hover-color;
+.ui-autocomplete {
+  button.ui-autocomplete-dropdown {
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    overflow: hidden;
     .border-left-radius(0px);
+    &.ui-state-hover, .ui-state-focus {
+      background: @hover-color;
+      .border-left-radius(0px);
+    }
   }
+  input.ui-autocomplete-dd-input {
+    .border-right-radius(3px);
+  }
+
 }
 
-.ui-autocomplete input.ui-autocomplete-dd-input {
-  .border-right-radius(3px);
-}
 
-button.ui-autocomplete-dropdown > span.ui-icon-triangle-1-s {
-  margin-top: -10px;
+button.ui-autocomplete-dropdown {
+  overflow: hidden;
+  > span.ui-icon-triangle-1-s {
+    margin-top: -10px;
+  }
 }
 
 
