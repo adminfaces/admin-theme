@@ -70,11 +70,12 @@ body .ui-datatable .ui-selection-column {
 
 body .ui-datatable {
   td.ui-selection-column, th.ui-selection-column {
-    @media (max-width: @screen-xs-max) {
-      width: 10% !important;
-    }
     @media (max-width: @screen-sm-max) {
       width: 8% !important;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      width: 10% !important;
     }
 
   }
@@ -164,6 +165,7 @@ body div.ui-datatable div.ui-paginator {
   span.ui-paginator-pages {
     overflow: hidden;
     padding: 6px 12px;
+    display: inline;
     line-height: 1.42857143;
   }
 }
@@ -198,6 +200,14 @@ body .ui-paginator {
     margin-right: 1px;
   }
 
+}
+
+@media (max-width: @screen-xs) {
+  body .ui-paginator {
+    select.ui-paginator-rpp-options, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next {
+      display: none;
+    }
+  }
 }
 
 body .ui-paginator .ui-paginator-pages a {
