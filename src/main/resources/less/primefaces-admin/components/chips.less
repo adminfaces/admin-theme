@@ -1,0 +1,50 @@
+body .ui-fluid .ui-chips {
+  width: 100%;
+  .ui-chips-container, .ui-inputfield {
+    width: 100%;
+  }
+}
+
+body .ui-chips {
+
+  .ui-chips-token {
+    background: @light-blue;
+    color: #fff;
+    height: 28px;
+    white-space: normal;
+  }
+
+  .ui-autocomplete-token-label {
+    padding-right: 1.5em;
+    float: left;
+    display: inline;
+  }
+
+  span.ui-icon-close {
+    background-image: none !important;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: #fff;
+      display: inline !important;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      margin-left: 5px;
+      top: -15px;
+      overflow: hidden;
+      content: "\f00d" !important;
+    }
+    &:hover:before {
+      color: @hover-icon-color;
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  body .ui-chips span.ui-icon-close {
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
+    }
+  }
+}
