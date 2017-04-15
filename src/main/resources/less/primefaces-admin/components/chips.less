@@ -39,6 +39,49 @@ body .ui-chips {
       color: @hover-icon-color;
     }
   }
+
+  /* box colors */
+  &.box-default {
+    .ui-chips-token {
+      background: @gray;
+    }
+  }
+  &.box-danger {
+    .ui-chips-token {
+      background: @red;
+    }
+  }
+
+  &.box-fatal {
+    .ui-chips-token {
+      background: @dark-red;
+    }
+  }
+
+  &.box-warning {
+    .ui-chips-token {
+      background: @yellow;
+    }
+  }
+
+  &.box-success {
+    .ui-chips-token {
+      background: @green;
+    }
+  }
+
+  &.box-info {
+    .ui-chips-token {
+      background: @aqua;
+    }
+  }
+  &.no-color {
+    .ui-chips-token {
+      background: #d2d6de;
+    }
+  }
+
+
 }
 
 @media (max-width: @screen-xs) {
