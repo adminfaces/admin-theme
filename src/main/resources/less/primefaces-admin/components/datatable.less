@@ -103,7 +103,7 @@ body .ui-datatable {
   .border-bottom-radius(0);
   .border-top-radius(3px);
   &.box-default .ui-datatable-header {
-    border-top: 3px solid  @gray;
+    border-top: 3px solid @gray;
   }
 
   &.box-primary .ui-datatable-header {
@@ -156,7 +156,6 @@ body .ui-datatable {
   }
 }
 
-
 /* datatable paginator */
 
 body div.ui-datatable div.ui-paginator {
@@ -203,7 +202,7 @@ body .ui-paginator {
 }
 
 @media (max-width: @screen-xm) {
-  .ui-paginator .ui-paginator-pages {
+  body div.ui-datatable div.ui-paginator span.ui-paginator-pages {
     display: none;
   }
 }
