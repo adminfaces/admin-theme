@@ -46,3 +46,30 @@ a.sidebar-toggle {
 div.ui-panelmenu div.ui-panelmenu-panel {
   overflow: hidden;
 }
+
+
+@media (max-width: @screen-sm -1) {
+  .slideout-menu {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    min-height: 100%;
+    width: 230px;
+  }
+
+  .slideout-menu-left {
+    left: 0;
+  }
+
+  .slideout-panel {
+    min-height: 100%;
+    background-color: #ecf0f5;
+    z-index: 811;
+    position: relative;
+    padding: 0;
+    will-change: transform;
+  }
+
+}
