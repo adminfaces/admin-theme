@@ -99,7 +99,7 @@ NOTE: Bootstrap less is not maintained in this project only it's mixins.
 
 == Theme classifiers
 
-This project uses http://stackoverflow.com/questions/20909634/what-is-the-purpose-of-classifier-tag-in-maven[maven classifiers^] to offer multiple `faces` (pum intended) of Admin Theme. Below is the explanation of each classifier and how to use it.
+This project uses http://stackoverflow.com/questions/20909634/what-is-the-purpose-of-classifier-tag-in-maven[maven classifiers^] to offer multiple `faces` (pum intended) of Admin Theme. Below is the description of each classifier and how to use it.
 
 === Default (no classifier)
 The default theme comes `compressed`, with `Bootstrap (3.3.7)` embedded and uses `JSF resource handling` for loading images and web fonts.
