@@ -59,7 +59,7 @@ TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] th
 
 == Architecture
 
-The theme uses {link-less}[less^] as css pre-processor. Each PrimeFaces component has its own less file:
+The theme uses http://lesscss.org/[less^] as css pre-processor. Each PrimeFaces component has its own less file:
 
 .src/main/resources/less
 ----
