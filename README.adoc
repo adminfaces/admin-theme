@@ -70,6 +70,118 @@ NOTE: At the moment only snapshots are available on maven central. Add the follo
 
 TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add this project to your classpath neither the web.xml entry.
 
+== Architecture
+
+The theme uses {link-less}[less^] as css pre-processor. Each PrimeFaces component has its own less file:
+
+.src/main/resources/less
+----
+├── admin-lte
+│    |
+│    ├── bootstrap <1>
+│    │
+│    ├── skins <2>
+│    │
+│    └── admin lte less files
+│
+├── primefaces-admin
+│    |
+│    ├─ components <3>
+│    │   |
+│    │   ├── accordeon.less
+│    │   │
+│    │   ├── autocomplete.less
+│    │   │
+│    │   └── etc...
+│    │
+│    ├─ theme.less <4>
+│    │
+     └─ variables.less
+----
+<1> Bootstrap variables and https://css-tricks.com/snippets/css/useful-css3-less-mixins/[mixins^] are used as reference in AdminLTE and admin theme less files
+<2> Built in skins
+<3> PrimeFaces components
+<4> Components and Admin-LTE less files are included in theme.less
+
+After compilation it will generate the theme.css with Admin-LTE, Bootstrap and Primefaces components.
+
+NOTE: Bootstrap.css (from src/META-INF/resources) is included in theme.less but can be removed via maven classifiers
+
+NOTE: Bootstrap less is not maintained in this project only it's mixins.
+
+
+== Theme classifiers
+
+This project uses http://stackoverflow.com/questions/20909634/what-is-the-purpose-of-classifier-tag-in-maven[maven classifiers^] to offer multiple `faces` (pum intended) of Admin Theme. Below is the explanation of each classifier and how to use it.
+
+=== Default (no classifier)
+The default theme comes `compressed`, with `Bootstrap (3.3.7)` embedded and uses `JSF resource handling` for loading images and web fonts.
+
+.Maven usage
+[source,xml]
+----
+<dependency>
+    <groupId>com.github.adminfaces</groupId>
+    <artifactId>admin-theme</artifactId>
+include::{projectRoot}/pom.xml[tags=version]
+</dependency>
+----
+
+=== Dev classifier
+
+The `dev` classifier will bring a theme.css *without minification*.
+
+.Maven usage
+[source,xml]
+----
+<dependency>
+    <groupId>com.github.adminfaces</groupId>
+    <artifactId>admin-theme</artifactId>
+include::{projectRoot}/pom.xml[tags=version]
+<classifier>dev</classifier>
+</dependency>
+----
+
+=== Without Bootstrap classifier
+
+The `without-bootstrap` classifier will bring a theme.css *without bootstrap embedded* so it's up to the developer to provide Bootstrap within the application.
+
+.Maven usage
+[source,xml]
+----
+<dependency>
+    <groupId>com.github.adminfaces</groupId>
+    <artifactId>admin-theme</artifactId>
+include::{projectRoot}/pom.xml[tags=version]
+<classifier>without-bootstrap</classifier>
+</dependency>
+----
+
+=== Without JSF classifier
+
+The `without-jsf` classifier will bring a theme.css *without JSF resource handling* so the theme can be used on projects (derived from PrimeFaces) without JSF like Prime React, PrimeUI or PrimeNG.
+
+
+.Maven usage
+[source,xml]
+----
+<dependency>
+    <groupId>com.github.adminfaces</groupId>
+    <artifactId>admin-theme</artifactId>
+include::{projectRoot}/pom.xml[tags=version]
+<classifier>without-jsf</classifier>
+</dependency>
+----
+
+== Development
+
+To get your hands dirty with admin theme it is recommended to use <<Admin Designer>> in combination with http://brackets.io/[Brackets] or any tool that `compile less` files to css on save.
+
+Using designer (which is backed by wildfly swarm) plus brackets will let you change the components less files and see the results instantly.
+
+NOTE: theme.less is already brackets aware so you just need to change any component less file, save it and see the results in Admin Designer.
+
+
 == Demo
 
 See https://github.com/adminfaces/admin-showcase[Admin Showcase^].
