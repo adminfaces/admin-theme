@@ -188,7 +188,7 @@ See https://github.com/adminfaces/admin-showcase[Admin Showcase^].
 
 == Snapshot
 
-Snapshots are published to https://oss.sonatype.org/content/repositories/snapshots/com/github/adminfaces/[maven central^] on each commit, to use it just declare the repository below on yur `pom.xml`:
+Snapshots are published to https://oss.sonatype.org/content/repositories/snapshots/com/github/adminfaces/[maven central^] on each commit, to use it just declare the repository below on your `pom.xml`:
 
 [source,xml]
 ----
