@@ -7,6 +7,9 @@ cache:
 script:
 - mvn clean package deploy --settings settings.xml
 - mvn clean package deploy -Pdev --settings settings.xml
+- mvn clean package deploy -Pwithout-bootstrap --settings settings.xml
+- mvn clean package deploy -Pwithout-bootstrap-dev --settings settings.xml
+
 env:
   global:
   - secure: ixdQyXS+BS31GZsBG/Qf0YO18hhRcgfDLPASwxsfvd6hroGPS5rWtA+lMpORNxobnMm/w0bE2HGNEk3cCvF9P12XHLQDoN4wFZdnMwQM0a2rCSfpcm4cRO06A/yMl8MHLx0qkVF70jixj2opkcuSSSqhn+ZGRwHtzGgPdyblt+gUqPDk091dj7mwUxjpVTTyMeRRlIu2E1vuivjZ30jmMRXKDqPEAb3qil16P0smSgo1U7M0Vt0j/iPFY5MVeqgOE2ZhpzNZ7b6tlTQE/ERIFeVbrvPvhT0hfK2MQdyc6EVs3H53JCZpax/VyaqzTH7Jy45NAicN+YSP6pd0cmrqfrXKwi5G3sn55ibRrZzcKCKs2KQY0ZuaTf4W2vaepIa7/zjXTQF803eHvvpTbXfqukwVCgNw/uP6J7oKtgQMKUErX3YF40gZRwK7NYRMGKK4UnO7R2JkEM/DlHK0qRDvwnuRlou5Tj2amCk6C6QTgU0GTp2bUzPgapb1jaM6wcNrPtPfzPcoxaDtQ7OgJzrfn+W0DohmcDiWjWgJaXibYCJMxqLwXB/j0bWmrpV3hyxke/VWp+BmaYKMqxtrXAIFwZAuRsCdsAX/ZsztIlIdAWzIXWM0LybAmT0tOKgbTjAkdtbvyLhAdiEfVzXIjkryQDkJvHrei6Vc82GFaVxolzw=
