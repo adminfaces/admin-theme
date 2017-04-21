@@ -188,7 +188,7 @@
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>3.0.2</version>
                         <configuration>
-                            <classifier>without-bootstrap</classifier>
+                            <classifier>without-bootstrap-dev</classifier>
                         </configuration>
                     </plugin>
                 </plugins>
