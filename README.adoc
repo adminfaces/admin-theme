@@ -185,3 +185,19 @@ NOTE: theme.less is already brackets aware so you just need to change any compon
 == Demo
 
 See https://github.com/adminfaces/admin-showcase[Admin Showcase^].
+
+== Snapshot
+
+Snapshots are published to https://oss.sonatype.org/content/repositories/snapshots/com/github/adminfaces/[maven central^] on each commit, to use it just declare the repository below on yur `pom.xml`:
+
+[source,xml]
+----
+<repositories>
+    <repository>
+        <snapshots/>
+        <id>snapshots</id>
+        <name>libs-snapshot</name>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+</repositories>
+----
