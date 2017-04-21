@@ -41,24 +41,11 @@ This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as 
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0.0-RC2</version>
 <!--<classifier>dev</classifier> uncompressed theme.css-->
 </dependency>
 ----
 +
-NOTE: At the moment only snapshots are available on maven central. Add the following repository to your maven pom:
-+
-----
-<repositories>
-    <repository>
-        <snapshots/>
-        <id>snapshots</id>
-        <name>libs-snapshot</name>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-</repositories>
-----
-
 . Add these context-param in your web.xml:
 
 ----
