@@ -195,6 +195,106 @@
             </build>
         </profile>
 
+        <profile>
+            <!-- removes JSF resource mechanism from generated css so the theme can be used with other technologies-->
+            <id>without-jsf</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.code.maven-replacer-plugin</groupId>
+                        <artifactId>replacer</artifactId>
+                        <version>1.5.2</version>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>replace</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <ignoreMissingFile>false</ignoreMissingFile>
+                            <regex>false</regex>
+                            <file>${project.build.directory}/classes/META-INF/resources/primefaces-admin/theme.css</file>
+                            <replacements>
+                                <replacement>
+                                    <token>"#{resource['primefaces-admin:</token>
+                                    <value>'../</value>
+                                </replacement>
+                                <replacement>
+                                    <token>"#{resource['bootstrap:</token>
+                                    <value>'../</value>
+                                </replacement>
+                                <replacement>
+                                    <token>']}"</token>
+                                    <value>'</value>
+                                </replacement>
+                            </replacements>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>3.0.2</version>
+                        <configuration>
+                            <classifier>without-jsf</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>without-jsf-dev</id>
+            <properties>
+                 <compressCss>false</compressCss>
+             </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.code.maven-replacer-plugin</groupId>
+                        <artifactId>replacer</artifactId>
+                        <version>1.5.2</version>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>replace</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <ignoreMissingFile>false</ignoreMissingFile>
+                            <regex>false</regex>
+                            <file>${project.build.directory}/classes/META-INF/resources/primefaces-admin/theme.css</file>
+                            <replacements>
+                                <replacement>
+                                    <token>"#{resource['primefaces-admin:</token>
+                                    <value>'../</value>
+                                </replacement>
+                                <replacement>
+                                    <token>"#{resource['bootstrap:</token>
+                                    <value>'../</value>
+                                </replacement>
+                                <replacement>
+                                    <token>']}"</token>
+                                    <value>'</value>
+                                </replacement>
+                            </replacements>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>3.0.2</version>
+                        <configuration>
+                            <classifier>without-jsf-dev</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
     <distributionManagement>
