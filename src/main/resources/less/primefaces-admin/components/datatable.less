@@ -11,7 +11,7 @@ body .ui-datatable th.ui-state-default {
 body .ui-datatable th.ui-state-hover {
   background: #d3d5d8;
   border-color: @datatable-border-color;
- }
+}
 
 body .ui-datatable th.ui-state-active {
   background: #E6E6E6;
@@ -33,6 +33,10 @@ body .ui-datatable tbody > tr > td > a {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+
+body .ui-datatable .ui-datatable-tablewrapper tfoot {
+  display: none;
 }
 
 .ui-datatable-odd {
@@ -70,11 +74,17 @@ body .ui-datatable {
     }
 
   }
+
+  tr.ui-widget-content.ui-state-hover {
+    border-bottom: #f4f4f4!important;
+    border-top: #f4f4f4!important;
+  }
 }
 
-.ui-datatable tr.ui-state-hover {
+body .ui-datatable tr.ui-state-hover, body .ui-datatable tr.ui-state-hover td {
   background-color: @datatable-row-hover-color;
 }
+
 
 body .ui-datatable table tbody td {
   padding: 10px 10px;
@@ -186,6 +196,10 @@ body .ui-paginator {
 
   .ui-paginator-prev {
     margin-right: 1px;
+  }
+
+  select.ui-paginator-rpp-options {
+    padding: 6px 8px;
   }
 
 }
