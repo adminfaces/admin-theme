@@ -4,30 +4,21 @@
   font-weight: 600;
 }
 
-.ui-datatable th.ui-state-hover {
-  background: #e8e8e8;
-  border-color: #d9d9d9;
-}
-
-.ui-datatable th.ui-state-active {
-  background: #E6E6E6;
-}
-
-.ui-datatable th {
-  font-weight: 600;
-}
-
 body .ui-datatable th.ui-state-default {
-  border-color: #e2e2e2;
+  border-color: @datatable-border-color;
 }
 
 body .ui-datatable th.ui-state-hover {
   background: #d3d5d8;
-  border-color: #d9d9d9;
-}
+  border-color: @datatable-border-color;
+ }
 
 body .ui-datatable th.ui-state-active {
   background: #E6E6E6;
+}
+
+body .ui-datatable tbody > tr.ui-widget-content {
+  border-color: @datatable-border-color;
 }
 
 body .ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
@@ -96,14 +87,15 @@ body .ui-datatable table {
 }
 
 body .ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-footer {
-  background-color: @datatable-header-color;
+  background: #fff;
+  border: none;
 }
 
 body .ui-datatable {
   .border-bottom-radius(0);
   .border-top-radius(3px);
   &.box-default .ui-datatable-header {
-    border-top: 3px solid  @gray;
+    border-top: 3px solid @gray;
   }
 
   &.box-primary .ui-datatable-header {
@@ -133,16 +125,14 @@ body .ui-datatable {
 
 body .ui-datatable {
   th[role="columnheader"].ui-state-default {
-    background-color: #f5f5f5;
-    background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
-    background-image: linear-gradient(top, #ffffff, #eeeeee);
-    border: 1px solid #e6e6e6;
+    background: #fff none;
+    border: 1px solid @datatable-border-color;
     box-shadow: none !important;
     outline: 0 !important;
     position: relative;
     border-radius: 0;
     &.ui-sortable-column.ui-state-active {
-      background-image: -webkit-linear-gradient(top, #ffffff, #e2e2e2);
+      background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f3);
       background-image: linear-gradient(top, #ffffff, #eeeeee);
 
     }
@@ -156,12 +146,10 @@ body .ui-datatable {
   }
 }
 
-
 /* datatable paginator */
 
 body div.ui-datatable div.ui-paginator {
-  border: 1px solid #e2e2e2;
-  border-bottom: none;
+  border: 1px solid #f4f4f4;
   span.ui-paginator-pages {
     overflow: hidden;
     padding: 6px 12px;
@@ -204,8 +192,15 @@ body .ui-paginator {
 
 @media (max-width: @screen-xm) {
   body div.ui-paginator .ui-paginator-pages {
-    display: none!important;
+    display: none !important;
   }
+}
+
+@media (max-width: @screen-xm) {
+  body .ui-paginator .ui-paginator-prev {
+    margin-right: 0px;
+  }
+
 }
 
 body .ui-paginator .ui-paginator-pages a {
