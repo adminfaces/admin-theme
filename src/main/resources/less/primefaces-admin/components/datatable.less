@@ -47,10 +47,6 @@ body .ui-datatable .ui-datatable-tablewrapper tfoot {
   background: #14a4ff none repeat scroll 0 0;
 }
 
-.ui-datatable tbody > tr.ui-widget-content {
-  border-color: #d9d9d9;
-}
-
 body .ui-datatable .ui-selection-column {
 
   .ui-radiobutton-box.ui-state-active, .ui-chkbox-box.ui-state-active {
@@ -76,15 +72,14 @@ body .ui-datatable {
   }
 
   tr.ui-widget-content.ui-state-hover {
-    border-bottom: #f4f4f4!important;
-    border-top: #f4f4f4!important;
+    border-bottom: #f4f4f4 !important;
+    border-top: #f4f4f4 !important;
   }
 }
 
 body .ui-datatable tr.ui-state-hover, body .ui-datatable tr.ui-state-hover td {
   background-color: @datatable-row-hover-color;
 }
-
 
 body .ui-datatable table tbody td {
   padding: 10px 10px;
@@ -140,6 +135,7 @@ body .ui-datatable {
     box-shadow: none !important;
     outline: 0 !important;
     position: relative;
+    font-weight: 600;
     border-radius: 0;
     &.ui-sortable-column.ui-state-active {
       background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f3);
@@ -154,18 +150,53 @@ body .ui-datatable {
       position: relative;
     }
   }
+
+  tbody > tr {
+    &.ui-widget-content {
+      border-top-color: @datatable-row-border-color;
+      border-bottom-color: @datatable-row-border-color;
+      border-left: @datatable-border-color;
+      border-right: @datatable-border-color;
+    }
+
+    &.ui-widget-content.ui-state-hover {
+      border-color: @datatable-row-border-color !important;
+    }
+
+    &.ui-widget-header > td {
+      border-color: @datatable-border-color!important;
+      font-weight: 600;
+    }
+  }
+
 }
 
 /* datatable paginator */
 
-body div.ui-datatable div.ui-paginator {
-  border: 1px solid #f4f4f4;
-  span.ui-paginator-pages {
-    overflow: hidden;
-    padding: 6px 12px;
-    display: inline;
-    line-height: 1.42857143;
+body div.ui-datatable {
+  div.ui-paginator {
+    border: 1px solid #f4f4f4;
+    span.ui-paginator-pages {
+      overflow: hidden;
+      padding: 6px 12px;
+      display: inline;
+      line-height: 1.42857143;
+    }
   }
+
+  div.ui-paginator-bottom {
+    border-top-color: transparent;
+  }
+
+  div.ui-paginator-top {
+    border-bottom-color: transparent;
+  }
+
+  td.ui-datatable-subtable-header {
+    border-color: @datatable-border-color;
+    border-bottom-color: @datatable-row-border-color;
+  }
+
 }
 
 body .ui-paginator {
