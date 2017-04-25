@@ -49,12 +49,38 @@ body .ui-datatable .ui-datatable-tablewrapper tfoot {
 
 body .ui-datatable .ui-selection-column {
 
-  .ui-radiobutton-box.ui-state-active, .ui-chkbox-box.ui-state-active {
-    background-color: #ffffff;
+  .ui-radiobutton-box, .ui-chkbox-box {
+
+    background-color: #fff;
+
+    .ui-chkbox-icon:before {
+      color: #fff;
+    }
+
+    .ui-chkbox-icon {
+      &.ui-icon-check {
+        margin-left: 1px;
+        &:before {
+          color: #444;
+        }
+      }
+    }
+
+    ui-radiobutton-icon {
+      margin-left: -6px;
+    }
+
+    .ui-icon-bullet {
+      width: 10px;
+      height: 10px;
+      margin-left: -5px;
+      margin-top: 3px;
+    }
+
   }
 
-  .ui-radiobutton-box .ui-icon, .ui-chkbox-box .ui-icon {
-    background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+  .ui-radiobutton {
+    .border-radius(50%);
   }
 
 }
@@ -164,7 +190,7 @@ body .ui-datatable {
     }
 
     &.ui-widget-header > td {
-      border-color: @datatable-border-color!important;
+      border-color: @datatable-border-color !important;
       font-weight: 600;
     }
   }
@@ -264,12 +290,6 @@ body .ui-paginator .ui-paginator-page.ui-state-active {
 
 span.ui-paginator-current {
   font-weight: 600 !important;
-}
-
-div.ui-chkbox span.ui-icon-check {
-  position: relative;
-  right: 1px;
-  bottom: 1px;
 }
 
 th .ui-column-customfilter {
