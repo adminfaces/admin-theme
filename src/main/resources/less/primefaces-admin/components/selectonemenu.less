@@ -39,9 +39,8 @@ ul.ui-selectlistbox-list > li.ui-selectlistbox-item {
   padding: 3px 6px;
 }
 
-
 .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-close {
-  padding: 1px!important;
+  padding: 1px !important;
 }
 
 div.ui-selectcheckboxmenu {
@@ -53,15 +52,24 @@ li.ui-selectcheckboxmenu-item div.ui-chkbox-box {
   margin-top: -15px;
 }
 
-div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger .ui-icon {
-    margin-top: 6px;
-}
-
 div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
   border-color: #ffffff;
+  width: 32px;
   &.ui-state-hover, &.ui-state-focus {
     background: @hover-color;
   }
+  .ui-icon {
+    margin-top: 6px;
+    margin-left: 3px;
+  }
+}
+
+.ui-selectcheckboxmenu-label-container .ui-selectcheckboxmenu-label {
+  min-width: 100px;
+}
+
+.ui-fluid div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
+  width: 32px;
 }
 
 div.ui-selectcheckboxmenu-header {
@@ -72,8 +80,4 @@ div.ui-selectcheckboxmenu-header {
 li.ui-selectlistbox-item {
   position: relative;
   overflow: hidden;
-}
-
-body .ui-selectonemenu-panel {
-  z-index: (@dialog-zindex+1)!important;
 }
