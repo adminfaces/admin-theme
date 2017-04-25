@@ -1,13 +1,14 @@
 /* checkbox */
 
 .ui-state-highlight .ui-chkbox-box .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_2e83ff_256x240.png']}");
+  background-image: none
 }
 
 div.ui-chkbox-box {
   &.ui-state-hover, &.ui-state-focus {
-    background: @hover-color;
+    background: transparent;
   }
+
 }
 
 div.ui-chkbox-box.ui-state-active,
@@ -18,10 +19,11 @@ div.ui-chkbox-box.ui-state-focus.ui-state-active {
 }
 
 .ui-chkbox-box.ui-state-active .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+  background-image: none;
 }
 
 div.ui-chkbox {
+
   label {
     font-weight: 500;
   }
@@ -32,6 +34,12 @@ div.ui-chkbox {
   .ui-chkbox-label {
     margin-top: -1px;
   }
+
+  span.ui-icon-check {
+    position: relative;
+    right: 3px;
+    bottom: 2px;
+  }
 }
 
 .ui-widget-header span.ui-chkbox-icon {
@@ -41,3 +49,32 @@ div.ui-chkbox {
 body .ui-selectmanycheckbox.ui-grid-responsive .ui-grid-row > div {
   padding: .2em;
 }
+
+
+div.ui-chkbox span.ui-chkbox-icon {
+  background-image: none !important;
+  display: inline;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline !important;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    margin-left: 4px;
+    overflow: hidden;
+    content: "\f00c" !important;
+  }
+  &:hover:before {
+    color: #fff;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  div.ui-chkbox span.ui-chkbox-icon {
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
+    }
+  }
+}
+
+
