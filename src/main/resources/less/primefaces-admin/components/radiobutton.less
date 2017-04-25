@@ -13,45 +13,66 @@ div.ui-radiobutton-box {
 .ui-radiobutton-box.ui-state-active,
 .ui-radiobutton-box.ui-state-focus.ui-state-active {
   border: 1px solid @light-blue;
-  background: @light-blue;
+  background: #FFFFFF;
   color: #FFFFFF;
 }
 
 .ui-radiobutton-box.ui-state-active .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+  background-image: none;
 }
 
-body .ui-radiobutton .ui-radiobutton-box {
-  border: 1px solid @input-border-color;
-  -moz-transition: box-shadow 0.3s;
-  -o-transition: box-shadow 0.3s;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  &.ui-state-active {
-    border-color: @light-blue;
-    background: @light-blue;
-    color: #fff;
-  }
-}
-
-span.ui-radiobutton-icon {
-  margin: 0;
-}
-
-div.ui-radiobutton {
+body .ui-radiobutton {
   margin: 3px 0;
   width: 18px;
-  line-height: 16px;
+  height: 18px;
   display: inline-block;
   vertical-align: middle;
+  text-decoration: none;
+  background-color: white;
   .ui-radiobutton-box {
     width: 18px;
     height: 18px;
+    border: 1px solid @input-border-color;
+    -moz-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    .border-radius(50%);
+
+    &.ui-state-active {
+      border: 1px solid #3c8dbc;
+      background-color: #fff;
+      color: #fff;
+
+      span.ui-radiobutton-icon {
+        background-color: #3c8dbc!important;
+      }
+    }
+
+    &.ui-state-default {
+      background-color: #fff;
+      color: #fff;
+
+      span.ui-radiobutton-icon {
+        background-color: #fff;
+        color: #fff;
+      }
+    }
+  }
+
+  span.ui-radiobutton-icon {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 2px;
+    border-radius: 50%;
+    display: inline-block;
+    background-image: none!important;
   }
 }
+
+
 
 div.ui-selectoneradio label {
   margin-top: 2px;
