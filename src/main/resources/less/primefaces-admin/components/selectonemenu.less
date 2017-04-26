@@ -47,9 +47,18 @@ div.ui-selectcheckboxmenu {
   overflow: hidden;
 }
 
+body .ui-selectcheckboxmenu-panel div.ui-chkbox span.ui-chkbox-icon:before {
+  top:1px;
+}
+
 li.ui-selectcheckboxmenu-item div.ui-chkbox-box {
   position: relative;
   margin-top: -15px;
+}
+
+
+body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox {
+  margin-top: -11px;
 }
 
 div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
@@ -75,6 +84,10 @@ div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
 div.ui-selectcheckboxmenu-header {
   border: 0;
   border-bottom: 1px solid @checkboxmenu-border-color;
+
+  .ui-chkbox span.ui-icon {
+    float: none;
+  }
 }
 
 li.ui-selectlistbox-item {
