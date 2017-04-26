@@ -4,7 +4,7 @@ body .ui-picklist {
 
   .ui-picklist-caption {
     background-color: @picklist-header-color;
-    border-color: @gray;
+    border-color: @picklist-border-color;
   }
 
   &.box-default .ui-picklist-caption {
@@ -44,11 +44,15 @@ body .ui-picklist {
 
   .ui-picklist-buttons-cell button {
     background-color: #fff;
-    border-color: @gray;
+    border-color: @picklist-border-color;
   }
 
   li.ui-picklist-outline {
     outline: none;
+  }
+
+  ul.ui-widget-content {
+    border-color: @datatable-border-color;
   }
 
 }
