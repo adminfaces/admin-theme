@@ -72,15 +72,12 @@ body .ui-datatable .ui-selection-column {
       }
     }
 
-    ui-radiobutton-icon {
-      margin-left: -6px;
-    }
-
     .ui-icon-bullet {
       width: 10px;
       height: 10px;
       margin-left: -5px;
       margin-top: 3px;
+      color: #444!important;
     }
 
   }
@@ -88,6 +85,14 @@ body .ui-datatable .ui-selection-column {
   .ui-radiobutton {
     background-color:transparent;
   }
+
+  .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+    border-color: #444;
+    span.ui-radiobutton-icon{
+      background-color: #444!important;
+    }
+  }
+
 
 }
 
