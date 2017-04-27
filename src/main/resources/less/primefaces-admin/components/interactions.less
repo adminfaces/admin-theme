@@ -18,15 +18,30 @@
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-  -moz-box-shadow: 0 0 5px #1f89ce;
-  -webkit-box-shadow: 0 0 5px #1f89ce;
-  box-shadow: 0 0 5px #1f89ce;
+  -moz-box-shadow: 0 0 5px @box-shadow-color;
+  -webkit-box-shadow: 0 0 5px @box-shadow-color;
+  box-shadow: 0 0 5px @box-shadow-color;
+}
+
+
+.ui-state-focus.ui-state-error,
+.ui-widget-content .ui-state-focus.ui-state-error,
+.ui-widget-header .ui-state-focus.ui-state-error {
+  -moz-box-shadow: 0 0 5px @box-shadow-color-error;
+  -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
+  box-shadow: 0 0 5px @box-shadow-color-error;
 }
 
 .ui-inputfield.ui-state-focus, .ui-widget-content .ui-inputfield.ui-state-focus, .ui-widget-header .ui-inputfield.ui-state-focus {
-  -moz-box-shadow: 0 0 5px #1f89ce;
-  -webkit-box-shadow: 0 0 5px #1f89ce;
-  box-shadow: 0 0 5px #1f89ce;
+  -moz-box-shadow: 0 0 5px @box-shadow-color;
+  -webkit-box-shadow: 0 0 5px @box-shadow-color;
+  box-shadow: 0 0 5px @box-shadow-color;
+}
+
+.ui-widget-content .ui-inputfield.ui-state-focus.ui-state-error, .ui-inputfield.ui-state-focus.ui-state-error {
+  -moz-box-shadow: 0 0 5px @box-shadow-color-error;
+  -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
+  box-shadow: 0 0 5px @box-shadow-color-error;
 }
 
 .ui-inputfield, .ui-selectonemenu {
@@ -57,11 +72,11 @@
   text-decoration: none;
   background-color: @brand-primary;
   background-position: 0px;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-image: -moz-linear-gradient(top, @highlight-color-begin, @highlight-color-end);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@highlight-color-begin), to(@highlight-color-end));
+  background-image: -webkit-linear-gradient(top, @highlight-color-begin, @highlight-color-end);
+  background-image: -o-linear-gradient(top, @highlight-color-begin, @highlight-color-end);
+  background-image: linear-gradient(to bottom, @highlight-color-begin, @highlight-color-end);
   background-repeat: repeat-x;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
 }
@@ -73,12 +88,17 @@
 
 .ui-state-error,
 .ui-widget-content .ui-state-error,
-.ui-widget-header .ui-state-error {
-  border: 1px solid #eed3d7;
-  /*uncomment if you want to get attention
-  background: #f2dede 50% 50% repeat-x;
-  */
-  color: #b94a48;
+.ui-widget-header .ui-state-error, div.ui-selectonemenu.ui-state-error,
+div.ui-fluid div.ui-selectonemenu.ui-state-error {
+  border: 1px solid @box-shadow-color-error;
+  color: @error-color;
+}
+
+/* autocomplete */
+.ui-autocomplete-input.ui-state-error + button.ui-autocomplete-dropdown {
+  border: 1px solid @box-shadow-color-error;
+  border-left: none;
+  color: @error-color;
 }
 
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
