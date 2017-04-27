@@ -25,3 +25,29 @@ button.ui-autocomplete-dropdown {
 }
 
 
+button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
+  background-image: none;
+  display: inline;
+  position: relative;
+
+  &:before {
+    font-family: FontAwesome;
+    color: @admin-text-color;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    padding: 0 4px;
+    top: -3px;
+    overflow: hidden;
+    content: "\f0d7" !important;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
+    }
+  }
+}
+
+
