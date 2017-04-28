@@ -51,3 +51,17 @@ button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
 }
 
 
+/* interaction cues */
+
+.ui-autocomplete-input.ui-state-error + button.ui-autocomplete-dropdown {
+  border: 1px solid @box-shadow-color-error;
+  border-left: none;
+  border-right: none;
+  color: @error-color;
+}
+
+.ui-autocomplete-input.ui-state-focus + button.ui-autocomplete-dropdown {
+  border-color: lighten(@box-shadow-color,30%);
+  border-left: none;
+  border-right: none;
+}

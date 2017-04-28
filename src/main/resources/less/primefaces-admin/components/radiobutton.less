@@ -4,11 +4,17 @@
   background-image: url("#{resource['primefaces-admin:images/ui-icons_2e83ff_256x240.png']}");
 }
 
-div.ui-radiobutton-box {
-  &.ui-state-hover, &.ui-state-focus {
+body .ui-radiobutton .ui-radiobutton-box {
+  overflow: hidden;
+  &.ui-state-focus {
+    background: @hover-color;
+    border-color: lighten(@box-shadow-color,30%);
+  }
+  &.ui-state-hover   {
     background: @hover-color;
   }
 }
+
 
 .ui-radiobutton-box.ui-state-active,
 .ui-radiobutton-box.ui-state-focus.ui-state-active {
@@ -55,6 +61,7 @@ body .ui-radiobutton {
 
       span.ui-radiobutton-icon {
         color: #fff;
+        opacity: 1;
       }
     }
   }
@@ -70,8 +77,6 @@ body .ui-radiobutton {
     background-image: none!important;
   }
 }
-
-
 
 div.ui-selectoneradio label {
   margin-top: 2px;

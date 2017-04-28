@@ -21,12 +21,13 @@
   -moz-box-shadow: 0 0 5px @box-shadow-color;
   -webkit-box-shadow: 0 0 5px @box-shadow-color;
   box-shadow: 0 0 5px @box-shadow-color;
+  border-color: lighten(@box-shadow-color,30%);
 }
 
 
 .ui-state-focus.ui-state-error,
 .ui-widget-content .ui-state-focus.ui-state-error,
-.ui-widget-header .ui-state-focus.ui-state-error {
+.ui-widget-header .ui-state-focus.ui-state-error, .form-control .ui-state-focus.ui-state-error {
   -moz-box-shadow: 0 0 5px @box-shadow-color-error;
   -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
   box-shadow: 0 0 5px @box-shadow-color-error;
@@ -36,13 +37,32 @@
   -moz-box-shadow: 0 0 5px @box-shadow-color;
   -webkit-box-shadow: 0 0 5px @box-shadow-color;
   box-shadow: 0 0 5px @box-shadow-color;
+  border-color: lighten(@box-shadow-color,30%);
 }
+
 
 .ui-widget-content .ui-inputfield.ui-state-focus.ui-state-error, .ui-inputfield.ui-state-focus.ui-state-error {
   -moz-box-shadow: 0 0 5px @box-shadow-color-error;
   -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
   box-shadow: 0 0 5px @box-shadow-color-error;
 }
+
+.form-control {
+  &.ui-inputfield.ui-state-focus.ui-state-error {
+    -moz-box-shadow: 0 0 5px @box-shadow-color-error;
+    -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
+    border-color: darken(@box-shadow-color-error,7%);
+    box-shadow: 0 0 5px @box-shadow-color-error;
+  }
+  &.ui-inputfield.ui-state-focus {
+    -moz-box-shadow: 0 0 5px @box-shadow-color;
+    -webkit-box-shadow: 0 0 5px @box-shadow-color;
+    border-color: lighten(@box-shadow-color,30%);
+    box-shadow: 0 0 5px @box-shadow-color
+  }
+}
+
+
 
 .ui-inputfield, .ui-selectonemenu {
   box-shadow: none;
@@ -67,9 +87,10 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .form-control .ui-state-highlight{
   color: #ffffff;
   text-decoration: none;
+  border-color: lighten(@box-shadow-color,30%);
   background-color: @brand-primary;
   background-position: 0px;
   background-image: -moz-linear-gradient(top, @highlight-color-begin, @highlight-color-end);
@@ -89,18 +110,15 @@
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error, div.ui-selectonemenu.ui-state-error,
-div.ui-fluid div.ui-selectonemenu.ui-state-error {
+div.ui-fluid div.ui-selectonemenu.ui-state-error, .form-control .ui-state-error {
   border: 1px solid @box-shadow-color-error;
   color: @error-color;
 }
 
-/* autocomplete */
-.ui-autocomplete-input.ui-state-error + button.ui-autocomplete-dropdown {
-  border: 1px solid @box-shadow-color-error;
-  border-left: none;
-  border-right: none;
-  color: @error-color;
+div.ui-selectonemenu.ui-state-focus, div.ui-fluid div.ui-selectonemenu.ui-state-focus {
+  border-color: lighten(@box-shadow-color,30%);
 }
+
 
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
   font-weight: bold;
