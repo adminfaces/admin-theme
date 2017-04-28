@@ -162,3 +162,7 @@ a.ui-dialog-titlebar-icon {
 body .ui-overlaypanel {
   z-index: @dialog-zindex!important;
 }
+
+div.ui-selectcheckboxmenu-panel, div.ui-selectonemenu-panel, div.ui-autocomplete-panel {
+  z-index: (@dialog-zindex+1)!important;
+}
