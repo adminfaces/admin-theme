@@ -21,7 +21,7 @@ div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
     color: @admin-text-color;
     position: relative;
     font-size: @font-awesome-icon-size;
-    padding: 0 4px;
+    padding: 0 7px;
     overflow: hidden;
     content: "\f0d7" !important;
   }
@@ -36,6 +36,23 @@ div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
 }
 
 
+div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
+  background-image: none;
+  display: inline;
+
+  &:before {
+    font-family: FontAwesome;
+    color: @admin-text-color;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    padding: 0 10px;
+    top: 4px;
+    overflow: hidden;
+    content: "\f0d7" !important;
+  }
+}
+
+
 
 
 .ui-selectcheckboxmenu.ui-state-focus .ui-selectcheckboxmenu-label,
@@ -43,11 +60,11 @@ div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
   background-color: #ffffff;
 }
 
-div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu {
+div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu, div.ui-selectcheckboxmenu, div.ui-fluid  div.ui-selectcheckboxmenu {
   height: 34px;
   display: block;
   overflow: hidden;
-  border-color: #d2d6de;
+  border-color: @select-border-color;
   .border-left-radius(@default-border-radius);
   min-width: 150px; /* primefaces adds min-width: 328px; when on ui-state-exception */
 
@@ -90,7 +107,8 @@ body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox {
 
 div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
   border-color: #ffffff;
-  width: 32px;
+  width: @select-trigger-width;
+  height: 32px;
   &.ui-state-hover, &.ui-state-focus {
     background: @hover-color;
   }
@@ -104,8 +122,13 @@ div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
   min-width: 100px;
 }
 
-.ui-fluid div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
-  width: 32px;
+body div.ui-fluid div.ui-selectonemenu,body div.ui-fluid div.ui-selectcheckboxmenu, body div.ui-selectcheckboxmenu {
+
+  .ui-selectonemenu-trigger {
+    width: @select-trigger-width;
+    height: 32px;
+  }
+
 }
 
 div.ui-selectcheckboxmenu-header {
@@ -121,3 +144,109 @@ li.ui-selectlistbox-item {
   position: relative;
   overflow: hidden;
 }
+
+/* box-menu */
+
+div.ui-fluid div.ui-selectcheckboxmenu-multiple, body div.ui-selectcheckboxmenu-multiple {
+  display: inline-table;
+}
+
+body .ui-selectcheckboxmenu-multiple {
+  .ui-selectcheckboxmenu-trigger .ui-icon {
+    top: -1px;
+  }
+  .ui-selectcheckboxmenu-token-label {
+    background: @light-blue;
+    color: #fff;
+    height: 28px;
+    white-space: normal;
+    float: left;
+    border-radius: @default-border-radius;
+  }
+
+  span.ui-selectcheckboxmenu-token-icon.ui-icon-close {
+    background-image: none !important;
+    display: inline;
+    position: relative;
+    margin-left: -15px;
+    top:2px;
+    &:before {
+      font-family: FontAwesome;
+      color: #fff;
+      display: inline !important;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      margin-left: 5px;
+      top: -5px;
+      left: -1px;
+      overflow: hidden;
+      content: "\f00d" !important;
+    }
+    &:hover:before {
+      color: @hover-icon-color;
+    }
+  }
+
+  /* box colors */
+  &.box-default {
+    .ui-selectcheckboxmenu-token-label {
+      background: @gray;
+    }
+  }
+  &.box-danger {
+    .ui-selectcheckboxmenu-token-label {
+      background: @red;
+    }
+  }
+
+  &.box-fatal {
+    .ui-selectcheckboxmenu-token-label {
+      background: @dark-red;
+    }
+  }
+
+  &.box-warning {
+    .ui-selectcheckboxmenu-token-label {
+      background: @yellow;
+    }
+  }
+
+  &.box-success {
+    .ui-selectcheckboxmenu-token-label {
+      background: @green;
+    }
+  }
+
+  &.box-info {
+    .ui-selectcheckboxmenu-token-label {
+      background: @aqua;
+    }
+  }
+  &.no-color {
+    .ui-selectcheckboxmenu-token-label {
+      background: #d2d6de;
+    }
+  }
+}
+
+/* checkboxmenu interactions */
+
+body div.ui-selectcheckboxmenu.ui-state-focus, div.ui-fluid div.ui-selectcheckboxmenu.ui-state-focus {
+
+  -moz-box-shadow: 0 0 5px @box-shadow-color;
+  -webkit-box-shadow: 0 0 5px @box-shadow-color;
+  box-shadow: 0 0 5px @box-shadow-color;
+
+  &.ui-state-error {
+    -moz-box-shadow: 0 0 5px @box-shadow-color-error;
+    -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
+    box-shadow: 0 0 5px @box-shadow-color-error;
+  }
+}
+
+body div.ui-selectcheckboxmenu.ui-state-error, div.ui-fluid div.ui-selectcheckboxmenu.ui-state-error {
+  border: 1px solid @box-shadow-color-error;
+  color: @error-color;
+}
+
+
