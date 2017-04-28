@@ -29,10 +29,10 @@ div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
 
 @media (max-width: @screen-xs) {
   div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
-    &:before {
-      font-size: @font-awesome-icon-size + 1;
+      &:before {
+        font-size: @font-awesome-icon-size + 1;
+      }
     }
-  }
 }
 
 
@@ -188,7 +188,7 @@ body .ui-selectcheckboxmenu-multiple {
       color: @hover-icon-color;
     }
   }
-
+  
   /* box colors */
   &.box-default {
     .ui-selectcheckboxmenu-token-label {
@@ -233,23 +233,28 @@ body .ui-selectcheckboxmenu-multiple {
 
 /* checkboxmenu interactions */
 
-body div.ui-selectcheckboxmenu.ui-state-focus, div.ui-fluid div.ui-selectcheckboxmenu.ui-state-focus {
+body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu{
 
-  -moz-box-shadow: 0 0 5px @box-shadow-color;
-  -webkit-box-shadow: 0 0 5px @box-shadow-color;
-  box-shadow: 0 0 5px @box-shadow-color;
-  border-color: lighten(@box-shadow-color,30%);
+  &.ui-state-focus {
+    -moz-box-shadow: 0 0 5px @box-shadow-color;
+    -webkit-box-shadow: 0 0 5px @box-shadow-color;
+    box-shadow: 0 0 5px @box-shadow-color;
+    border-color: lighten(@box-shadow-color,30%);
+  }
 
-  &.ui-state-error {
+  &.ui-state-error, &.ui-state-error.ui-state-focus {
     -moz-box-shadow: 0 0 5px @box-shadow-color-error;
     -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
     box-shadow: 0 0 5px @box-shadow-color-error;
+    border: 1px solid @box-shadow-color-error;
   }
 }
 
-body div.ui-selectcheckboxmenu.ui-state-error, div.ui-fluid div.ui-selectcheckboxmenu.ui-state-error {
-  border: 1px solid @box-shadow-color-error;
-  color: @error-color;
+body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
+  &.ui-state-error, &.ui-state-error.ui-state-focus {
+    border: 1px solid @box-shadow-color-error;
+    color: @error-color;
+  }
 }
 
 

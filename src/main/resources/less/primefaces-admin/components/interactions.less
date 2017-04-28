@@ -31,6 +31,7 @@
   -moz-box-shadow: 0 0 5px @box-shadow-color-error;
   -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
   box-shadow: 0 0 5px @box-shadow-color-error;
+  border-color: @box-shadow-color-error;
 }
 
 .ui-inputfield.ui-state-focus, .ui-widget-content .ui-inputfield.ui-state-focus, .ui-widget-header .ui-inputfield.ui-state-focus {
@@ -45,6 +46,11 @@
   -moz-box-shadow: 0 0 5px @box-shadow-color-error;
   -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
   box-shadow: 0 0 5px @box-shadow-color-error;
+  border-color: @box-shadow-color-error;
+}
+
+.ui-inputfield.ui-state-focus.ui-state-error, .ui-widget-content .ui-inputfield.ui-state-focus.ui-state-error, .ui-widget-header .ui-inputfield.ui-state-focus.ui-state-error {
+  border-color: @box-shadow-color-error;
 }
 
 .form-control {
@@ -53,12 +59,17 @@
     -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
     border-color: darken(@box-shadow-color-error,7%);
     box-shadow: 0 0 5px @box-shadow-color-error;
+    order-color: @box-shadow-color-error;
   }
   &.ui-inputfield.ui-state-focus {
     -moz-box-shadow: 0 0 5px @box-shadow-color;
     -webkit-box-shadow: 0 0 5px @box-shadow-color;
     border-color: lighten(@box-shadow-color,30%);
     box-shadow: 0 0 5px @box-shadow-color
+  }
+
+  &.ui-inputfield.ui-state-focus.ui-state-error {
+    order-color: @box-shadow-color-error;
   }
 }
 
@@ -110,7 +121,8 @@
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error, div.ui-selectonemenu.ui-state-error,
-div.ui-fluid div.ui-selectonemenu.ui-state-error, .form-control .ui-state-error {
+div.ui-fluid div.ui-selectonemenu.ui-state-error,
+div.ui-fluid div.ui-selectonemenu.ui-state-error.ui-state-focus, .form-control .ui-state-error {
   border: 1px solid @box-shadow-color-error;
   color: @error-color;
 }
