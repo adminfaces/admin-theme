@@ -41,12 +41,12 @@ This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as 
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC2</version>
+    <version>1.0.0-RC4</version>
 <!--<classifier>dev</classifier> uncompressed theme.css-->
 </dependency>
 ----
 +
-. Add these context-param in your web.xml:
+. Add this context-param in your web.xml:
 
 ----
 <context-param>
