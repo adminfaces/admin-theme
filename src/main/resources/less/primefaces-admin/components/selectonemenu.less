@@ -29,10 +29,10 @@ div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
 
 @media (max-width: @screen-xs) {
   div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
-      &:before {
-        font-size: @font-awesome-icon-size + 1;
-      }
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
     }
+  }
 }
 
 
@@ -188,7 +188,7 @@ body .ui-selectcheckboxmenu-multiple {
       color: @hover-icon-color;
     }
   }
-  
+
   /* box colors */
   &.box-default {
     .ui-selectcheckboxmenu-token-label {
@@ -255,6 +255,11 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
     border: 1px solid @box-shadow-color-error;
     color: @error-color;
   }
+}
+
+
+body .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
+  padding-top: 6px;
 }
 
 
