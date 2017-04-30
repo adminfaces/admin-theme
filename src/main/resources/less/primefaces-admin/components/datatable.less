@@ -1,171 +1,61 @@
 /* datatable */
 
-.ui-datatable th {
-  font-weight: 600;
-}
+body .ui-datatable, body .ui-treetable {
 
-body .ui-datatable th.ui-state-default {
-  border-color: @datatable-border-color;
-}
+  .ui-treetable-header, ui-treetable-footer {
+    border-color: @datatable-border-color;
+  }
 
-body .ui-datatable th.ui-state-hover {
-  background: #d3d5d8;
-  border-color: @datatable-border-color;
-}
+  th {
+    font-weight: 600;
+  }
 
-body .ui-datatable th.ui-state-active {
-  background: #E6E6E6;
-}
+  th.ui-state-default {
+    border-color: @datatable-border-color;
+  }
 
-body .ui-datatable tbody > tr.ui-widget-content {
-  border-color: @datatable-border-color;
-}
+  th.ui-state-hover {
+    background: #d3d5d8;
+    border-color: @datatable-border-color;
+  }
 
-body .ui-datatable th.ui-state-active .ui-icon-carat-2-n-s {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
+  th.ui-state-active {
+    background: #E6E6E6;
+    color: #444;
+  }
 
-}
+  tbody > tr.ui-widget-content {
+    border-color: @datatable-border-color;
+  }
 
-body .ui-datatable tbody > tr > td > a {
-  cursor: pointer;
-  color: @light-blue;
-  &:hover {
-    text-decoration: underline;
+  tbody > tr > td > a {
     cursor: pointer;
-  }
-}
-
-body .ui-datatable .ui-datatable-tablewrapper tfoot {
-  display: none;
-}
-
-.ui-datatable-odd {
-  background-color: #f9f9f9;
-}
-
-.ui-datatable-rowordering.ui-state-active {
-  background: #14a4ff none repeat scroll 0 0;
-}
-
-body .ui-datatable .ui-selection-column {
-
-  .ui-radiobutton-box, .ui-chkbox-box {
-
-    background-color: #fff;
-
-    .ui-chkbox-icon:before {
-      color: #fff;
-    }
-
-    .ui-chkbox-icon {
-      &.ui-icon-check {
-        margin-left: 1px;
-        &:before {
-          color: #444;
-        }
-      }
-
-      &.ui-icon-blank {
-        &:before {
-          color: transparent;
-        }
-      }
-    }
-
-    .ui-icon-bullet {
-      width: 10px;
-      height: 10px;
-      margin-left: -5px;
-      margin-top: 3px;
-      color: #444!important;
-    }
-
-  }
-
-  .ui-radiobutton {
-    background-color:transparent;
-  }
-
-  .ui-radiobutton .ui-radiobutton-box.ui-state-active {
-    border-color: #444;
-    span.ui-radiobutton-icon{
-      background-color: #444!important;
+    color: @light-blue;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 
-
-}
-
-body .ui-datatable {
-  td.ui-selection-column, th.ui-selection-column {
-    @media (max-width: @screen-sm-max) {
-      width: 8% !important;
-    }
-
-    @media (max-width: @screen-xs-max) {
-      width: 10% !important;
-    }
-
+  .ui-datatable-tablewrapper tfoot {
+    display: none;
   }
 
-  tr.ui-widget-content.ui-state-hover {
-    border-bottom: #f4f4f4 !important;
-    border-top: #f4f4f4 !important;
-  }
-}
-
-body .ui-datatable tr.ui-state-hover, body .ui-datatable tr.ui-state-hover td {
-  background-color: @datatable-row-hover-color;
-}
-
-body .ui-datatable table tbody td {
-  padding: 10px 10px;
-}
-
-body .ui-datatable table {
-  border-collapse: collapse;
-  width: 100%;
-  table-layout: fixed;
-}
-
-body .ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-footer {
-  background: #fff;
-  border: none;
-}
-
-body .ui-datatable {
-  .border-bottom-radius(0);
-  .border-top-radius(3px);
-  &.box-default .ui-datatable-header {
-    border-top: 3px solid @gray;
+  tr.ui-state-hover, tr.ui-state-hover td {
+    background-color: @datatable-row-hover-color;
   }
 
-  &.box-primary .ui-datatable-header {
-    border-top: 3px solid @light-blue;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
   }
 
-  &.box-danger .ui-datatable-header {
-    border-top: 3px solid @red;
+  .ui-datatable-header, ui-treetable-header, .ui-datatable-footer, .ui-treetable-footer {
+    background: #fff;
+    border: none;
   }
 
-  &.box-fatal .ui-datatable-header {
-    border-top: 3px solid @dark-red;
-  }
-
-  &.box-warning .ui-datatable-header {
-    border-top: 3px solid @yellow;
-  }
-
-  &.box-success .ui-datatable-header {
-    border-top: 3px solid @green;
-  }
-
-  &.box-info .ui-datatable-header {
-    border-top: 3px solid @aqua;
-  }
-}
-
-body .ui-datatable {
   th[role="columnheader"].ui-state-default {
     background: #fff none;
     border: 1px solid @datatable-border-color;
@@ -207,18 +97,150 @@ body .ui-datatable {
   }
 
   .ui-widget-content .ui-state-highlight a {
-     text-decoration:underline;
+    text-decoration: underline;
 
-     &:hover {
-        color:#222;
-     }
+    &:hover {
+      color: #222;
+    }
+  }
+
+  .border-bottom-radius(0);
+  .border-top-radius(3px);
+
+  &.box-default {
+    .ui-datatable-header, ui-treetable-header {
+      border-top: 3px solid @gray;
+    }
+
+  }
+
+  &.box-primary {
+    .ui-datatable-header, ui-treetable-header {
+      border-top: 3px solid @light-blue;
+    }
+  }
+
+  &.box-danger {
+    .ui-datatable-header, ui-treetable-header {
+      border-top: 3px solid @red;
+    }
+  }
+
+  &.box-fatal {
+    .ui-datatable-header, ui-treetable-header {
+      border-top: 3px solid @dark-red;
+    }
+  }
+
+  &.box-warning {
+    .ui-datatable-header, ui-treetable-header {
+      border-top: 3px solid @yellow;
+    }
+  }
+
+  &.box-success {
+    .ui-datatable-header, .ui-treetable-header {
+      border-top: 3px solid @green;
+    }
+  }
+
+  &.box-info {
+    .ui-datatable-header, .ui-treetable-header {
+      border-top: 3px solid @aqua;
+    }
+  }
+
+  table tbody td, table thead th {
+    padding: 10px 10px;
+  }
+
+  th.ui-state-active .ui-icon-carat-2-n-s {
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
+
+  }
+}
+
+.ui-datatable-odd, ui-treetable-odd {
+  background-color: #f9f9f9;
+}
+
+.ui-datatable-rowordering.ui-state-active {
+  background: #14a4ff none repeat scroll 0 0;
+}
+
+body .ui-datatable, body .ui-treetable {
+
+  .ui-selection-column {
+
+    .ui-radiobutton-box, .ui-chkbox-box {
+
+      background-color: #fff;
+
+      .ui-chkbox-icon:before {
+        color: #fff;
+      }
+
+      .ui-chkbox-icon {
+        &.ui-icon-check {
+          margin-left: 1px;
+          &:before {
+            color: #444;
+          }
+        }
+
+        &.ui-icon-blank {
+          &:before {
+            color: transparent;
+          }
+        }
+      }
+
+      .ui-icon-bullet {
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+        margin-top: 3px;
+        color: #444 !important;
+      }
+
+    }
+
+    .ui-radiobutton {
+      background-color: transparent;
+    }
+
+    .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+      border-color: #444;
+      span.ui-radiobutton-icon {
+        background-color: #444 !important;
+      }
+    }
+
   }
 
 }
 
+body .ui-datatable, body .ui-treetable {
+  td.ui-selection-column, th.ui-selection-column {
+    @media (max-width: @screen-sm-max) {
+      width: 8% !important;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      width: 10% !important;
+    }
+
+  }
+
+  tr.ui-widget-content.ui-state-hover {
+    border-bottom: #f4f4f4 !important;
+    border-top: #f4f4f4 !important;
+  }
+}
+
 /* datatable paginator */
 
-body div.ui-datatable {
+body div.ui-datatable, body div.ui-treetable {
   div.ui-paginator {
     border: 1px solid #f4f4f4;
     span.ui-paginator-pages {
@@ -316,3 +338,4 @@ th .ui-column-customfilter {
     background-color: #fff;
   }
 }
+
