@@ -4,6 +4,7 @@ body .ui-datatable, body .ui-treetable {
 
   .ui-treetable-header, ui-treetable-footer {
     border-color: @datatable-border-color;
+    padding: 10px 5px;
   }
 
   th {
@@ -155,7 +156,14 @@ body .ui-datatable, body .ui-treetable {
   }
 
   table thead th.ui-filter-column {
-    padding: 0px 2px;
+    padding: 0 2px;
+  }
+
+  th .ui-column-customfilter {
+    .ui-selectonemenu, .ui-selectcheckboxmenu {
+      background-color: #fff;
+    }
+
   }
 
   th.ui-state-active .ui-icon-carat-2-n-s {
@@ -337,9 +345,4 @@ span.ui-paginator-current {
   font-weight: 600 !important;
 }
 
-th .ui-column-customfilter {
-  .ui-selectonemenu, .ui-selectcheckboxmenu {
-    background-color: #fff;
-  }
-}
 
