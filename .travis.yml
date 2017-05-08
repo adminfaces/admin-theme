@@ -5,7 +5,7 @@ cache:
   directories:
   - "$HOME/.m2/repository"
 script:
-- mvn clean package deploy --settings settings.xml
+- mvn clean package deploy --settings settings.xml 
 - mvn clean package deploy -Pdev --settings settings.xml
 - mvn clean package deploy -Pwithout-bootstrap --settings settings.xml
 - mvn clean package deploy -Pwithout-bootstrap-dev --settings settings.xml
