@@ -170,6 +170,56 @@ body .ui-datatable, body .ui-treetable {
     background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
 
   }
+
+  span.ui-sortable-column-icon {
+
+    &.ui-icon-carat-2-n-s {
+      background-image: none;
+      display: inline;
+
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        padding: 0 7px;
+        overflow: hidden;
+        content: "\f0dc";
+      }
+    }
+
+    &.ui-icon-carat-2-n-s.ui-icon-triangle-1-s {
+      background-image: none;
+      display: inline;
+
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        padding: 0 7px;
+        overflow: hidden;
+        content: "\f0d7" !important;
+      }
+    }
+
+    &.ui-icon-carat-2-n-s.ui-icon-triangle-1-n {
+      background-image: none;
+      display: inline;
+
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        padding: 0 7px;
+        overflow: hidden;
+        content: "\f0d8" !important;
+      }
+    }
+
+  }
+
 }
 
 .ui-datatable-odd, ui-treetable-odd {
