@@ -392,11 +392,80 @@ body .ui-paginator {
     padding: 6px 8px;
   }
 
+  a.ui-paginator-next span.ui-icon-seek-next {
+    background-image: none !important;
+    display: inline !important;
+    font-size: 0;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      top: -1px;
+      padding: 0 4px;
+      content: "\f051" !important;
+    }
+  }
+
+  a.ui-paginator-prev span.ui-icon-seek-prev {
+    background-image: none !important;
+    display: inline !important;
+    font-size: 0;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      top: -1px;
+      padding: 0 4px;
+      overflow: hidden;
+      content: "\f048" !important;
+    }
+  }
+
+  a.ui-paginator-last span.ui-icon-seek-end {
+    background-image: none !important;
+    display: inline !important;
+    font-size: 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      top: -1px;
+      padding: 0 4px;
+      overflow: hidden;
+      content: "\f04e" !important;
+    }
+  }
+
+  a.ui-paginator-first span.ui-icon-seek-first {
+    background-image: none !important;
+    display: inline !important;
+    font-size: 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      top: -1px;
+      padding: 0 4px;
+      overflow: hidden;
+      content: "\f04a" !important;
+    }
+  }
+
 }
 
 @media (max-width: @screen-xm) {
-  body div.ui-paginator .ui-paginator-pages {
-    display: none !important;
+  body div.ui-treetable, body div.ui-datatable {
+    div.ui-paginator span.ui-paginator-pages {
+      display: none ;
+    }
   }
 }
 
