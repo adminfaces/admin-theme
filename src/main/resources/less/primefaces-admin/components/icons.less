@@ -13,6 +13,15 @@
   background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
 }
 
+body .ui-widget-header .ui-icon {
+  opacity: .9;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+
+
 .ui-state-default .ui-icon {
   background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
 }
@@ -770,6 +779,7 @@ span.ui-icon-closethick {
 
 span.ui-icon-minusthick {
   background-image: none !important;
+  opacity: 1;
   display: inline !important;
   &:before {
     font-family: FontAwesome;
