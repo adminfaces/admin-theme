@@ -392,7 +392,7 @@ body .ui-paginator {
     padding: 6px 8px;
   }
 
-  a.ui-paginator-next span.ui-icon-seek-next {
+  a.ui-paginator-last span.ui-icon-seek-end {
     background-image: none !important;
     display: inline !important;
     font-size: 0;
@@ -407,7 +407,7 @@ body .ui-paginator {
     }
   }
 
-  a.ui-paginator-prev span.ui-icon-seek-prev {
+  a.ui-paginator-first span.ui-icon-seek-first {
     background-image: none !important;
     display: inline !important;
     font-size: 0;
@@ -423,12 +423,12 @@ body .ui-paginator {
     }
   }
 
-  a.ui-paginator-last span.ui-icon-seek-end {
+  a.ui-paginator-next span.ui-icon-seek-next {
     background-image: none !important;
     display: inline !important;
     font-size: 0;
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: -1px;
+    margin-right: -4px;
     &:before {
       font-family: FontAwesome;
       color: @admin-text-color;
@@ -441,12 +441,12 @@ body .ui-paginator {
     }
   }
 
-  a.ui-paginator-first span.ui-icon-seek-first {
+  a.ui-paginator-prev span.ui-icon-seek-prev {
     background-image: none !important;
     display: inline !important;
     font-size: 0;
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: -4px;
+    margin-right: -1px;
     &:before {
       font-family: FontAwesome;
       color: @admin-text-color;
