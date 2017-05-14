@@ -300,6 +300,36 @@ body .ui-datatable, body .ui-treetable {
   }
 }
 
+body span.ui-treetable-toggler.ui-icon-triangle-1-e {
+  background-image: none !important;
+  display: inline !important;
+  &:before {
+    font-family: FontAwesome;
+    color: @admin-text-color;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    top: -1px;
+    padding: 0 4px;
+    overflow: hidden;
+    content: "\f0da" !important;
+  }
+}
+
+span.ui-treetable-toggler.ui-icon-triangle-1-s {
+  background-image: none !important;
+  display: inline !important;
+  &:before {
+    font-family: FontAwesome;
+    color: @admin-text-color;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    top: -1px;
+    padding: 0 4px;
+    overflow: hidden;
+    content: "\f0d7" !important;
+  }
+}
+
 /* datatable paginator */
 
 body div.ui-datatable, body div.ui-treetable {
