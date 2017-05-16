@@ -35,13 +35,13 @@ body .ui-menu .ui-menu-list {
 }
 
 /* ripple/waves effect integration, overflow hidden so the effect doesn't exceed element size */
-@media (max-width: 768px) {
-ul.sidebar-menu > li {
-  overflow: hidden;
+@media (max-width: @screen-sm) {
+  ul.sidebar-menu > li {
+    overflow: hidden;
+  }
 }
 
-
-@media (min-width: 769px) {
+@media (min-width: (@screen-sm + 1)) {
   body ul.sidebar-menu > li {
     overflow: visible;
   }
