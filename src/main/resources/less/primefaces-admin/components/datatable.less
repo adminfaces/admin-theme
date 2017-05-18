@@ -276,6 +276,10 @@ body .ui-datatable, body .ui-treetable {
 
   }
 
+  th.ui-state-default[role="columnheader"] {
+    background: transparent none;
+  }
+
 }
 
 body .ui-datatable, body .ui-treetable {
@@ -396,8 +400,8 @@ body .ui-paginator {
       font-family: FontAwesome;
       color: @admin-text-color;
       position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -1px;
+      font-size:  (@font-awesome-icon-size - 1) ;
+      top: 0;
       padding: 0 4px;
       content: "\f051" !important;
     }
@@ -411,8 +415,8 @@ body .ui-paginator {
       font-family: FontAwesome;
       color: @admin-text-color;
       position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -1px;
+      font-size: (@font-awesome-icon-size - 1);
+      top: 0;
       padding: 0 4px;
       overflow: hidden;
       content: "\f048" !important;
@@ -429,8 +433,8 @@ body .ui-paginator {
       font-family: FontAwesome;
       color: @admin-text-color;
       position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -1px;
+      font-size: (@font-awesome-icon-size - 1);
+      top: 0;
       padding: 0 4px;
       overflow: hidden;
       content: "\f04e" !important;
@@ -447,8 +451,8 @@ body .ui-paginator {
       font-family: FontAwesome;
       color: @admin-text-color;
       position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -1px;
+      font-size: (@font-awesome-icon-size - 1);
+      top: 0;
       padding: 0 4px;
       overflow: hidden;
       content: "\f04a" !important;
