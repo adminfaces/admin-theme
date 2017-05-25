@@ -225,3 +225,28 @@ body .ui-tabs > ul > li > a {
   font-weight: normal;
   color: #555555;
 }
+
+body .ui-tabs .ui-tabs-nav li span.ui-icon-close {
+  background-image: none !important;
+  display: inline;
+  float: none;
+  &:before {
+    font-family: FontAwesome;
+    color: @admin-text-color;
+    display: inline !important;
+    position: relative;
+    font-size: @font-awesome-icon-size - 2;
+    margin-right: 2px;
+    overflow: hidden;
+    content: "\f00d" !important;
+  }
+  &:hover:before {
+    color: @hover-icon-color;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  body .ui-tabs .ui-tabs-nav li span.ui-icon-close:before {
+    font-size: @font-awesome-icon-size - 1;
+  }
+}
