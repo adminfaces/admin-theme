@@ -1,4 +1,3 @@
-/* states and images */
 .ui-icon {
   width: 16px;
   height: 16px;
@@ -924,5 +923,15 @@ a {
     &:active {
       -webkit-transform: scale3d(0.9, 0.9, 1);
     }
+  }
+}
+
+span.ui-icon.fa:before {
+  font-size: @font-awesome-icon-size;
+}
+
+@media (max-width: @screen-sm) {
+  span.ui-icon.fa:before  {
+    font-size: @font-awesome-icon-size + 1;
   }
 }
