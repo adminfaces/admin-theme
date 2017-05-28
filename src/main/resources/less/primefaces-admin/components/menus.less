@@ -94,7 +94,71 @@ body .ui-menu.ui-menu-toggleable li.ui-widget-header h3 {
   padding-left: 15px;
 }
 
+/* panelmenu */
+
+body .ui-panelmenu li.ui-menuitem span.ui-menuitem-text {
+  padding-left: 0;
+}
+
+
+div.ui-panelmenu div.ui-panelmenu-panel {
+  overflow: hidden;
+
+  span.ui-menuitem-icon {
+    left: .7em;
+  }
+}
+
+body .ui-panelmenu .ui-menu-parent > .ui-menuitem-link {
+
+  > .ui-icon {
+    left: 1.6em;
+    top: 5px;
+  }
+
+  &.ui-menuitem-link-hasicon {
+    padding-left: 2.5em;
+  }
+}
+
+
+body span.ui-panelmenu-icon.ui-icon {
+
+  &.ui-icon-triangle-1-e {
+    background-image: none;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      left: -50px;
+      top: -4px;
+      font-size: @font-awesome-icon-size;
+      overflow: hidden;
+      content: "\f0da" !important;
+    }
+  }
+
+  &.ui-icon-triangle-1-s {
+    background-image: none;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      left: -50px;
+      top: -4px;
+      font-size: @font-awesome-icon-size;
+      overflow: hidden;
+      content: "\f0d7" !important;
+    }
+  }
+}
+
 /* ripple/waves effect integration, overflow hidden so the effect doesn't exceed element size */
+
 @media (max-width: @screen-sm) {
   ul.sidebar-menu > li {
     overflow: hidden;
@@ -110,14 +174,6 @@ body .ui-menu.ui-menu-toggleable li.ui-widget-header h3 {
 a.sidebar-toggle {
   overflow: hidden;
   position: relative;
-}
-
-div.ui-panelmenu div.ui-panelmenu-panel {
-  overflow: hidden;
-
-  span.ui-menuitem-icon {
-    left: .7em;
-  }
 }
 
 @media (max-width: (@screen-sm - 1)) {
@@ -144,54 +200,4 @@ div.ui-panelmenu div.ui-panelmenu-panel {
   }
 
 }
-
-body .ui-panelmenu .ui-menu-parent > .ui-menuitem-link {
-
-  > .ui-icon {
-    left: 1.6em;
-    top: 5px;
-  }
-
-  &.ui-menuitem-link-hasicon {
-    padding-left: 2.5em;
-  }
-}
-
-
-body span.ui-panelmenu-icon.ui-icon {
-
-  &.ui-icon-triangle-1-e {
-    background-image: none;
-    display: inline;
-    position: relative;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      left: -55px;
-      top: -4px;
-      font-size: @font-awesome-icon-size;
-      overflow: hidden;
-      content: "\f0da" !important;
-    }
-  }
-
-  &.ui-icon-triangle-1-s {
-    background-image: none;
-    display: inline;
-    position: relative;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      left: -55px;
-      top: -4px;
-      font-size: @font-awesome-icon-size;
-      overflow: hidden;
-      content: "\f0d7" !important;
-    }
-  }
-}
-
-
 
