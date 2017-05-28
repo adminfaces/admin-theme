@@ -38,3 +38,14 @@ body .ui-tree .ui-tree-toggler {
     }
   }
 }
+
+@media (max-width: @screen-sm) {
+  body .ui-tree .ui-tree-toggler {
+
+    &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
+      &:before {
+        font-size: @font-awesome-icon-size + 1;
+      }
+    }
+  }
+}

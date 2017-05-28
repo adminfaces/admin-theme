@@ -100,7 +100,6 @@ body .ui-panelmenu li.ui-menuitem span.ui-menuitem-text {
   padding-left: 0;
 }
 
-
 div.ui-panelmenu div.ui-panelmenu-panel {
   overflow: hidden;
 
@@ -120,7 +119,6 @@ body .ui-panelmenu .ui-menu-parent > .ui-menuitem-link {
     padding-left: 2.5em;
   }
 }
-
 
 body span.ui-panelmenu-icon.ui-icon {
 
@@ -154,6 +152,18 @@ body span.ui-panelmenu-icon.ui-icon {
       overflow: hidden;
       content: "\f0d7" !important;
     }
+  }
+}
+
+@media (max-width: @screen-sm) {
+  body span.ui-panelmenu-icon.ui-icon {
+
+    &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
+      &:before {
+        font-size: @font-awesome-icon-size + 1;
+      }
+    }
+
   }
 }
 
