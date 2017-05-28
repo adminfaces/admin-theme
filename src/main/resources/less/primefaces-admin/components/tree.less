@@ -2,6 +2,39 @@
   position: relative;
   left: 3px;
 }
-.ui-tree-toggler {
-  position: relative !important;
+
+body .ui-tree .ui-tree-toggler {
+  position: relative;
+
+  &.ui-icon-triangle-1-e {
+    background-image: none;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      margin: 0 7px;
+      top: -4px;
+      font-size: @font-awesome-icon-size;
+      overflow: hidden;
+      content: "\f0da" !important;
+    }
+  }
+
+  &.ui-icon-triangle-1-s {
+    background-image: none;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      margin: 0 7px;
+      top: -4px;
+      font-size: @font-awesome-icon-size;
+      overflow: hidden;
+      content: "\f0d7" !important;
+    }
+  }
 }
