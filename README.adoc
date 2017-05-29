@@ -41,7 +41,7 @@ This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as 
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC5</version>
+    <version>1.0.0-RC6</version>
 <!--<classifier>dev</classifier> uncompressed theme.css-->
 </dependency>
 ----
@@ -110,7 +110,7 @@ The default theme comes `compressed`, with `Bootstrap (3.3.7)` embedded and uses
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC5</version>
+    <version>1.0.0-RC6</version>
 </dependency>
 ----
 
@@ -124,7 +124,7 @@ The `dev` classifier will bring a theme.css *without minification*.
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC5</version>
+    <version>1.0.0-RC6</version>
 <classifier>dev</classifier>
 </dependency>
 ----
@@ -139,7 +139,7 @@ The `without-bootstrap` classifier will bring a theme.css *without bootstrap emb
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC5</version>
+    <version>1.0.0-RC6</version>
 <classifier>without-bootstrap</classifier>
 </dependency>
 ----
@@ -155,7 +155,7 @@ The `without-jsf` classifier will bring a theme.css *without JSF resource handli
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC5</version>
+    <version>1.0.0-RC6</version>
 <classifier>without-jsf</classifier>
 </dependency>
 ----
