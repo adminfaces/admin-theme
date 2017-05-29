@@ -11,7 +11,7 @@
 
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-RC6</version>
 
     <name>admin-theme</name>
     <url>https://github.com/adminfaces/admin-theme</url>
@@ -374,7 +374,7 @@
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/primefaces-admin/"/>
+                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/primefaces-admin/" />
                                     </target>
                                 </configuration>
                             </execution>
@@ -498,7 +498,7 @@
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/primefaces-admin/"/>
+                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/primefaces-admin/" />
                                     </target>
                                 </configuration>
                             </execution>
