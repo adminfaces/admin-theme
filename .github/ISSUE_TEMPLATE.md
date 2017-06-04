@@ -2,13 +2,14 @@
 
 Tell us briefly what the problem is about.
 
+##### Current Behaviour
+
+An image may worth a thousand words
+
 ##### Expected Behaviour
 
 An image may worth a thousand words
 
-##### Current Behaviour
-
-An image may worth a thousand words
 
 ##### How to reproduce  
 
