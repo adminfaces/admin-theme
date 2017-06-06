@@ -480,8 +480,15 @@ body .ui-paginator {
 }
 
 @media (max-width: @screen-xm) {
-  body .ui-paginator .ui-paginator-prev {
-    margin-right: 0px;
+  body .ui-paginator {
+
+    .ui-paginator-prev {
+      margin-right: 0px;
+    }
+
+    span.ui-icon:hover {
+      opacity: 1;
+    }
   }
 
 }
