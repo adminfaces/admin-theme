@@ -28,5 +28,5 @@ A sample xhtml code may help, ex:
 
 ##### Additional Information
 
-* Affected version 
-* Browser version
+* Affected version:  
+* Browser version: 

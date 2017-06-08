@@ -14,6 +14,80 @@
     .border-right-radius(3px);
   }
 
+  li.ui-autocomplete-token {
+    background: @light-blue;
+    color: #fff;
+    height: 28px;
+    white-space: normal;
+  }
+
+  span.ui-autocomplete-token-label {
+    padding-right: 1.5em;
+    float: left;
+    display: inline;
+  }
+
+  span.ui-icon-close {
+    background-image: none !important;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: #fff;
+      display: inline !important;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      margin-left: 5px;
+      top: -15px;
+      overflow: hidden;
+      content: "\f00d" !important;
+    }
+    &:hover:before {
+      color: @hover-icon-color;
+    }
+  }
+
+  /* box colors */
+  &.box-default {
+    .ui-autocomplete-token {
+      background: @gray;
+    }
+  }
+  &.box-danger {
+    .ui-autocomplete-token {
+      background: @red;
+    }
+  }
+
+  &.box-fatal {
+    .ui-autocomplete-token {
+      background: @dark-red;
+    }
+  }
+
+  &.box-warning {
+    .ui-autocomplete-token {
+      background: @yellow;
+    }
+  }
+
+  &.box-success {
+    .ui-autocomplete-token {
+      background: @green;
+    }
+  }
+
+  &.box-info {
+    .ui-autocomplete-token {
+      background: @aqua;
+    }
+  }
+  &.no-color {
+    .ui-autocomplete-token {
+      background: #d2d6de;
+    }
+  }
+
 }
 
 
@@ -56,6 +130,10 @@ button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
   }
 }
 
+div.ui-autocomplete-itemtip {
+  z-index: (@dialog-zindex + 1)!important;
+  width: auto!important;
+}
 
 /* interaction cues */
 
