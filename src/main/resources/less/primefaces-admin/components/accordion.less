@@ -26,10 +26,10 @@ div.ui-accordion .ui-accordion-header {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    border-top: 3px solid  @tabview-border-top-color;
+    border-top: 3px solid @tabview-border-top-color;
 
     &.box-default {
-      border-top: 3px solid  @gray;
+      border-top: 3px solid @gray;
     }
     &.box-danger {
       border-top: 3px solid @red;
@@ -56,8 +56,50 @@ div.ui-accordion .ui-accordion-header {
     }
   }
 
+  span.ui-icon-triangle-1-e {
+    background-image: none;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      left:-22px;
+      font-size: @font-awesome-icon-size;
+      overflow: hidden;
+      content: "\f0da" !important;
+    }
+
+  }
+
+  span.ui-icon-triangle-1-s {
+    background-image: none;
+    display: inline;
+    position: relative;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      left:-22px;
+      font-size: @font-awesome-icon-size;
+      overflow: hidden;
+      content: "\f0d7" !important;
+    }
+  }
+
+}
+
+@media (max-width: @screen-sm) {
+  div.ui-accordion .ui-accordion-header {
+
+    &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
+      &:before {
+        font-size: @font-awesome-icon-size + 1;
+      }
+    }
+  }
 }
 
 .ui-accordion .ui-accordion-header.ui-state-hover {
-  background: #ededf0;
+  background: @tabview-hover-color;
 }
