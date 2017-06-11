@@ -21,7 +21,7 @@
 }
 
 div.ui-panel-titlebar {
-    border: 1px solid @panel-border-bottom-color;
+  border: 1px solid @panel-border-bottom-color;
 }
 
 div.ui-panel-footer {
@@ -36,7 +36,6 @@ div.ui-panel.no-border .ui-panel-footer {
   border: none;
 }
 
-
 div.ui-panel .ui-panel-title {
   display: inline-block;
   font-size: 18px;
@@ -44,19 +43,17 @@ div.ui-panel .ui-panel-title {
   line-height: 1;
   color: @admin-text-color;
   padding: 8px 5px;
-
 }
 
 div.ui-panel .ui-panel-content {
   padding: 10px 10px;
 }
 
-
 body .ui-panel {
   border-radius: @default-border-radius;
 
   &.box-default {
-    border-top: 3px solid  @gray;
+    border-top: 3px solid @gray;
   }
 
   &.box-primary {
@@ -82,8 +79,14 @@ body .ui-panel {
   &.box-info {
     border-top: 3px solid @aqua;
   }
-}
 
+  &.card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    border: none;
+  }
+}
 
 /* PanelMenu */
 .ui-panelmenu .ui-panelmenu-header.ui-state-active,
@@ -103,9 +106,9 @@ body .ui-panel {
 }
 
 a.ui-panel-titlebar-icon {
-  border: 0!important;
+  border: 0 !important;
   > span:before {
-    top:2px;
+    top: 2px;
   }
 }
 
