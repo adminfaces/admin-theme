@@ -1,8 +1,13 @@
+body .ui-orderlist-caption {
+  border-color: @picklist-border-color;
+}
+
 body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
+
+  border-color: @picklist-border-color;
 
   .ui-orderlist-controls {
     margin-right: 0;
-    margin-top: 10px;
 
     button {
       background-color: transparent;
@@ -109,3 +114,10 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
 
   }
 }
+
+@media (min-width: (@screen-sm + 1 )) {
+  body .ui-orderlist, body .ui-orderlist.ui-grid-responsive .ui-orderlist-controls {
+    margin-top: 20px;
+  }
+}
+
