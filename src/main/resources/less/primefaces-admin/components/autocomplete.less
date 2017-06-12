@@ -1,4 +1,4 @@
-.ui-autocomplete {
+body .ui-autocomplete {
   button.ui-autocomplete-dropdown {
     border-left: 0;
     border-right: 0;
@@ -9,7 +9,11 @@
       background: @hover-color;
       .border-left-radius(0px);
     }
+    &:active {
+      .box-shadow(none);
+    }
   }
+
   input.ui-autocomplete-dd-input {
     .border-right-radius(3px);
   }
