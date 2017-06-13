@@ -84,7 +84,25 @@ ul.ui-selectlistbox-list > li.ui-selectlistbox-item {
 }
 
 .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-close {
+  box-shadow: none;
   padding: 1px !important;
+
+  span.ui-icon-circle-close {
+    background-image: none !important;
+    display: inline !important;
+    text-indent: initial;
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      top: -5px;
+      left: 5px;
+      overflow: hidden;
+      content: "\f00d" !important;
+    }
+  }
+
 }
 
 div.ui-selectcheckboxmenu {
@@ -157,11 +175,6 @@ body .ui-selectcheckboxmenu-multiple {
   .ui-selectcheckboxmenu-trigger .ui-icon {
     top: -1px;
   }
-
-  li.ui-selectcheckboxmenu-token {
-    white-space: normal;
-  }
-
   .ui-selectcheckboxmenu-token-label {
     background: @light-blue;
     color: #fff;
@@ -169,6 +182,10 @@ body .ui-selectcheckboxmenu-multiple {
     white-space: normal;
     float: left;
     border-radius: @default-border-radius;
+  }
+
+  li.ui-selectcheckboxmenu-token {
+    white-space: normal;
   }
 
   span.ui-selectcheckboxmenu-token-icon.ui-icon-close {
@@ -236,6 +253,32 @@ body .ui-selectcheckboxmenu-multiple {
   }
 }
 
+body .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-filter-container {
+
+  span.ui-icon-search {
+    background-image: none !important;
+    display: inline;
+    position: relative!important;
+    text-indent: initial;
+    float: right;
+    top: 7px;
+    right: 0;
+    width: 20px;
+
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      display: inline !important;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      margin-left: 5px;
+      top: -3px;
+      overflow: hidden;
+      content: "\f002" !important;
+    }
+  }
+}
+
 /* checkboxmenu interactions */
 
 body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu{
@@ -261,7 +304,6 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
     color: @error-color;
   }
 }
-
 
 body .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
   padding-top: 6px;
