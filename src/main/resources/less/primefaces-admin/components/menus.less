@@ -111,6 +111,46 @@ body .ui-panelmenu {
   div.ui-panelmenu-panel {
     overflow: hidden;
 
+    > H3 {
+      padding: 2px 0;
+
+      .ui-icon-triangle-1-s {
+        background-image: none!important;
+        display: inline;
+        position: relative;
+        float: left;
+        text-indent: initial;
+        left: 10px;
+        top: 15px;
+        &:before {
+          font-family: FontAwesome;
+          color: @admin-text-color;
+          position: relative;
+          font-size: @font-awesome-icon-size;
+          overflow: hidden;
+          content: "\f0d7" !important;
+        }
+      }
+
+      .ui-icon-triangle-1-e {
+        background-image: none!important;
+        display: inline;
+        position: relative;
+        float: left;
+        text-indent: initial;
+        left: 10px;
+        top: 15px;
+        &:before {
+          font-family: FontAwesome;
+          color: @admin-text-color;
+          position: relative;
+          font-size: @font-awesome-icon-size;
+          overflow: hidden;
+          content: "\f0da" !important;
+        }
+      }
+    }
+
     span.ui-menuitem-icon {
       left: .7em;
     }
