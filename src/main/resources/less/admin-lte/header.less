@@ -6,7 +6,7 @@
 .main-header {
   position: relative;
   max-height: 100px;
-  z-index: 1030;
+  z-index: (@dialog-zindex - 1);
   //Navbar
   .navbar {
     .transition(margin-left @transition-speed @transition-fn);
