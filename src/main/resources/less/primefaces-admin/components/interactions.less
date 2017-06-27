@@ -30,7 +30,7 @@
   -moz-box-shadow: 0 0 5px @box-shadow-color-error;
   -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
   box-shadow: 0 0 5px @box-shadow-color-error;
-  border-color: @box-shadow-color-error;
+  border-color: darken(@box-shadow-color-error, 7%);
 }
 
 .ui-inputfield.ui-state-focus, .ui-widget-content .ui-inputfield.ui-state-focus, .ui-widget-header .ui-inputfield.ui-state-focus {
@@ -44,7 +44,7 @@
   -moz-box-shadow: 0 0 5px @box-shadow-color-error;
   -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
   box-shadow: 0 0 5px @box-shadow-color-error;
-  border-color: @box-shadow-color-error;
+  border-color: darken(@box-shadow-color-error, 7%);
 }
 
 .ui-inputfield.ui-state-focus.ui-state-error, .ui-widget-content .ui-inputfield.ui-state-focus.ui-state-error, .ui-widget-header .ui-inputfield.ui-state-focus.ui-state-error {
@@ -57,7 +57,6 @@
     -webkit-box-shadow: 0 0 5px @box-shadow-color-error;
     border-color: darken(@box-shadow-color-error, 7%);
     box-shadow: 0 0 5px @box-shadow-color-error;
-    order-color: @box-shadow-color-error;
   }
   &.ui-inputfield.ui-state-focus {
     -moz-box-shadow: 0 0 5px @box-shadow-color;
@@ -66,9 +65,6 @@
     box-shadow: 0 0 5px @box-shadow-color
   }
 
-  &.ui-inputfield.ui-state-focus.ui-state-error {
-    order-color: @box-shadow-color-error;
-  }
 }
 
 .ui-inputfield, .ui-selectonemenu {

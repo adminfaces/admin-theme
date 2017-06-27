@@ -1,0 +1,80 @@
+/* material design classes */
+
+.ui-inputfield.material, .ui-selectonemenu.material {
+  display: block;
+  border: none;
+  border-bottom: solid 1px @light-blue;
+  background-size: 200px 100%;
+  border-radius: 0 !important;
+  transition: all 0.1s cubic-bezier(.64, .09, .08, 1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, @light-blue 4%) no-repeat -10000px 0;
+  &.ui-state-focus {
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    outline: none;
+    background-position: 0 0;
+    &::-webkit-input-placeholder {
+      color: @light-blue;
+      font-size: 11px;
+      transform: translateY(-20px);
+      transition: all 0.3s ease-in-out;
+      visibility: visible !important;
+    }
+    &::-moz-placeholder { //cant be inline
+      color: @light-blue;
+      font-size: 11px;
+      transform: translateY(-20px);
+      transition: all 0.3s ease-in-out;
+      visibility: visible !important;
+    }
+    &:-ms-input-placeholder { //cant be inline
+      color: @light-blue;
+      font-size: 11px;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-20px);
+      visibility: visible !important;
+    }
+
+  }
+
+  &.ui-state-error {
+    border: none;
+    box-shadow: none;
+    border-bottom: solid 1px @box-shadow-color-error;
+    color: @text-color;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, @error-color 4%) no-repeat -10000px 0;
+    &::-webkit-input-placeholder {
+      color: @error-color;
+    }
+    &.ui-state-focus {
+      background-position: 0 0;
+      color: @text-color;
+      box-shadow: none;
+      &::-webkit-input-placeholder {
+        color: @error-color;
+      }
+    }
+  }
+
+  .ui-selectonemenu-trigger {
+    &.ui-state-hover, &.ui-state-focus {
+      background: transparent !important;
+      box-shadow: none!important;
+      -webkit-box-shadow: none!important;
+    }
+  }
+
+  &.ui-state-focus .ui-selectonemenu-label {
+    font-size: 11px;
+  }
+
+  span.ui-icon-triangle-1-s:before {
+    top:8px;
+  }
+
+  label {
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+  }
+
+}
