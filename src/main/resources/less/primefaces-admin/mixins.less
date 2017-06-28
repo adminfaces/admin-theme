@@ -1,0 +1,37 @@
+.input-placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    font-size: 11px;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+    visibility: visible !important;
+  }
+  &::-moz-placeholder { //cant be inline
+    color: @color;
+    font-size: 11px;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+    visibility: visible !important;
+  }
+  &:-ms-input-placeholder { //cant be inline
+    color: @color;
+    font-size: 11px;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
+    visibility: visible !important;
+  }
+}
+
+.input-placeholder-color(@color) {
+
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  &::-moz-placeholder { //cant be inline
+    color: @color;
+  }
+  &:-ms-input-placeholder { //cant be inline
+    color: @color;
+  }
+
+}
