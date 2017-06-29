@@ -52,9 +52,6 @@ div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
   }
 }
 
-
-
-
 .ui-selectcheckboxmenu.ui-state-focus .ui-selectcheckboxmenu-label,
 .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label.ui-state-hover {
   background-color: #ffffff;
@@ -68,13 +65,19 @@ div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu, div.ui-selectcheckboxme
   .border-left-radius(@default-border-radius);
   min-width: 150px; /* primefaces adds min-width: 328px; when on ui-state-exception */
 
-  > .ui-selectonemenu-trigger {
-    width: 30px;
+   .ui-selectonemenu-trigger {
+    width: @select-trigger-width;
+    height: @select-trigger-height;
     padding: 3px 6px;
     .border-left-radius(0px);
+
+    &.ui-state-hover, &.ui-state-focus {
+      background: transparent;
+      .box-shadow(none);
+    }
   }
 
-  > .ui-selectonemenu-label {
+  .ui-selectonemenu-label {
     padding-left: 6px;
   }
 }
@@ -84,7 +87,7 @@ ul.ui-selectlistbox-list > li.ui-selectlistbox-item {
 }
 
 .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-close {
-  box-shadow: none;
+  .box-shadow(none);
   padding: 1px !important;
 
   span.ui-icon-circle-close {
@@ -126,9 +129,10 @@ body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox {
 div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
   border-color: transparent;
   width: @select-trigger-width;
-  height: 32px;
+  height: @select-trigger-height;
+  .box-shadow(none);
   &.ui-state-hover, &.ui-state-focus {
-    background: @hover-color;
+    background: transparent;
   }
   .ui-icon {
     margin-top: 6px;
@@ -140,14 +144,6 @@ div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
   min-width: 100px;
 }
 
-body div.ui-fluid div.ui-selectonemenu,body div.ui-fluid div.ui-selectcheckboxmenu, body div.ui-selectcheckboxmenu {
-
-  .ui-selectonemenu-trigger {
-    width: @select-trigger-width;
-    height: 32px;
-  }
-
-}
 
 div.ui-selectcheckboxmenu-header {
   border: 0;
@@ -304,6 +300,7 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
     border: 1px solid @box-shadow-color-error;
   }
 }
+
 
 body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
   &.ui-state-error, &.ui-state-error.ui-state-focus {
