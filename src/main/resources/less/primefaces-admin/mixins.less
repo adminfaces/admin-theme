@@ -3,21 +3,24 @@
     color: @color;
     font-size: 11px;
     transform: translateY(-20px);
-    transition: all 0.3s ease-in-out;
+    -webkit-transform: translateY(-20px);
+    .transition(all 0.3s ease-in-out);
     visibility: visible !important;
   }
   &::-moz-placeholder { //cant be inline
     color: @color;
     font-size: 11px;
     transform: translateY(-20px);
-    transition: all 0.3s ease-in-out;
+    -moz-transform: translateY(-20px);
+    .transition(all 0.3s ease-in-out);
     visibility: visible !important;
   }
   &:-ms-input-placeholder { //cant be inline
     color: @color;
     font-size: 11px;
-    transition: all 0.3s ease-in-out;
+    .transition(all 0.3s ease-in-out);
     transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
     visibility: visible !important;
   }
 }
