@@ -1,5 +1,7 @@
 /* material design classes */
 
+//textarea password checkboxmenu
+
 body, body .ui-widget, body div.ui-fluid {
 
   div.material {
@@ -19,7 +21,7 @@ body, body .ui-widget, body div.ui-fluid {
 
     &.focused { //focused is set via javascript on input focus or when input has any value
 
-      input.ui-inputfield, input.ui-autocomplete-input, span.ui-calendar > input.ui-inputfield {
+      input.ui-inputfield, textarea.ui-inputtextarea, input.ui-autocomplete-input, span.ui-calendar > input.ui-inputfield {
 
         &::-webkit-input-placeholder { //now placeholder is visible because label will float
           color: #bbb;
@@ -40,6 +42,10 @@ body, body .ui-widget, body div.ui-fluid {
         }
       }
 
+      textarea.ui-inputtextarea.ui-inputfield ~ label {
+        top:-8px;
+      }
+
       span.ui-autocomplete, span.ui-calendar {
 
         ~ label {
@@ -53,10 +59,11 @@ body, body .ui-widget, body div.ui-fluid {
         }
 
       }
-    }  //end focused
+    }
+    //end focused
 
     //placeholder transparent by default because input label must be visible
-    input.ui-inputfield, input.ui-autocomplete-input {
+    input.ui-inputfield, input.ui-autocomplete-input, textarea.ui-inputtextarea {
 
       &::-webkit-input-placeholder {
         color: transparent;
@@ -89,7 +96,7 @@ body, body .ui-widget, body div.ui-fluid {
       }
     }
 
-    input.ui-inputfield, div.ui-selectonemenu, .ui-autocomplete, .ui-selectcheckboxmenu, .ui-calendar {
+    input.ui-inputfield, textarea.ui-inputtextarea, div.ui-selectonemenu, .ui-autocomplete, .ui-selectcheckboxmenu, .ui-calendar {
 
       display: block;
       border: none;
@@ -192,6 +199,41 @@ body, body .ui-widget, body div.ui-fluid {
       color: @error-color;
     }
 
+    textarea.ui-inputtextarea.ui-inputfield {
+      border: 1px solid @input-border-color;
+      padding: 15px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 98%, @light-blue 2%) no-repeat -10000px 0;
+      background-size: 2000px 100%;
+      ~ label {
+        padding: 7px;
+      }
+
+      &.ui-state-focus {
+        background-position: 0 0;
+        ~ label {
+          color: @light-blue;
+          font-size: 12px;
+          top: -8px;
+        }
+
+      }
+
+      &.ui-state-error {
+        border: solid 1px @box-shadow-color-error;
+        color: @text-color;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 98%, @error-color 2%) no-repeat -10000px 0;
+
+        &.ui-state-focus {
+          background-position: 0 0;
+
+        }
+
+        ~ label {
+          color: @error-color;
+        }
+      }
+
+    }
   }
   //div material
 
