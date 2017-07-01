@@ -1,9 +1,96 @@
 /* material design classes */
 
 body, body .ui-widget, body div.ui-fluid {
-  .ui-inputfield, .ui-selectonemenu, div.ui-selectonemenu, .ui-autocomplete, .ui-selectcheckboxmenu, .ui-calendar {
 
-    &.material, &.material input,  &.material select {
+  div.material {
+    position: relative;
+
+    .ui-message.ui-message-error {
+      font-size: 12px;
+      color: @error-color;
+      background: transparent;
+      border: none;
+      margin-left: -5px;
+
+      .ui-message-error-icon {
+        display: none;
+      }
+    }
+
+    &.focused { //focused is set via javascript on input focus or when input has any value
+
+      input.ui-inputfield, input.ui-autocomplete-input, span.ui-calendar > input.ui-inputfield {
+
+        &::-webkit-input-placeholder { //now placeholder is visible because label will float
+          color: #bbb;
+        }
+
+        &::-moz-placeholder {
+          color: #bbb;
+        }
+
+        &:-ms-input-placeholder {
+          color: #bbb;
+        }
+
+        ~ label {
+          color: @light-blue;
+          font-size: 12px;
+          top: -15px;
+        }
+      }
+
+      span.ui-autocomplete, span.ui-calendar {
+
+        ~ label {
+          color: @light-blue;
+          font-size: 12px;
+          top: -15px;
+
+          &.ui-state-error {
+            color: @error-color;
+          }
+        }
+
+      }
+    }  //end focused
+
+    //placeholder transparent by default because input label must be visible
+    input.ui-inputfield, input.ui-autocomplete-input {
+
+      &::-webkit-input-placeholder {
+        color: transparent;
+        .transition(240ms);
+      }
+
+      &::-moz-placeholder {
+        color: transparent;
+        .transition(240ms);
+      }
+
+      &:-ms-input-placeholder {
+        color: transparent;
+        .transition(240ms);
+      }
+
+      &:focus {
+        &::-webkit-input-placeholder {
+          .transition(none);
+        }
+
+        &::-moz-placeholder {
+          .transition(none);
+        }
+
+        &:-ms-input-placeholder {
+          .transition(none);
+        }
+
+      }
+    }
+
+    input.ui-inputfield, div.ui-selectonemenu, .ui-autocomplete, .ui-selectcheckboxmenu, .ui-calendar {
+
       display: block;
       border: none;
       border-bottom: solid 1px @input-border-color;
@@ -11,12 +98,27 @@ body, body .ui-widget, body div.ui-fluid {
       border-radius: 0 !important;
       .transition(all 0.3s cubic-bezier(.64, .09, .08, 1));
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, @light-blue 4%) no-repeat -10000px 0;
+
+      ~ label {
+        position: absolute;
+        color: #9e9e9e;
+        font-weight: 500;
+        pointer-events: none;
+        .transition(all 0.3s ease-in-out);
+        top: 7px;
+        margin-left: 5px;
+      }
+
       &.ui-state-focus {
         box-shadow: none !important;
         -webkit-box-shadow: none !important;
         outline: none;
         background-position: 0 0;
-        .input-placeholder(@light-blue);
+        ~ label {
+          color: @light-blue;
+          font-size: 12px;
+          top: -15px;
+        }
       }
 
       &.ui-state-error {
@@ -26,12 +128,15 @@ body, body .ui-widget, body div.ui-fluid {
         border-bottom: solid 1px @box-shadow-color-error;
         color: @text-color;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, @error-color 4%) no-repeat -10000px 0;
-        .input-placeholder-color(@error-color);
+
+        ~ label {
+          color: @error-color;
+        }
+
         &.ui-state-focus {
           background-position: 0 0;
           color: @text-color;
           .box-shadow(none);
-          .input-placeholder-color(@error-color);
         }
 
         .ui-selectonemenu-label {
@@ -39,7 +144,7 @@ body, body .ui-widget, body div.ui-fluid {
         }
       }
 
-      .ui-selectonemenu-trigger,.ui-selectcheckboxmenu-trigger, .ui-autocomplete-dropdown {
+      .ui-selectonemenu-trigger, .ui-selectcheckboxmenu-trigger, .ui-autocomplete-dropdown {
         border: none;
         &.ui-state-hover, &.ui-state-focus {
           border: none;
@@ -58,7 +163,7 @@ body, body .ui-widget, body div.ui-fluid {
       }
 
       button.ui-autocomplete-dropdown {
-        top:-5px;
+        top: -5px;
       }
 
       span.ui-icon-triangle-1-s:before {
@@ -68,23 +173,26 @@ body, body .ui-widget, body div.ui-fluid {
       label {
         box-shadow: none !important;
         -webkit-box-shadow: none !important;
-        -moz-box-shadow: none!important;
+        -moz-box-shadow: none !important;
       }
     }
-  }
 
-  .ui-selectcheckboxmenu.material {
-    display: inline-table;
-    &.ui-state-focus.ui-state-error {
-      border:none;
+    .ui-selectcheckboxmenu {
+      display: inline-table;
+      &.ui-state-focus.ui-state-error {
+        border: none;
+      }
     }
-  }
 
-  span.ui-autocomplete, span.ui-calendar {
-
-    &.material {
+    span.ui-autocomplete, span.ui-calendar {
       border-bottom: none;
     }
+
+    label.ui-outputlabel.ui-state-error {
+      color: @error-color;
+    }
+
   }
+  //div material
 
 }
