@@ -1,7 +1,5 @@
 /* material design classes */
 
-//textarea password checkboxmenu
-
 body, body .ui-widget, body div.ui-fluid {
 
   div.material {
@@ -17,6 +15,11 @@ body, body .ui-widget, body div.ui-fluid {
       .ui-message-error-icon {
         display: none;
       }
+    }
+
+    i.fa {
+      position: absolute;
+      right: 5px;
     }
 
     &.focused { //focused is set via javascript on input focus or when input has any value
@@ -40,10 +43,11 @@ body, body .ui-widget, body div.ui-fluid {
           font-size: 12px;
           top: -15px;
         }
+
       }
 
       textarea.ui-inputtextarea.ui-inputfield ~ label {
-        top:-8px;
+        top: -8px;
       }
 
       span.ui-autocomplete, span.ui-calendar {
@@ -58,6 +62,13 @@ body, body .ui-widget, body div.ui-fluid {
           }
         }
 
+      }
+
+      div.ui-selectcheckboxmenu {
+
+        ~ label, label.ui-selectcheckboxmenu-label {
+          display: none;//checkboxmenu label is hidden on focus
+        }
       }
     }
     //end focused
@@ -173,6 +184,12 @@ body, body .ui-widget, body div.ui-fluid {
         top: -5px;
       }
 
+      @-moz-document url-prefix() {
+        button.ui-autocomplete-dropdown {
+          top: 5px;
+        }
+      }
+
       span.ui-icon-triangle-1-s:before {
         top: 8px;
       }
@@ -191,6 +208,19 @@ body, body .ui-widget, body div.ui-fluid {
       }
     }
 
+    div.ui-selectcheckboxmenu {
+
+      ~ label {
+        position: relative;
+        top:-30px;
+      }
+
+      &.ui-state-focus ~ label {
+        display: none;
+      }
+
+    }
+
     span.ui-autocomplete, span.ui-calendar {
       border-bottom: none;
     }
@@ -202,10 +232,12 @@ body, body .ui-widget, body div.ui-fluid {
     textarea.ui-inputtextarea.ui-inputfield {
       border: 1px solid @input-border-color;
       padding: 15px;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 98%, @light-blue 2%) no-repeat -10000px 0;
+      padding-left: 5px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, @light-blue 1%) no-repeat -10000px 0;
       background-size: 2000px 100%;
       ~ label {
         padding: 7px;
+        padding-left: 3px;
       }
 
       &.ui-state-focus {
@@ -221,7 +253,7 @@ body, body .ui-widget, body div.ui-fluid {
       &.ui-state-error {
         border: solid 1px @box-shadow-color-error;
         color: @text-color;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 98%, @error-color 2%) no-repeat -10000px 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, @error-color 1%) no-repeat -10000px 0;
 
         &.ui-state-focus {
           background-position: 0 0;
