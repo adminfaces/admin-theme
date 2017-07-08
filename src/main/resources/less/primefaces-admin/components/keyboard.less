@@ -1,0 +1,15 @@
+body .ui-widget .keypad-key.ui-state-default {
+  border: none;
+  background: #fff;
+  border-radius: 50%;
+
+  &.ui-state-hover {
+    background: @hover-color;
+  }
+
+  &.keypad-close, &.keypad-enter, &.keypad-spacebar, &.keypad-shift, &.keypad-clear, &.keypad-back {
+    background: @light-blue;
+    color: #fff;
+    border-radius: @default-border-radius;
+  }
+}
