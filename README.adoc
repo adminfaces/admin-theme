@@ -125,7 +125,7 @@ The `dev` classifier will bring a theme.css *without minification*.
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
     <version>1.0.0-RC9</version>
-<classifier>dev</classifier>
+    <classifier>dev</classifier>
 </dependency>
 ----
 
@@ -140,7 +140,7 @@ The `without-bootstrap` classifier will bring a theme.css *without bootstrap emb
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
     <version>1.0.0-RC9</version>
-<classifier>without-bootstrap</classifier>
+    <classifier>without-bootstrap</classifier>
 </dependency>
 ----
 
@@ -156,7 +156,7 @@ The `without-jsf` classifier will bring a theme.css *without JSF resource handli
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
     <version>1.0.0-RC9</version>
-<classifier>without-jsf</classifier>
+    <classifier>without-jsf</classifier>
 </dependency>
 ----
 
@@ -178,7 +178,7 @@ To solve this issues you can use a theme classifier called *no-cache*:
 </dependency>
 ----
 
-This classifier *appends the theme version* to the name of theme so you need to change the theme name in web.xml:
+This classifier *appends the theme version* to the name of theme so you need to *change the theme name* in `web.xml`:
 
 .web.xml
 [source,xml]

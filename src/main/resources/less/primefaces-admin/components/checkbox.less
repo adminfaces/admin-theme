@@ -9,6 +9,10 @@ div.ui-chkbox-box {
     background: transparent;
   }
 
+  &:focus {
+    outline: none;
+  }
+
 }
 
 div.ui-chkbox-box.ui-state-active,
@@ -46,6 +50,7 @@ div.ui-chkbox {
   span.ui-chkbox-icon:hover {
     opacity: 1;
   }
+
 }
 
 
@@ -82,3 +87,32 @@ div.ui-chkbox span.ui-chkbox-icon {
     }
   }
 }
+
+
+div.ui-chkbox span.ui-icon-closethick {
+  background-image: none !important;
+  display: inline;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline !important;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    top: -2px;
+    left: -5px;
+    overflow: hidden;
+    content: "\f00d" !important;
+  }
+  &:hover:before {
+    color: #fff;
+  }
+}
+
+div.ui-chkbox-box.ui-state-default.ui-state-active  span.ui-chkbox-icon:before {
+  color: #fff;
+}
+
+div.ui-chkbox-box.ui-state-default span.ui-chkbox-icon:before {
+  color: transparent;
+}
+
