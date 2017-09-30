@@ -191,9 +191,9 @@ This classifier *appends the theme version* to the name of theme so you need to 
 
 == Development
 
-To get your hands dirty with admin theme it is recommended to use <<Admin Designer>> in combination with http://brackets.io/[Brackets] or any tool that `compile less` files to css on save.
+To get your hands dirty with admin theme it is recommended to use http://github.com/adminfaces/admin-designer[Admin Designer^] in combination with http://brackets.io/[Brackets] or any tool that `compile less` files to css on save.
 
-Using designer (which is backed by wildfly swarm) plus brackets will let you change the components less files and see the results instantly.
+Using designer, which is backed by http://wildfly-swarm.io/[Wildfly Swarm^], plus brackets will let you change the components less files and see the results instantly.
 
 NOTE: theme.less is already brackets aware so you just need to change any component less file, save it and see the results in Admin Designer.
 
