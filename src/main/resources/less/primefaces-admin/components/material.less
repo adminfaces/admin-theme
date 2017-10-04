@@ -276,7 +276,7 @@ body, body .ui-widget, body div.ui-fluid {
     div.ui-selectonemenu {
 
       ~ label {
-        top: -17px!important;
+        top: -17px !important;
         font-size: 12px;
         margin-left: 5px;
         color: @light-blue;
@@ -290,21 +290,71 @@ body, body .ui-widget, body div.ui-fluid {
     }
 
     // left icon
-    &.icon-left .fa {
-      left: 0px;
-      width: 32px;
-    }
 
-    &.icon-left input {
-      padding-left: 30px;
-    }
+    &.icon-left {
 
-    &.icon-left input.ui-inputfield~label {
-      margin-left: 30px;
-    }
-  }
-  //div material
+      button.ui-datepicker-trigger {
+        left: 0;
+        margin-left: -5px;
+        width:32px;
+      }
+
+      .fa {
+        left: 0px;
+        width: 32px;
+      }
+
+      input {
+        padding-left: 30px;
+      }
+
+      input.ui-inputfield, span.ui-calendar {
+
+        & ~ label {
+          margin-left: 30px;
+        }
+      }
+    } //end icon left
 
 
+    //no floating label
+    &.no-float {
+
+      input.ui-inputfield, input.ui-autocomplete-input, textarea.ui-inputtextarea {
+
+        &::-webkit-input-placeholder {
+          color: @input-color-placeholder;
+          .transition(none);
+        }
+
+        &::-moz-placeholder {
+          color: @input-color-placeholder;
+          .transition(none);
+        }
+
+        &:-ms-input-placeholder {
+          color: @input-color-placeholder;
+          .transition(none);
+        }
+
+        &.ui-state-error {
+          &::-webkit-input-placeholder {
+            color: @error-color;
+          }
+
+          &::-moz-placeholder {
+            color: @error-color;
+          }
+
+          &:-ms-input-placeholder {
+            color: @error-color;
+          }
+        }
+
+      }
+
+    } //end no float
+
+  } //end div material
 
 }
