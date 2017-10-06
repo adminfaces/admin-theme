@@ -1,0 +1,109 @@
+div.ui-fileupload {
+
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .15), 0 2px 2px 0 rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .09);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .15), 0 2px 2px 0 rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .09);
+
+  .border-bottom-radius(3px);
+
+  .ui-fileupload-buttonbar {
+
+    span.ui-icon-plusthick {
+      color: #fff;
+      text-indent: 0;
+      top: 10px;
+      height: 24px;
+      &:before {
+        color: #fff;
+        top: 5px;
+      }
+    }
+
+    span.ui-fileupload-choose {
+      color: white;
+      background: @light-blue;
+      padding: 3px;
+      .btn-interactions(@light-blue);
+    }
+
+    button.ui-fileupload-upload {
+      color: white;
+      background: @green;
+      .btn-interactions(@green);
+
+      span.ui-icon-arrowreturnthick-1-n {
+        background-image: none !important;
+        display: inline !important;
+        text-indent: 0;
+        top: 10px;
+        height: 24px;
+        &:before {
+          font-family: FontAwesome;
+          color: #fff;
+          position: relative;
+          font-size: @font-awesome-icon-size;
+          padding: 0 4px;
+          top: 2px;
+          overflow: hidden;
+          content: "\f093" !important;
+        }
+      }
+    }
+
+    button.ui-fileupload-cancel {
+      color: white;
+      background: @red;
+      .btn-interactions(@red);
+
+      span.ui-icon-cancel {
+        background-image: none !important;
+        display: inline !important;
+        text-indent: 0;
+        top: 10px;
+        height: 24px;
+        &:before {
+          font-family: FontAwesome;
+          color: #fff;
+          position: relative;
+          font-size: @font-awesome-icon-size;
+          padding: 0 4px;
+          top: 2px;
+          overflow: hidden;
+          content: "\f05e" !important;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: @screen-sm) {
+  body div.ui-fileupload .ui-fileupload-buttonbar .ui-button {
+
+    padding: .9em 1em .9em 1.2em;
+
+    .ui-button-text {
+      display: none;
+    }
+
+    span.ui-icon-plusthick {
+      top: 11px;
+    }
+
+    span.ui-icon-arrowreturnthick-1-n, span.ui-icon-cancel {
+      top: 8px;
+    }
+
+
+  }
+}
+
+@media (max-width: @screen-sm) {
+  span.ui-icon-plusthick, button.ui-fileupload-upload span.ui-icon-arrowreturnthick-1-n, button.ui-fileupload-cancel span.ui-icon-cancel {
+
+    &:before {
+      top: 0 !important;
+      margin-left: -2px !important;
+    }
+  }
+}
