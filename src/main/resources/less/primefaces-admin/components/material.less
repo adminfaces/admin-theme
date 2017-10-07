@@ -39,9 +39,13 @@ body, body .ui-widget, body div.ui-fluid {
         }
 
         ~ label {
-          color: @light-blue;
+          color: @text-color;
           font-size: 12px;
           top: -15px;
+
+          &.material-focus  {
+            color: @light-blue;
+          }
         }
 
       }
@@ -53,12 +57,16 @@ body, body .ui-widget, body div.ui-fluid {
       span.ui-autocomplete, span.ui-calendar {
 
         ~ label {
-          color: @light-blue;
+          color: @text-color;
           font-size: 12px;
           top: -15px;
 
-          &.ui-state-error {
+          &.ui-state-error, &.material-focus.ui-state-error {
             color: @error-color;
+          }
+
+          &.material-focus  {
+            color: @light-blue;
           }
         }
 
@@ -70,8 +78,9 @@ body, body .ui-widget, body div.ui-fluid {
           display: none; //checkboxmenu label is hidden on focus
         }
       }
-    }
-    //end focused
+
+
+    } //end focused
 
     //placeholder transparent by default because input label must be visible
     input.ui-inputfield, input.ui-autocomplete-input, textarea.ui-inputtextarea {
@@ -137,6 +146,7 @@ body, body .ui-widget, body div.ui-fluid {
           font-size: 12px;
           top: -15px;
         }
+
       }
 
       &.ui-state-disabled {
@@ -153,7 +163,7 @@ body, body .ui-widget, body div.ui-fluid {
         color: @text-color;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, @error-color 4%) no-repeat -10000px 0;
 
-        ~ label {
+        ~ label, ~ label.material-focus {
           color: @error-color;
         }
 
@@ -231,7 +241,7 @@ body, body .ui-widget, body div.ui-fluid {
       border-bottom: none;
     }
 
-    label.ui-outputlabel.ui-state-error {
+    label.ui-outputlabel.ui-state-error, label.ui-outputlabel.ui-state-error.material-focus {
       color: @error-color;
     }
 
@@ -279,7 +289,7 @@ body, body .ui-widget, body div.ui-fluid {
         top: -17px !important;
         font-size: 12px;
         margin-left: 5px;
-        color: @light-blue;
+        color: @text-color;
       }
 
       &.ui-state-disabled {
