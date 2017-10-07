@@ -15,6 +15,7 @@ div.ui-fileupload {
       &:before {
         color: #fff;
         top: 5px;
+        left: 1px;
       }
     }
 
@@ -73,6 +74,29 @@ div.ui-fileupload {
       }
     }
 
+  }
+
+  .ui-fileupload-row {
+    button.ui-fileupload-cancel span.ui-icon-close {
+      background-image: none !important;
+      display: inline!important;
+      text-indent: 0;
+
+      &:before {
+        font-family: FontAwesome;
+        color: #444;
+        display: inline !important;
+        top: -5px;
+        right: 2px;
+        cursor: pointer;
+        position: absolute;
+        font-size: 16px;
+        margin-left: 5px;
+        overflow: hidden;
+        content: "\f00d" !important;
+      }
+
+    }
   }
 
 }
