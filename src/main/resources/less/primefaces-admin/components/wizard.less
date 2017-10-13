@@ -1,0 +1,47 @@
+.ui-wizard {
+
+  .ui-wizard-navbar {
+
+    button.ui-wizard-nav-back {
+      .btn-success;
+      .btn-interactions(@green);
+
+      span.ui-icon-arrowthick-1-w {
+        background-image: none !important;
+        display: inline !important;
+        text-indent: 0;
+        &:before {
+          font-family: FontAwesome;
+          color: #fff;
+          position: relative;
+          font-size: @font-awesome-icon-size;
+          top: -3px;
+          overflow: hidden;
+          content: "\f112" !important;
+        }
+
+      }
+    }
+
+    button.ui-wizard-nav-next {
+      .btn-primary;
+      .btn-interactions(@light-blue);
+
+      span.ui-icon-arrowthick-1-e {
+        background-image: none !important;
+        display: inline !important;
+        text-indent: 0;
+        &:before {
+          font-family: FontAwesome;
+          color: #fff;
+          position: relative;
+          font-size: @font-awesome-icon-size;
+          top: -3px;
+          overflow: hidden;
+          content: "\f064" !important;
+        }
+      }
+
+    }
+  }
+}
