@@ -375,6 +375,7 @@
                                 <configuration>
                                     <target>
                                         <delete dir="${project.build.outputDirectory}/META-INF/resources/primefaces-admin/" />
+                                        <delete dir="${project.basedir}/src/main/resources/META-INF/resources/primefaces-admin-${project.version}/" />
                                     </target>
                                 </configuration>
                             </execution>
