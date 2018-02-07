@@ -99,25 +99,17 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
   }
 
-  div.ui-picklist-target-controls {
-
-    .ui-picklist-buttons-cell > button {
-      text-align: left;
-    }
-    span.ui-button-icon-left {
-      left: 0;
-      padding: 0 4px;
-    }
-
-  }
-
   div.ui-picklist-buttons-cell button {
-    background-color: transparent;
-    border: none;
+    background-color: @light-blue;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    .btn-interactions(@light-blue);
   }
 
   button.ui-picklist-button-move-up {
     .box-shadow(none);
+    .rotate(270deg);
     > span {
       background-image: none;
       display: inline;
@@ -125,11 +117,11 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f139" !important;
+        content: "\f04b" !important;
       }
     }
 
@@ -140,6 +132,7 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
   button.ui-picklist-button-move-top {
     .box-shadow(none);
+    .rotate(270deg);
     > span {
       background-image: none;
       display: inline;
@@ -147,11 +140,12 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
+        font-size: @font-awesome-icon-size;
+        left: -2px;
         overflow: hidden;
-        content: "\f0aa" !important;
+        content: "\f051" !important;
       }
     }
 
@@ -162,6 +156,7 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
   button.ui-picklist-button-move-bottom {
     .box-shadow(none);
+    .rotate(90deg);
     > span {
       background-image: none;
       display: inline;
@@ -169,11 +164,11 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f0ab" !important;
+        content: "\f051" !important;
       }
     }
 
@@ -184,6 +179,7 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
   button.ui-picklist-button-move-down {
     .box-shadow(none);
+    .rotate(90deg);
     > span {
       background-image: none;
       display: inline;
@@ -191,11 +187,12 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
+        left: -1px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f13a" !important;
+        content: "\f04b" !important;
       }
     }
 
@@ -205,7 +202,6 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
   }
 
   button.ui-picklist-button-add {
-    width: 53px;
     .box-shadow(none);
     > span {
       background-image: none;
@@ -214,12 +210,11 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
-        margin-right: 25px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f138" !important;
+        content: "\f04b" !important;
       }
     }
 
@@ -229,7 +224,6 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
   }
 
   button.ui-picklist-button-add-all {
-    width: 53px;
     .box-shadow(none);
     > span {
       background-image: none;
@@ -238,12 +232,11 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
-        margin-right: 25px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f0a9" !important;
+        content: "\f04e" !important;
       }
     }
 
@@ -253,8 +246,8 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
   }
 
   button.ui-picklist-button-remove {
-    width: 53px;
     .box-shadow(none);
+
     > span {
       background-image: none;
       display: inline;
@@ -262,12 +255,11 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
-        margin-right: 25px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f137" !important;
+        content: "\f04b" !important;
       }
     }
 
@@ -277,8 +269,8 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
   }
 
   button.ui-picklist-button-remove-all {
-    width: 53px;
     .box-shadow(none);
+    .rotate(180deg);
     > span {
       background-image: none;
       display: inline;
@@ -286,12 +278,11 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
 
       &:before {
         font-family: FontAwesome;
-        color: @admin-text-color;
+        color: #fff;
         position: relative;
-        font-size: 20px;
-        margin-right: 25px;
+        font-size: @font-awesome-icon-size;
         overflow: hidden;
-        content: "\f0a8" !important;
+        content: "\f04e" !important;
       }
     }
 
@@ -304,12 +295,23 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
     width: 1px;
   }
 
+  @media (max-width: @screen-xs-max) {
+    button.ui-picklist-button-add, button.ui-picklist-button-add-all {
+      .rotate(90deg);
+    }
+
+    button.ui-picklist-button-remove, button.ui-picklist-button-remove-all {
+      .rotate(270deg);
+    }
+  }
+
 }
 
 @media (min-width: (@screen-sm + 1 )) {
-    .ui-picklist-buttons-cell {
-      padding-top: 25px;
-    }
+  .ui-picklist-buttons-cell {
+    padding-top: 10px;
+  }
 }
+
 
 
