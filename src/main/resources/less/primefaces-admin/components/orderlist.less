@@ -8,24 +8,33 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
 
   .ui-orderlist-controls {
     margin-right: 0;
+    width: 30px;
 
-    button {
-      background-color: transparent;
+    button.ui-button {
+      padding: 0 10px;
+      background-color: @light-blue;
+      border-radius: 50%;
       border: none;
+      width: 30px;
+      height: 30px;
+      .btn-interactions(@light-blue);
       .box-shadow(none);
-    }
 
-    .ui-button {
-      min-width: 30px;
-    }
+      @-moz-document url-prefix() {
+        > span:before {
+          bottom: 15px;
+        }
 
-    span.ui-button-icon-left {
-      left: 0;
-      padding: 0 4px;
+        &.ui-orderlist-button-move-bottom, &.ui-orderlist-button-move-down {
+          > span:before {
+            bottom: 16px;
+          }
+        }
+      }
     }
 
     button.ui-orderlist-button-move-up {
-      .box-shadow(none);
+      .rotate(270deg);
       > span {
         background-image: none;
         display: inline;
@@ -33,11 +42,11 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
 
         &:before {
           font-family: FontAwesome;
-          color: @admin-text-color;
+          color: #fff;
           position: relative;
-          font-size: 20px;
+          font-size: @font-awesome-icon-size;
           overflow: hidden;
-          content: "\f139" !important;
+          content: "\f04b" !important;
         }
       }
 
@@ -47,7 +56,7 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
     }
 
     button.ui-orderlist-button-move-top {
-      .box-shadow(none);
+      .rotate(270deg);
       > span {
         background-image: none;
         display: inline;
@@ -55,11 +64,11 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
 
         &:before {
           font-family: FontAwesome;
-          color: @admin-text-color;
+          color: #fff;
           position: relative;
-          font-size: 20px;
+          font-size: @font-awesome-icon-size;
           overflow: hidden;
-          content: "\f0aa" !important;
+          content: "\f051" !important;
         }
       }
 
@@ -69,7 +78,7 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
     }
 
     button.ui-orderlist-button-move-bottom {
-      .box-shadow(none);
+      .rotate(90deg);
       > span {
         background-image: none;
         display: inline;
@@ -77,11 +86,11 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
 
         &:before {
           font-family: FontAwesome;
-          color: @admin-text-color;
+          color: #fff;
           position: relative;
-          font-size: 20px;
+          font-size: @font-awesome-icon-size;
           overflow: hidden;
-          content: "\f0ab" !important;
+          content: "\f051" !important;
         }
       }
 
@@ -91,7 +100,7 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
     }
 
     button.ui-orderlist-button-move-down {
-      .box-shadow(none);
+      .rotate(90deg);
       > span {
         background-image: none;
         display: inline;
@@ -99,11 +108,11 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
 
         &:before {
           font-family: FontAwesome;
-          color: @admin-text-color;
+          color: #fff;
           position: relative;
-          font-size: 20px;
+          font-size: @font-awesome-icon-size;
           overflow: hidden;
-          content: "\f13a" !important;
+          content: "\f04b" !important;
         }
       }
 
@@ -115,9 +124,7 @@ body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
   }
 }
 
-@media (min-width: (@screen-sm + 1 )) {
-  body .ui-orderlist, body .ui-orderlist.ui-grid-responsive .ui-orderlist-controls {
-    margin-top: 20px;
-  }
+body .ui-orderlist, body .ui-orderlist.ui-grid-responsive .ui-orderlist-controls {
+  margin-top: 20px;
 }
 
