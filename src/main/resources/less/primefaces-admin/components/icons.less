@@ -22,7 +22,7 @@ body .ui-widget-header .ui-icon {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   &:hover {
-    opacity: .5;
+    opacity: @opacity-hover;
   }
 }
 
@@ -782,7 +782,6 @@ span.ui-icon-closethick {
 
 span.ui-icon-minusthick {
   background-image: none !important;
-  opacity: 1;
   display: inline !important;
   &:before {
     font-family: FontAwesome;
