@@ -15,7 +15,7 @@ body .ui-datepicker {
       color: #fff;
       position: relative;
       margin: 0 7px;
-      top: -5px;
+      top: -10px;
       font-size: @font-awesome-icon-size;
       overflow: hidden;
       content: "\f0da" !important;
@@ -36,7 +36,7 @@ body .ui-datepicker {
       color: #fff;
       position: relative;
       margin: 0 7px;
-      top: -5px;
+      top: -10px;
       font-size: @font-awesome-icon-size;
       overflow: hidden;
       content: "\f0d9" !important;
@@ -51,7 +51,7 @@ body .ui-datepicker {
 .ui-datepicker .ui-timepicker-div > .ui-widget-header {
   position: relative;
   padding: .4em 0;
-  border: 1px solid  darken(@light-blue, 5%);
+  border: 1px solid darken(@light-blue, 5%);
 }
 
 .ui-datepicker .ui-datepicker-header,
@@ -164,6 +164,9 @@ body .ui-datepicker {
 .ui-datepicker select.ui-datepicker-year {
   width: 49%;
   -moz-appearance: none;
+  color: @admin-text-color;
+  background-color: #fff !important;
+  border: #d2d6de;
 }
 
 .ui-datepicker select.ui-datepicker-month::-ms-expand {
@@ -232,7 +235,7 @@ body .ui-datepicker tbody td.ui-datepicker-today a {
   padding: 3px;
 
   &.ui-state-active {
-    border: none!important;
+    border: none !important;
   }
 }
 
@@ -262,7 +265,6 @@ td.ui-datepicker-unselectable {
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left;
 }
-
 
 .ui-datepicker-header .ui-state-hover {
   border: 0;
@@ -381,7 +383,6 @@ body .ui-datepicker tbody td a {
 table.ui-datepicker-calendar {
   background-color: #fff;
 }
-
 
 body .ui-timepicker-div .ui-slider.ui-slider-horizontal {
   margin-top: 18px;
