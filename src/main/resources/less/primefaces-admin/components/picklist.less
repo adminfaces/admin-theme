@@ -107,11 +107,21 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive {
     .btn-interactions(@light-blue);
   }
 
-   @-moz-document url-prefix() {
-       div.ui-picklist-buttons-cell button > span:before {
+  @-moz-document url-prefix() {
+    div.ui-picklist-buttons-cell button {
+      > span:before {
         bottom: 15px;
       }
+
+      &.ui-picklist-button-move-bottom, &.ui-picklist-button-move-down {
+        > span:before {
+          bottom: 16px;
+        }
+      }
+
     }
+
+  }
 
   button.ui-picklist-button-move-up {
     .box-shadow(none);
