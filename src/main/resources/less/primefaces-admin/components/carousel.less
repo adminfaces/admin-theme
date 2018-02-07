@@ -1,0 +1,88 @@
+/* Carousel */
+
+.ui-carousel {
+  div.ui-carousel-header {
+    border: none;
+  }
+  ul.ui-carousel-items li.ui-carousel-item {
+    border: none;
+  }
+
+  .ui-carousel-page-links {
+    a.ui-icon-radio-on.ui-icon-radio-off {
+      background-image: none !important;
+      display: inline !important;
+      text-indent: 0;
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: (@font-awesome-icon-size);
+        top: -2px;
+        padding: 0 4px;
+        overflow: hidden;
+        content: "\f192" !important;
+      }
+    }
+
+    a.ui-icon-radio-off {
+      background-image: none !important;
+      display: inline !important;
+      text-indent: 0;
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: (@font-awesome-icon-size);
+        top: -2px;
+        padding: 0 4px;
+        overflow: hidden;
+        content: "\f10c" !important;
+      }
+    }
+  }
+
+  span.ui-carousel-button {
+
+    &.ui-carousel-prev-button {
+      background-image: none !important;
+      display: inline !important;
+      text-indent: 0;
+
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: (@font-awesome-icon-size);
+        top: -3px;
+        padding: 0 4px;
+        overflow: hidden;
+        content: "\f137" !important;
+      }
+
+    }
+
+     &.ui-carousel-next-button {
+      background-image: none !important;
+      display: inline !important;
+      text-indent: 0;
+
+      &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: (@font-awesome-icon-size);
+        top: -3px;
+        padding: 0 4px;
+        overflow: hidden;
+        content: "\f138" !important;
+      }
+
+    }
+
+    &.ui-state-disabled {
+      opacity: @opacity-disabled;
+    }
+  }
+
+}
