@@ -1,92 +1,124 @@
-/* radio */
+/* checkbox */
 
-.ui-state-highlight .ui-radiobutton-box .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_2e83ff_256x240.png']}");
+.ui-state-highlight .ui-chkbox-box .ui-icon {
+  background-image: none
 }
 
-body .ui-radiobutton .ui-radiobutton-box {
-  overflow: hidden;
-  &.ui-state-focus {
-    background: @hover-color;
-    border-color: lighten(@box-shadow-color,30%);
+div.ui-chkbox-box {
+  &.ui-state-hover, &.ui-state-focus {
+    background: transparent;
   }
-  &.ui-state-hover   {
-    background: @hover-color;
+
+  &:focus {
+    outline: none;
   }
+
 }
 
-
-.ui-radiobutton-box.ui-state-active,
-.ui-radiobutton-box.ui-state-focus.ui-state-active {
+div.ui-chkbox-box.ui-state-active,
+div.ui-chkbox-box.ui-state-focus.ui-state-active {
   border: 1px solid @light-blue;
-  background: #FFFFFF;
+  background: @light-blue;
   color: #FFFFFF;
 }
 
-.ui-radiobutton-box.ui-state-active .ui-icon {
+.ui-chkbox-box.ui-state-active .ui-icon {
   background-image: none;
+
 }
 
-body .ui-radiobutton {
-  margin: 3px 0;
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  background-color: white;
-  .ui-radiobutton-box {
+div.ui-chkbox {
+
+  label {
+    font-weight: 500;
+  }
+  .ui-chkbox-box {
     width: 18px;
     height: 18px;
-    border: 1px solid @input-border-color;
-    -moz-transition: box-shadow 0.3s;
-    -o-transition: box-shadow 0.3s;
-    -webkit-transition: box-shadow 0.3s;
-    transition: box-shadow 0.3s;
-    .border-radius(50%);
-
-    &.ui-state-active {
-      border: 1px solid #3c8dbc;
-      background-color: #fff;
-      color: #fff;
-
-      span.ui-radiobutton-icon {
-        background-color: #3c8dbc!important;
-      }
-    }
-
-    &.ui-state-default {
-      background-color: #fff;
-      color: #fff;
-
-      span.ui-radiobutton-icon {
-        color: #fff;
-        opacity: 1;
-      }
-    }
+    overflow: hidden;
+  }
+  .ui-chkbox-label {
+    margin-top: -1px;
   }
 
-  span.ui-radiobutton-icon {
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    margin-left: 2px;
-    margin-top: 2px;
-    border-radius: 50%;
-    display: inline-block;
-    background-image: none!important;
+  span.ui-icon-check {
+    position: relative;
+    right: 3px;
+    bottom: 2px;
+  }
+
+  span.ui-chkbox-icon:hover {
+    opacity: 1;
+  }
+
+}
+
+body .ui-selectmanycheckbox.ui-grid-responsive {
+
+  .ui-grid-row, ui-g { //prime 6.1 backward compatibility
+
+    > div {
+      padding: .2em;
+    }
+
+  }
+
+}
+
+div.ui-chkbox span.ui-chkbox-icon.ui-icon-blank:before {
+  color: transparent;
+}
+
+div.ui-chkbox span.ui-chkbox-icon {
+  background-image: none !important;
+  display: inline;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline !important;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    margin-left: 4px;
+    overflow: hidden;
+    content: "\f00c" !important;
+  }
+  &:hover:before {
+    color: #fff;
   }
 }
 
-div.ui-selectoneradio label {
-  margin-top: 2px;
-  font-weight: 500;
+@media (max-width: @screen-xs) {
+  div.ui-chkbox span.ui-chkbox-icon {
+    &:before {
+      font-size: @font-awesome-icon-size + 1;
+    }
+  }
 }
 
-body .ui-selectoneradio.ui-grid-responsive .ui-grid-row > div {
-  padding: .2em;
+div.ui-chkbox span.ui-icon-closethick {
+  background-image: none !important;
+  display: inline;
+  &:before {
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline !important;
+    position: relative;
+    font-size: @font-awesome-icon-size;
+    top: -2px;
+    left: -5px;
+    padding: 2px 4px;
+    overflow: hidden;
+    content: "\f00d" !important;
+  }
+  &:hover:before {
+    color: #fff;
+  }
 }
 
-body div.ui-radiobutton-box {
-  position: relative;
+div.ui-chkbox-box.ui-state-default.ui-state-active span.ui-chkbox-icon:before {
+  color: #fff;
+}
+
+div.ui-chkbox-box.ui-state-default span.ui-chkbox-icon:before {
+  color: transparent;
 }

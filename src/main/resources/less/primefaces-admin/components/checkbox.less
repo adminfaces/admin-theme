@@ -53,9 +53,16 @@ div.ui-chkbox {
 
 }
 
+body .ui-selectmanycheckbox.ui-grid-responsive {
 
-body .ui-selectmanycheckbox.ui-grid-responsive .ui-grid-row > div {
-  padding: .2em;
+  .ui-grid-row, ui-g { //prime 6.1 backward compatibility
+
+    > div {
+      padding: .2em;
+    }
+
+  }
+
 }
 
 div.ui-chkbox span.ui-chkbox-icon.ui-icon-blank:before {
@@ -88,7 +95,6 @@ div.ui-chkbox span.ui-chkbox-icon {
   }
 }
 
-
 div.ui-chkbox span.ui-icon-closethick {
   background-image: none !important;
   display: inline;
@@ -109,7 +115,7 @@ div.ui-chkbox span.ui-icon-closethick {
   }
 }
 
-div.ui-chkbox-box.ui-state-default.ui-state-active  span.ui-chkbox-icon:before {
+div.ui-chkbox-box.ui-state-default.ui-state-active span.ui-chkbox-icon:before {
   color: #fff;
 }
 
