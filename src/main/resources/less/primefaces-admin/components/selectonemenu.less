@@ -12,19 +12,23 @@ div.ui-selectonemenu-trigger {
 
 }
 
-div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
-  background-image: none;
-  display: inline;
-
-  &:before {
-    font-family: FontAwesome;
-    color: @admin-text-color;
+div.ui-selectonemenu {
+  div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
+    background-image: none;
+    display: inline;
     position: relative;
-    font-size: @font-awesome-icon-size;
-    padding: 0 7px;
-    overflow: hidden;
-    content: "\f0d7" !important;
+
+    &:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      padding: 0 7px;
+      overflow: hidden;
+      content: "\f0d7" !important;
+    }
   }
+
 }
 
 @media (max-width: @screen-xs) {
@@ -35,10 +39,10 @@ div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
   }
 }
 
-
 div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
   background-image: none;
   display: inline;
+  position: relative;
 
   &:before {
     font-family: FontAwesome;
@@ -46,7 +50,7 @@ div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
     position: relative;
     font-size: @font-awesome-icon-size;
     padding: 0 10px;
-    top: 5px;
+    top: 0px;
     overflow: hidden;
     content: "\f0d7" !important;
   }
@@ -57,7 +61,7 @@ div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
   background-color: #ffffff;
 }
 
-div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu, div.ui-selectcheckboxmenu, div.ui-fluid  div.ui-selectcheckboxmenu {
+div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu, div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
   height: 34px;
   display: block;
   overflow: hidden;
@@ -113,14 +117,13 @@ div.ui-selectcheckboxmenu {
 }
 
 body .ui-selectcheckboxmenu-panel div.ui-chkbox span.ui-chkbox-icon:before {
-  top:1px;
+  top: 1px;
 }
 
 li.ui-selectcheckboxmenu-item div.ui-chkbox-box {
   position: relative;
   margin-top: -15px;
 }
-
 
 body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox {
   margin-top: -11px;
@@ -143,7 +146,6 @@ div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
 .ui-selectcheckboxmenu-label-container .ui-selectcheckboxmenu-label {
   min-width: 100px;
 }
-
 
 div.ui-selectcheckboxmenu-header {
   border: 0;
@@ -168,7 +170,7 @@ div.ui-fluid div.ui-selectcheckboxmenu-multiple, body div.ui-selectcheckboxmenu-
 
 body .ui-selectcheckboxmenu-multiple {
   .ui-selectcheckboxmenu-trigger .ui-icon {
-    top: -1px;
+    top: 5px;
   }
   .ui-selectcheckboxmenu-token-label {
     background: @light-blue;
@@ -188,7 +190,7 @@ body .ui-selectcheckboxmenu-multiple {
     display: inline;
     position: relative;
     margin-left: -15px;
-    top:2px;
+    top: 2px;
     &:before {
       font-family: FontAwesome;
       color: #fff;
@@ -253,7 +255,7 @@ body .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-filter-container {
   span.ui-icon-search {
     background-image: none !important;
     display: inline;
-    position: relative!important;
+    position: relative !important;
     text-indent: initial;
     float: right;
     top: 7px;
@@ -277,7 +279,7 @@ body .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-filter-container {
 /* checkboxmenu interactions */
 
 ul.ui-selectcheckboxmenu-multiple-container {
-  border: none!important;
+  border: none !important;
 }
 
 body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
@@ -286,7 +288,7 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
     -moz-box-shadow: 0 0 5px @box-shadow-color;
     -webkit-box-shadow: 0 0 5px @box-shadow-color;
     box-shadow: 0 0 5px @box-shadow-color;
-    border-color: lighten(@box-shadow-color,30%);
+    border-color: lighten(@box-shadow-color, 30%);
   }
 
   &.ui-state-error {
@@ -300,7 +302,6 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
     border: 1px solid @box-shadow-color-error;
   }
 }
-
 
 body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
   &.ui-state-error, &.ui-state-error.ui-state-focus {
