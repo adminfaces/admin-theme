@@ -1,6 +1,6 @@
 /* Inputs */
 .ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield {
-  line-height: 1.72;/*sets inputs height to 32px*/
+  line-height: 1.72; /*sets inputs height to 32px*/
 }
 
 .ui-inputfield.ui-state-focus, .ui-widget-content .ui-inputfield.ui-state-focus, .ui-widget-header .ui-inputfield.ui-state-focus {
@@ -24,4 +24,58 @@
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+//input switch
+
+body div.ui-inputswitch {
+  height: 16px;
+  width: 38px !important;
+  overflow: visible;
+  background-color: #9e9e9e;
+  border-color: darken(#9e9e9e,5%);
+  padding: 0;
+  .border-radius(15px);
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+
+  .ui-inputswitch-on, .ui-inputswitch-off {
+    visibility: hidden;
+  }
+
+  .ui-inputswitch-handle {
+    top: -4px;
+    background-color: @btn-background-color;
+    .btn-interactions(@btn-background-color);
+    border: #ddd;
+    .border-radius(50%);
+    .transition(background-color 0.3s);
+    width: 22px !important;
+    height: 22px !important;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+
+  }
+
+  &.ui-inputswitch-active {
+
+    background-color: lighten(@light-blue, 10%);
+    border-color: darken(lighten(@light-blue, 10%),5%);
+
+    .ui-inputswitch-handle {
+      .btn-interactions(@light-blue);
+      background-color: @light-blue;
+      border-color: darken(@light-blue, 5%);
+      color: #fff;
+
+      &.ui-state-focus {
+        -moz-box-shadow: 0 0 5px @box-shadow-color;
+        -webkit-box-shadow: 0 0 5px @box-shadow-color;
+        box-shadow: 0 0 5px @box-shadow-color;
+        border-color: lighten(@box-shadow-color,30%);
+      }
+    }
+  }
 }
