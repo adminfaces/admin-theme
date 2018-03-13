@@ -6,7 +6,7 @@
 .main-header {
   position: relative;
   max-height: 100px;
-  z-index: 1000;
+  z-index: 1030;
   //Navbar
   .navbar {
     .transition(margin-left @transition-speed @transition-fn);
@@ -67,7 +67,6 @@
   .sidebar-toggle {
     float: left;
     background-color: transparent;
-    text-decoration: none;
     background-image: none;
     padding: @navbar-padding-vertical @navbar-padding-horizontal;
     //Add the fontawesome bars icon
@@ -112,12 +111,12 @@
     display: block;
     float: left;
     height: @navbar-height;
-    font-size: 18px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 50px;
     text-align: center;
     width: @sidebar-width;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 5px 0 ;
+    padding: 0 15px;
     font-weight: 300;
     overflow: hidden;
     //Add support to sidebar mini by allowing the user to create
@@ -128,7 +127,6 @@
     }
     .logo-mini {
       display: none;
-      padding-top: 10px;
     }
   }
   //Navbar Brand. Alternative logo with layout-top-nav
@@ -184,10 +182,10 @@
       top: 0;
       right: 0;
       float: none;
-      background: @gray;
+      background: @gray-lte;
       padding-left: 10px;
       li:before {
-        color: darken(@gray, 20%);
+        color: darken(@gray-lte, 20%);
       }
     }
   }

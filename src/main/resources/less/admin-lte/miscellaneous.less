@@ -95,7 +95,7 @@
 
 .bg-gray {
   color: #000;
-  background-color: @gray !important;
+  background-color: @gray-lte !important;
 }
 
 .bg-gray-light {
@@ -165,7 +165,7 @@
 //Set of Active Background Colors
 .bg-gray-active {
   color: #000;
-  background-color: darken(@gray, 10%) !important;
+  background-color: darken(@gray-lte, 10%) !important;
 }
 
 .bg-black-active {
@@ -238,10 +238,6 @@
   color: @red !important;
 }
 
-.text-fatal {
-  color: @dark-red!important;
-}
-
 .text-yellow {
   color: @yellow !important;
 }
@@ -267,7 +263,7 @@
 }
 
 .text-gray {
-  color: @gray !important;
+  color: @gray-lte !important;
 }
 
 .text-navy {
@@ -303,10 +299,10 @@
 }
 
 .link-muted {
-  color: darken(@gray, 30%);
+  color: darken(@gray-lte, 30%);
   &:hover,
   &:focus {
-    color: darken(@gray, 40%);
+    color: darken(@gray-lte, 40%);
   }
 }
 
@@ -549,12 +545,12 @@
 
 // Image bordered
 .img-bordered {
-  border: 3px solid @gray;
+  border: 3px solid @gray-lte;
   padding: 3px;
 }
 
 .img-bordered-sm {
-  border: 2px solid @gray;
+  border: 2px solid @gray-lte;
   padding: 2px;
 }
 

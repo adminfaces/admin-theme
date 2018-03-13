@@ -28,7 +28,7 @@
     border-top-color: @green;
   }
   &.box-default {
-    border-top-color: @gray;
+    border-top-color: @gray-lte;
   }
 
   // collapsed mode
@@ -84,7 +84,7 @@
 
     // Box color variations
     &.box-default {
-      .box-solid-variant(@gray, #444);
+      .box-solid-variant(@gray-lte, #444);
     }
     &.box-primary {
       .box-solid-variant(@light-blue);
@@ -104,7 +104,7 @@
 
     > .box-header > .box-tools .btn {
       border: 0;
-      .box-shadow(none);
+      box-shadow: none;
     }
 
     // Fix font color for tiles
@@ -216,6 +216,10 @@
         left: auto;
       }
     }
+
+    .dropdown-menu > li > a {
+      color: #444!important;
+    }
   }
 }
 
@@ -230,7 +234,7 @@
     color: darken(@box-default-border-top-color, 40%);
   }
   &.btn:active {
-    .box-shadow(none);
+    box-shadow: none;
   }
 }
 
@@ -380,7 +384,7 @@
       }
 
       .label {
-        background: @gray !important;
+        background: @gray-lte !important;
       }
     }
   }
