@@ -1,12 +1,31 @@
+/*sidebar component*/
 body div.ui-sidebar {
 
-  a.ui-sidebar-close {
-    padding:0;
-    .box-shadow(none);
-    border: none;
-
-    .ui-state-hover,ui-state-focus {
-      .opacity(@opacity-hover);
+    a.ui-sidebar-close {
+        padding:0;
+        .box-shadow(none);
+        border: none;
+        .ui-state-hover,ui-state-focus {
+            .opacity(@opacity-hover);
+        }
     }
-  }
+
+}
+
+@media (max-width: @screen-xm) {
+    body div.ui-sidebar {
+        &.ui-sidebar-bottom {
+            .transform(translateY(150%));
+            &.ui-sidebar-active {
+                .transform(translateY(37%))
+            }
+        }
+        
+        &.ui-sidebar-left {
+           .transform(translateX(-185%));  
+        }
+    }
+    .ui-sidebar-mask {
+        z-index: @sidebar-mask-zindex!important;
+    }
 }
