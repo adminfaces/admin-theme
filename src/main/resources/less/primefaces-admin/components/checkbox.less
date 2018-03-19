@@ -4,30 +4,35 @@
   background-image: none
 }
 
-div.ui-chkbox-box {
-  &.ui-state-hover, &.ui-state-focus {
-    background: transparent;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-}
-
-div.ui-chkbox-box.ui-state-active,
-div.ui-chkbox-box.ui-state-focus.ui-state-active {
-  border: 1px solid @light-blue;
-  background: @light-blue;
-  color: #FFFFFF;
-}
-
-.ui-chkbox-box.ui-state-active .ui-icon {
-  background-image: none;
-
-}
-
 div.ui-chkbox {
+
+
+  div.ui-chkbox-box {
+
+    &.ui-state-hover, &.ui-state-focus {
+      background: transparent;
+    }
+
+    &.ui-state-focus span.ui-chkbox-icon.ui-icon-check:before {
+      color: @admin-text-color;
+    }
+
+    &.ui-state-active {
+      border: 1px solid @light-blue;
+      background: @light-blue;
+      color: #FFFFFF;
+
+      .ui-icon {
+        background-image: none;
+
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+  }
 
   label {
     font-weight: 500;
