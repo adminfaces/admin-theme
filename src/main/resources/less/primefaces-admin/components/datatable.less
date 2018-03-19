@@ -232,7 +232,7 @@ body .ui-datatable, body .ui-treetable {
 
   .ui-selection-column {
 
-    .ui-radiobutton-box, .ui-chkbox-box {
+    .ui-radiobutton .ui-radiobutton-box, .ui-chkbox .ui-chkbox-box, .ui-radiobutton .ui-radiobutton-box.ui-state-active, .ui-chkbox .ui-chkbox-box.ui-state-active {
 
       background-color: #fff;
 
@@ -261,6 +261,14 @@ body .ui-datatable, body .ui-treetable {
         margin-left: -5px;
         margin-top: 3px;
         color: #444 !important;
+      }
+      
+      &.ui-state-focus {
+          -moz-box-shadow: 0 0 5px @box-shadow-color;
+          -webkit-box-shadow: 0 0 5px @box-shadow-color;
+          box-shadow: 0 0 5px @box-shadow-color;
+          border-color: lighten(@box-shadow-color, 30%);
+          background-color: #fff;
       }
 
     }
