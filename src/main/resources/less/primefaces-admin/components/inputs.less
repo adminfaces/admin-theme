@@ -4,9 +4,7 @@
 }
 
 .ui-inputfield.ui-state-focus, .ui-widget-content .ui-inputfield.ui-state-focus, .ui-widget-header .ui-inputfield.ui-state-focus {
-  -moz-box-shadow: 0px 0px 5px #1f89ce;
-  -webkit-box-shadow: 0px 0px 5px #1f89ce;
-  box-shadow: 0px 0px 5px #1f89ce;
+  .box-shadow(0 0 5px #1f89ce)
 }
 
 /* InputSwitch */
@@ -71,10 +69,7 @@ body div.ui-inputswitch {
       color: #fff;
 
       &.ui-state-focus {
-        -moz-box-shadow: 0 0 5px @box-shadow-color;
-        -webkit-box-shadow: 0 0 5px @box-shadow-color;
-        box-shadow: 0 0 5px @box-shadow-color;
-        border-color: lighten(@box-shadow-color,30%);
+        .input-shadow;
       }
     }
   }

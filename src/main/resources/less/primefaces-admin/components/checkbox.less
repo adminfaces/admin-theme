@@ -6,7 +6,6 @@
 
 div.ui-chkbox {
 
-
   div.ui-chkbox-box {
 
     &.ui-state-hover, &.ui-state-focus {
@@ -32,6 +31,9 @@ div.ui-chkbox {
       outline: none;
     }
 
+    &.ui-state-focus, &.ui-state-active.ui-state-focus {
+      .input-shadow;
+    }
   }
 
   label {
@@ -55,7 +57,6 @@ div.ui-chkbox {
   span.ui-chkbox-icon:hover {
     opacity: 1;
   }
-
 }
 
 body .ui-selectmanycheckbox.ui-grid-responsive {
@@ -69,6 +70,7 @@ body .ui-selectmanycheckbox.ui-grid-responsive {
   }
 
 }
+
 
 div.ui-chkbox span.ui-chkbox-icon.ui-icon-blank:before {
   color: transparent;
@@ -90,6 +92,7 @@ div.ui-chkbox span.ui-chkbox-icon {
   &:hover:before {
     color: #fff;
   }
+
 }
 
 @media (max-width: @screen-xs) {
