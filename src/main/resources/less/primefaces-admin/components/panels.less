@@ -56,31 +56,60 @@ body .ui-panel {
 
     &.box-default {
       border-top: 3px solid @gray-lte;
+      &.box-solid {
+        .panel-solid(@gray-lte);
+        .ui-panel-title {
+          color: @admin-text-color;
+        }
+      }
     }
 
     &.box-primary {
       border-top: 3px solid @light-blue;
+      &.box-solid {
+        .panel-solid(@light-blue);
+      }
     }
 
     &.box-danger {
       border-top: 3px solid @red;
+      &.box-solid {
+        .panel-solid(@red);
+      }
     }
 
     &.box-fatal {
       border-top: 3px solid @dark-red;
+      &.box-solid {
+        .panel-solid(@dark-red);
+      }
     }
 
     &.box-warning {
       border-top: 3px solid @yellow;
+      &.box-solid {
+        .panel-solid(@yellow);
+      }
     }
 
     &.box-success {
       border-top: 3px solid @green;
+      &.box-solid {
+        .panel-solid(@green);
+      }
     }
 
     &.box-info {
       border-top: 3px solid @aqua;
+      &.box-solid {
+        .panel-solid(@aqua);
+      }
     }
+
+    &.box-solid span.ui-icon:before {
+      color: #fff;
+    }
+
   }
 
 
@@ -116,3 +145,14 @@ a.ui-panel-titlebar-icon {
   }
 }
 
+
+.panel-solid(@color) {
+  border-top: 0;
+  .ui-panel-titlebar {
+    background: @color;
+  }
+
+  .ui-panel-title {
+    color: #fff;
+  }
+}
