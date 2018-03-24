@@ -51,6 +51,7 @@ div.ui-dialog {
 .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
   float: left;
   font-size: 18px;
+  font-weight: 500;
   color: @admin-text-color;
   margin: 0.3em 16px 0.3em 0px;
 }
@@ -113,38 +114,74 @@ div.ui-dialog {
   cursor: move;
 }
 
-.ui-dialog.ui-widget-content {
+body .ui-dialog.ui-widget-content, body .ui-dialog {
   border: none;
   border-radius: @default-border-radius;
 
   &.box-default {
     border-top: 3px solid  @gray-lte;
+
+    &.box-solid {
+      .dialog-solid(@gray-lte);
+      .ui-panel-title {
+        color: @admin-text-color;
+      }
+    }
   }
 
   &.box-primary {
     border-top: 3px solid @light-blue;
+    &.box-solid {
+      .dialog-solid(@light-blue);
+    }
   }
 
   &.box-danger {
     border-top: 3px solid @red;
+    &.box-solid {
+      .dialog-solid(@red);
+    }
   }
 
   &.box-fatal {
     border-top: 3px solid @dark-red;
+    &.box-solid {
+      .dialog-solid(@dark-red);
+    }
   }
 
   &.box-warning {
     border-top: 3px solid @yellow;
+    &.box-solid {
+      .dialog-solid(@yellow);
+    }
   }
 
   &.box-success {
     border-top: 3px solid @green;
+    &.box-solid {
+      .dialog-solid(@green);
+    }
   }
 
   &.box-info {
     border-top: 3px solid @aqua;
+    &.box-solid {
+      .dialog-solid(@aqua);
+    }
   }
 
+  &.box-solid span.ui-icon:before {
+    color: #fff;
+  }
+
+}
+
+a.ui-dialog-titlebar-icon {
+  border: 0 !important;
+  > span:before {
+    top: 2px;
+  }
 }
 
 a.ui-dialog-titlebar-close {
@@ -165,4 +202,15 @@ body .ui-overlaypanel {
 
 div.ui-selectcheckboxmenu-panel, div.ui-selectonemenu-panel, div.ui-autocomplete-panel {
   z-index: (@dialog-zindex+1);
+}
+
+.dialog-solid(@color) {
+  border-top: 0;
+  .ui-dialog-titlebar {
+    background: @color!important;
+  }
+
+  .ui-dialog-title {
+    color: #fff;
+  }
 }
