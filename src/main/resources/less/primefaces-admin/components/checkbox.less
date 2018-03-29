@@ -11,6 +11,8 @@ div.ui-chkbox {
     &.ui-state-hover, &.ui-state-focus {
       background: transparent;
     }
+    
+    
 
     &.ui-state-focus span.ui-chkbox-icon.ui-icon-check:before {
       color: @admin-text-color;
@@ -25,6 +27,7 @@ div.ui-chkbox {
         background-image: none;
 
       }
+      
     }
 
     &:focus {
@@ -33,6 +36,10 @@ div.ui-chkbox {
 
     &.ui-state-focus, &.ui-state-active.ui-state-focus {
       .input-shadow;
+    }
+    
+    &.ui-state-active.ui-state-focus {
+       background: #fff; 
     }
   }
 
