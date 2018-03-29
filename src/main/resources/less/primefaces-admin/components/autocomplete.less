@@ -1,158 +1,162 @@
 body .ui-autocomplete {
-  button.ui-autocomplete-dropdown {
-    border: none;
-    background-color: transparent;
-    overflow: hidden;
-    .border-left-radius(0px);
-    &.ui-state-hover, .ui-state-focus {
-      background: transparent;
-      .border-left-radius(0px);
+    button.ui-autocomplete-dropdown {
+        border: none;
+        background-color: transparent;
+        overflow: hidden;
+        .border-left-radius(0px);
+        &.ui-state-hover, .ui-state-focus {
+            background: transparent;
+            .border-left-radius(0px);
+        }
+        &:active {
+            .box-shadow(none);
+        }
     }
-    &:active {
-      .box-shadow(none);
-    }
-  }
 
-  input.ui-autocomplete-dd-input {
-    .border-right-radius(3px);
-  }
+    input.ui-autocomplete-dd-input {
+        .border-right-radius(3px);
+    }
 
-  li.ui-autocomplete-token {
-    background: @light-blue;
-    color: #fff;
-    height: 28px;
-    white-space: normal;
-  }
+    li.ui-autocomplete-token {
+        background: @light-blue;
+        color: #fff;
+        height: 28px;
+        white-space: normal;
+    }
 
-  span.ui-autocomplete-token-label {
-    padding-right: 1.5em;
-    float: left;
-    display: inline;
-  }
+    span.ui-autocomplete-token-label {
+        padding-right: 1.5em;
+        float: left;
+        display: inline;
+    }
 
-  span.ui-icon-close {
-    background-image: none !important;
-    display: inline;
-    position: relative;
-    &:before {
-      font-family: FontAwesome;
-      color: #fff;
-      display: inline !important;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      margin-left: 5px;
-      top: -15px;
-      overflow: hidden;
-      content: "\f00d" !important;
+    span.ui-icon-close {
+        background-image: none !important;
+        display: inline;
+        position: relative;
+        &:before {
+            font-family: FontAwesome;
+            color: #fff;
+            display: inline !important;
+            position: relative;
+            font-size: @font-awesome-icon-size;
+            margin-left: 5px;
+            top: -15px;
+            overflow: hidden;
+            content: "\f00d" !important;
+        }
+        &:hover:before {
+            color: @hover-icon-color;
+        }
     }
-    &:hover:before {
-      color: @hover-icon-color;
-    }
-  }
 
-  /* box colors */
-  &.box-default {
-    .ui-autocomplete-token {
-      background: @gray-lte;
+    /* box colors */
+    &.box-default {
+        .ui-autocomplete-token {
+            background: @gray-lte;
+        }
     }
-  }
-  &.box-danger {
-    .ui-autocomplete-token {
-      background: @red;
+    &.box-danger {
+        .ui-autocomplete-token {
+            background: @red;
+        }
     }
-  }
 
-  &.box-fatal {
-    .ui-autocomplete-token {
-      background: @dark-red;
+    &.box-fatal {
+        .ui-autocomplete-token {
+            background: @dark-red;
+        }
     }
-  }
 
-  &.box-warning {
-    .ui-autocomplete-token {
-      background: @yellow;
+    &.box-warning {
+        .ui-autocomplete-token {
+            background: @yellow;
+        }
     }
-  }
 
-  &.box-success {
-    .ui-autocomplete-token {
-      background: @green;
+    &.box-success {
+        .ui-autocomplete-token {
+            background: @green;
+        }
     }
-  }
 
-  &.box-info {
-    .ui-autocomplete-token {
-      background: @aqua;
+    &.box-info {
+        .ui-autocomplete-token {
+            background: @aqua;
+        }
     }
-  }
-  &.no-color {
-    .ui-autocomplete-token {
-      background: #d2d6de;
+    &.no-color {
+        .ui-autocomplete-token {
+            background: #d2d6de;
+        }
     }
-  }
 
 }
 
 
 button.ui-autocomplete-dropdown {
-  overflow: hidden;
-  > span.ui-icon-triangle-1-s {
-    margin-top: -10px;
-  }
+    overflow: hidden;
+    > span.ui-icon-triangle-1-s {
+        margin-top: -10px;
+    }
 }
 
 
 button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
-  background-image: none;
-  display: inline;
-  position: relative;
-
-  &:before {
-    font-family: FontAwesome;
-    color: @admin-text-color;
+    background-image: none;
+    display: inline;
     position: relative;
-    font-size: @font-awesome-icon-size;
-    padding: 0 1px;
-    top: -2px;
-    left:-2px;
-    overflow: hidden;
-    content: "\f0d7" !important;
-  }
+
+    &:before {
+        font-family: FontAwesome;
+        color: @admin-text-color;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        padding: 0 1px;
+        top: -2px;
+        overflow: hidden;
+        content: "\f0d7" !important;
+    }
 }
 
 @media (max-width: @screen-xs) {
-  button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
-    &:before {
-      font-size: @font-awesome-icon-size + 1;
+    button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
+        &:before {
+            font-size: @font-awesome-icon-size + 1;
+        }
     }
-  }
 }
 
 @-moz-document url-prefix() {
-  button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
-    top: -15px!important;
-  }
+    button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
+        top: -19px!important;
+        left: 2px;
+    }
+    
+    .ui-material button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
+        top: -8px!important;
+    }
 }
 
 div.ui-autocomplete-itemtip {
-  z-index: (@dialog-zindex + 1);
-  width: auto!important;
+    z-index: (@dialog-zindex + 1);
+    width: auto!important;
 }
 
 /* interaction cues */
 
 .ui-autocomplete-input.ui-state-error, .ui-autocomplete-input.ui-state-error.ui-state-focus {
 
-  +button.ui-autocomplete-dropdown {
-    border: 1px solid @box-shadow-color-error;
-    border-left: none;
-    border-right: none;
-    color: @error-color;
-  }
+    +button.ui-autocomplete-dropdown {
+        border: 1px solid @box-shadow-color-error;
+        border-left: none;
+        border-right: none;
+        color: @error-color;
+    }
 }
 
 .ui-autocomplete-input.ui-state-focus + button.ui-autocomplete-dropdown {
-  border-color: lighten(@box-shadow-color,30%);
-  border-left: none;
-  border-right: none;
+    border-color: lighten(@box-shadow-color,30%);
+    border-left: none;
+    border-right: none;
 }
