@@ -262,13 +262,13 @@ body .ui-datatable, body .ui-treetable {
         margin-top: 3px;
         color: #444 !important;
       }
-      
+
       &.ui-state-focus {
-          -moz-box-shadow: 0 0 5px @box-shadow-color;
-          -webkit-box-shadow: 0 0 5px @box-shadow-color;
-          box-shadow: 0 0 5px @box-shadow-color;
-          border-color: lighten(@box-shadow-color, 30%);
-          background-color: #fff;
+        -moz-box-shadow: 0 0 5px @box-shadow-color;
+        -webkit-box-shadow: 0 0 5px @box-shadow-color;
+        box-shadow: 0 0 5px @box-shadow-color;
+        border-color: lighten(@box-shadow-color, 30%);
+        background-color: #fff;
       }
 
     }
@@ -312,35 +312,37 @@ body .ui-datatable, body .ui-treetable {
 
 }
 
-body span.ui-treetable-toggler.ui-icon-triangle-1-e {
-  background-image: none !important;
-  display: inline !important;
-  &:before {
-    font-family: FontAwesome;
-    color: @admin-text-color;
-    position: relative;
-    font-size: @font-awesome-icon-size;
-    top: -1px;
-    padding: 0 4px;
-    overflow: hidden;
-    content: "\f0da" !important;
+body .ui-treetable .ui-treetable-data {
+
+  span.ui-treetable-toggler {
+    background-image: none !important;
+    display: inline !important;
+
+    &.ui-icon-triangle-1-e:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      top: -5px;
+      padding: 0 4px;
+      overflow: hidden;
+      content: "\f0da" !important;
+    }
+
+    &.ui-icon-triangle-1-s:before {
+      font-family: FontAwesome;
+      color: @admin-text-color;
+      position: relative;
+      font-size: @font-awesome-icon-size;
+      padding: 0 4px;
+      overflow: hidden;
+      top: -5px;
+      content: "\f0d7" !important;
+    }
   }
+
 }
 
-span.ui-treetable-toggler.ui-icon-triangle-1-s {
-  background-image: none !important;
-  display: inline !important;
-  &:before {
-    font-family: FontAwesome;
-    color: @admin-text-color;
-    position: relative;
-    font-size: @font-awesome-icon-size;
-    top: -1px;
-    padding: 0 4px;
-    overflow: hidden;
-    content: "\f0d7" !important;
-  }
-}
 
 body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chkbox-icon.ui-icon-check:before {
   color: @admin-text-color;
