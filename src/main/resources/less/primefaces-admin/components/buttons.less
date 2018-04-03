@@ -41,6 +41,7 @@ button.ui-button {
   -o-transition: background-color .2s;
   transition: background-color .2s;
   overflow: hidden;
+  .btn-interactions(@btn-background-color);
 
   &.btn {
     padding: 5px 12px;
@@ -215,10 +216,26 @@ body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
 
 }
 
-.ui-splitbutton.btn-block > button {
-  display: block;
-  width: 100%;
+.ui-splitbutton.btn-block {
+  > button {
+    display: block;
+    border-right: none;
+    z-index: 1;
+  }
+
+  button.ui-splitbutton-menubutton {
+    z-index: 0;
+    width: 100%;
+
+    &:before {
+      float: right;
+      right:15px;
+    }
+  }
+
 }
+
+
 
 .ui-splitbutton-menubutton span {
   &.ui-icon, &.ui-button-text {
