@@ -28,5 +28,6 @@ A sample xhtml code may help, ex:
 
 ##### Additional Information
 
-* Affected version:  
+* AdminFaces version:  
+* PrimeFaces version:  
 * Browser version: 
