@@ -41,7 +41,28 @@ button.ui-button {
   -o-transition: background-color .2s;
   transition: background-color .2s;
   overflow: hidden;
-  .btn-interactions(@btn-background-color);
+  
+  &:hover {
+      background-color: darken(@btn-background-color, 5%);
+  }
+  &:focus {
+      background-color: darken(@btn-background-color, 8%);
+  }
+  &:active {
+      background-color: darken(@btn-background-color, 15%);
+  }
+
+  &.ui-state-disabled {
+      &:hover {
+          background-color: darken(@btn-background-color, 0%);
+      }
+      &:focus {
+          background-color: darken(@btn-background-color, 0%);
+      }
+      &:active {
+          background-color: darken(@btn-background-color, 0%);
+      }
+  }
 
   &.btn {
     padding: 5px 12px;
