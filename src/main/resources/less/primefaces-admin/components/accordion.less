@@ -27,32 +27,40 @@ div.ui-accordion .ui-accordion-header {
     -moz-border-radius: 0px;
     border-radius: 0px;
     border-top: 3px solid @tabview-border-top-color;
+    
+    .accordionSolid(@tabview-border-top-color, #fff);
 
     &.box-default {
       border-top: 3px solid @gray-lte;
+     .accordionSolid(@gray-lte, @admin-text-color);
     }
     &.box-danger {
       border-top: 3px solid @red;
+     .accordionSolid(@red, #fff);
     }
-
     &.box-fatal {
       border-top: 3px solid @dark-red;
+      .accordionSolid(@dark-red, #fff);
     }
 
     &.box-warning {
       border-top: 3px solid @yellow;
+      .accordionSolid(@yellow, #fff);
     }
 
     &.box-success {
       border-top: 3px solid @green;
+      .accordionSolid(@green, #fff);
     }
 
     &.box-info {
       border-top: 3px solid @aqua;
+      .accordionSolid(@aqua, #fff);
     }
 
     &.no-color {
       border-top: 1px solid @hover-color;
+      .accordionSolid(#f6f7f9, @admin-text-color);
     }
   }
 
@@ -106,4 +114,15 @@ div.ui-accordion .ui-accordion-header {
 
 div.ui-accordion.no-icon span.ui-icon {
   display: none;
+}
+
+.accordionSolid(@color, @text-color) {
+    &.box-solid {
+      background: @color;
+      color: @text-color;
+      
+      span.ui-icon:before {
+          color:@text-color;
+      }
+   }
 }
