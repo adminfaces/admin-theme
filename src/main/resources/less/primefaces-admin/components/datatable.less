@@ -2,538 +2,549 @@
 
 body .ui-datatable, body .ui-treetable {
 
-  background-color: #fff;
+    background-color: #fff;
 
-  .ui-treetable-header, ui-treetable-footer {
-    border-color: @datatable-border-color;
-    padding: 10px 5px;
-  }
-
-  th {
-    font-weight: 600;
-  }
-
-  th.ui-state-default {
-    border-color: @datatable-border-color;
-  }
-
-  th.ui-state-hover {
-    background: #d3d5d8;
-    border-color: @datatable-border-color;
-  }
-
-  th.ui-state-active {
-    background: #E6E6E6;
-    color: #444;
-  }
-
-  tbody > tr.ui-widget-content {
-    border-color: @datatable-border-color;
-  }
-
-  tbody > tr > td > a {
-    cursor: pointer;
-    color: @light-blue;
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  }
-
-  tr.ui-state-hover, tr.ui-state-hover td {
-    background-color: @datatable-row-hover-color;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-  }
-
-  .ui-datatable-header, ui-treetable-header, .ui-datatable-footer, .ui-treetable-footer {
-    background: #fff;
-    border: none;
-  }
-
-  th[role="columnheader"].ui-state-default {
-    background: #fff none;
-    border: 1px solid @datatable-border-color;
-    box-shadow: none !important;
-    outline: 0 !important;
-    position: relative;
-    font-weight: 600;
-    border-radius: 0;
-    &.ui-sortable-column.ui-state-active {
-      background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f3);
-      background-image: linear-gradient(top, #ffffff, #eeeeee);
-
-    }
-  }
-
-  td[role="gridcell"] {
-    position: relative;
-    a {
-      position: relative;
-    }
-  }
-
-  tbody > tr {
-    &.ui-widget-content {
-      border-top-color: @datatable-row-border-color;
-      border-bottom-color: @datatable-row-border-color;
-      border-left: @datatable-border-color;
-      border-right: @datatable-border-color;
+    .ui-treetable-header, ui-treetable-footer {
+        border-color: @datatable-border-color;
+        padding: 10px 5px;
     }
 
-    &.ui-widget-content.ui-state-hover {
-      border-color: @datatable-row-border-color !important;
+    th {
+        font-weight: 600;
     }
 
-    &.ui-widget-header > td {
-      border-color: @datatable-border-color !important;
-      font-weight: 600;
-    }
-  }
-
-  .ui-widget-content .ui-state-highlight a {
-    text-decoration: underline;
-
-    &:hover {
-      color: #222;
-    }
-  }
-
-  .border-bottom-radius(0);
-  .border-top-radius(3px);
-
-  &.box-default {
-    .ui-datatable-header, ui-treetable-header {
-      border-top: 3px solid @gray-lte;
+    th.ui-state-default {
+        border-color: @datatable-border-color;
     }
 
-  }
-
-  &.box-primary {
-    .ui-datatable-header, ui-treetable-header {
-      border-top: 3px solid @light-blue;
-    }
-  }
-
-  &.box-danger {
-    .ui-datatable-header, ui-treetable-header {
-      border-top: 3px solid @red;
-    }
-  }
-
-  &.box-fatal {
-    .ui-datatable-header, ui-treetable-header {
-      border-top: 3px solid @dark-red;
-    }
-  }
-
-  &.box-warning {
-    .ui-datatable-header, ui-treetable-header {
-      border-top: 3px solid @yellow;
-    }
-  }
-
-  &.box-success {
-    .ui-datatable-header, .ui-treetable-header {
-      border-top: 3px solid @green;
-    }
-  }
-
-  &.box-info {
-    .ui-datatable-header, .ui-treetable-header {
-      border-top: 3px solid @aqua;
-    }
-  }
-
-  table tbody td, table thead th {
-    padding: 10px 10px;
-  }
-
-  table thead th.ui-filter-column {
-    padding: 5px 2px;
-  }
-
-  th .ui-column-customfilter {
-    .ui-selectonemenu, .ui-selectcheckboxmenu {
-      background-color: #fff;
+    th.ui-state-hover {
+        background: #d3d5d8;
+        border-color: @datatable-border-color;
     }
 
-  }
+    th.ui-state-active {
+        background: #E6E6E6;
+        color: #444;
+    }
 
-  th.ui-state-active .ui-icon-carat-2-n-s {
-    background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
+    tbody > tr.ui-widget-content {
+        border-color: @datatable-border-color;
+    }
 
-  }
+    tbody > tr > td > a {
+        cursor: pointer;
+        color: @light-blue;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
 
-  span.ui-sortable-column-icon {
+    tr.ui-state-hover, tr.ui-state-hover td {
+        background-color: @datatable-row-hover-color;
+    }
 
-    &.ui-icon-carat-2-n-s {
-      background-image: none;
-      display: inline;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
 
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
+    .ui-datatable-header, .ui-treetable-header, .ui-datatable-footer, .ui-treetable-footer {
+        background: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        border-color: @datatable-border-color
+    }
+
+    th[role="columnheader"].ui-state-default {
+        background: #fff none;
+        border: 1px solid @datatable-border-color;
+        box-shadow: none !important;
+        outline: 0 !important;
         position: relative;
-        font-size: @font-awesome-icon-size;
-        padding: 0 7px;
-        overflow: hidden;
-        content: "\f0dc";
-      }
+        font-weight: 600;
+        border-radius: 0;
+        &.ui-sortable-column.ui-state-active {
+            background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f3);
+            background-image: linear-gradient(top, #ffffff, #eeeeee);
+
+        }
     }
 
-    &.ui-icon-carat-2-n-s.ui-icon-triangle-1-s {
-      background-image: none;
-      display: inline;
-
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
+    td[role="gridcell"] {
         position: relative;
-        font-size: @font-awesome-icon-size;
-        padding: 0 7px;
-        overflow: hidden;
-        content: "\f0d7" !important;
-      }
+        a {
+            position: relative;
+        }
     }
 
-    &.ui-icon-carat-2-n-s.ui-icon-triangle-1-n {
-      background-image: none;
-      display: inline;
+    tbody > tr {
+        &.ui-widget-content {
+            border-top-color: @datatable-row-border-color;
+            border-bottom-color: @datatable-row-border-color;
+            border-left: @datatable-border-color;
+            border-right: @datatable-border-color;
+        }
 
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
-        position: relative;
-        font-size: @font-awesome-icon-size;
-        padding: 0 7px;
-        overflow: hidden;
-        content: "\f0d8" !important;
-      }
+        &.ui-widget-content.ui-state-hover {
+            border-color: @datatable-row-border-color !important;
+        }
+
+        &.ui-widget-header > td {
+            border-color: @datatable-border-color !important;
+            font-weight: 600;
+        }
     }
 
-  }
+    .ui-widget-content .ui-state-highlight a {
+        text-decoration: underline;
+
+        &:hover {
+            color: #222;
+        }
+    }
+
+    .border-bottom-radius(0);
+    .border-top-radius(3px);
+
+
+    &.box-default {
+        .datatableBoxColors(@gray-lte, @admin-text-color)
+    }
+
+    &.box-primary {
+        .datatableBoxColors(@light-blue, #fff)
+    }
+
+    &.box-danger {
+        .datatableBoxColors(@red, #fff)
+    }
+
+    &.box-fatal {
+        .datatableBoxColors(@dark-red, #fff)
+    }
+
+    &.box-warning {
+        .datatableBoxColors(@yellow, #fff)
+    }
+
+    &.box-success {
+        .datatableBoxColors(@green, #fff)
+    }
+
+    &.box-info {
+        .datatableBoxColors(@aqua, #fff)
+    }
+
+    table tbody td, table thead th {
+        padding: 10px 10px;
+    }
+
+    table thead th.ui-filter-column {
+        padding: 5px 2px;
+    }
+
+    th .ui-column-customfilter {
+        .ui-selectonemenu, .ui-selectcheckboxmenu {
+            background-color: #fff;
+        }
+
+    }
+
+    th.ui-state-active .ui-icon-carat-2-n-s {
+        background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
+
+    }
+
+    span.ui-sortable-column-icon {
+
+        &.ui-icon-carat-2-n-s {
+            background-image: none;
+            display: inline;
+
+            &:before {
+                font-family: FontAwesome;
+                color: @admin-text-color;
+                position: relative;
+                font-size: @font-awesome-icon-size;
+                padding: 0 7px;
+                overflow: hidden;
+                content: "\f0dc";
+            }
+        }
+
+        &.ui-icon-carat-2-n-s.ui-icon-triangle-1-s {
+            background-image: none;
+            display: inline;
+
+            &:before {
+                font-family: FontAwesome;
+                color: @admin-text-color;
+                position: relative;
+                font-size: @font-awesome-icon-size;
+                padding: 0 7px;
+                overflow: hidden;
+                content: "\f0d7" !important;
+            }
+        }
+
+        &.ui-icon-carat-2-n-s.ui-icon-triangle-1-n {
+            background-image: none;
+            display: inline;
+
+            &:before {
+                font-family: FontAwesome;
+                color: @admin-text-color;
+                position: relative;
+                font-size: @font-awesome-icon-size;
+                padding: 0 7px;
+                overflow: hidden;
+                content: "\f0d8" !important;
+            }
+        }
+
+    }
 
 }
 
 .ui-datatable-odd, ui-treetable-odd {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 .ui-datatable-rowordering.ui-state-active {
-  background: #14a4ff none repeat scroll 0 0;
+    background: #14a4ff none repeat scroll 0 0;
 }
 
 body .ui-datatable, body .ui-treetable {
 
-  .ui-selection-column {
+    .ui-selection-column {
 
-    .ui-radiobutton .ui-radiobutton-box, .ui-chkbox .ui-chkbox-box, .ui-radiobutton .ui-radiobutton-box.ui-state-active, .ui-chkbox .ui-chkbox-box.ui-state-active {
+        .ui-radiobutton .ui-radiobutton-box, .ui-chkbox .ui-chkbox-box, .ui-radiobutton .ui-radiobutton-box.ui-state-active, .ui-chkbox .ui-chkbox-box.ui-state-active {
 
-      background-color: #fff;
+            background-color: #fff;
 
-      .ui-chkbox-icon:before {
-        color: #fff;
-      }
+            .ui-chkbox-icon:before {
+                color: #fff;
+            }
 
-      .ui-chkbox-icon {
-        &.ui-icon-check {
-          margin-left: 1px;
-          &:before {
-            color: #444;
-          }
+            .ui-chkbox-icon {
+                &.ui-icon-check {
+                    margin-left: 1px;
+                    &:before {
+                        color: #444;
+                    }
+                }
+
+                &.ui-icon-blank {
+                    &:before {
+                        color: transparent;
+                    }
+                }
+            }
+
+            .ui-icon-bullet {
+                width: 10px;
+                height: 10px;
+                margin-left: -5px;
+                margin-top: 3px;
+                color: #444 !important;
+            }
+
+            &.ui-state-focus {
+                -moz-box-shadow: 0 0 5px @box-shadow-color;
+                -webkit-box-shadow: 0 0 5px @box-shadow-color;
+                box-shadow: 0 0 5px @box-shadow-color;
+                border-color: lighten(@box-shadow-color, 30%);
+                background-color: #fff;
+            }
+
         }
 
-        &.ui-icon-blank {
-          &:before {
-            color: transparent;
-          }
+        .ui-radiobutton {
+            background-color: transparent;
         }
-      }
 
-      .ui-icon-bullet {
-        width: 10px;
-        height: 10px;
-        margin-left: -5px;
-        margin-top: 3px;
-        color: #444 !important;
-      }
-
-      &.ui-state-focus {
-        -moz-box-shadow: 0 0 5px @box-shadow-color;
-        -webkit-box-shadow: 0 0 5px @box-shadow-color;
-        box-shadow: 0 0 5px @box-shadow-color;
-        border-color: lighten(@box-shadow-color, 30%);
-        background-color: #fff;
-      }
+        .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+            border-color: #444;
+            span.ui-radiobutton-icon {
+                background-color: #444 !important;
+            }
+        }
 
     }
 
-    .ui-radiobutton {
-      background-color: transparent;
+    th.ui-state-default[role="columnheader"] {
+        background: transparent none;
     }
-
-    .ui-radiobutton .ui-radiobutton-box.ui-state-active {
-      border-color: #444;
-      span.ui-radiobutton-icon {
-        background-color: #444 !important;
-      }
-    }
-
-  }
-
-  th.ui-state-default[role="columnheader"] {
-    background: transparent none;
-  }
 
 }
 
 body .ui-datatable, body .ui-treetable {
-  td.ui-selection-column, th.ui-selection-column {
-    @media (max-width: @screen-sm-max) {
-      width: 8% !important;
+    td.ui-selection-column, th.ui-selection-column {
+        @media (max-width: @screen-sm-max) {
+            width: 8% !important;
+        }
+
+        @media (max-width: @screen-xs-max) {
+            width: 10% !important;
+        }
+
     }
 
-    @media (max-width: @screen-xs-max) {
-      width: 10% !important;
+    tr.ui-widget-content.ui-state-hover {
+        border-bottom: #f4f4f4 !important;
+        border-top: #f4f4f4 !important;
     }
-
-  }
-
-  tr.ui-widget-content.ui-state-hover {
-    border-bottom: #f4f4f4 !important;
-    border-top: #f4f4f4 !important;
-  }
 
 
 }
 
 body .ui-treetable .ui-treetable-data {
 
-  span.ui-treetable-toggler {
-    background-image: none !important;
-    display: inline !important;
+    span.ui-treetable-toggler {
+        background-image: none !important;
+        display: inline !important;
 
-    &.ui-icon-triangle-1-e:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -5px;
-      padding: 0 4px;
-      overflow: hidden;
-      content: "\f0da" !important;
-    }
+        &.ui-icon-triangle-1-e:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size: @font-awesome-icon-size;
+            top: -5px;
+            padding: 0 4px;
+            overflow: hidden;
+            content: "\f0da" !important;
+        }
 
-    &.ui-icon-triangle-1-s:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      padding: 0 4px;
-      overflow: hidden;
-      top: -5px;
-      content: "\f0d7" !important;
+        &.ui-icon-triangle-1-s:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size: @font-awesome-icon-size;
+            padding: 0 4px;
+            overflow: hidden;
+            top: -5px;
+            content: "\f0d7" !important;
+        }
     }
-  }
 
 }
 
 
 body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chkbox-icon.ui-icon-check:before {
-  color: @admin-text-color;
+    color: @admin-text-color;
 }
 
 body .ui-treetable  {
 
-  span.ui-treetable-toggler {
-    margin-right: 5px;
-  }
+    span.ui-treetable-toggler {
+        margin-right: 5px;
+    }
 
-  div.ui-chkbox-box {
-    margin-top: 3px;
-    margin-right: 2px;
-  }
+    div.ui-chkbox-box {
+        margin-top: 3px;
+        margin-right: 2px;
+    }
 }
 
 /* datatable paginator */
 
 body div.ui-datatable, body div.ui-treetable {
-  div.ui-paginator {
-    border: 1px solid #f4f4f4;
-    span.ui-paginator-pages {
-      overflow: hidden;
-      padding: 6px 12px;
-      display: inline;
-      line-height: 1.42857143;
+    div.ui-paginator {
+        border: 1px solid #f4f4f4;
+        span.ui-paginator-pages {
+            overflow: hidden;
+            padding: 6px 12px;
+            display: inline;
+            line-height: 1.42857143;
+        }
     }
-  }
 
-  div.ui-paginator-bottom {
-    border-top-color: transparent;
-  }
+    div.ui-paginator-bottom {
+        border-top-color: transparent;
+    }
 
-  div.ui-paginator-top {
-    border-bottom-color: transparent;
-  }
+    div.ui-paginator-top {
+        border-bottom-color: transparent;
+    }
 
-  td.ui-datatable-subtable-header {
-    border-color: @datatable-border-color;
-    border-bottom-color: @datatable-row-border-color;
-  }
+    td.ui-datatable-subtable-header {
+        border-color: @datatable-border-color;
+        border-bottom-color: @datatable-row-border-color;
+    }
 
 }
 
 body .ui-paginator {
-  .ui-paginator-page, .ui-paginator-pages, .ui-paginator-current, select, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next {
-    background: #fff;
-    position: relative;
-    font-weight: 400;
-    display: inline-block;
-    zoom: 1;
-    margin: 0 0 0 -1px;
-    line-height: 1.42857143;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 0;
-    outline: 0;
-    .box-shadow(none);
-    a.ui-state-hover {
-      background: #e6e6e6;
+    .ui-paginator-page, .ui-paginator-pages, .ui-paginator-current, select, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next {
+        background: #fff;
+        position: relative;
+        font-weight: 400;
+        display: inline-block;
+        zoom: 1;
+        margin: 0 0 0 -1px;
+        line-height: 1.42857143;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 0;
+        outline: 0;
+        .box-shadow(none);
+        a.ui-state-hover {
+            background: #e6e6e6;
+        }
     }
-  }
-  .ui-paginator-page, .ui-paginator-pages, .ui-paginator-current {
-    padding: 6px 12px;
-  }
-
-  .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next, select {
-    padding: 6px 8px;
-  }
-
-  .ui-paginator-prev {
-    margin-right: 1px;
-  }
-
-  select.ui-paginator-rpp-options {
-    padding: 6px 8px;
-    -moz-appearance: none;
-  }
-
-  a.ui-paginator-last span.ui-icon-seek-end {
-    background-image: none !important;
-    display: inline !important;
-    font-size: 0;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size:  (@font-awesome-icon-size - 1) ;
-      top: 0;
-      padding: 0 4px;
-      content: "\f051" !important;
+    .ui-paginator-page, .ui-paginator-pages, .ui-paginator-current {
+        padding: 6px 12px;
     }
-  }
 
-  a.ui-paginator-first span.ui-icon-seek-first {
-    background-image: none !important;
-    display: inline !important;
-    font-size: 0;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: (@font-awesome-icon-size - 1);
-      top: 0;
-      padding: 0 4px;
-      overflow: hidden;
-      content: "\f048" !important;
+    .ui-paginator-first, .ui-paginator-prev, .ui-paginator-last, .ui-paginator-next, select {
+        padding: 6px 8px;
     }
-  }
-
-  a.ui-paginator-next span.ui-icon-seek-next {
-    background-image: none !important;
-    display: inline !important;
-    font-size: 0;
-    margin-left: -1px;
-    margin-right: -4px;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: (@font-awesome-icon-size - 1);
-      top: 0;
-      padding: 0 4px;
-      overflow: hidden;
-      content: "\f054" !important;
-    }
-  }
-
-  a.ui-paginator-prev span.ui-icon-seek-prev {
-    background-image: none !important;
-    display: inline !important;
-    font-size: 0;
-    margin-left: -4px;
-    margin-right: -1px;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: (@font-awesome-icon-size - 1);
-      top: 0;
-      padding: 0 4px;
-      overflow: hidden;
-      content: "\f053" !important;
-    }
-  }
-
-}
-
-@media (max-width: @screen-xm) {
-  body div.ui-treetable, body div.ui-datatable {
-    div.ui-paginator span.ui-paginator-pages {
-      display: none ;
-    }
-  }
-}
-
-@media (max-width: @screen-xm) {
-  body .ui-paginator {
 
     .ui-paginator-prev {
-      margin-right: 0px;
+        margin-right: 1px;
     }
 
-    span.ui-icon:hover {
-      opacity: 1;
+    select.ui-paginator-rpp-options {
+        padding: 6px 8px;
+        -moz-appearance: none;
     }
-  }
+
+    a.ui-paginator-last span.ui-icon-seek-end {
+        background-image: none !important;
+        display: inline !important;
+        font-size: 0;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size:  (@font-awesome-icon-size - 1) ;
+            top: 0;
+            padding: 0 4px;
+            content: "\f051" !important;
+        }
+    }
+
+    a.ui-paginator-first span.ui-icon-seek-first {
+        background-image: none !important;
+        display: inline !important;
+        font-size: 0;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size: (@font-awesome-icon-size - 1);
+            top: 0;
+            padding: 0 4px;
+            overflow: hidden;
+            content: "\f048" !important;
+        }
+    }
+
+    a.ui-paginator-next span.ui-icon-seek-next {
+        background-image: none !important;
+        display: inline !important;
+        font-size: 0;
+        margin-left: -1px;
+        margin-right: -4px;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size: (@font-awesome-icon-size - 1);
+            top: 0;
+            padding: 0 4px;
+            overflow: hidden;
+            content: "\f054" !important;
+        }
+    }
+
+    a.ui-paginator-prev span.ui-icon-seek-prev {
+        background-image: none !important;
+        display: inline !important;
+        font-size: 0;
+        margin-left: -4px;
+        margin-right: -1px;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size: (@font-awesome-icon-size - 1);
+            top: 0;
+            padding: 0 4px;
+            overflow: hidden;
+            content: "\f053" !important;
+        }
+    }
+
+}
+
+@media (max-width: @screen-xm) {
+    body div.ui-treetable, body div.ui-datatable {
+        div.ui-paginator span.ui-paginator-pages {
+            display: none ;
+        }
+    }
+}
+
+@media (max-width: @screen-xm) {
+    body .ui-paginator {
+
+        .ui-paginator-prev {
+            margin-right: 0px;
+        }
+
+        span.ui-icon:hover {
+            opacity: 1;
+        }
+    }
 
 }
 
 body .ui-paginator .ui-paginator-pages a {
-  color: #666 !important;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+    color: #666 !important;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 body .ui-paginator .ui-paginator-page.ui-state-active {
-  background: @light-blue;
-  color: #fff !important;
-  border-color: @light-blue;
+    background: @light-blue;
+    color: #fff !important;
+    border-color: @light-blue;
 }
 
 span.ui-paginator-current {
-  font-weight: 600 !important;
+    font-weight: 600 !important;
 }
 
 
 .ui-datatable .ui-datatable-sticky {
-  z-index: 999!important;
+    z-index: 999!important;
 }
 
+.datatableBoxColors(@color, @text-color) {
+    .ui-datatable-header, .ui-treetable-header {
+        border-top: 3px solid @color;
+    }
+
+    &.box-solid {
+        .ui-datatable-header, .ui-treetable-header, .ui-datatable-footer, .ui-treetable-footer {
+           background-color: @color;
+           color: @text-color;
+        }
+        thead tr[role="row"] {
+            background-color: @color;
+        }
+
+        th[role="columnheader"] span.ui-column-title {
+            color: @text-color
+        }
+        
+        span.ui-sortable-column-icon:before {
+            color: @text-color
+        } 
+    }
+}
