@@ -19,6 +19,7 @@ ____
 A PrimeFaces theme to rule them all!
 ____
 
+image:https://travis-ci.org/adminfaces/admin-theme.svg[Build Status (Travis CI), link=https://travis-ci.org/adminfaces/admin-theme]
 image:https://maven-badges.herokuapp.com/maven-central/com.github.adminfaces/admin-theme/badge.svg["Maven Central",link="http://search.maven.org/#search|ga|1|admin-theme"]
 image:https://badges.gitter.im/Join%20Chat.svg[link="https://gitter.im/adminfaces?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
 
