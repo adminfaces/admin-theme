@@ -2,37 +2,60 @@
 
 
 body .ui-datagrid .ui-datagrid-header, .ui-datatable .ui-datagrid-footer {
-  background-color: @datatagrid-header-color;
+    background-color: @datatagrid-header-color;
 }
 
 body .ui-datagrid {
-  .border-bottom-radius(0);
-  .border-top-radius(3px);
-  &.box-default .ui-datagrid-header {
-    border-top: 3px solid  @gray-lte;
-  }
+    .border-bottom-radius(0);
+    .border-top-radius(3px);
 
-  &.box-primary .ui-datagrid-header {
-    border-top: 3px solid @light-blue;
-  }
+    .ui-datagrid-header, .ui-datagrid-footer {
+        font-size: 18px;
+        font-weight: 500;
+    } 
 
-  &.box-danger .ui-datagrid-header {
-    border-top: 3px solid @red;
-  }
+    &.box-default {
+        .datagridBoxColors (@gray-lte, @admin-text-color)
+    }
 
-  &.box-fatal .ui-datagrid-header {
-    border-top: 3px solid @dark-red;
-  }
+    &.box-primary  {
+        .datagridBoxColors (@light-blue, #fff);
+    }
 
-  &.box-warning .ui-datagrid-header {
-    border-top: 3px solid @yellow;
-  }
+    &.box-danger {
+        .datagridBoxColors (@red, #fff);
+    }
 
-  &.box-success .ui-datagrid-header {
-    border-top: 3px solid @green;
-  }
+    &.box-fatal {
+        .datagridBoxColors (@dark-red, #fff);
+    }
 
-  &.box-info .ui-datagrid-header {
-    border-top: 3px solid @aqua;
-  }
+    &.box-warning {
+        .datagridBoxColors (@yellow, #fff);
+    }
+
+    &.box-success {
+        .datagridBoxColors (@green, #fff);
+    }
+
+    &.box-info {
+        .datagridBoxColors (@aqua, #fff);
+    }
+}
+
+.datagridBoxColors(@color, @text-color) {
+    .ui-datagrid-header, .ui-panel-titlebar {
+        border-top: 3px solid  @color;
+
+    }
+    &.box-solid {
+        .ui-datagrid-header, .ui-datagrid-footer, .ui-panel-titlebar {
+            background-color: @color;
+            color:@text-color;
+            
+            .ui-panel-title {
+                color:@text-color;
+            }
+        }
+    }
 }
