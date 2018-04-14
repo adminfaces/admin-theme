@@ -2,92 +2,121 @@
 
 body .ui-tabs.ui-tabs-top .ui-tabs-nav.ui-widget-header li.ui-state-active {
   border-top: 3px solid @tabview-border-top-color;
+  
+  .tabviewSolid(@tabview-border-top-color, #fff);
+    
   &.box-default {
     border-top: 3px solid  @gray-lte;
+   .tabviewSolid(@gray-lte, #444);
   }
+  
   &.box-danger {
     border-top: 3px solid @red;
+    .tabviewSolid(@red, #fff);
   }
 
   &.box-fatal {
     border-top: 3px solid @dark-red;
+    .tabviewSolid(@dark-red, #fff);
   }
 
   &.box-warning {
     border-top: 3px solid @yellow;
+    .tabviewSolid(@yellow, #fff);
   }
 
   &.box-success {
     border-top: 3px solid @green;
+    .tabviewSolid(@green, #fff);
   }
 
   &.box-info {
     border-top: 3px solid @aqua;
+    .tabviewSolid(@aqua, #fff);
   }
 
   &.no-color {
     border-top: 1px solid #d2d6de;
+   .tabviewSolid(#f6f7f9, @admin-text-color);
   }
 }
 
 body .ui-tabs.ui-tabs-left .ui-tabs-nav.ui-widget-header li.ui-state-active {
   border-top: 3px solid @tabview-border-top-color;
-
+  .tabviewSolid(@tabview-border-top-color, #fff);
+  
   &.box-default {
     border-top: 3px solid  @gray-lte;
+   .tabviewSolid(@gray-lte, #444);
   }
+  
   &.box-danger {
     border-top: 3px solid @red;
+    .tabviewSolid(@red, #fff);
   }
 
   &.box-fatal {
     border-top: 3px solid @dark-red;
+    .tabviewSolid(@dark-red, #fff);
   }
 
   &.box-warning {
     border-top: 3px solid @yellow;
+    .tabviewSolid(@yellow, #fff);
   }
 
   &.box-success {
     border-top: 3px solid @green;
+    .tabviewSolid(@green, #fff);
   }
 
   &.box-info {
     border-top: 3px solid @aqua;
+    .tabviewSolid(@aqua, #fff);
   }
 
   &.no-color {
     border-top: 1px solid #d2d6de;
+   .tabviewSolid(#f6f7f9, @admin-text-color);
   }
 }
 
 body .ui-tabs.ui-tabs-right .ui-tabs-nav.ui-widget-header li.ui-state-active {
   border-top: 3px solid @tabview-border-top-color;
+  
   &.box-default {
     border-top: 3px solid  @gray-lte;
+   .tabviewSolid(@gray-lte, #444);
   }
+  
   &.box-danger {
     border-top: 3px solid @red;
+    .tabviewSolid(@red, #fff);
   }
 
   &.box-fatal {
     border-top: 3px solid @dark-red;
+    .tabviewSolid(@dark-red, #fff);
   }
 
   &.box-warning {
     border-top: 3px solid @yellow;
+    .tabviewSolid(@yellow, #fff);
   }
 
   &.box-success {
     border-top: 3px solid @green;
+    .tabviewSolid(@green, #fff);
   }
 
   &.box-info {
     border-top: 3px solid @aqua;
+    .tabviewSolid(@aqua, #fff);
   }
 
   &.no-color {
     border-top: 1px solid #d2d6de;
+   .tabviewSolid(#f6f7f9, @admin-text-color);
   }
 }
 
@@ -249,4 +278,19 @@ body .ui-tabs .ui-tabs-nav li span.ui-icon-close {
   body .ui-tabs .ui-tabs-nav li span.ui-icon-close:before {
     font-size: @font-awesome-icon-size - 1;
   }
+}
+
+
+.tabviewSolid(@color, @text-color) {
+    &.box-solid {
+      background: @color;
+      
+      a {
+          color: @text-color;
+      }
+      
+      span.ui-icon:before {
+          color:@text-color;
+      }
+   }
 }
