@@ -12,8 +12,6 @@ div.ui-chkbox {
       background: transparent;
     }
     
-    
-
     &.ui-state-focus span.ui-chkbox-icon.ui-icon-check:before {
       color: @admin-text-color;
     }
@@ -136,4 +134,25 @@ div.ui-chkbox-box.ui-state-default.ui-state-active span.ui-chkbox-icon:before {
 
 div.ui-chkbox-box.ui-state-default span.ui-chkbox-icon:before {
   color: transparent;
+}
+
+//checkbox black
+body .ui-chkbox.black, body .ui-selectcheckboxmenu-panel.black, .ui-selectmanycheckbox.black .ui-chkbox {
+    
+    div.ui-chkbox-box span.ui-chkbox-icon.ui-icon-check:before {
+        color: #222d32;
+        margin-left: 5px;
+    }    
+
+    div.ui-chkbox-box.ui-state-active {
+        border-color: #d2d6de;
+        color: #222d32!important;
+    }
+
+    div.ui-chkbox-box.ui-state-focus.ui-state-active {
+        color: #222d32!important;
+    }
+    div.ui-chkbox-box {
+        background: #fff!important;
+    }
 }
