@@ -284,7 +284,8 @@ body .ui-tabs .ui-tabs-nav li span.ui-icon-close {
 .tabviewSolid(@color, @text-color) {
     &.box-solid {
       background: @color;
-      
+      border-color: @color;
+      .border-radius(@default-border-radius);
       a {
           color: @text-color;
       }
