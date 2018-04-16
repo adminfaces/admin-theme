@@ -399,8 +399,8 @@
                             <file>${project.build.directory}/classes/META-INF/resources/primefaces-admin-${project.version}/theme.css</file>
                             <replacements>
                                 <replacement>
-                                    <token>"#{resource['primefaces-admin:</token>
-                                    <value>"#{resource['primefaces-admin-${project.version}:</value>
+                                    <token>#{resource['primefaces-admin:</token>
+                                    <value>#{resource['primefaces-admin-${project.version}:</value>
                                 </replacement>
                             </replacements>
                         </configuration>
@@ -523,8 +523,8 @@
                             <file>${project.build.directory}/classes/META-INF/resources/primefaces-admin-${project.version}/theme.css</file>
                             <replacements>
                                 <replacement>
-                                    <token>"#{resource['primefaces-admin:</token>
-                                    <value>"#{resource['primefaces-admin-${project.version}:</value>
+                                    <token>#{resource['primefaces-admin:</token>
+                                    <value>#{resource['primefaces-admin-${project.version}:</value>
                                 </replacement>
                             </replacements>
                         </configuration>
