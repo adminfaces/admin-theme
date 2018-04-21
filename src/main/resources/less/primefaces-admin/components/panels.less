@@ -106,6 +106,13 @@ body .ui-panel {
         .panel-solid(@aqua);
       }
     }
+    
+    &.box-teal {
+      border-top: 3px solid @admin-teal;
+      &.box-solid {
+        .panel-solid(@admin-teal);
+      }
+    }
 
     &.box-solid span.ui-icon:before {
       color: #fff;
@@ -148,7 +155,7 @@ a.ui-panel-titlebar-icon {
 
 
 .panel-solid(@color) {
-  border-top: 0;
+   border-top: 0;
   .ui-panel-titlebar {
     background: @color;
   }
