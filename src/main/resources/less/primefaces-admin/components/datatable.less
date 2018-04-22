@@ -66,8 +66,8 @@ body .ui-datatable, body .ui-treetable {
         font-weight: 600;
         border-radius: 0;
         &.ui-sortable-column.ui-state-active {
-            background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f3);
-            background-image: linear-gradient(top, #ffffff, #eeeeee);
+            background-image: -webkit-linear-gradient(top, #ffffff, darken(#ffffff,8%));
+            background-image: linear-gradient(top, #ffffff, darken(#ffffff,8%));
 
         }
     }
@@ -156,13 +156,8 @@ body .ui-datatable, body .ui-treetable {
 
     }
 
-    th.ui-state-active .ui-icon-carat-2-n-s {
-        background-image: url("#{resource['primefaces-admin:images/ui-icons_222222_256x240.png']}");
-
-    }
-
     span.ui-sortable-column-icon {
-
+        
         &.ui-icon-carat-2-n-s {
             background-image: none;
             display: inline;
@@ -188,6 +183,7 @@ body .ui-datatable, body .ui-treetable {
                 position: relative;
                 font-size: @font-awesome-icon-size;
                 padding: 0 7px;
+                top:-2px;
                 overflow: hidden;
                 content: "\f0d7" !important;
             }
@@ -542,13 +538,22 @@ span.ui-paginator-current {
             background-color: @color;
         }
 
-        th[role="columnheader"] span.ui-column-title {
-            color: @text-color
-        }
+        th[role="columnheader"] {
+            span.ui-column-title {
+                color: @text-color
+            }
+            
+            .ui-sortable-column-icon:before {
+                color:@text-color;
+            }
+            
+            &.ui-state-default.ui-sortable-column.ui-state-active {
+                    background-image: -webkit-linear-gradient(top, @color, darken(@color,20%));
+                    background-image: linear-gradient(top, @color, darken(@color,20%));
 
-        span.ui-sortable-column-icon:before {
-            color: @text-color
-        } 
+                }
+            }
+
     }
 }
 
@@ -561,7 +566,7 @@ body .ui-treetable .ui-selection .ui-chkbox-box {
 
 td.ui-editable-column .ui-cell-editor-input {
     background-color: #fff;
-    
+
     .ui-inputfield {
         width: 100%;
     }
