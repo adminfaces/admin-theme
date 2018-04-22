@@ -333,14 +333,20 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist 
         border-top: 3px solid @color;
     }
 
-    &.box-solid .ui-picklist-caption, &.box-solid .ui-orderlist-caption {
-        background-color: @color;
-        border-color: @color;
-        color: @text-color
+    &.box-solid {
+        .ui-picklist-caption, .ui-orderlist-caption {
+            background-color: @color;
+            border-color: @color;
+            color: @text-color
+        }
+
+        .ui-picklist-buttons-cell, .ui-orderlist-controls {
+            button {
+                background-color: @color;
+                .btn-interactions(@color);
+            }
+        }
+
     }
 
-    div.ui-picklist-buttons-cell button, div.ui-orderlist-buttons-cell button {
-        background-color: @color;
-        .btn-interactions(@color);
-    }
 }
