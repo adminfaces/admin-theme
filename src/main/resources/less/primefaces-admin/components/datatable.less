@@ -555,3 +555,69 @@ span.ui-paginator-current {
 body .ui-treetable .ui-selection .ui-chkbox-box {
     background-color: #ffffff;
 }
+
+/* Editable */
+
+
+td.ui-editable-column .ui-cell-editor-input {
+    background-color: #fff;
+    
+    .ui-inputfield {
+        width: 100%;
+    }
+}
+
+.ui-row-editor  {
+
+    a {
+        text-decoration: none!important;
+    }
+
+    span.ui-icon {
+        background-image: none;
+        display: inline;
+    }
+    span.ui-icon-pencil:before {
+        font-family: FontAwesome;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        overflow: hidden;
+        content: "\f040";
+    }
+
+    span.ui-icon-check:before {
+        font-family: FontAwesome;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        overflow: hidden;
+        content: "\f00c";
+    }
+
+    span.ui-icon-close:before {
+        font-family: FontAwesome;
+        position: relative;
+        font-size: @font-awesome-icon-size;
+        overflow: hidden;
+        content: "\f00d";
+    }
+
+}
+
+
+@media (max-width: @screen-xs) {
+
+    .ui-row-editor  {
+        span.ui-icon-pencil:before {
+            font-size: @font-awesome-icon-size + 1;
+        }
+
+        span.ui-icon-check:before {
+            font-size: @font-awesome-icon-size + 1;
+        }
+
+        span.ui-icon-close:before {
+            font-size: @font-awesome-icon-size + 1;
+        }
+    }
+
+}
