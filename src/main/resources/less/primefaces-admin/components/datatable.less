@@ -1,4 +1,4 @@
-/* datatable */
+/* datatable and treetable */
 
 body .ui-datatable, body .ui-treetable {
 
@@ -136,7 +136,7 @@ body .ui-datatable, body .ui-treetable {
     &.box-info {
         .datatableBoxColors(@aqua, #fff)
     }
-    
+
     &.box-teal {
         .datatableBoxColors(@admin-teal, #fff)
     }
@@ -353,7 +353,6 @@ body .ui-treetable  {
 }
 
 /* datatable paginator */
-
 body div.ui-datatable, body div.ui-treetable {
     div.ui-paginator {
         border: 1px solid #f4f4f4;
@@ -536,8 +535,8 @@ span.ui-paginator-current {
 
     &.box-solid {
         .ui-datatable-header, .ui-treetable-header, .ui-datatable-footer, .ui-treetable-footer {
-           background-color: @color;
-           color: @text-color;
+            background-color: @color;
+            color: @text-color;
         }
         thead tr[role="row"] {
             background-color: @color;
@@ -546,9 +545,13 @@ span.ui-paginator-current {
         th[role="columnheader"] span.ui-column-title {
             color: @text-color
         }
-        
+
         span.ui-sortable-column-icon:before {
             color: @text-color
         } 
     }
+}
+
+body .ui-treetable .ui-selection .ui-chkbox-box {
+    background-color: #ffffff;
 }
