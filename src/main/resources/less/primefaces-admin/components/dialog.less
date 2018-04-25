@@ -8,203 +8,182 @@
  *
  * http://docs.jquery.com/UI/Dialog#theming
  */
-div.ui-dialog {
-  position: absolute;
-  padding: .2em;
-  width: 300px;
-  overflow: visible;
-  border: 0 none;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
-  z-index: @dialog-zindex;
 
-  .ui-dialog-content {
-    padding: 15px;
-  }
-  a.ui-dialog-titlebar-icon {
-    padding: 1px !important;
-  }
-}
-
-.ui-dialog .ui-dialog-titlebar {
-  background: none !important;
-  margin: 0;
-  line-height: 1.42857143;
-  font-size: 24px !important;
-  border: solid #e5e5e5;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-
-.ui-dialog.ui-widget-content .ui-dialog-titlebar-close {
-  margin-top: 10px;
-  padding: 1px !important;
-}
-
-.ui-dialog.ui-widget-content .ui-dialog-titlebar {
-  padding-left: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
-  float: left;
-  font-size: 18px;
-  font-weight: 500;
-  color: @admin-text-color;
-  margin: 0.3em 16px 0.3em 0px;
-}
-
-.ui-dialog .ui-dialog-buttonpane {
-  text-align: left;
-  border: solid #e5e5e5;
-  border-width: 1px 0 0 0;
-  background: transparent;
-  margin: 20px 20px 10px 20px;
-  padding: 10px 0 0 0;
-}
-
-.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
-  float: right;
-}
-
-.ui-dialog .ui-dialog-buttonpane button {
-  margin: .5em .4em .5em 0;
-  cursor: pointer;
-}
-
-.ui-dialog .ui-resizable-se {
-  width: 14px;
-  height: 14px;
-  right: 3px;
-  bottom: 3px;
-}
-
-.ui-draggable .ui-dialog-titlebar {
-  cursor: move;
-}
-
-.ui-dialog .ui-dialog-buttonpane {
-  text-align: left;
-  border: solid #e5e5e5;
-  border-width: 1px 0 0 0;
-  background: transparent;
-  margin: 20px 20px 10px 20px;
-  padding: 10px 0 0 0;
-}
-
-.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
-  float: right;
-}
-
-.ui-dialog .ui-dialog-buttonpane button {
-  margin: .5em .4em .5em 0;
-  cursor: pointer;
-}
-
-.ui-dialog .ui-resizable-se {
-  width: 14px;
-  height: 14px;
-  right: 3px;
-  bottom: 3px;
-}
-
-.ui-draggable .ui-dialog-titlebar {
-  cursor: move;
-}
 
 body .ui-dialog.ui-widget-content, body .ui-dialog {
-  border: none;
-  border-radius: @default-border-radius;
+    border-radius: @default-border-radius;
+    position: absolute;
+    padding: .2em;
+    width: 300px;
+    overflow: visible;
+    border: 0 none;
+    .box-shadow(0 1px 4px rgba(0, 0, 0, 0.75));
+    z-index: @dialog-zindex;
 
-  &.box-default {
-    border-top: 3px solid  @gray-lte;
-
-    &.box-solid {
-      .dialog-solid(@gray-lte);
-      .ui-panel-title {
-        color: @admin-text-color;
-      }
+    .ui-dialog-content {
+        padding: 15px;
     }
-  }
-
-  &.box-primary {
-    border-top: 3px solid @light-blue;
-    &.box-solid {
-      .dialog-solid(@light-blue);
+    a.ui-dialog-titlebar-icon {
+        padding: 1px !important;
     }
-  }
 
-  &.box-danger {
-    border-top: 3px solid @red;
-    &.box-solid {
-      .dialog-solid(@red);
+    &.ui-dialog-maximized {
+        z-index: @zindex-navbar-fixed + 1!important;
     }
-  }
 
-  &.box-fatal {
-    border-top: 3px solid @dark-red;
-    &.box-solid {
-      .dialog-solid(@dark-red);
+    .ui-dialog-titlebar {
+        background: none !important;
+        margin: 0;
+        line-height: 1.42857143;
+        font-size: 24px !important;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border: 0 none;
+        border-radius: 0;
+        padding-left: 15px;
+        border-bottom: 1px solid #eee;
+
+        .ui-dialog-title {
+            float: left;
+            font-size: 18px;
+            font-weight: 500;
+            color: @admin-text-color;
+            margin: 0.3em 16px 0.3em 0px;
+        }
     }
-  }
 
-  &.box-warning {
-    border-top: 3px solid @yellow;
-    &.box-solid {
-      .dialog-solid(@yellow);
+    .ui-dialog-titlebar-close {
+        margin-top: 10px;
+        padding: 1px !important;
     }
-  }
 
-  &.box-success {
-    border-top: 3px solid @green;
-    &.box-solid {
-      .dialog-solid(@green);
+    .ui-dialog-buttonpane {
+        text-align: left;
+        border: solid #e5e5e5;
+        border-width: 1px 0 0 0;
+        background: transparent;
+        margin: 20px 20px 10px 20px;
+        padding: 10px 0 0 0;
+
+        .ui-dialog-buttonset {
+            float: right;
+        }
+
+        button {
+            margin: .5em .4em .5em 0;
+            cursor: pointer;
+        }
     }
-  }
 
-  &.box-info {
-    border-top: 3px solid @aqua;
-    &.box-solid {
-      .dialog-solid(@aqua);
+    &.box-default {
+        border-top: 3px solid  @gray-lte;
+
+        &.box-solid {
+            .dialog-solid(@gray-lte);
+            .ui-panel-title {
+                color: @admin-text-color;
+            }
+        }
     }
-  }
 
-  &.box-solid span.ui-icon:before {
-    color: #fff;
-  }
+    &.box-primary {
+        border-top: 3px solid @light-blue;
+        &.box-solid {
+            .dialog-solid(@light-blue);
+        }
+    }
 
+    &.box-danger {
+        border-top: 3px solid @red;
+        &.box-solid {
+            .dialog-solid(@red);
+        }
+    }
+
+    &.box-fatal {
+        border-top: 3px solid @dark-red;
+        &.box-solid {
+            .dialog-solid(@dark-red);
+        }
+    }
+
+    &.box-warning {
+        border-top: 3px solid @yellow;
+        &.box-solid {
+            .dialog-solid(@yellow);
+        }
+    }
+
+    &.box-success {
+        border-top: 3px solid @green;
+        &.box-solid {
+            .dialog-solid(@green);
+        }
+    }
+
+    &.box-info {
+        border-top: 3px solid @aqua;
+        &.box-solid {
+            .dialog-solid(@aqua);
+        }
+    }
+
+    &.box-solid span.ui-icon:before {
+        color: #fff;
+    }
+
+}
+
+.ui-dialog .ui-resizable-se {
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    bottom: 3px;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+
+.ui-dialog .ui-resizable-se {
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    bottom: 3px;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
 }
 
 
 a.ui-dialog-titlebar-close {
-  height: 0;
+    height: 0;
 }
 
 a.ui-dialog-titlebar-icon > span.ui-icon-closethick:before {
-  top: -20px;
+    top: -20px;
 }
 
 a.ui-dialog-titlebar-icon {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 body .ui-overlaypanel {
-  z-index: @dialog-zindex;
+    z-index: @dialog-zindex;
 }
 
 div.ui-selectcheckboxmenu-panel, div.ui-selectonemenu-panel, div.ui-autocomplete-panel {
-  z-index: (@dialog-zindex+1);
+    z-index: (@dialog-zindex+1);
 }
 
 .dialog-solid(@color) {
-  border-top: 0;
-  .ui-dialog-titlebar {
-    background: @color!important;
-  }
+    border-top: 0;
+    .ui-dialog-titlebar {
+        background: @color!important;
+    }
 
-  .ui-dialog-title {
-    color: #fff;
-  }
+    .ui-dialog-title {
+        color: #fff;
+    }
 }

@@ -93,12 +93,17 @@ body .ui-autocomplete {
 
 }
 
-
 button.ui-autocomplete-dropdown {
     overflow: hidden;
     > span.ui-icon-triangle-1-s {
         margin-top: -10px;
     }
+}
+
+@supports (-ms-ime-align: auto) { 
+    button.ui-autocomplete-dropdown span.ui-icon-triangle-1-s {
+        top: -2px;
+    } 
 }
 
 
@@ -132,7 +137,7 @@ button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
         top: -19px!important;
         left: 2px;
     }
-    
+
     .ui-material button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
         top: -8px!important;
     }
