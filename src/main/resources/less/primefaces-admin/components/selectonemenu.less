@@ -1,33 +1,33 @@
 /*  SelectOneMenu */
 
-div.ui-selectonemenu .ui-selectonemenu-trigger, div.ui-selectonemenu-trigger .ui-state-focus {
-    border-color: #ffffff;
-}
-
-div.ui-selectonemenu-trigger {
-    overflow: hidden;
-    &.ui-state-hover, &.ui-state-focus {
-        background: @hover-color;
-    }
-
-}
-
 div.ui-selectonemenu {
-    div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
-        background-image: none;
-        display: inline;
-        position: relative;
 
-        &:before {
-            font-family: FontAwesome;
-            color: @admin-text-color;
-            position: relative;
-            font-size: @font-awesome-icon-size;
-            padding: 0 7px;
-            left:2px;
-            overflow: hidden;
-            content: "\f0d7" !important;
+    div.ui-selectonemenu-trigger {
+        border-color: #ffffff;
+        overflow: hidden;
+        box-shadow:none;
+        border: none;
+        &.ui-state-hover, &.ui-state-focus {
+            background: @hover-color;
         }
+
+        span.ui-icon-triangle-1-s {
+            background-image: none;
+            display: inline;
+            position: relative;
+
+            &:before {
+                font-family: FontAwesome;
+                color: @admin-text-color;
+                position: relative;
+                font-size: @font-awesome-icon-size;
+                padding: 0 7px;
+                left:2px;
+                overflow: hidden;
+                content: "\f0d7" !important;
+            }
+        }
+
     }
 
 }
