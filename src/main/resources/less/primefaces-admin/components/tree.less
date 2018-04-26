@@ -1,55 +1,78 @@
 .ui-treenode-label {
-  position: relative;
-  left: 3px;
+    position: relative;
+    left: 3px;
 }
 
 body .ui-tree ul.ui-tree-container {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 body .ui-tree .ui-tree-toggler {
-  position: relative;
-
-  &.ui-icon-triangle-1-e {
-    background-image: none;
-    display: inline;
     position: relative;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      margin: 0 7px;
-      top: -5px;
-      font-size: @font-awesome-icon-size;
-      overflow: hidden;
-      content: "\f0da" !important;
-    }
-  }
 
-  &.ui-icon-triangle-1-s {
-    background-image: none;
-    display: inline;
-    position: relative;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      margin: 0 7px;
-      top: -5px;
-      font-size: @font-awesome-icon-size;
-      overflow: hidden;
-      content: "\f0d7" !important;
+    &.ui-icon-triangle-1-e {
+        background-image: none;
+        display: inline;
+        position: relative;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            margin: 0 7px;
+            top: -5px;
+            font-size: @font-awesome-icon-size;
+            overflow: hidden;
+            content: "\f0da" !important;
+        }
     }
-  }
+
+    &.ui-icon-triangle-1-s {
+        background-image: none;
+        display: inline;
+        position: relative;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            margin: 0 7px;
+            top: -5px;
+            font-size: @font-awesome-icon-size;
+            overflow: hidden;
+            content: "\f0d7" !important;
+        }
+    }
 }
 
 @media (max-width: @screen-sm) {
-  body .ui-tree .ui-tree-toggler {
+    body .ui-tree .ui-tree-toggler {
 
-    &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
-      &:before {
-        font-size: @font-awesome-icon-size + 1;
-      }
+        &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
+            &:before {
+                font-size: @font-awesome-icon-size + 1;
+            }
+        }
     }
-  }
+}
+
+
+body .ui-tree.ui-tree-horizontal {
+
+    .ui-tree-selectable.ui-state-highlight {
+        span.ui-tree-toggler.ui-icon:before {
+            color: #fff;
+        }
+    }
+
+    span.ui-tree-toggler.ui-icon:before {
+        top: 0;
+        margin: 0 2px;
+    }
+
+    .ui-treenode-parent .ui-treenode-content {
+        padding: .6em 2em .6em .2em;
+    }
+    
+    .ui-treenode-content {
+        background-color: #fff;
+    }
 }
