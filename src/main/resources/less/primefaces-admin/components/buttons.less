@@ -9,510 +9,673 @@
  * http://docs.jquery.com/UI/Button#theming
  */
 .ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 button.ui-button {
-  padding: 4px 12px;
-  display: inline-block;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.74857143;
-  text-align: center;
-  /* white-space: nowrap;*/
-  white-space: normal;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid #ddd;
-  border-radius: @default-border-radius;
-  background: @btn-background-color none;
-  .box-shadow(none);
-  text-shadow: none !important;
-  color: @admin-text-color;
-  -webkit-transition: background-color .2s;
-  -moz-transition: background-color .2s;
-  -o-transition: background-color .2s;
-  transition: background-color .2s;
-  overflow: hidden;
-  
-  &:hover {
-      background-color: darken(@btn-background-color, 5%);
-  }
-  &:focus {
-      background-color: darken(@btn-background-color, 8%);
-  }
-  &:active {
-      background-color: darken(@btn-background-color, 15%);
-  }
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.74857143;
+    text-align: center;
+    /* white-space: nowrap;*/
+    white-space: normal;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #ddd;
+    border-radius: @default-border-radius;
+    background: @btn-background-color none;
+    .box-shadow(none);
+    text-shadow: none !important;
+    color: @admin-text-color;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+    overflow: hidden;
 
-  &.ui-state-disabled {
-      &:hover {
-          background-color: darken(@btn-background-color, 0%);
-      }
-      &:focus {
-          background-color: darken(@btn-background-color, 0%);
-      }
-      &:active {
-          background-color: darken(@btn-background-color, 0%);
-      }
-  }
+    &:hover {
+        background-color: darken(@btn-background-color, 5%);
+    }
+    &:focus {
+        background-color: darken(@btn-background-color, 8%);
+    }
+    &:active {
+        background-color: darken(@btn-background-color, 15%);
+    }
 
-  &.btn {
-    padding: 5px 12px;
-  }
-  &.btn-lg {
-    .btn-lg; /* reference to admin-lte/buttons.less */
-    
-    span.ui-icon {
-        width: 20px;
-        height: 20px;
-        margin-top:-8px;
-        &:before {
-            font-size: @font-awesome-icon2x-size 
+    &.ui-state-disabled {
+        &:hover {
+            background-color: darken(@btn-background-color, 0%);
+        }
+        &:focus {
+            background-color: darken(@btn-background-color, 0%);
+        }
+        &:active {
+            background-color: darken(@btn-background-color, 0%);
         }
     }
-  }
-  &.btn-sm {
-    .btn-sm;
-  }
-  &.btn-xs {
-    .btn-xs;
-  }
-  &.btn-flat {
-    .border-radius(0);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border-width: 1px;
-  }
 
-  &:active {
-    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &.btn-default {
-    .btn-interactions(@btn-background-color);
-  }
-
-  &.btn-primary {
-    .btn-interactions(@light-blue);
-
-    span.ui-icon {
-      color: #fff;
+    &.btn {
+        padding: 5px 12px;
     }
-  }
+    &.btn-lg {
+        .btn-lg; /* reference to admin-lte/buttons.less */
 
-  &.btn-danger {
-    .btn-interactions(@red);
-
-    span.ui-icon {
-      color: #fff;
+        span.ui-icon {
+            width: 20px;
+            height: 20px;
+            margin-top:-8px;
+            &:before {
+                font-size: @font-awesome-icon2x-size 
+            }
+        }
+        
+        &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
+            padding: 6px 16px;
+        }
     }
-  }
-
-  &.btn-fatal {
-    .btn-interactions(@dark-red);
-    span.ui-icon {
-      color: #fff;
+    &.btn-sm {
+        .btn-sm;
     }
-  }
-
-  &.btn-warning {
-    .btn-interactions(@yellow);
-    span.ui-icon {
-      color: #fff;
+    &.btn-xs {
+        .btn-xs;
     }
-  }
-
-  &.btn-success {
-    .btn-interactions(@green);
-    span.ui-icon {
-      color: #fff;
+    &.btn-flat {
+        .border-radius(0);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-width: 1px;
     }
-  }
 
-  &.btn-teal {
-    .btn-interactions(@admin-teal);
-    span.ui-icon {
-      color: #fff;
+    &:active {
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
     }
-  }
 
-  &.btn-info {
-    .btn-interactions(@aqua);
-    span.ui-icon {
-      color: #fff!important;
+    &:focus {
+        outline: none;
     }
-  }
+
+    &.btn-default {
+        .btn-interactions(@btn-background-color);
+    }
+
+    &.btn-primary {
+        .btn-interactions(@light-blue);
+
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+
+    &.btn-danger {
+        .btn-interactions(@red);
+
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+
+    &.btn-fatal {
+        .btn-interactions(@dark-red);
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+
+    &.btn-warning {
+        .btn-interactions(@yellow);
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+
+    &.btn-success {
+        .btn-interactions(@green);
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+
+    &.btn-teal {
+        .btn-interactions(@admin-teal);
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+
+    &.btn-info {
+        .btn-interactions(@aqua);
+        span.ui-icon {
+            color: #fff!important;
+        }
+    }
 
 }
 
 button.ui-button-text-only .ui-button-text {
-  padding: 0;
-  padding-left: .3em !important;
-  padding-right: .3em !important;
+    padding: 0;
+    padding-left: .3em !important;
+    padding-right: .3em !important;
 }
 
 button.ui-button-text-icon-left .ui-button-text, .ui-button-text-icon-right .ui-button-text {
-  padding: .2em 1.5em .2em 1.5em;
+    padding: .2em 1.5em .2em 1.5em;
 }
 
 button.ui-button .ui-button-text {
-  display: inline-block;
-  line-height: 1.32857143;
+    display: inline-block;
+    line-height: 1.32857143;
 }
 
 button.ui-state-default {
-  background-image: none !important;
+    background-image: none !important;
 }
 
 button.ui-state-disabled {
-  cursor: not-allowed !important;
-  filter: alpha(opacity=65) !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  opacity: .65 !important;
+    cursor: not-allowed !important;
+    filter: alpha(opacity=65) !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    opacity: .65 !important;
 }
 
 button, a {
-  &.btn-fatal {
-    color: #fff !important;
-    background-color: @dark-red !important;;
-    border-color: darken(@dark-red, 5%) !important;;
-    .btn-interactions(@dark-red);
-  }
+    &.btn-fatal {
+        color: #fff !important;
+        background-color: @dark-red !important;;
+        border-color: darken(@dark-red, 5%) !important;;
+        .btn-interactions(@dark-red);
+    }
 }
 
 button, a {
-  &.btn-teal {
-    color: #fff !important;
-    background-color: @admin-teal !important;;
-    border-color: darken(@admin-teal, 5%) !important;;
-    .btn-interactions(@admin-teal);
-  }
+    &.btn-teal {
+        color: #fff !important;
+        background-color: @admin-teal !important;;
+        border-color: darken(@admin-teal, 5%) !important;;
+        .btn-interactions(@admin-teal);
+    }
 }
 
 /* split button */
 
 .ui-splitbutton {
-  border-radius: @default-border-radius; /* rounded corners */
+    border-radius: @default-border-radius; /* rounded corners */
 }
 
 body .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
-  overflow: hidden;
-  line-height: 1.74;
-  padding: 4px 0px;
-  border: 1px solid @default-border-color;
-  border-left: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  height: 34.4px;
+    overflow: hidden;
+    line-height: 1.74;
+    padding: 4px 0px;
+    border: 1px solid @default-border-color;
+    border-left: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 34.4px;
 }
 
 body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
-  height: 33px;
+    height: 33px;
 }
 
 .ui-splitbutton {
-  &.btn-primary > button {
-    .btn-primary;
-    .btn-interactions(@light-blue);
-    span.ui-icon {
-      color: #fff;
+    &.btn-primary > button {
+        .btn-primary;
+        .btn-interactions(@light-blue);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
 
-  &.btn-success > button {
-    .btn-success;
-    .btn-interactions(@green);
-    span.ui-icon {
-      color: #fff;
+    &.btn-success > button {
+        .btn-success;
+        .btn-interactions(@green);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
 
-  &.btn-danger > button {
-    .btn-danger;
-    .btn-interactions(@red);
-    span.ui-icon {
-      color: #fff;
+    &.btn-danger > button {
+        .btn-danger;
+        .btn-interactions(@red);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
-  &.btn-fatal > button {
-    color: #fff !important;
-    background-color: @dark-red !important;;
-    border-color: darken(@dark-red, 5%) !important;;
-    .btn-interactions(@dark-red);
-    span.ui-icon {
-      color: #fff;
+    &.btn-fatal > button {
+        color: #fff !important;
+        background-color: @dark-red !important;;
+        border-color: darken(@dark-red, 5%) !important;;
+        .btn-interactions(@dark-red);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
-  &.btn-info > button {
-    .btn-info;
-    .btn-interactions(@aqua);
-    span.ui-icon {
-      color: #fff;
+    &.btn-info > button {
+        .btn-info;
+        .btn-interactions(@aqua);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
-  &.btn-default > button {
-    .btn-default;
-    .btn-interactions(@btn-background-color);
-  }
-  &.btn-warning > button {
-    .btn-warning;
-    .btn-interactions(@yellow);
-    span.ui-icon {
-      color: #fff;
+    &.btn-default > button {
+        .btn-default;
+        .btn-interactions(@btn-background-color);
     }
-  }
-  &.btn-flat {
-    .border-radius(0);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border-width: 1px;
-  }
+    &.btn-warning > button {
+        .btn-warning;
+        .btn-interactions(@yellow);
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+    &.btn-flat {
+        .border-radius(0);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-width: 1px;
+    }
+
+    &.btn-material {
+        background-color: transparent!important;
+        border: none!important;
+        .border-radius(2px);
+
+        > button {
+            .btn-material;
+        }
+        
+        button.ui-button.ui-splitbutton-menubutton  {
+            border: none;
+            .btn-interactions(@btn-background-color);
+        }
+
+
+        &.btn-default > button {
+            .btn-interactions(@btn-background-color);
+            color: rgba(0,0,0,.87)!important;
+            span.ui-icon {
+                color: rgba(0,0,0,.87);
+            }
+        }
+
+        &.btn-success > button {
+            .btn-interactions(@btn-background-color);
+            color: @green!important;
+            span.ui-icon {
+                color: green;
+            }
+        }
+        
+        &.btn-primary > button {
+            .btn-interactions(@btn-background-color);
+            color: @light-blue!important;
+            span.ui-icon {
+                color: @light-blue;
+            }
+        }
+    }
 
 }
 
 .ui-splitbutton.btn-block {
-  > button {
-    display: block;
-    border-right: none;
-    z-index: 1;
-  }
-
-  button.ui-splitbutton-menubutton {
-    z-index: 0;
-    width: 100%;
-
-    &:before {
-      float: right;
-      right:15px;
+    > button {
+        display: block;
+        border-right: none;
+        z-index: 1;
     }
-  }
+
+    button.ui-splitbutton-menubutton {
+        z-index: 0;
+        width: 100%;
+
+        &:before {
+            float: right;
+            right:15px;
+        }
+    }
 
 }
 
-
-
 .ui-splitbutton-menubutton span {
-  &.ui-icon, &.ui-button-text {
-    display: none !important;
-  }
+    &.ui-icon, &.ui-button-text {
+        display: none !important;
+    }
 }
 
 /* adds fa-caret-down to split button so it can be render as bootstrap button style (e.g btn-primary)*/
 .ui-splitbutton-menubutton:before {
-  font-family: FontAwesome;
-  position: relative;
-  top: -2px;
-  overflow: hidden;
-  content: "\f0d7" !important;
+    font-family: FontAwesome;
+    position: relative;
+    top: -2px;
+    overflow: hidden;
+    content: "\f0d7" !important;
 }
 
 /* ButtonSet */
 .ui-selectbooleanbutton.ui-button.ui-state-default,
 .ui-selectonebutton .ui-button.ui-state-default,
 .ui-selectmanybutton .ui-button.ui-state-default {
-  border: 1px solid @input-border-color;
-  background: #ffffff;
-  font-weight: normal;
-  color: #555555;
+    border: 1px solid @input-border-color;
+    background: #ffffff;
+    font-weight: normal;
+    color: #555555;
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-hover, .ui-selectbooleanbutton.ui-button.ui-state-focus,
 .ui-selectonebutton .ui-button.ui-state-hover, .ui-selectonebutton .ui-button.ui-state-focus,
 .ui-selectmanybutton .ui-button.ui-state-hover, .ui-selectmanybutton .ui-button.ui-state-focus {
-  border: 1px solid #c0c0c0;
-  background: @hover-color;
-  font-weight: normal;
-  color: #212121;
+    border: 1px solid #c0c0c0;
+    background: @hover-color;
+    font-weight: normal;
+    color: #212121;
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-active,
 .ui-selectonebutton .ui-button.ui-state-active,
 .ui-selectmanybutton .ui-button.ui-state-active {
-  border: 1px solid darken(@light-blue, 5%);
-  background: @light-blue;
-  color: #FFFFFF;
+    border: 1px solid darken(@light-blue, 5%);
+    background: @light-blue;
+    color: #FFFFFF;
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-default .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-hover.ui-icon,
 .ui-selectbooleanbutton.ui-button.ui-state-focus .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_454545_256x240.png']}");
 }
 
 .ui-selectbooleanbutton.ui-button.ui-state-active .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
 }
 
 /* delimit ripple effect */
 div.ui-selectbooleanbutton {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 div .ui-selectonebutton {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 div.ui-button {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 /* menu button */
 
 body span.ui-button-icon-left, body span.ui-button-icon-right {
 
-  &.ui-icon-triangle-1-s {
-    background-image: none ;
-    display: inline ;
-    &:before {
-      font-family: FontAwesome;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      padding: 0 4px;
-      top: -4px;
-      text-indent: 0;
-      float: left;
-      overflow: hidden;
-      content: "\f0d7" !important;
+    &.ui-icon-triangle-1-s {
+        background-image: none ;
+        display: inline ;
+        &:before {
+            font-family: FontAwesome;
+            position: relative;
+            font-size: @font-awesome-icon-size;
+            padding: 0 4px;
+            top: -4px;
+            text-indent: 0;
+            float: left;
+            overflow: hidden;
+            content: "\f0d7" !important;
+        }
     }
-  }
 
 
 }
 
 
 @media (max-width: @screen-xs) {
-  body span.ui-button-icon-left, span.ui-button-icon-right {
-    &.ui-icon-triangle-1-s {
-      &:before {
-        font-size: @font-awesome-icon-size + 1;
-      }
+    body span.ui-button-icon-left, span.ui-button-icon-right {
+        &.ui-icon-triangle-1-s {
+            &:before {
+                font-size: @font-awesome-icon-size + 1;
+            }
+        }
     }
-  }
 }
 
 body .ui-menubutton {
 
-  .border-radius(50%);
+    .border-radius(50%);
 
-  &.btn-primary > button {
-    .btn-primary;
-    .btn-interactions(@light-blue);
-    span.ui-icon {
-      color: #fff;
+    &.btn-material {
+        > button {
+            .btn-material;
+        }
     }
-  }
 
-  &.btn-success > button {
-    .btn-success;
-    .btn-interactions(@green);
-    span.ui-icon {
-      color: #fff;
+    &.btn-primary > button {
+        .btn-primary;
+        .btn-interactions(@light-blue);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
 
-  &.btn-danger > button {
-    .btn-danger;
-    .btn-interactions(@red);
-    span.ui-icon {
-      color: #fff;
+    &.btn-success > button {
+        .btn-success;
+        .btn-interactions(@green);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
 
-  &.btn-fatal > button {
-    color: #fff !important;
-    background-color: @dark-red !important;;
-    border-color: darken(@dark-red, 5%) !important;;
-    .btn-interactions(@dark-red);
-    span.ui-icon {
-      color: #fff;
+    &.btn-danger > button {
+        .btn-danger;
+        .btn-interactions(@red);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
 
-  &.btn-info > button {
-    .btn-info;
-    .btn-interactions(@aqua);
-    span.ui-icon {
-      color: #fff;
+    &.btn-fatal > button {
+        color: #fff !important;
+        background-color: @dark-red !important;;
+        border-color: darken(@dark-red, 5%) !important;;
+        .btn-interactions(@dark-red);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
-  &.btn-default > button {
-    .btn-default;
-    .btn-interactions(@btn-background-color);
-  }
-  &.btn-warning > button {
-    .btn-warning;
-    .btn-interactions(@yellow);
-    span.ui-icon {
-      color: #fff;
+
+    &.btn-info > button {
+        .btn-info;
+        .btn-interactions(@aqua);
+        span.ui-icon {
+            color: #fff;
+        }
     }
-  }
-  &.btn-flat {
-    .border-radius(0);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border-width: 1px;
-  }
+    &.btn-default > button {
+        .btn-default;
+        .btn-interactions(@btn-background-color);
+    }
+    &.btn-warning > button {
+        .btn-warning;
+        .btn-interactions(@yellow);
+        span.ui-icon {
+            color: #fff;
+        }
+    }
+    &.btn-flat {
+        .border-radius(0);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-width: 1px;
+    }
 }
 
 body div.ui-fluid .ui-menubutton {
-  width: 100%;
+    width: 100%;
 }
 
 /* boolean button */
 
 div.ui-selectbooleanbutton {
 
-  span.ui-button-icon-left.ui-icon-close {
-    background-image: none !important;
-    display: inline !important;
-    text-indent: initial;
+    span.ui-button-icon-left.ui-icon-close {
+        background-image: none !important;
+        display: inline !important;
+        text-indent: initial;
 
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -3px;
-      overflow: hidden;
-      content: "\f00d" !important;
+        &:before {
+            font-family: FontAwesome;
+            color: @admin-text-color;
+            position: relative;
+            font-size: @font-awesome-icon-size;
+            top: -3px;
+            overflow: hidden;
+            content: "\f00d" !important;
+        }
     }
-  }
 
-  span.ui-button-icon-left.ui-icon-check {
-    background-image: none !important;
-    display: inline !important;
-    text-indent: initial;
+    span.ui-button-icon-left.ui-icon-check {
+        background-image: none !important;
+        display: inline !important;
+        text-indent: initial;
 
-    &:before {
-      font-family: FontAwesome;
-      color: #fff;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      top: -3px;
-      overflow: hidden;
-      content: "\f00c" !important;
+        &:before {
+            font-family: FontAwesome;
+            color: #fff;
+            position: relative;
+            font-size: @font-awesome-icon-size;
+            top: -3px;
+            overflow: hidden;
+            content: "\f00c" !important;
+        }
     }
-  }
 
+}
+
+
+//material flat buttons
+
+body button, body button.ui-button.ui-widget  {
+
+    &.btn-material {
+        .btn-material;
+    }
+
+}
+
+.btn-material() {
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    padding: 6px 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow,transform;
+    -webkit-transition: -webkit-box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    -o-transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background: 0 0!important;
+
+    &:hover, &:focus {
+        background-color: rgba(153,153,153,.2);
+        .box-shadow(none);
+    }
+
+    &.btn-lg {
+        padding: 8px 30px;  
+        
+        
+       &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
+            padding: 4px 30px;
+        }
+    }
+
+    &.btn-sm {
+        padding: 5px 20px;
+    }
+
+    &.btn-xs {
+        padding: 4px 15px;
+    }
+
+    &.btn-default {
+        .btn-interactions(@btn-background-color);
+        color: rgba(0,0,0,.87)!important;
+        span.ui-icon {
+            color: rgba(0,0,0,.87);
+        }
+    }
+
+    &.btn-primary {
+        .btn-interactions(@btn-background-color);
+        color: @light-blue!important;
+        span.ui-icon {
+            color: @light-blue;
+        }
+    }
+
+    &.btn-danger {
+        .btn-interactions(@btn-background-color);
+        color: @red!important;
+        span.ui-icon {
+            color: @red;
+        }
+    }
+
+    &.btn-fatal {
+        .btn-interactions(@btn-background-color);
+        color: @dark-red!important;
+        span.ui-icon {
+            color: @dark-red;
+        }
+    }
+
+    &.btn-warning {
+        .btn-interactions(@btn-background-color);
+        color: @yellow!important;
+        span.ui-icon {
+            color: @yellow;
+        }
+    }
+
+    &.btn-success {
+        .btn-interactions(@btn-background-color);
+        color: @green!important;
+        span.ui-icon {
+            color: @green;
+        }
+    }
+
+    &.btn-teal {
+        .btn-interactions(@btn-background-color);
+        color: @admin-teal!important;
+        span.ui-icon {
+            color: @admin-teal;
+        }
+    }
+
+    &.btn-info {
+        .btn-interactions(@btn-background-color);
+        color: @aqua!important;
+        span.ui-icon {
+            color: @aqua;
+        }
+    }
 }
