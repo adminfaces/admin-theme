@@ -78,7 +78,7 @@ button.ui-button {
                 font-size: @font-awesome-icon2x-size 
             }
         }
-        
+
         &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
             padding: 6px 16px;
         }
@@ -297,7 +297,7 @@ body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
         > button {
             .btn-material;
         }
-        
+
         button.ui-button.ui-splitbutton-menubutton  {
             border: none;
             .btn-interactions(@btn-background-color);
@@ -319,7 +319,7 @@ body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
                 color: green;
             }
         }
-        
+
         &.btn-primary > button {
             .btn-interactions(@btn-background-color);
             color: @light-blue!important;
@@ -598,12 +598,21 @@ body button, body button.ui-button.ui-widget  {
         .box-shadow(none);
     }
 
+    span.ui-button-icon-right, span.ui-button-icon-left  {
+        &:before {
+            font-size: @font-awesome-icon-size + 2;
+        }
+    }
+
     &.btn-lg {
         padding: 8px 30px;  
-        
-        
-       &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
+
+
+        &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
             padding: 4px 30px;
+            &:before {
+                font-size: @font-awesome-icon-size + 2;
+            }
         }
     }
 
