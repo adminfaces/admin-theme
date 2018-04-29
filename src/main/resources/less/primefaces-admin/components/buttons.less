@@ -576,6 +576,8 @@ body button, body button.ui-button.ui-widget  {
 
 }
 
+//mixins
+
 .btn-material() {
     border: none;
     border-radius: 2px;
@@ -594,7 +596,7 @@ body button, body button.ui-button.ui-widget  {
     background: 0 0!important;
 
     &:hover, &:focus {
-        background-color: rgba(153,153,153,.2);
+        background-color: lighten(@btn-background-color,25%);
         .box-shadow(none);
     }
 
@@ -625,7 +627,7 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-default {
-        .btn-interactions(@btn-background-color);
+        .btn-interactions(lighten(@btn-background-color,10%));
         color: rgba(0,0,0,.87)!important;
         span.ui-icon {
             color: rgba(0,0,0,.87);
@@ -685,6 +687,30 @@ body button, body button.ui-button.ui-widget  {
         color: @aqua!important;
         span.ui-icon {
             color: @aqua;
+        }
+    }
+}
+
+.btn-interactions(@bg-color) {
+    &:hover {
+        background-color: darken(@bg-color, 5%) !important;
+    }
+    &:focus {
+        background-color: darken(@bg-color, 8%) !important;
+    }
+    &:active {
+        background-color: darken(@bg-color, 15%) !important;
+    }
+
+    &.ui-state-disabled {
+        &:hover {
+            background-color: darken(@bg-color, 0%) !important;
+        }
+        &:focus {
+            background-color: darken(@bg-color, 0%) !important;
+        }
+        &:active {
+            background-color: darken(@bg-color, 0%) !important;
         }
     }
 }
