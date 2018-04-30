@@ -594,7 +594,6 @@ body button, body button.ui-button.ui-widget  {
     cursor: pointer;
     text-decoration: none;
     background: 0 0!important;
-
     .btn-interactions(lighten(@btn-background-color,10%));
     color: rgba(0,0,0,.87);
     &:hover, &:focus {
@@ -628,9 +627,12 @@ body button, body button.ui-button.ui-widget  {
     &.btn-xs {
         padding: 4px 15px;
     }
+    
+    &.btn-flat {
+        .border-radius(0);
+    }
 
     &.btn-default {
-        .btn-interactions(lighten(@btn-background-color,10%));
         color: rgba(0,0,0,.87)!important;
         span.ui-icon {
             color: rgba(0,0,0,.87);
@@ -638,7 +640,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-primary {
-        .btn-interactions(@btn-background-color);
         color: @light-blue!important;
         span.ui-icon {
             color: @light-blue;
@@ -646,7 +647,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-danger {
-        .btn-interactions(@btn-background-color);
         color: @red!important;
         span.ui-icon {
             color: @red;
@@ -654,7 +654,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-fatal {
-        .btn-interactions(@btn-background-color);
         color: @dark-red!important;
         span.ui-icon {
             color: @dark-red;
@@ -662,7 +661,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-warning {
-        .btn-interactions(@btn-background-color);
         color: @yellow!important;
         span.ui-icon {
             color: @yellow;
@@ -670,7 +668,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-success {
-        .btn-interactions(@btn-background-color);
         color: @green!important;
         span.ui-icon {
             color: @green;
@@ -678,7 +675,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-teal {
-        .btn-interactions(@btn-background-color);
         color: @admin-teal!important;
         span.ui-icon {
             color: @admin-teal;
@@ -686,7 +682,6 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-info {
-        .btn-interactions(@btn-background-color);
         color: @aqua!important;
         span.ui-icon {
             color: @aqua;
