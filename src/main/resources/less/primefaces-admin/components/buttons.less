@@ -71,7 +71,7 @@ button.ui-button {
         .btn-lg; /* reference to admin-lte/buttons.less */
 
         span.ui-icon {
-            width: 20px;
+            width: 22px;
             height: 20px;
             margin-top:-8px;
             &:before {
@@ -595,8 +595,9 @@ body button, body button.ui-button.ui-widget  {
     text-decoration: none;
     background: 0 0!important;
 
+    .btn-interactions(lighten(@btn-background-color,10%));
+    color: rgba(0,0,0,.87);
     &:hover, &:focus {
-        background-color: lighten(@btn-background-color,25%);
         .box-shadow(none);
     }
 
@@ -604,6 +605,7 @@ body button, body button.ui-button.ui-widget  {
         &:before {
             font-size: @font-awesome-icon-size + 2;
         }
+         
     }
 
     &.btn-lg {
@@ -612,8 +614,9 @@ body button, body button.ui-button.ui-widget  {
 
         &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
             padding: 4px 30px;
-            &:before {
-                font-size: @font-awesome-icon-size + 2;
+            
+            span.ui-icon:before {
+                font-size: @font-awesome-icon2x-size;
             }
         }
     }
