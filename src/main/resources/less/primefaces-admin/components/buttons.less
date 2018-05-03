@@ -215,22 +215,41 @@ button, a {
     border-radius: @default-border-radius; /* rounded corners */
 }
 
-body .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
-    overflow: hidden;
-    line-height: 1.74;
-    padding: 4px 0px;
-    border: 1px solid @default-border-color;
-    border-left: 0;
-    border-bottom-left-radius: @default-border-radius;
-    border-top-left-radius: @default-border-radius;
-    height: 34.4px;
-}
+body .ui-splitbutton {
 
-body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
-    height: 33px;
-}
+    .ui-button.ui-splitbutton-menubutton {
+        overflow: hidden;
+        line-height: 1.74;
+        padding: 4px 0px;
+        border: 1px solid @default-border-color;
+        border-left: none;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        height: 34.4px;
 
-.ui-splitbutton {
+        span {
+            &.ui-icon, &.ui-button-text {
+                display: none !important;
+            }
+        }
+
+        &:before {
+            font-family: FontAwesome;
+            position: relative;
+            top: -2px;
+            overflow: hidden;
+            content: "\f0d7" !important;
+        }
+
+    }
+
+    > button {
+        border-bottom-right-radius: @default-border-radius;
+        border-top-right-radius: @default-border-radius;
+        border-right: none;
+    }
+
+
     &.btn-primary > button {
         .btn-primary;
         .btn-interactions(@light-blue);
@@ -329,41 +348,38 @@ body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
         }
     }
 
-}
-
-.ui-splitbutton.btn-block {
-    > button {
-        display: block;
-        border-right: none;
-        z-index: 1;
-    }
-
-    button.ui-splitbutton-menubutton {
-        z-index: 0;
-        width: 100%;
-
-        &:before {
-            float: right;
-            right:15px;
+    &.btn-block {
+        > button {
+            display: block;
+            border-right: none;
+            z-index: 1;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: @default-border-radius;
+            border-top-left-radius: @default-border-radius;
         }
+
+        button.ui-splitbutton-menubutton {
+            z-index: 0;
+            width: 100%;
+            
+            .border-radius(@default-border-radius);
+            
+
+            &:before {
+                float: right;
+                right:15px;
+            }
+        }
+
     }
 
 }
 
-.ui-splitbutton-menubutton span {
-    &.ui-icon, &.ui-button-text {
-        display: none !important;
-    }
+body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
+    height: 33px;
 }
 
-/* adds fa-caret-down to split button so it can be render as bootstrap button style (e.g btn-primary)*/
-.ui-splitbutton-menubutton:before {
-    font-family: FontAwesome;
-    position: relative;
-    top: -2px;
-    overflow: hidden;
-    content: "\f0d7" !important;
-}
 
 /* ButtonSet */
 .ui-selectbooleanbutton.ui-button.ui-state-default,
@@ -604,7 +620,7 @@ body button, body button.ui-button.ui-widget  {
         &:before {
             font-size: @font-awesome-icon-size + 2;
         }
-         
+
     }
 
     &.btn-lg {
@@ -613,7 +629,7 @@ body button, body button.ui-button.ui-widget  {
 
         &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
             padding: 4px 30px;
-            
+
             span.ui-icon:before {
                 font-size: @font-awesome-icon2x-size;
             }
@@ -627,7 +643,7 @@ body button, body button.ui-button.ui-widget  {
     &.btn-xs {
         padding: 4px 15px;
     }
-    
+
     &.btn-flat {
         .border-radius(0);
     }
