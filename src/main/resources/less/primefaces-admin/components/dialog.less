@@ -18,7 +18,7 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
     overflow: visible;
     border: 0 none;
     .box-shadow(0 1px 4px rgba(0, 0, 0, 0.75));
-    z-index: @dialog-zindex;
+    z-index: @dialog-zindex!important;
 
     .ui-dialog-content {
         padding: 15px;
@@ -28,7 +28,7 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
     }
 
     &.ui-dialog-maximized {
-        z-index: @zindex-navbar-fixed + 1!important;
+        z-index: @dialog-zindex!important;
     }
 
     .ui-dialog-titlebar {
@@ -170,7 +170,7 @@ a.ui-dialog-titlebar-icon {
 }
 
 body .ui-overlaypanel {
-    z-index: @dialog-zindex;
+    z-index: @dialog-zindex!important;
 }
 
 div.ui-selectcheckboxmenu-panel, div.ui-selectonemenu-panel, div.ui-autocomplete-panel {
