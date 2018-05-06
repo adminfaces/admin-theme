@@ -18,7 +18,7 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
     overflow: visible;
     border: 0 none;
     .box-shadow(0 1px 4px rgba(0, 0, 0, 0.75));
-    z-index: @dialog-zindex!important;
+    z-index: @dialog-zindex!important;//we need the important because primefaces add z-index directly to component style
 
     .ui-dialog-content {
         padding: 15px;
@@ -173,8 +173,8 @@ body .ui-overlaypanel {
     z-index: @dialog-zindex!important;
 }
 
-div.ui-selectcheckboxmenu-panel, div.ui-selectonemenu-panel, div.ui-autocomplete-panel {
-    z-index: (@dialog-zindex+1);
+.ui-selectcheckboxmenu-panel, .ui-selectonemenu-panel, .ui-autocomplete-panel {
+    z-index: (@dialog-zindex+1)!important;
 }
 
 .dialog-solid(@color) {
