@@ -42,7 +42,7 @@ This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as 
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC13</version>
+    <version>1.0.0-RC15</version>
 <!--<classifier>dev</classifier> uncompressed theme.css-->
 </dependency>
 ----
@@ -174,7 +174,7 @@ To solve this issues you can use a theme classifier called *no-cache*:
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC13</version>
+    <version>1.0.0-RC15</version>
     <classifier>no-cache</classifier>
 </dependency>
 ----
@@ -186,7 +186,7 @@ This classifier *appends the theme version* to the name of theme so you need to 
 ----
 <context-param>
     <param-name>primefaces.THEME</param-name>
-    <param-value>admin-1.0.0-RC13</param-value>
+    <param-value>admin-1.0.0-RC15</param-value>
 </context-param>
 ----
 
