@@ -111,7 +111,7 @@ The default theme comes `compressed`, with `Bootstrap (3.3.7)` embedded and uses
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC13</version>
+    <version>1.0.0-RC15</version>
 </dependency>
 ----
 
@@ -125,7 +125,7 @@ The `dev` classifier will bring a theme.css *without minification*.
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC13</version>
+    <version>1.0.0-RC15</version>
     <classifier>dev</classifier>
 </dependency>
 ----
@@ -140,7 +140,7 @@ The `without-bootstrap` classifier will bring a theme.css *without bootstrap emb
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC13</version>
+    <version>1.0.0-RC15</version>
     <classifier>without-bootstrap</classifier>
 </dependency>
 ----
@@ -156,7 +156,7 @@ The `without-jsf` classifier will bring a theme.css *without JSF resource handli
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC13</version>
+    <version>1.0.0-RC15</version>
     <classifier>without-jsf</classifier>
 </dependency>
 ----
