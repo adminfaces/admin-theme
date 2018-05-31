@@ -4,7 +4,7 @@
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd"
               id="admin_theme" version="3.0">
     
-    <name>admin_template_fragment</name>
+    <name>admin_theme_fragment</name>
 
     <context-param>
         <param-name>primefaces.FONT_AWESOME</param-name>
