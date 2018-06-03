@@ -66,10 +66,6 @@ div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
     }
 }
 
-.ui-selectcheckboxmenu.ui-state-focus .ui-selectcheckboxmenu-label,
-.ui-selectcheckboxmenu .ui-selectcheckboxmenu-label.ui-state-hover {
-    background-color: #ffffff;
-}
 
 div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu, div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
     height: 34px;
@@ -96,9 +92,36 @@ div.ui-selectonemenu, div.ui-fluid div.ui-selectonemenu, div.ui-selectcheckboxme
     }
 }
 
-ul.ui-selectlistbox-list > li.ui-selectlistbox-item {
-    padding: 3px 6px;
+
+/* listbox */
+
+ul.ui-selectlistbox-list, ul.ui-multiselectlistbox-list {
+    li {
+        &.ui-selectlistbox-item, &.ui-multiselectlistbox-item {
+            position: relative;
+            overflow: hidden;
+            padding: 3px 6px;
+            &.ui-state-highlight {
+                border-radius: @default-border-radius;
+            }
+        }
+
+    }
 }
+
+
+/* box-menu */
+
+
+div.ui-selectcheckboxmenu {
+    overflow: hidden;
+    
+    &.ui-state-focus .ui-selectcheckboxmenu-label, &.ui-selectcheckboxmenu-label.ui-state-hover {
+        background-color: #ffffff;
+    }
+}
+
+ 
 
 .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-close {
     .box-shadow(none);
@@ -120,10 +143,6 @@ ul.ui-selectlistbox-list > li.ui-selectlistbox-item {
         }
     }
 
-}
-
-div.ui-selectcheckboxmenu {
-    overflow: hidden;
 }
 
 body .ui-selectcheckboxmenu-panel div.ui-chkbox span.ui-chkbox-icon:before {
@@ -165,13 +184,6 @@ div.ui-selectcheckboxmenu-header {
         float: none;
     }
 }
-
-li.ui-selectlistbox-item {
-    position: relative;
-    overflow: hidden;
-}
-
-/* box-menu */
 
 div.ui-fluid div.ui-selectcheckboxmenu-multiple, body div.ui-selectcheckboxmenu-multiple {
     display: inline-table;
@@ -312,7 +324,7 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
         box-shadow: 0 0 5px @box-shadow-color-error;
         border: 1px solid @box-shadow-color-error;
     }
-    
+
     .ui-selectcheckboxmenu-trigger.ui-state-error.ui-state-focus {
         border: none;
         box-shadow: none;
