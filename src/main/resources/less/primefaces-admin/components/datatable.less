@@ -153,6 +153,14 @@ body .ui-datatable, body .ui-treetable {
         .ui-selectonemenu, .ui-selectcheckboxmenu {
             background-color: #fff;
         }
+        
+        input {
+            width: 100%;
+        }
+        
+        div.ui-selectcheckboxmenu {
+            min-width: auto;
+        }
 
     }
 
@@ -163,13 +171,16 @@ body .ui-datatable, body .ui-treetable {
             display: inline;
 
             &:before {
-                font-family: FontAwesome;
+                font-family: 'Glyphicons Halflings';
                 color: @admin-text-color;
                 position: relative;
                 font-size: @font-awesome-icon-size;
                 padding: 0 7px;
+                top: 1px;
+                font-weight: 500;
                 overflow: hidden;
-                content: "\f0dc";
+                opacity: .2 ;
+                content: "\e150";
             }
         }
 
@@ -178,14 +189,16 @@ body .ui-datatable, body .ui-treetable {
             display: inline;
 
             &:before {
-                font-family: FontAwesome;
+                font-family: 'Glyphicons Halflings';
                 color: @admin-text-color;
                 position: relative;
                 font-size: @font-awesome-icon-size;
                 padding: 0 7px;
                 top:-2px;
+                font-weight: 500;
                 overflow: hidden;
-                content: "\f0d7" !important;
+                opacity: .5;
+                content: "\e156" !important;
             }
         }
 
@@ -194,13 +207,16 @@ body .ui-datatable, body .ui-treetable {
             display: inline;
 
             &:before {
-                font-family: FontAwesome;
+                font-family: 'Glyphicons Halflings';
                 color: @admin-text-color;
                 position: relative;
                 font-size: @font-awesome-icon-size;
                 padding: 0 7px;
+                font-weight: 500;
+                top: 2px;
                 overflow: hidden;
-                content: "\f0d8" !important;
+                opacity: .5;
+                content: "\e155" !important;
             }
         }
 
