@@ -153,11 +153,11 @@ body .ui-datatable, body .ui-treetable {
         .ui-selectonemenu, .ui-selectcheckboxmenu {
             background-color: #fff;
         }
-        
+
         input {
             width: 100%;
         }
-        
+
         div.ui-selectcheckboxmenu {
             min-width: auto;
         }
@@ -165,7 +165,7 @@ body .ui-datatable, body .ui-treetable {
     }
 
     span.ui-sortable-column-icon {
-        
+
         &.ui-icon-carat-2-n-s {
             background-image: none;
             display: inline;
@@ -179,7 +179,7 @@ body .ui-datatable, body .ui-treetable {
                 top: 1px;
                 font-weight: 500;
                 overflow: hidden;
-                opacity: .2 ;
+                opacity: .3 ;
                 content: "\e150";
             }
         }
@@ -197,7 +197,7 @@ body .ui-datatable, body .ui-treetable {
                 top:-2px;
                 font-weight: 500;
                 overflow: hidden;
-                opacity: .5;
+                opacity: .6;
                 content: "\e156" !important;
             }
         }
@@ -215,7 +215,7 @@ body .ui-datatable, body .ui-treetable {
                 font-weight: 500;
                 top: 2px;
                 overflow: hidden;
-                opacity: .5;
+                opacity: .6;
                 content: "\e155" !important;
             }
         }
@@ -558,17 +558,17 @@ span.ui-paginator-current {
             span.ui-column-title {
                 color: @text-color
             }
-            
+
             .ui-sortable-column-icon:before {
                 color:@text-color;
             }
-            
-            &.ui-state-default.ui-sortable-column.ui-state-active {
-                    background-image: -webkit-linear-gradient(top, @color, darken(@color,20%));
-                    background-image: linear-gradient(top, @color, darken(@color,20%));
 
-                }
+            &.ui-state-default.ui-sortable-column.ui-state-active {
+                background-image: -webkit-linear-gradient(top, @color, darken(@color,20%));
+                background-image: linear-gradient(top, @color, darken(@color,20%));
+
             }
+        }
 
     }
 }
