@@ -69,7 +69,7 @@
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
                 <includes>
-                     <include>**/fonts/*</include>
+                    <include>**/fonts/*</include>
                 </includes>
             </resource>
         </resources>
@@ -317,11 +317,18 @@
                             <include>**/admin-theme.properties</include>
                             <include>**/primefaces-admin-${project.version}/images/*</include>
                             <include>**/js/*</include>
-                            <include>**/fonts/*</include>
                         </includes>
                         <excludes>
                             <exclude>**/primefaces-admin/*</exclude>
+                            <exclude>**/fonts/*</exclude>
                         </excludes>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>false</filtering>
+                        <includes>
+                            <include>**/fonts/*</include>
+                        </includes>
                     </resource>
                 </resources>
                 <plugins>
@@ -442,11 +449,18 @@
                             <include>**/admin-theme.properties</include>
                             <include>**/primefaces-admin-${project.version}/images/*</include>
                             <include>**/js/*</include>
-                            <include>**/fonts/*</include>
                         </includes>
                         <excludes>
                             <exclude>**/primefaces-admin/*</exclude>
+                            <exclude>**/fonts/*</exclude>
                         </excludes>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>false</filtering>
+                        <includes>
+                            <include>**/fonts/*</include>
+                        </includes>
                     </resource>
                 </resources>
                 <plugins>
