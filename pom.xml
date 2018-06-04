@@ -59,7 +59,17 @@
                     <include>**/admin-theme.properties</include>
                     <include>**/primefaces-admin/images/*</include>
                     <include>**/js/*</include>
-                    <include>**/fonts/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/fonts/*</exclude>
+                </excludes>
+            </resource>
+            
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                     <include>**/fonts/*</include>
                 </includes>
             </resource>
         </resources>
@@ -247,8 +257,8 @@
         <profile>
             <id>without-jsf-dev</id>
             <properties>
-                 <compressCss>false</compressCss>
-             </properties>
+                <compressCss>false</compressCss>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
