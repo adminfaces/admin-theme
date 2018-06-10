@@ -1,14 +1,16 @@
 body .ui-autocomplete {
-    button.ui-autocomplete-dropdown {
+    button.ui-button.ui-autocomplete-dropdown {
         border: none;
         background-color: transparent;
         overflow: hidden;
+        .box-shadow(none);
         .border-left-radius(0px);
         &.ui-state-hover, .ui-state-focus {
             background: transparent;
             .border-left-radius(0px);
         }
-        &:active {
+        
+        &.ui-state-active {
             .box-shadow(none);
         }
     }
