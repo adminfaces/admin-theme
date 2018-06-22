@@ -15,14 +15,14 @@ body .ui-tree .ui-tree-toggler {
         display: inline;
         position: relative;
         &:before {
-            font-family: FontAwesome;
+            font-family: 'Glyphicons Halflings';
             color: @admin-text-color;
             position: relative;
             margin: 0 7px;
             top: -5px;
-            font-size: @font-awesome-icon-size;
+            font-size: @glyphicon-icon-size;
             overflow: hidden;
-            content: "\f0da" !important;
+            content: "\e258" !important;
         }
     }
 
@@ -31,14 +31,14 @@ body .ui-tree .ui-tree-toggler {
         display: inline;
         position: relative;
         &:before {
-            font-family: FontAwesome;
+            font-family: 'Glyphicons Halflings';
             color: @admin-text-color;
             position: relative;
             margin: 0 7px;
             top: -5px;
-            font-size: @font-awesome-icon-size;
+            font-size: @glyphicon-icon-size;
             overflow: hidden;
-            content: "\f0d7" !important;
+            content: "\e259" !important;
         }
     }
 }
@@ -48,7 +48,7 @@ body .ui-tree .ui-tree-toggler {
 
         &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
             &:before {
-                font-size: @font-awesome-icon-size + 1;
+                font-size: @glyphicon-icon-size;
             }
         }
     }
@@ -63,6 +63,10 @@ body .ui-tree.ui-tree-horizontal {
             color: #fff;
             border: @light-blue;
         }
+    }
+    
+    span.ui-tree-toggler:before {
+    	 font-size: @font-awesome-icon-size - 2;
     }
 
     span.ui-tree-toggler.ui-icon:before {
