@@ -1,264 +1,388 @@
 /* Menus */
-.ui-tabmenu li.ui-state-active {
-  border: 1px solid #156090;
-  background: #186ba0;
-  color: #FFFFFF;
+
+//general
+li.ui-menuitem  { 
+
+    &:hover {
+        background: @hover-color;
+    }
+
+    a.ui-menuitem-link {
+
+        span.ui-menuitem-icon {
+            top: 1px;
+            margin-right: 4px;
+        }
+
+        .ui-icon-triangle-1-s, .ui-icon-triangle-1-e {
+            background-image: none;
+            display: inline-block;
+            top: 2px;
+            text-indent: 0;
+        }
+
+        .ui-icon-triangle-1-s:before {
+            font-family: 'Glyphicons Halflings';
+            color: @admin-text-color;
+            position: relative;
+            left: 5px;
+            top: -2px;
+            font-size: @glyphicon-icon-size!important;
+            overflow: hidden;
+            content: "\e259" !important;
+        }
+
+        .ui-icon-triangle-1-e:before {
+            font-family: 'Glyphicons Halflings';
+            color: @admin-text-color;
+            position: relative;
+            top: -2px;
+            font-size: @glyphicon-icon-size!important;
+            overflow: hidden;
+            content: "\e258" !important;
+        }
+    }
+
 }
 
-.ui-tabmenu li.ui-state-active .ui-menuitem-text {
-  color: #FFFFFF;
+li.ui-menuitem-active {
+    background-color: @hover-color;
 }
 
-.ui-tabmenu li.ui-state-active .ui-menuitem-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
-}
+body .ui-menu {
 
-/* SlideMenu */
-.ui-slidemenu .ui-menu-child {
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
-}
+    ul.ui-menu-list > li.ui-widget-header {
+        border: 0;
+        background: @light-blue;
+        color: #fff;
 
-ul.ui-menu-list > li.ui-widget-header {
-  border: 0;
+        span.ui-icon:before {
+            color:#fff;
+        }
+    }
+
+    //icones 
+
 }
 
 li.ui-menuitem > a.ui-menuitem-link {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 body li.ui-menuitem span.ui-menuitem-text {
-  padding-left: 2px;
+    padding-left: 2px;
 }
+
+/* menubar */
+div.ui-menu.ui-menubar {
+    padding: 0; 
+
+    li.ui-menuitem {
+        padding: .2em;
+    }
+}
+
+/* tabmenu */
+.ui-tabmenu {
+
+    li {
+        &.ui-state-active {
+            border: 1px solid darken(@light-blue, 5%);
+            background: @light-blue;
+            color: #FFFFFF;
+
+            .ui-menuitem-text {
+                color: #FFFFFF;
+            }
+
+            .ui-menuitem-icon:before {
+                color: #fff;
+            }
+
+        }
+
+        &.ui-state-hover {
+            background-color: @hover-color;
+        }
+
+        .ui-menuitem-icon {
+            display: inline-block;
+            margin: 3px;
+        }
+    }
+
+}
+
+
+
+.ui-tabmenu li.ui-state-active .ui-menuitem-icon {
+    background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}
+
+
+/* SlideMenu */
+
+.ui-slidemenu {
+
+    .ui-menu-child {
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .ui-slidemenu-backward {
+        margin-bottom: 0;
+        border: none;
+        color: transparent;
+        &:hover {
+            background: @hover-color;
+        }
+        .ui-icon-triangle-1-w {
+            text-indent: 0;
+            &:before {
+                font-family: FontAwesome;
+                color: @admin-text-color;
+                position: relative;
+                font-size: @font-awesome-icon-size;
+                overflow: hidden;
+                content: "\f112" !important;
+            }
+        }
+
+    }
+
+}
+
 
 body .ui-menu .ui-menu-list li.ui-widget-header {
-
-  span.ui-icon-triangle-1-s {
-    background-image: none;
-    display: inline;
-    position: relative;
-    left: -8px;
-
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      overflow: hidden;
-      content: "\f0d7" !important;
+    span.ui-icon-triangle-1-s {
+        background-image: none;
+        display: inline;
+        position: relative;
+        left: -8px;
+        &:before {
+            font-family: 'Glyphicons Halflings';
+            color: @admin-text-color;
+            position: relative;
+            font-size: @glyphicon-icon-size;
+            overflow: hidden;
+            content: "\e259" !important;
+        }
     }
-
-  }
-
-  span.ui-icon-triangle-1-e {
-    background-image: none;
-    display: inline;
-    position: relative;
-    left: -8px;
-    &:before {
-      font-family: FontAwesome;
-      color: @admin-text-color;
-      position: relative;
-      font-size: @font-awesome-icon-size;
-      overflow: hidden;
-      content: "\f0da" !important;
+    span.ui-icon-triangle-1-e {
+        background-image: none;
+        display: inline;
+        position: relative;
+        left: -8px;
+        &:before {
+            font-family: 'Glyphicons Halflings';
+            color: @admin-text-color;
+            position: relative;
+            font-size: @glyphicon-icon-size;
+            overflow: hidden;
+            content: "\e258" !important;
+        }
     }
-  }
 }
 
-@media (max-width: @screen-sm) {
-  body .ui-menu .ui-menu-list li.ui-widget-header {
-
-    span {
-      &.ui-icon-triangle-1-s, &.ui-icon-triangle-1-e {
-        &:before {
-          font-size: @font-awesome-icon-size + 1;
+/* body .ui-menu .ui-menu-list li.ui-widget-header {
+        span {
+            &.ui-icon-triangle-1-s:before {
+                font-size: @glyphicon-icon-size;
+            }
+            &.ui-icon-triangle-1-e:before {
+                font-size: @glyphicon-icon-size;
+            }
         }
-      }
+    }*/
+
+@media (max-width: @screen-sm) {
+    body .ui-menu .ui-menu-list li.ui-widget-header {
+        span {
+            &.ui-icon-triangle-1-s,
+            &.ui-icon-triangle-1-e {
+                &:before {
+                    font-size: @glyphicon-icon-size + 1;
+                }
+            }
+        }
     }
-  }
 }
 
 span.ui-menuitem-icon.ui-icon.fa:before {
-  font-size: @font-awesome-icon-size;
+    font-size: @font-awesome-icon-size;
 }
 
 @media (max-width: @screen-sm) {
-  span.ui-menuitem-icon.ui-icon.fa:before {
-    font-size: @font-awesome-icon-size + 1;
-  }
+    span.ui-menuitem-icon.ui-icon.fa:before {
+        font-size: @font-awesome-icon-size + 1;
+    }
 }
 
 body .ui-menu.ui-menu-toggleable li.ui-widget-header h3 {
-  padding-left: 15px;
+    padding-left: 15px;
 }
+
 
 /* panelmenu */
 
-
-
 body .ui-panelmenu {
 
-  li.ui-menuitem span.ui-menuitem-text {
-    padding-left: 0;
-  }
+    .ui-panelmenu-header {
 
-  .ui-panelmenu-content {
-    position: initial;
-  }
-
-  div.ui-panelmenu-panel {
-    overflow: hidden;
-
-    > H3 {
-      padding: 2px 0;
-
-      .ui-icon-triangle-1-s {
-        background-image: none!important;
-        display: inline;
-        position: relative;
-        float: left;
-        text-indent: initial;
-        left: 10px;
-        top: 15px;
-        &:before {
-          font-family: FontAwesome;
-          color: @admin-text-color;
-          position: relative;
-          font-size: @font-awesome-icon-size;
-          overflow: hidden;
-          content: "\f0d7" !important;
+        &.ui-state-active, &.ui-state-active a {
+            background: @light-blue;
+            color: #ffffff;
+            border: 1px solid darken(@light-blue, 5%);
         }
-      }
+    }
 
-      .ui-icon-triangle-1-e {
-        background-image: none!important;
-        display: inline;
-        position: relative;
-        float: left;
-        text-indent: initial;
-        left: 10px;
-        top: 15px;
-        &:before {
-          font-family: FontAwesome;
-          color: @admin-text-color;
-          position: relative;
-          font-size: @font-awesome-icon-size;
-          overflow: hidden;
-          content: "\f0da" !important;
+    li.ui-menuitem span.ui-menuitem-text {
+        padding-left: 0;
+    }
+    .ui-panelmenu-content {
+        position: initial;
+    }
+    div.ui-panelmenu-panel {
+        overflow: hidden;
+        > H3 {
+            padding: 2px 0;
+            .ui-icon-triangle-1-s {
+                background-image: none!important;
+                display: inline;
+                position: relative;
+                float: left;
+                text-indent: initial;
+                left: 10px;
+                top: 15px;
+                &:before {
+                    font-family: 'Glyphicons Halflings';
+                    color: #fff;
+                    position: relative;
+                    font-size: @glyphicon-icon-size;
+                    overflow: hidden;
+                    content: "\e259" !important;
+                }
+            }
+            .ui-icon-triangle-1-e {
+                background-image: none!important;
+                display: inline;
+                position: relative;
+                float: left;
+                text-indent: initial;
+                left: 10px;
+                top: 15px;
+                &:before {
+                    font-family: 'Glyphicons Halflings';
+                    color: @admin-text-color;
+                    position: relative;
+                    font-size: @glyphicon-icon-size;
+                    overflow: hidden;
+                    content: "\e258" !important;
+                }
+            }
         }
-      }
+
+    }//end header
+
+    a.ui-menuitem-link-hasicon span.ui-panelmenu-icon.ui-icon:before {
+        left:-25px!important;
     }
 
-    span.ui-menuitem-icon {
-      left: .7em;
+    .ui-menu-parent > .ui-menuitem-link {
+        > .ui-icon {
+            top: 5px;
+        }
+        &.ui-menuitem-link-hasicon {
+            padding-left: 2.5em;
+        }
+
+        span.ui-panelmenu-icon.ui-icon {
+            left: -4px;
+            &.ui-icon-triangle-1-e {
+                background-image: none;
+                display: inline;
+                position: relative;
+                &:before {
+                    font-family: 'Glyphicons Halflings';
+                    color: @admin-text-color;
+                    position: relative;
+                    left: -4px;
+                    top: -4px;
+                    font-size: @glyphicon-icon-size;
+                    overflow: hidden;
+                    content: "\e258" !important;
+                }
+            }
+            &.ui-icon-triangle-1-s {
+                background-image: none;
+                display: inline;
+                position: relative;
+                &:before {
+                    font-family: 'Glyphicons Halflings';
+                    color: @admin-text-color;
+                    position: relative;
+                    left: -5px;
+                    top: -4px;
+                    font-size: @glyphicon-icon-size;
+                    overflow: hidden;
+                    content: "\e259" !important;
+                }
+            }
+        }
     }
-  }
-
-  .ui-menu-parent > .ui-menuitem-link {
-
-    > .ui-icon {
-      left: 1.6em;
-      top: 5px;
-    }
-
-    &.ui-menuitem-link-hasicon {
-      padding-left: 2.5em;
-    }
-  }
-
-  span.ui-panelmenu-icon.ui-icon {
-
-    &.ui-icon-triangle-1-e {
-      background-image: none;
-      display: inline;
-      position: relative;
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
-        position: relative;
-        left: -48px;
-        top: -4px;
-        font-size: @font-awesome-icon-size;
-        overflow: hidden;
-        content: "\f0da" !important;
-      }
-    }
-
-    &.ui-icon-triangle-1-s {
-      background-image: none;
-      display: inline;
-      position: relative;
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
-        position: relative;
-        left: -50px;
-        top: -4px;
-        font-size: @font-awesome-icon-size;
-        overflow: hidden;
-        content: "\f0d7" !important;
-      }
-    }
-  }
 }
-
-
 
 @media (max-width: @screen-sm) {
-  body .ui-panelmenu span.ui-panelmenu-icon.ui-icon, body .ui-panelmenu div.ui-panelmenu-panel > H3 span {
-
-    &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
-      &:before {
-        font-size: @font-awesome-icon-size + 1;
-      }
+    body .ui-panelmenu span.ui-panelmenu-icon.ui-icon,
+    body .ui-panelmenu div.ui-panelmenu-panel > H3 span {
+        &.ui-icon-triangle-1-e,
+        &.ui-icon-triangle-1-s {
+            &:before {
+                font-size: @font-awesome-icon-size + 1;
+            }
+        }
     }
-
-  }
 }
+
 
 /* ripple/waves effect integration, overflow hidden so the effect doesn't exceed element size */
 
 @media (max-width: @screen-sm) {
-  ul.sidebar-menu > li {
-    overflow: hidden;
-  }
+    ul.sidebar-menu > li {
+        overflow: hidden;
+    }
 }
 
 @media (min-width: (@screen-sm + 1)) {
-  body ul.sidebar-menu > li {
-    overflow: visible;
-  }
+    body ul.sidebar-menu > li {
+        overflow: visible;
+    }
 }
 
 a.sidebar-toggle {
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 @media (max-width: (@screen-sm - 1)) {
-  .slideout-menu {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    width: 230px;
-  }
-
-  .slideout-menu-left {
-    left: 0;
-  }
-
-  .slideout-panel {
-    min-height: 100%;
-    background-color: #ecf0f5;
-    z-index: 811;
-    position: relative;
-    padding: 0;
-    will-change: transform;
-  }
-
+    .slideout-menu {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        width: 230px;
+    }
+    .slideout-menu-left {
+        left: 0;
+    }
+    .slideout-panel {
+        min-height: 100%;
+        background-color: #ecf0f5;
+        z-index: 811;
+        position: relative;
+        padding: 0;
+        will-change: transform;
+    }
 }
-
