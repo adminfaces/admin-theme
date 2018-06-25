@@ -482,6 +482,21 @@ body .ui-menubutton {
     &.btn-material {
         > button {
             .btn-material;
+            span.ui-button-icon-right, span.ui-button-icon-left  {
+                &:before {
+                    font-size: @glyphicon-icon-size + 2;
+                }
+
+            }
+            
+            &.btn-lg {
+                span.ui-button-icon-right, span.ui-button-icon-left  {
+                &:before {
+                    font-size: @glyphicon-icon2x-size;
+                }
+
+            }
+            }
         }
     }
 
