@@ -42,7 +42,6 @@ li.ui-menuitem  {
             content: "\e258" !important;
         }
     }
-
 }
 
 li.ui-menuitem-active {
@@ -233,7 +232,7 @@ body .ui-panelmenu {
         &.ui-state-active, &.ui-state-active a {
             background: @light-blue;
             color: #ffffff;
-            border: 1px solid darken(@light-blue, 5%);
+            border: 1px solid @light-blue;
         }
     }
 
@@ -339,7 +338,7 @@ body .ui-panelmenu {
         &.ui-icon-triangle-1-e,
         &.ui-icon-triangle-1-s {
             &:before {
-                font-size: @font-awesome-icon-size + 1;
+                font-size: @glyphicon-icon-size + 1;
             }
         }
     }

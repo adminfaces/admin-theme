@@ -444,7 +444,7 @@ body span.ui-button-icon-left, body span.ui-button-icon-right {
             position: relative;
             font-size: @glyphicon-icon-size;
             padding: 0 4px;
-            top: -4px;
+            top: -2px;
             text-indent: 0;
             float: left;
             overflow: hidden;
@@ -463,6 +463,15 @@ body span.ui-button-icon-left, body span.ui-button-icon-right {
                 font-size: @font-awesome-icon-size + 1;
             }
         }
+    }
+}
+
+@media (max-width: @screen-xs) {
+    body .ui-menubutton span.ui-button-icon-left, body .ui-menubutton span.ui-button-icon-right {
+        &.ui-icon-triangle-1-s:before {
+            font-size: @glyphicon-icon-size + 1;
+        }
+
     }
 }
 
