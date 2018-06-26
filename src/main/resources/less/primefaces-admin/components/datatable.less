@@ -303,6 +303,7 @@ body .ui-datatable, body .ui-treetable {
 
         @media (max-width: @screen-xs-max) {
             width: 10% !important;
+            
         }
 
     }
@@ -322,26 +323,36 @@ body .ui-treetable .ui-treetable-data {
         display: inline !important;
 
         &.ui-icon-triangle-1-e:before {
-            font-family: FontAwesome;
+            font-family: 'Glyphicons Halflings';
             color: @admin-text-color;
             position: relative;
-            font-size: @font-awesome-icon-size;
+            font-size: @glyphicon-icon-size;
             top: -5px;
             padding: 0 4px;
             overflow: hidden;
-            content: "\f0da" !important;
+            content: "\e258" !important;
         }
 
         &.ui-icon-triangle-1-s:before {
-            font-family: FontAwesome;
+            font-family: 'Glyphicons Halflings';
             color: @admin-text-color;
             position: relative;
-            font-size: @font-awesome-icon-size;
+            font-size: @glyphicon-icon-size;
             padding: 0 4px;
             overflow: hidden;
             top: -5px;
-            content: "\f0d7" !important;
+            content: "\e259" !important;
         }
+    }
+    
+    tr[aria-selected="true"]:not(.ui-treetable-partialselected) {
+        
+        .ui-icon-triangle-1-s, .ui-icon-triangle-1-e {
+            &:before {
+                color:#fff;
+            }
+        }
+        
     }
 
 }
@@ -349,6 +360,7 @@ body .ui-treetable .ui-treetable-data {
 
 body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chkbox-icon.ui-icon-check:before {
     color: @admin-text-color;
+    top:1px;
 }
 
 body .ui-treetable  {
@@ -600,7 +612,7 @@ td.ui-editable-column .ui-cell-editor-input {
     span.ui-icon-pencil:before {
         font-family: FontAwesome;
         position: relative;
-        font-size: @font-awesome-icon-size;
+        font-size: @font-awesome-icon-size - 1;
         overflow: hidden;
         content: "\f040";
     }
@@ -608,7 +620,7 @@ td.ui-editable-column .ui-cell-editor-input {
     span.ui-icon-check:before {
         font-family: 'Glyphicons Halflings';
         position: relative;
-        font-size: @font-awesome-icon-size;
+        font-size: @font-awesome-icon-size - 1;
         overflow: hidden;
         content: "\e013";
     }
@@ -616,7 +628,7 @@ td.ui-editable-column .ui-cell-editor-input {
     span.ui-icon-close:before {
         font-family: 'Glyphicons Halflings';
         position: relative;
-        font-size: @font-awesome-icon-size;
+        font-size: @font-awesome-icon-size - 1;
         overflow: hidden;
         content: "\e014";
     }
@@ -628,15 +640,15 @@ td.ui-editable-column .ui-cell-editor-input {
 
     .ui-row-editor  {
         span.ui-icon-pencil:before {
-            font-size: @font-awesome-icon-size + 1;
+            font-size: @font-awesome-icon-size;
         }
 
         span.ui-icon-check:before {
-            font-size: @font-awesome-icon-size + 1;
+            font-size: @font-awesome-icon-size;
         }
 
         span.ui-icon-close:before {
-            font-size: @font-awesome-icon-size + 1;
+            font-size: @font-awesome-icon-size;
         }
     }
 
