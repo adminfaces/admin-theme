@@ -478,26 +478,9 @@ body span.ui-button-icon-left, body span.ui-button-icon-right {
 body .ui-menubutton {
 
     .border-radius(50%);
-
     &.btn-material {
-        > button {
-            .btn-material;
-            span.ui-button-icon-right, span.ui-button-icon-left  {
-                &:before {
-                    font-size: @glyphicon-icon-size + 2;
-                }
+        .menubutton-material;
 
-            }
-            
-            &.btn-lg {
-                span.ui-button-icon-right, span.ui-button-icon-left  {
-                &:before {
-                    font-size: @glyphicon-icon2x-size;
-                }
-
-            }
-            }
-        }
     }
 
     &.btn-primary > button {
@@ -616,6 +599,164 @@ body button, body button.ui-button.ui-widget  {
 
 //mixins
 
+.menubutton-material() {
+    .border-radius(2px);
+    border: none;
+    position: relative;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow,transform;
+    -webkit-transition: -webkit-box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    -o-transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background: 0 0!important;
+    .btn-interactions(lighten(@btn-background-color,10%));
+    color: rgba(0,0,0,.87);
+    &:hover, &:focus {
+        .box-shadow(none);
+    }
+
+    > button.ui-button {
+        padding: 6px 30px;
+        .btn-interactions(lighten(@btn-background-color,10%));
+        background: 0 0!important;
+        text-decoration: none;
+        border: none;
+        position: relative;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        span.ui-button-icon-right, span.ui-button-icon-left  {
+            &:before {
+                top:-4px;
+                font-size: @glyphicon-icon-size + 2;
+            }
+
+        }
+
+    }
+
+    &.btn-lg {
+        > button.ui-button {
+            padding: 8px 30px;
+        }
+        span.ui-button-icon-right, span.ui-button-icon-left {
+            &:before {
+                font-size: @glyphicon-icon2x-size;
+            }
+
+        }
+    }
+
+    &.btn-sm {
+        > button.ui-button {
+            padding: 4px 20px;
+        }
+    }
+
+    &.btn-xs {
+         > button.ui-button {
+            padding: 2px 15px;
+         }
+    }
+
+    &.btn-flat {
+        .border-radius(0);
+    }
+
+    &.btn-default {
+        color: rgba(0,0,0,.87)!important;
+        span.ui-icon {
+            color: rgba(0,0,0,.87);
+        }
+
+        > button.ui-button { 
+            color: rgba(0,0,0,.87);
+        }
+    }
+
+    &.btn-primary {
+        color: @light-blue!important;
+        span.ui-icon {
+            color: @light-blue;
+        }
+
+        > button.ui-button { 
+            color: @light-blue!important;
+        }
+    }
+
+    &.btn-danger {
+        color: @red!important;
+        span.ui-icon {
+            color: @red;
+        }
+
+        > button.ui-button { 
+            color: @red!important;
+        }
+    }
+
+    &.btn-fatal {
+        color: @dark-red!important;
+        span.ui-icon {
+            color: @dark-red;
+        }
+
+        > button.ui-button { 
+            color: @dark-red!important;
+        }
+    }
+
+    &.btn-warning {
+        color: @yellow!important;
+        span.ui-icon {
+            color: @yellow;
+        }
+
+        > button.ui-button { 
+            color: @yellow!important;
+        }
+    }
+
+    &.btn-success {
+        color: @green!important;
+        span.ui-icon {
+            color: @green;
+        }
+
+        > button.ui-button { 
+            color: @green!important;
+        }
+    }
+
+    &.btn-teal {
+        color: @admin-teal!important;
+        span.ui-icon {
+            color: @admin-teal;
+        }
+
+        > button.ui-button { 
+            color: @admin-teal!important;
+        }
+    }
+
+    &.btn-info {
+        color: @aqua!important;
+        span.ui-icon {
+            color: @aqua;
+        }
+
+        > button.ui-button { 
+            color: @aqua!important;
+        }
+    }
+}
+
 .btn-material() {
     border: none;
     border-radius: 2px;
@@ -647,8 +788,6 @@ body button, body button.ui-button.ui-widget  {
 
     &.btn-lg {
         padding: 8px 30px;  
-
-
         &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
             padding: 4px 30px;
 
