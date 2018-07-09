@@ -8,12 +8,19 @@
         -webkit-box-shadow: 0 0 10px #1f89ce!important;
         box-shadow: 0 0 10px #1f89ce!important;
         border-color: #97ccef!important;
-        
+
         ~ p {
             font-weight: bold;
             color:#fff;
         }
     }
+
+    div#restore-defaults {
+        a, label, i {
+            color: #fff;
+        }
+    }
+    
 }
 
 .control-sidebar-light {
@@ -25,10 +32,16 @@
         -moz-box-shadow: 0 0 10px #222!important;
         -webkit-box-shadow: 0 0 10px #222!important;
         box-shadow: 0 0 10px #222!important;
-        
-         ~ p {
+
+        ~ p {
             font-weight: bold;
             color:#444;
+        }
+    }
+
+    div#restore-defaults {
+        a, label, i {
+            color: #444;
         }
     }
 }
@@ -38,3 +51,20 @@
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
 }
 
+div#restore-defaults {
+    a, label {
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+aside.control-sidebar {
+    .ui-outputlabel {
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
