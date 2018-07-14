@@ -1,6 +1,6 @@
-/* Picklist */
+/* Picklist & Orderlist*/
 
-body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist {
+body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist,  body .ui-orderlist.ui-grid-responsive {
 
     .ui-picklist-caption {
         background-color: @picklist-header-color;
@@ -43,9 +43,13 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist 
     .ui-picklist-list li {
         padding: 6px;
     }
+    
+    .ui-orderlist-controls {
+        margin-right: 5px;
+    }
 
     .ui-picklist-buttons-cell, .ui-orderlist-controls {
-
+        
         > button {
             .box-shadow(none);
         }
@@ -55,9 +59,9 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist 
             padding: 0 10px;
             border: none;
         }
-        
+
         span.ui-button-icon-left.ui-icon, span.ui-button-icon-right.ui-icon {
-        	top:0px;
+            top:0px;
         }
     }
 
@@ -321,6 +325,26 @@ body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist 
         button.ui-picklist-button-remove, button.ui-picklist-button-remove-all {
             .rotate(270deg);
         }
+    }
+
+}
+
+@-moz-document url-prefix() {
+
+    body .ui-picklist, body .ui-picklist.ui-picklist-responsive, body .ui-orderlist, body .ui-orderlist.ui-grid-responsive {
+
+        .ui-picklist-buttons-cell, .ui-orderlist-controls {
+            span.ui-button-icon-left.ui-icon, span.ui-button-icon-right.ui-icon {
+                top:50%;
+            }
+
+            .ui-orderlist-button-move-up, .ui-orderlist-button-move-top {
+                span.ui-button-icon-left.ui-icon, span.ui-button-icon-right.ui-icon {
+                    top:0;
+                }
+            }
+        }
+
     }
 
 }
