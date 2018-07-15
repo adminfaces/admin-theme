@@ -51,20 +51,27 @@
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
 }
 
-div#restore-defaults {
-    a, label {
-        cursor: pointer;
-        &:hover {
-            opacity: .7;
-        }
-    }
-}
-
 aside.control-sidebar {
     .ui-outputlabel {
         cursor: pointer;
         &:hover {
             opacity: .7;
+        }
+    }
+
+    span.control-sidebar-subheading {
+        position: relative;
+    }
+
+    div#restore-defaults {
+        > a {
+            position: relative;
+        }
+        > a, label {
+            cursor: pointer;
+            &:hover {
+                opacity: .7;
+            }
         }
     }
 }
