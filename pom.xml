@@ -564,6 +564,85 @@
                 </plugins>
             </build>
         </profile>
+        
+        <profile>
+            <id>no-fonts</id>
+            <properties>
+                <themeFile>theme-no-fonts.less</themeFile>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>3.0.2</version>
+                        <configuration>
+                            <classifier>no-fonts</classifier>
+                        </configuration>
+                    </plugin>
+                    
+                     <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.7</version>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/admin-lte/fonts" />
+                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/bootstrap/fonts" />
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        
+        <profile>
+            <id>no-fonts-dev</id>
+            <properties>
+                <themeFile>theme-no-fonts.less</themeFile>
+                <compressCss>false</compressCss>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>3.0.2</version>
+                        <configuration>
+                            <classifier>no-fonts</classifier>
+                        </configuration>
+                    </plugin>
+                    
+                     <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.7</version>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/admin-lte/fonts" />
+                                        <delete dir="${project.build.outputDirectory}/META-INF/resources/bootstrap/fonts" />
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
 
     </profiles>
 
