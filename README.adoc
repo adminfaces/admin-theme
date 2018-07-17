@@ -30,7 +30,7 @@ image:messages.png[]
 
 == Introduction
 
-This theme is a `~300kb` css file containing Admin LTE and Bootstrap as well as customized Primefaces components to make them look like Admin LTE and Bootstrap.
+This theme is a css file containing Admin LTE and Bootstrap as well as customized Primefaces components to make them look like AdminLTE and Bootstrap.
 
 
 == Usage
@@ -161,6 +161,25 @@ The `without-jsf` classifier will bring a theme.css *without JSF resource handli
 </dependency>
 ----
 
+=== No Fonts classifier
+
+Since `v1.0.0-RC16` web fonts such as `glyphicons` and `Source Sans Pro` are embedded inside the theme instead of being queried from a CDN. 
+
+This makes the theme work offline or in environments with limited access to the internet but on the other hand results in a larger jar file, `~1MB` against `~200kb` when fonts are not in the theme.
+
+So if you want a thinner theme you can use the *no-fonts* classifier:
+
+[source,xml]
+----
+<dependency>
+    <groupId>com.github.adminfaces</groupId>
+    <artifactId>admin-theme</artifactId>
+    <version>1.0.0-RC16</version>
+    <classifier>no-fonts</classifier>
+</dependency>
+----
+
+
 == Avoiding theme caching
 
 Whenever the theme is updated to a new version in the project users may have to clear their browser caches to get the changes of the new theme.
@@ -189,6 +208,7 @@ This classifier *appends the theme version* to the name of theme so you need to 
     <param-value>admin-1.0.0-RC15</param-value>
 </context-param>
 ----
+
 
 == Development
 
