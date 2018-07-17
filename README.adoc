@@ -209,6 +209,8 @@ This classifier *appends the theme version* to the name of theme so you need to 
 </context-param>
 ----
 
+TIP: There is also a `no-cache-no-fonts` classifier combining both approaches.
+
 
 == Development
 
