@@ -363,6 +363,14 @@ body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chk
     top:1px;
 }
 
+ @-moz-document url-prefix() {
+     @media (max-width: @screen-xm) {
+         body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chkbox-icon.ui-icon-check:before {
+             top:0px; //checkbox is not centered on firefox on small screens
+         }
+     }
+ }
+
 body .ui-treetable  {
 
     span.ui-treetable-toggler {
