@@ -659,9 +659,9 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-xs {
-         > button.ui-button {
+        > button.ui-button {
             padding: 2px 15px;
-         }
+        }
     }
 
     &.btn-flat {
@@ -889,3 +889,19 @@ body button, body button.ui-button.ui-widget  {
         }
     }
 }
+
+
+/* generic btn interactions (no matter btn-color) */
+button.btn-states {
+    &.ui-state-hover {
+        opacity: .9;
+    } 
+    &.ui-state-focus {
+        opacity: .8;
+    }
+    &.ui-state-active {
+        opacity: .7;
+    }
+}
+
+
