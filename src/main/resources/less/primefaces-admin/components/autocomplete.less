@@ -13,6 +13,7 @@ body .ui-autocomplete {
         &.ui-state-active {
             .box-shadow(none);
         }
+       
     }
 
     input.ui-autocomplete-dd-input {
@@ -115,21 +116,21 @@ button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
     position: relative;
 
     &:before {
-        font-family: FontAwesome;
+        font-family: 'Glyphicons Halflings';
         color: @admin-text-color;
         position: relative;
-        font-size: @font-awesome-icon-size;
+        font-size: @glyphicon-icon-size;
         padding: 0 1px;
         top: -2px;
         overflow: hidden;
-        content: "\f0d7" !important;
+        content: "\e259" !important; 
     }
 }
 
 @media (max-width: @screen-xs) {
     button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
         &:before {
-            font-size: @font-awesome-icon-size + 1;
+            font-size: @glyphicon-icon-size + 1;
         }
     }
 }

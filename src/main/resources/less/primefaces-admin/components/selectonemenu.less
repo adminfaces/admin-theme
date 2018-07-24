@@ -17,14 +17,14 @@ div.ui-selectonemenu {
             position: relative;
 
             &:before {
-                font-family: FontAwesome;
+                font-family: 'Glyphicons Halflings';
                 color: @admin-text-color;
                 position: relative;
-                font-size: @font-awesome-icon-size;
+                font-size: @glyphicon-icon-size;
                 padding: 0 7px;
                 left: 3px;
                 overflow: hidden;
-                content: "\f0d7" !important;
+                content: "\e259" !important;
             }
         }
 
@@ -43,7 +43,7 @@ div.ui-selectonemenu {
 @media (max-width: @screen-xs) {
     div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
         &:before {
-            font-size: @font-awesome-icon-size + 1;
+            font-size: @glyphicon-icon-size  + 1;
         }
     }
 }
@@ -54,15 +54,15 @@ div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
     position: relative;
 
     &:before {
-        font-family: FontAwesome;
+        font-family: 'Glyphicons Halflings';
         color: @admin-text-color;
         position: relative;
-        font-size: @font-awesome-icon-size;
+        font-size: @glyphicon-icon-size;
         padding: 0 10px;
         top: -2px;
         left: 2px;
         overflow: hidden;
-        content: "\f0d7" !important;
+        content: "\e259" !important;
     }
 }
 
@@ -109,7 +109,13 @@ ul.ui-selectlistbox-list, ul.ui-multiselectlistbox-list {
     }
 }
 
-
+li {
+    &.ui-selectlistbox-item, &.ui-selectonemenu-item, &.multiselectlistbox-item {
+        &.ui-state-hover, .ui-state-focus, &:hover, &:focus {
+            background: @hover-color;
+        }
+    }
+}
 /* box-menu */
 
 
@@ -155,7 +161,7 @@ li.ui-selectcheckboxmenu-item div.ui-chkbox-box {
 }
 
 body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox {
-    margin-top: -11px;
+    margin-top: -7px;
 }
 
 div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
