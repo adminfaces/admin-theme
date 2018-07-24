@@ -1,0 +1,57 @@
+/* callouts */
+.callout-card {
+    background-color: #fff !important;
+    color: #525252 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    .callout;
+
+    &.callout-info,
+    &.callout-danger,
+    &.callout-warning,
+    &.callout-teal,
+    &.callout-success {
+        background-color: #fff !important;
+        color: #525252 !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        > h4 {
+            margin-bottom: 5px;
+        }
+        a {
+            color: @light-blue;
+            text-decoration: none;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+
+    &.callout-warning > h4 {
+        color: #c87f0a;
+    }
+
+    &.callout-info > h4 {
+        color: #0097bc;
+    }
+
+    &.callout-success > h4 {
+        color: @green;
+    }
+
+    &.callout-danger > h4 {
+        color: #c23321;
+    }
+
+    &.callout-fatal > h4 {
+        color: @dark-red;
+    }
+
+    &.callout-teal > h4 {
+        color: @admin-teal;
+    }
+}
+
+.callout.callout-teal {
+    background-color: @admin-teal;
+    border-color: darken(@admin-teal, 10%);
+    color: #fff;
+}
