@@ -1,4 +1,4 @@
-/*sidebar component*/
+/*sidebar primefaces component*/
 body div.ui-sidebar {
 
     a.ui-sidebar-close {
@@ -24,5 +24,42 @@ body div.ui-sidebar {
     }
     .ui-sidebar-mask {
         z-index: @sidebar-mask-zindex!important;
+    }
+}
+
+
+/* AdminLTE sidebar customizations */
+
+a.sidebar-toggle {
+    overflow: hidden;
+    position: relative;
+}
+
+
+ul.sidebar-menu {
+
+    li.header {
+        text-transform: uppercase;
+    }
+
+    li.treeview {
+        i.fa-angle-left:before {
+            font-weight: 600;
+        }
+    }
+}
+
+
+/* ripple/waves effect integration, overflow hidden so the effect doesn't exceed element size */
+
+@media (max-width: @screen-sm) {
+    ul.sidebar-menu > li {
+        overflow: hidden;
+    }
+}
+
+@media (min-width: (@screen-sm + 1)) {
+    body ul.sidebar-menu > li {
+        overflow: visible;
     }
 }
