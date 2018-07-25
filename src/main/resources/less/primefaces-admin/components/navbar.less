@@ -19,6 +19,9 @@ ul.nav.navbar-nav {
             color: #444;
             font-weight: bold;
             background-color: #fff;
+            &:hover {
+                background-color: #e1e3e9;
+            }
         }
     }
 
@@ -36,29 +39,65 @@ ul.nav.navbar-nav {
         }
     }
 
-    button.navbar-toggle-collapsed {
-        &:hover {
-            background: darken(@light-blue, 5%)
-        }
-    }
-
 }
+
+div.navbar-header, div.navbar-custom-menu {
+    button.navbar-toggle-collapsed, button.navbar-toggle, a#layout-setup {
+        border-radius: 0;
+    }
+}
+
 
 
 //menu hightlight based on skin
 
 body.skin-blue, body.skin-blue-light {
-   .highlight-menu(@light-blue)
+    .highlight-menu(@light-blue)
 
 }
 
 body.skin-red, body.skin-red-light {
-   .highlight-menu(@red)
+    .highlight-menu(@red)
 
 }
 
-body.skin-black, body.skin-black-light {
-    .highlight-menu(@black)
+body.skin-black, body.skin-black-light {    
+
+    div.navbar-collapse ul.nav.navbar-nav {
+
+        ul.dropdown-menu li.active a {
+            border-left-color:@black;  
+            font-weight: bolder;
+            @media (max-width: @screen-sm) {
+                background: #fff;
+                color: #444;
+                &:hover {
+                    background-color: #e1e3e9;
+                }
+            }
+
+        }
+        li.dropdown, li.dropdown.open {
+            a, a:hover, a:focus {
+                color: #333;
+            }
+        }
+
+    }
+
+    div.navbar-header, div.navbar-custom-menu {
+        button.navbar-toggle-collapsed, button.navbar-toggle, a#layout-setup {
+            &:hover {
+                background: #e1e3e9!important;
+            }
+        }
+
+        a#layout-setup i.fa-gears {
+            color: #333;
+        }
+
+    }
+
 }
 
 body.skin-yellow, body.skin-yellow-light {
@@ -72,18 +111,34 @@ body.skin-green, body.skin-green-light {
 }
 
 body.skin-teal, body.skin-teal-light {
-    .highlight-menu(@teal)
+    .highlight-menu(@admin-teal)
 
 }
 
 body.skin-purple, body.skin-purple-light {
     .highlight-menu(@purple)
-
 }
 
 
 .highlight-menu(@color) {
     ul.nav.navbar-nav ul.dropdown-menu li.active a {
-       border-left-color:@color;  
+        border-left-color:@color;  
+        @media (max-width: @screen-sm) {
+            border-left:none;
+            font-weight: bolder;
+            color: #fff;
+            background: @color;
+            &:hover {
+                background-color: darken(@color, 5%);
+            }
+        }
+    }
+
+    div.navbar-header {
+        button.navbar-toggle-collapsed, button.navbar-toggle {
+            &:hover {
+                background: darken(@color, 5%)
+            }
+        }   
     }
 }
