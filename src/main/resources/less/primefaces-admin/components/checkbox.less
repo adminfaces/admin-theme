@@ -23,7 +23,6 @@ div.ui-chkbox {
 
       .ui-icon {
         background-image: none;
-
       }
       
     }
@@ -89,8 +88,10 @@ div.ui-chkbox span.ui-chkbox-icon {
     color: #fff;
     display: inline !important;
     position: relative;
-    font-size: @font-awesome-icon-size;
-    margin-left: 4px;
+    font-size: (@font-awesome-icon-size - 1);
+    margin-left: 3px;
+    font-style: italic;
+    top: 1px;
     overflow: hidden;
     content: "\e013" !important;
   }
@@ -103,7 +104,8 @@ div.ui-chkbox span.ui-chkbox-icon {
 @media (max-width: @screen-xs) {
   div.ui-chkbox span.ui-chkbox-icon {
     &:before {
-      font-size: @font-awesome-icon-size + 1;
+      font-size: @font-awesome-icon-size;
+      top: 0;
     }
   }
 }
