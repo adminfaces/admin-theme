@@ -334,24 +334,16 @@ body .ui-panelmenu {
     }
 }
 
-
-/* ripple/waves effect integration, overflow hidden so the effect doesn't exceed element size */
-
-@media (max-width: @screen-sm) {
-    ul.sidebar-menu > li {
-        overflow: hidden;
+//make menu icons 'fat' on wider screens
+@media (min-width: (@screen-md + 1)) {
+    h3.ui-panelmenu-header, span.ui-menuitem-icon, li.ui-menuitem, .ui-menu-list, .ui-tree-toggler {
+        .ui-icon-triangle-1-e,
+        .ui-icon-triangle-1-s {
+            &:before {
+                font-weight: 600;
+            }
+        }
     }
-}
-
-@media (min-width: (@screen-sm + 1)) {
-    body ul.sidebar-menu > li {
-        overflow: visible;
-    }
-}
-
-a.sidebar-toggle {
-    overflow: hidden;
-    position: relative;
 }
 
 @media (max-width: (@screen-sm - 1)) {

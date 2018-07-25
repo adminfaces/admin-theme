@@ -237,6 +237,7 @@ body .ui-splitbutton {
             font-family: 'Glyphicons Halflings';
             position: relative;
             font-size: @glyphicon-icon-size;
+            font-weight: bold;
             top: -2px;
             overflow: hidden;
             content: "\e259" !important;
@@ -452,6 +453,7 @@ body span.ui-button-icon-left, body span.ui-button-icon-right {
             font-size: @glyphicon-icon-size;
             padding: 0 4px;
             top: -2px;
+            font-weight: bold;
             text-indent: 0;
             float: left;
             overflow: hidden;
@@ -568,7 +570,7 @@ div.ui-selectbooleanbutton {
             font-family: 'Glyphicons Halflings';
             color: @admin-text-color;
             position: relative;
-            font-size: @font-awesome-icon-size;
+            font-size: (@font-awesome-icon-size - 1) ;
             top: -1px;
             overflow: hidden;
             content: "\e014" !important;
@@ -584,7 +586,7 @@ div.ui-selectbooleanbutton {
             font-family: 'Glyphicons Halflings';
             color: #fff;
             position: relative;
-            font-size: @font-awesome-icon-size;
+            font-size: (@font-awesome-icon-size - 1);
             top: -2px;
             overflow: hidden;
             content: "\e013" !important;
@@ -910,5 +912,3 @@ button.btn-states {
         opacity: .7;
     }
 }
-
-
