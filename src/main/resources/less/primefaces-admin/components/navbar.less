@@ -1,6 +1,36 @@
 ul.nav.navbar-nav {
     li {
         display: block; //delimits ripple effect
-         position: relative;
+        position: relative;
+        &:hover:not(a.ui-link), &:focus:not(a.ui-link) {
+            opacity: .8;
+        }
+        
+        &.dropdown a.dropdown-toggle {
+            &:hover {
+                opacity: .8;
+            } 
+        }
     }
+
+    span.caret {
+        display: inline;
+        position: relative;
+        border: none;
+
+        &:before {
+            font-family: 'Glyphicons Halflings';
+            font-size: 10px;
+            top: -1px;
+            font-weight: 600;
+            content: "\e259" !important;
+        }
+    }
+    
+    button.navbar-toggle-collapsed {
+        &:hover {
+            background: darken(@light-blue, 5%)
+        }
+    }
+
 }
