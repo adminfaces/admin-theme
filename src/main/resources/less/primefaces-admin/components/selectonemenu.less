@@ -25,6 +25,9 @@ div.ui-selectonemenu {
                 left: 3px;
                 overflow: hidden;
                 content: "\e259" !important;
+                @media (max-width: @screen-xs) {
+                    font-size: @glyphicon-icon-size + 1;
+                }
             }
         }
 
@@ -40,13 +43,6 @@ div.ui-selectonemenu {
     }
 }
 
-@media (max-width: @screen-xs) {
-    div.ui-selectonemenu-trigger span.ui-icon-triangle-1-s {
-        &:before {
-            font-size: @glyphicon-icon-size  + 1;
-        }
-    }
-}
 
 div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
     background-image: none;
@@ -63,6 +59,9 @@ div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
         left: 2px;
         overflow: hidden;
         content: "\e259" !important;
+        @media (max-width: @screen-xs) {
+            font-size: @glyphicon-icon-size + 1;
+        }
     }
 }
 
@@ -109,8 +108,8 @@ ul.ui-selectlistbox-list, ul.ui-multiselectlistbox-list {
     }
 }
 
-li {
-    &.ui-selectlistbox-item, &.ui-selectonemenu-item, &.multiselectlistbox-item {
+li:not(.ui-state-highlight) {
+    &.ui-selectlistbox-item, &.ui-selectonemenu-item, &.ui-multiselectlistbox-item {
         &.ui-state-hover, .ui-state-focus, &:hover, &:focus {
             background: @hover-color;
         }
@@ -121,13 +120,13 @@ li {
 
 div.ui-selectcheckboxmenu {
     overflow: hidden;
-    
+
     &.ui-state-focus .ui-selectcheckboxmenu-label, &.ui-selectcheckboxmenu-label.ui-state-hover {
         background-color: #ffffff;
     }
 }
 
- 
+
 
 .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-close {
     .box-shadow(none);
@@ -347,5 +346,3 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
 body .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
     padding-top: 6px;
 }
-
-

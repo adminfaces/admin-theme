@@ -1,44 +1,53 @@
 body .ui-spinner {
 
-  .ui-icon {
-    position: relative;
-  }
-
-  a.ui-spinner-button {
-    border: none;
-
-    &.ui-state-hover {
-      background-color: transparent;
-    }
-
-    span.ui-icon-triangle-1-n {
-      background-image: none !important;
-      display: inline !important;
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
+    .ui-icon {
         position: relative;
-        font-size: @spinner-icon-size;
-        top: -4px;
-        left: 2px;
-        overflow: hidden;
-        content: "\f077" !important;
-      }
     }
 
-    span.ui-icon-triangle-1-s {
-      background-image: none !important;
-      display: inline !important;
-      &:before {
-        font-family: FontAwesome;
-        color: @admin-text-color;
-        position: relative;
-        font-size: @spinner-icon-size;
-        top: -8px;
-        left: 2px;
-        overflow: hidden;
-        content: "\f078" !important;
-      }
+    a.ui-spinner-button {
+        border: none;
+        cursor: pointer;
+
+        &.ui-state-hover {
+            background-color: transparent;
+        }
+
+        span.ui-icon-triangle-1-n {
+            background-image: none !important;
+            display: inline !important;
+            &:before {
+                font-family: 'Glyphicons Halflings';
+                color: @admin-text-color;
+                position: relative;
+                font-size: @spinner-icon-size;
+                top: -3px;
+                left: 2px;
+                overflow: hidden;
+                content: "\e260" !important;
+                @media (max-width: @screen-sm) {
+                    font-size: @spinner-icon-size + 1;
+                }
+            }
+
+        }
+
+        span.ui-icon-triangle-1-s {
+            background-image: none !important;
+            display: inline !important;
+            &:before {
+                font-family: 'Glyphicons Halflings';
+                color: @admin-text-color;
+                position: relative;
+                font-size: @spinner-icon-size;
+                top: -6px;
+                left: 2px;
+                overflow: hidden;
+                content: "\e259" !important;
+                @media (max-width: @screen-sm) {
+                    font-size: @spinner-icon-size + 1;
+                }
+            }
+
+        }
     }
-  }
 }
