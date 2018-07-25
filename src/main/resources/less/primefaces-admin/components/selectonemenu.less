@@ -109,8 +109,8 @@ ul.ui-selectlistbox-list, ul.ui-multiselectlistbox-list {
     }
 }
 
-li {
-    &.ui-selectlistbox-item, &.ui-selectonemenu-item, &.multiselectlistbox-item {
+li:not(.ui-state-highlight) {
+    &.ui-selectlistbox-item, &.ui-selectonemenu-item, &.ui-multiselectlistbox-item {
         &.ui-state-hover, .ui-state-focus, &:hover, &:focus {
             background: @hover-color;
         }
@@ -347,5 +347,3 @@ body div.ui-selectcheckboxmenu, div.ui-fluid div.ui-selectcheckboxmenu {
 body .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
     padding-top: 6px;
 }
-
-
