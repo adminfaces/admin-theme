@@ -2,14 +2,23 @@ ul.nav.navbar-nav {
     li {
         display: block; //delimits ripple effect
         position: relative;
-        &:hover:not(a.ui-link), &:focus:not(a.ui-link) {
+        &:hover:not(a.ui-link) {
             opacity: .8;
         }
-        
+
         &.dropdown a.dropdown-toggle {
             &:hover {
                 opacity: .8;
             } 
+        }
+    }
+
+    ul.dropdown-menu li.active {
+        a {
+            border-left: 3px solid; 
+            color: #444;
+            font-weight: bold;
+            background-color: #fff;
         }
     }
 
@@ -26,11 +35,55 @@ ul.nav.navbar-nav {
             content: "\e259" !important;
         }
     }
-    
+
     button.navbar-toggle-collapsed {
         &:hover {
             background: darken(@light-blue, 5%)
         }
     }
 
+}
+
+
+//menu hightlight based on skin
+
+body.skin-blue, body.skin-blue-light {
+   .highlight-menu(@light-blue)
+
+}
+
+body.skin-red, body.skin-red-light {
+   .highlight-menu(@red)
+
+}
+
+body.skin-black, body.skin-black-light {
+    .highlight-menu(@black)
+}
+
+body.skin-yellow, body.skin-yellow-light {
+    .highlight-menu(@yellow)
+
+}
+
+body.skin-green, body.skin-green-light {
+    .highlight-menu(@green)
+
+}
+
+body.skin-teal, body.skin-teal-light {
+    .highlight-menu(@teal)
+
+}
+
+body.skin-purple, body.skin-purple-light {
+    .highlight-menu(@purple)
+
+}
+
+
+.highlight-menu(@color) {
+    ul.nav.navbar-nav ul.dropdown-menu li.active a {
+       border-left-color:@color;  
+    }
 }
