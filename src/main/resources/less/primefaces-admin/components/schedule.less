@@ -1,19 +1,53 @@
 /* schedule */
-body .fc .fc-event {
-  line-height: 1.4;
-  background-color: @schedule-event-color;
-}
-
-body .fc .fc-day-header {
-  background-color: #f8f8f8;
-}
-
-body .fc-button-group button.ui-state-active {
-    .btn-primary();
-  }
-
 body .fc {
-  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
-    background: #08c none;
-  }
+    .fc-event {
+        line-height: 1.4;
+        background-color: @schedule-event-color;
+    }
+    .fc-day-header {
+        background-color: #f8f8f8;
+    }
+    .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+        background: #08c none;
+    }
+
+    .fc-button-group button {
+        border-color: @default-border-color;
+
+        &.fc-prev-button {
+            span.ui-icon-circle-triangle-w {
+                position: relative;
+                background-image: none;
+                display: inline;
+                &:before {
+                    font-family: 'Glyphicons Halflings';
+                    color: @admin-text-color;
+                    font-size: @glyphicon-icon-size!important;
+                    overflow: hidden;
+                    font-weight: bold;
+                    content:"\e257";
+                }
+            }
+        }
+
+        &.fc-next-button {
+             span.ui-icon-circle-triangle-e {
+                position: relative;
+                background-image: none;
+                display: inline;
+                &:before {
+                    font-family: 'Glyphicons Halflings';
+                    color: @admin-text-color;
+                    font-size: @glyphicon-icon-size!important;
+                    overflow: hidden;
+                    font-weight: bold;
+                    content:"\e258";
+                }
+            }
+        }
+        
+        &.ui-state-active {
+            .btn-primary();
+        }
+    }
 }
