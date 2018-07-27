@@ -7,50 +7,75 @@ body .ui-tree ul.ui-tree-container {
     overflow: hidden;
 }
 
-body .ui-tree .ui-tree-toggler {
-    position: relative;
+body .ui-tree {
 
-    &.ui-icon-triangle-1-e {
-        background-image: none;
-        display: inline;
+    .ui-tree-toggler {
         position: relative;
-        &:before {
-            font-family: 'Glyphicons Halflings';
-            color: @admin-text-color;
+
+        &.ui-icon-triangle-1-e {
+            background-image: none;
+            display: inline;
             position: relative;
-            margin: 0 7px;
-            top: -5px;
-            font-size: @glyphicon-icon-size;
-            overflow: hidden;
-            content: "\e258" !important;
-        }
-    }
-
-    &.ui-icon-triangle-1-s {
-        background-image: none;
-        display: inline;
-        position: relative;
-        &:before {
-            font-family: 'Glyphicons Halflings';
-            color: @admin-text-color;
-            position: relative;
-            margin: 0 7px;
-            top: -5px;
-            font-size: @glyphicon-icon-size;
-            overflow: hidden;
-            content: "\e259" !important;
-        }
-    }
-}
-
-@media (max-width: @screen-sm) {
-    body .ui-tree .ui-tree-toggler {
-
-        &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
             &:before {
+                font-family: 'Glyphicons Halflings';
+                color: @admin-text-color;
+                position: relative;
+                margin: 0 7px;
+                font-weight: bold;
+                top: -5px;
                 font-size: @glyphicon-icon-size;
+                overflow: hidden;
+                content: "\e258" !important;
             }
         }
+
+        &.ui-icon-triangle-1-s {
+            background-image: none;
+            display: inline;
+            position: relative;
+            &:before {
+                font-family: 'Glyphicons Halflings';
+                color: @admin-text-color;
+                position: relative;
+                margin: 0 7px;
+                font-weight: bold;
+                top: -5px;
+                font-size: @glyphicon-icon-size;
+                overflow: hidden;
+                content: "\e259" !important;
+            }
+        }
+    }
+
+    span.ui-tree-selectable {
+        .ui-chkbox-icon {
+            &.ui-icon-minus:before {
+                font-family: 'Glyphicons Halflings';
+                color: @admin-text-color;
+                position: relative;
+                top: -1px;
+                left: -6px;
+                font-style: normal;
+                font-size: (@font-awesome-icon-size - 1);
+                overflow: hidden;
+                content:"\2212"!important;
+            }
+        }
+
+        .ui-icon-check:before {
+            color: #444;   
+            font-size: (@font-awesome-icon-size - 1);
+        }
+
+    }
+    
+    .ui-treenode-label.ui-state-highlight {
+        border: 1px solid @light-blue;
+        border-right: @default-border-radius;
+    }
+    
+    span.ui-treenode-label.ui-treenode-outline {
+        outline: none;
     }
 }
 
@@ -64,9 +89,9 @@ body .ui-tree.ui-tree-horizontal {
             border: @light-blue;
         }
     }
-    
+
     span.ui-tree-toggler:before {
-    	 font-size: @font-awesome-icon-size - 2;
+        font-size: @font-awesome-icon-size - 2;
     }
 
     span.ui-tree-toggler.ui-icon:before {
@@ -77,7 +102,7 @@ body .ui-tree.ui-tree-horizontal {
     .ui-treenode-parent .ui-treenode-content {
         padding: .6em 2em .6em .2em;
     }
-    
+
     .ui-treenode-content {
         background-color: #fff;
     }
