@@ -37,6 +37,10 @@ ul.nav.navbar-nav {
             font-weight: 600;
             content: "\e259" !important;
         }
+
+        @media (min-width: (@screen-sm + 1) ) {
+            top:-1px;
+        }
     }
 
 }
@@ -140,5 +144,96 @@ body.skin-purple, body.skin-purple-light {
                 background: darken(@color, 5%)
             }
         }   
+    }
+}
+
+//submenu suppport
+
+.dropdown-submenu {
+    position: relative;
+
+    > a {
+        line-height: 1.2!important;
+    }
+
+    >.dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    &:hover {
+        >.dropdown-menu {
+            display: block;
+        }
+
+        >a:after {
+            opacity: .8;
+        }
+    }
+
+    >a:after {
+        display: block;
+        position: relative;
+        font-family: 'Glyphicons Halflings';
+        top: 3px;
+        color: @admin-text-color;
+        font-size: @glyphicon-icon-size;
+        overflow: hidden;
+        content: "\e258" !important;
+        font-weight: bold;
+        float: right;
+        @media (max-width: @screen-sm) {
+            float: none;
+            display: inline-block;
+            margin-left: 10px;
+            color: #fff;
+        }
+    }
+
+    &.pull-left {
+        float: none;
+
+        >.dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+    }
+}
+
+
+
+@media (max-width: @screen-sm) {
+    ul.nav.navbar-nav {
+        li.dropdown-submenu ul.dropdown-menu li {
+            margin-left: 15px;
+        }
+    }    
+
+    body.skin-black, body.skin-black-light { 
+        ul.nav.navbar-nav .dropdown-submenu  {
+            &:hover {
+                >a:after {
+                    opacity: .8;
+                }
+            }
+
+            >a:after {
+                color: #444;
+            }
+        }
+    } 
+}
+
+@-moz-document url-prefix() {
+    ul.nav.navbar-nav ul.dropdown-menu > li > a {
+        white-space: normal;
     }
 }
