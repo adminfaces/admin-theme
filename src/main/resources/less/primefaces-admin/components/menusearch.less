@@ -4,14 +4,13 @@ body ul#menu-search {
 
     li.dropdown {
         > a.dropdown-toggle {
-           padding: 0;
-           margin: 0;
+            padding: 0;
+            margin: 0;
         }
 
         ul.dropdown-menu {
             margin-left: 7px;
             min-width: 196px;
-
             li {
                 a {
                     padding: 3px 15px;
@@ -36,6 +35,14 @@ body ul#menu-search {
     }
 }
 
+@-moz-document url-prefix() {
+    @media (min-width: (@screen-sm + 1)) {
+        nav.navbar ul#menu-search li.dropdown ul.dropdown-menu {
+            top: 34px;
+        }
+    }
+}  
+
 //left menu search customizations
 body aside.main-sidebar div.sidebar-form {
     border: none;
@@ -44,13 +51,13 @@ body aside.main-sidebar div.sidebar-form {
         width: 100%;
         display: none;
         margin-left: -7px;
-        
+
         @media (max-width: @screen-sm) {
             margin-top: -2px;
         }
     }
     li.dropdown {
-        
+
         &.open {
             width: 100%;
         }
