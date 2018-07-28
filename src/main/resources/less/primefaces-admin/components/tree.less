@@ -68,14 +68,34 @@ body .ui-tree {
         }
 
     }
-    
+
     .ui-treenode-label.ui-state-highlight {
         border: 1px solid @light-blue;
         border-right: @default-border-radius;
     }
-    
+
     span.ui-treenode-label.ui-treenode-outline {
         outline: none;
+    }
+
+    .ui-tree-filter-container {
+        .ui-icon-search {
+            background-image: none;
+            display: inline;
+            position: relative;
+            text-indent: initial;
+            &:before {
+                font-family: FontAwesome;
+                color: #444444;
+                position: relative;
+                margin: 0 7px;
+                top: -25px;
+                float: right;
+                font-size: 13.3px;
+                overflow: hidden;
+                content: "\f002" !important
+            }
+        }
     }
 }
 
