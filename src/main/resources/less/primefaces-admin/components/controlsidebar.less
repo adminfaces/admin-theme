@@ -79,13 +79,13 @@ aside.control-sidebar {
 
 body .control-sidebar {
     padding-top:55px;
+    
+    @media(max-width: @screen-sm) {
+         padding-top:100px;
+    }
 }
 
 @media (max-width: @screen-md) {
-    body .control-sidebar {
-        padding-top:100px;
-    }
-
     body.layout-top-nav .control-sidebar{
         padding-top:50px;
     }
