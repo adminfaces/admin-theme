@@ -21,8 +21,8 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
     z-index: @dialog-zindex!important;//we need the important because primefaces add z-index directly to component style
 
     &#adminStatusDialog {//ajaxStatus dialog must have higher z-index
-        z-index: 9999!important;
-        position: fixed;
+                         z-index: 9999!important;
+                         position: fixed;
     }
 
     .ui-dialog-content {
@@ -135,6 +135,11 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
 
     &.box-solid span.ui-icon:before {
         color: #fff;
+    }
+
+    &.card {
+        .box-shadow(@card-shadow);
+        border: none;
     }
 
 }
