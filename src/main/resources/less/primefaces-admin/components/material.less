@@ -197,7 +197,11 @@ body, body .ui-widget, body div.ui-fluid {
       }
 
       button.ui-autocomplete-dropdown {
-        top: -5px;
+          top: -4px;
+
+          span.ui-icon-triangle-1-s:before {
+              left: 4px;
+          }
       }
 
       @-moz-document url-prefix() {
@@ -210,8 +214,11 @@ body, body .ui-widget, body div.ui-fluid {
         top: 5px;
       }
       
-      div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s:before {
-        top: 2px;
+      div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
+          top: 3px;
+          &:before {
+              left: 3px;
+          }
       }
 
       label {
