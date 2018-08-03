@@ -45,12 +45,62 @@ ul.nav.navbar-nav {
 
 }
 
+body.layout-top-nav {
+
+    .container {
+        width: 100%;
+    }
+
+    span.caret {
+        margin-left: 3px;
+        margin-top: -2px;
+    }
+
+    li.dropdown {
+        margin-left: -7px
+    }
+
+    li.dropdown i {
+        float: left;
+        padding: 3px 5px 3px 0;
+    }
+
+    @media (max-width: @screen-md) {
+        li.messages-menu, li.notifications-menu, li.tasks-menu {
+            display: none ;
+        }
+
+        li.dropdown > a > i {
+            display: none;
+        }
+
+        #navbar-search-input {
+            width: 150px;
+        }
+    }
+
+    @media (max-width: @screen-sm) {
+        li.messages-menu, li.notifications-menu, li.tasks-menu {
+            display: inline ;
+        }
+
+        li.dropdown > a > i {
+            display: inline;
+        }
+
+        #navbar-search-input {
+            width: 100%;
+        }
+
+    }
+
+}
+
 div.navbar-header, div.navbar-custom-menu {
     button.navbar-toggle-collapsed, button.navbar-toggle, a#layout-setup {
         border-radius: 0;
     }
 }
-
 
 
 //menu hightlight based on skin
