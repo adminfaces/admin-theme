@@ -56,6 +56,7 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>**/theme.css</include>
+                    <include>**/web-fragment.xml</include>
                     <include>**/admin-theme.properties</include>
                     <include>**/primefaces-admin/images/*</include>
                     <include>**/js/*</include>
@@ -314,6 +315,7 @@
                         <filtering>true</filtering>
                         <includes>
                             <include>**/theme.css</include>
+                            <include>**/web-fragment.xml</include>
                             <include>**/admin-theme.properties</include>
                             <include>**/primefaces-admin-${project.version}/images/*</include>
                             <include>**/js/*</include>
@@ -446,6 +448,7 @@
                         <filtering>true</filtering>
                         <includes>
                             <include>**/theme.css</include>
+                            <include>**/web-fragment.xml</include>
                             <include>**/admin-theme.properties</include>
                             <include>**/primefaces-admin-${project.version}/images/*</include>
                             <include>**/js/*</include>
@@ -654,6 +657,7 @@
                         <filtering>true</filtering>
                         <includes>
                             <include>**/theme.css</include>
+                            <include>**/web-fragment.xml</include>
                             <include>**/admin-theme.properties</include>
                             <include>**/primefaces-admin-${project.version}/images/*</include>
                             <include>**/js/*</include>
