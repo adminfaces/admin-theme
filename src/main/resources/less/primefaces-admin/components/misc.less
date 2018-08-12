@@ -213,10 +213,21 @@ body hr.ui-separator.ui-state-default {
 }
 
 //template breadcrumb icon
-body .content-header>.breadcrumb>li+li:before {
-    content: '\e258';
-    font-family: 'Glyphicons Halflings';
-    font-size: 8px;
+body .content-header>.breadcrumb {
+
+    >li+li {
+        &:before {
+            content: '\e258';
+            font-family: 'Glyphicons Halflings';
+            font-size: 8px;
+        }
+
+    }
+
+    i.fa-home {
+        padding-right: 2px;
+    }
+
 }
 
 .scroll-top {
@@ -234,7 +245,7 @@ body .content-header>.breadcrumb>li+li:before {
     border-radius: 50%; 
     z-index: 99999; 
     opacity: 0.7;
-    
+
     .fa {
         position:relative;
         top: -2px
