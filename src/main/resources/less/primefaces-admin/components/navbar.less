@@ -22,6 +22,13 @@ ul.nav.navbar-nav {
             &:hover {
                 background-color: #e1e3e9;
             }
+            
+            @media (min-width: @screen-sm) {
+            	i:before {
+            		margin-left: -5px;
+            	}
+            }
+            
         }
     }
 
@@ -129,7 +136,6 @@ body.skin-black, body.skin-black-light {
                     background-color: #e1e3e9;
                 }
             }
-
         }
         li.dropdown, li.dropdown.open {
             a, a:hover, a:focus {
