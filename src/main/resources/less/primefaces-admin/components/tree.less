@@ -21,11 +21,15 @@ body .ui-tree {
                 color: @admin-text-color;
                 position: relative;
                 margin: 0 7px;
-                font-weight: bold;
                 top: -5px;
                 font-size: @glyphicon-icon-size;
                 overflow: hidden;
                 content: "\e258" !important;
+                
+               //make menu icons 'fat' on wider screens
+				@media (min-width: (@screen-md + 1)) {
+					font-weight: bold;
+				}
             }
         }
 
@@ -38,18 +42,19 @@ body .ui-tree {
                 color: @admin-text-color;
                 position: relative;
                 margin: 0 7px;
-                font-weight: bold;
                 top: -5px;
                 font-size: @glyphicon-icon-size;
                 overflow: hidden;
                 content: "\e259" !important;
+                @media (min-width: (@screen-md + 1)) {
+					font-weight: bold;
+				}
             }
         }
         &.icon-ripple {
             margin-left: -4px;
 
             ~ .ui-treenode-icon {
-                margin-left: -4px;
                 overflow: visible;
             }
         }
@@ -122,16 +127,32 @@ body .ui-tree.ui-tree-horizontal {
 
     .ui-tree-selectable.ui-state-highlight {
         border: @light-blue;
-        span.ui-tree-toggler.ui-icon:before {
-            color: #fff;
-            border: @light-blue;
+        span.ui-tree-toggler {
+        	&.ui-icon:before {
+	            color: #fff;
+	            border: @light-blue;
+        	}
+        	
         }
+    	div.ui-chkbox {
+	    	background: #fff;
+	    	.ui-chkbox-icon.ui-icon-check:before {
+	    		color: @admin-text-color;
+	    	}
+  	 	 }
     }
 
     span.ui-tree-toggler {
     
 	    &:before {
 	        font-size: @font-awesome-icon-size - 2;
+	    }
+	    
+	    div.ui-chkbox {
+	    	background: #fff;
+	    	.ui-chkbox-icon.ui-icon-check {
+	    		color: @admin-text-color;
+	    	}
 	    }
 	    
 	    &.icon-ripple {
