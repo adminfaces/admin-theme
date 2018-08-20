@@ -32,6 +32,10 @@ div.ui-selectonemenu {
                 }
             }
         }
+        
+        .icon-ripple.ui-icon-triangle-1-s {
+            margin-left: 2px;
+        }
 
     }
 
@@ -139,6 +143,7 @@ div.ui-selectcheckboxmenu {
         background-image: none !important;
         display: inline !important;
         text-indent: initial;
+        overflow: visible;
         &:before {
             font-family: FontAwesome;
             color: @admin-text-color;
@@ -148,6 +153,10 @@ div.ui-selectcheckboxmenu {
             left: 5px;
             overflow: hidden;
             content: "\f00d" !important;
+        }
+        
+        &.icon-ripple {
+            left: -3px;
         }
     }
 
@@ -177,6 +186,10 @@ div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
     .ui-icon {
         margin-top: 6px;
         margin-left: 3px;
+        
+        &.icon-ripple {
+            left: 6px;
+        }
     }
 }
 

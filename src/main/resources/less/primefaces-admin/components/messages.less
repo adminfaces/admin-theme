@@ -71,8 +71,16 @@ div.ui-messages ul {
 }
 
 div.ui-messages .ui-icon {
-  background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
-  content: "\f06a"
+  
+  &.icon-ripple {
+  	left:-4px;
+  	opacity:1;
+  	
+  	&:before {
+  	    color:#fff!important;
+  	}
+  }
+  
 }
 
 span.ui-message-error-icon {

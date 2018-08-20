@@ -1,19 +1,36 @@
 .ripple {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(0);
-  position: absolute;
-  opacity: 1;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    position: absolute;
+    opacity: 1;
 }
 .rippleEffect {
-  animation: rippleDrop .6s linear;
+    animation: rippleDrop .6s linear;
 }
 
 @keyframes rippleDrop {
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+span.ui-icon.icon-ripple {
+    opacity: .9!important;
+
+    &:before {
+        border-radius: 50%;
+        background-color: rgba(0,0,0,.12);
+        background-size: 24px 24px;
+        padding: 4px!important;
+        height: 24px;
+        width: 24px;
+    }
+    
+    &.ui-icon-plusthick:before {
+        padding-left: 5px!important;
+    }
 }

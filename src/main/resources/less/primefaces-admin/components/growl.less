@@ -88,6 +88,7 @@ span.ui-growl-image {
   background-image: none !important;
   display: inline!important;
   text-indent: 0;
+  overflow: visible;
   &:before {
     font-family: 'Glyphicons Halflings';
     color: #fff;
@@ -105,6 +106,20 @@ span.ui-growl-image {
     color: @hover-icon-color;
     opacity: 1;
   }
+  
+  &.icon-ripple:before {
+  	    border-radius: 50%;
+        background-color: rgba(0,0,0,.12);
+        background-size: 24px 24px;
+        padding: 4px!important;
+        height: 24px;
+        width: 24px;
+        left: -11px;
+        color:#fff!important;
+        top:-4px;
+        opacity: 1;
+  }
+  
 }
 
 @media (max-width: @screen-xs) {
