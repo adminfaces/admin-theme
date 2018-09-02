@@ -223,7 +223,13 @@ NOTE: theme.less is already brackets aware so you just need to change any compon
 
 == Demo
 
-See https://github.com/adminfaces/admin-showcase[Admin Showcase^].
+* https://github.com/adminfaces/admin-showcase[Admin Showcase^]
+
+* https://github.com/adminfaces/admin-starter[Admin Starter^]
+
+== Docs
+
+https://adminfaces.github.io/site/docs/latest/#admin_theme
 
 == Snapshot
 
