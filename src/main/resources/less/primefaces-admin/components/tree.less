@@ -25,11 +25,11 @@ body .ui-tree {
                 font-size: @glyphicon-icon-size;
                 overflow: hidden;
                 content: "\e258" !important;
-                
-               //make menu icons 'fat' on wider screens
-				@media (min-width: (@screen-md + 1)) {
-					font-weight: bold;
-				}
+
+                //make menu icons 'fat' on wider screens
+                @media (min-width: (@screen-md + 1)) {
+                    font-weight: bold;
+                }
             }
         }
 
@@ -47,8 +47,8 @@ body .ui-tree {
                 overflow: hidden;
                 content: "\e259" !important;
                 @media (min-width: (@screen-md + 1)) {
-					font-weight: bold;
-				}
+                    font-weight: bold;
+                }
             }
         }
         &.icon-ripple {
@@ -81,20 +81,19 @@ body .ui-tree {
             color: #444;   
             font-size: (@font-awesome-icon-size - 1);
         }
-        
+
         .ui-tree-toggler.icon-ripple {
-        	 margin-left: -8px;
-        	 
-        	 &:before {
-        	 	left:4px;
-        	 }
+            margin-left: -8px;
+
+            &:before {
+                left:4px;
+            }
         }
 
     }
 
     .ui-treenode-label.ui-state-highlight {
-        border: 1px solid @light-blue;
-        border-right: @default-border-radius;
+        border: 0 none;
     }
 
     span.ui-treenode-label.ui-treenode-outline {
@@ -120,62 +119,79 @@ body .ui-tree {
             }
         }
     }
-}
+    
+    .ui-treenode-content {
 
+        .ui-chkbox {
+            margin: 0 4px 0 1px;
+        }
+
+        .ui-treenode-icon {
+            vertical-align: middle;
+            &:before {
+                font-size: @font-awesome-icon-size + 2;
+            }
+        }
+    }
+}
 
 body .ui-tree.ui-tree-horizontal {
 
     .ui-tree-selectable.ui-state-highlight {
         border: @light-blue;
         span.ui-tree-toggler {
-        	&.ui-icon:before {
-	            color: #fff;
-	            border: @light-blue;
-        	}
-        	
+            &.ui-icon:before {
+                color: #fff;
+                border: @light-blue;
+            }
+
         }
-    	div.ui-chkbox {
-	    	background: #fff;
-	    	.ui-chkbox-icon.ui-icon-check:before {
-	    		color: @admin-text-color;
-	    	}
-  	 	 }
+        div.ui-chkbox {
+            background: #fff;
+            .ui-chkbox-icon.ui-icon-check:before {
+                color: @admin-text-color;
+            }
+        }
     }
 
     span.ui-tree-toggler {
-    
-	    &:before {
-	        font-size: @font-awesome-icon-size - 2;
-	    }
-	    
-	    div.ui-chkbox {
-	    	background: #fff;
-	    	.ui-chkbox-icon.ui-icon-check {
-	    		color: @admin-text-color;
-	    	}
-	    }
-	    
-	    &.icon-ripple {
+
+        &:before {
+            font-size: @font-awesome-icon-size - 2;
+        }
+
+        div.ui-chkbox {
+            background: #fff;
+            .ui-chkbox-icon.ui-icon-check {
+                color: @admin-text-color;
+            }
+        }
+
+        &.icon-ripple {
             margin-left: 0px;
 
             ~ .ui-treenode-icon {
-                margin-left: 0px;
+                margin-left: 1px;
                 overflow: visible;
             }
         }
-        
+
         &.ui-icon:before {
-	        top: 0;
-	        margin: 0 2px;
-    	}
-    
+            top: 0;
+            margin: 0 2px;
+        }
+
     }
-    
+
     .ui-treenode-parent .ui-treenode-content {
         padding: .6em 2em .6em .2em;
     }
 
     .ui-treenode-content {
         background-color: #fff;
+        
+        .ui-treenode-icon {
+             margin: 0 4px 0 1px;
+        }
     }
 }
