@@ -47,8 +47,19 @@ ul.sidebar-menu {
             font-weight: 600;
         }
     }
-}
 
+    @-moz-document url-prefix() {
+        body ul.sidebar-menu  li span.label {
+            margin-top: -20px;
+        }
+    }
+
+    @supports (font: -moz-document) {
+        body ul.sidebar-menu li span.label {
+            margin-top: -20px;
+        }
+    }
+}
 
 /* ripple/waves effect integration, overflow hidden so the effect doesn't exceed element size */
 
