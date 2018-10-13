@@ -9,11 +9,11 @@ body .ui-autocomplete {
             background: transparent;
             .border-left-radius(0px);
         }
-        
+
         &.ui-state-active {
             .box-shadow(none);
         }
-       
+
     }
 
     input.ui-autocomplete-dd-input {
@@ -103,12 +103,11 @@ button.ui-autocomplete-dropdown {
     }
 }
 
-@supports (-ms-ime-align: auto) { 
+@supports (-ms-ime-align: auto) {
     button.ui-autocomplete-dropdown span.ui-icon-triangle-1-s {
         top: -2px;
-    } 
+    }
 }
-
 
 button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
     background-image: none;
@@ -125,7 +124,7 @@ button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
         font-weight: bold;
         top: -2px;
         overflow: hidden;
-        content: "\e259" !important; 
+        content: "\e259" !important;
     }
 }
 
@@ -143,6 +142,16 @@ button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s {
         left: 2px;
     }
 
+    .ui-material button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
+        top: -8px!important;
+    }
+}
+
+@supports (font: -moz-document) {
+    button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
+        top: -16px!important;
+        left: 2px;
+    }
     .ui-material button.ui-autocomplete-dropdown  span.ui-icon-triangle-1-s:before {
         top: -8px!important;
     }
