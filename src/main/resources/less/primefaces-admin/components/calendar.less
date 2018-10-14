@@ -362,8 +362,10 @@ body .ui-calendar {
 }
 
 //ie11
-_:-ms-fullscreen, :root body div.ui-calendar button.ui-datepicker-trigger > span.ui-icon-calendar {
-  top:-4px;
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body span.ui-calendar button.ui-datepicker-trigger > span.ui-icon-calendar {
+    top:-4px!important;
+  }
 }
 
 .ui-datepicker .ui-datepicker-header,
