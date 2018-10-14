@@ -206,6 +206,12 @@ body, body .ui-widget, body div.ui-fluid {
           span.ui-icon-triangle-1-s:before {
               left: 4px;
           }
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          span.ui-icon-triangle-1-s:before {
+            top:-10px;
+          }
+        }
       }
 
       @-moz-document url-prefix() {
@@ -217,7 +223,7 @@ body, body .ui-widget, body div.ui-fluid {
       span.ui-icon-triangle-1-s:before {
         top: 5px;
       }
-      
+
       div.ui-selectcheckboxmenu-trigger span.ui-icon-triangle-1-s {
           top: 3px;
           &:before {
