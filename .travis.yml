@@ -4,7 +4,9 @@ jdk: oraclejdk8
 cache:
   directories:
   - "$HOME/.m2/repository"
-script: bash maven-install.sh
+script:
+- if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then bash maven-install.sh ; fi ;
+- if [[ $TRAVIS_PULL_REQUEST == "true" ]]; then bash maven-install-local.sh ; fi ;
 
 
 env:
