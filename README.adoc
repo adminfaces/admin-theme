@@ -42,7 +42,7 @@ This theme is a css file containing Admin LTE and Bootstrap as well as customize
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
 <!--<classifier>dev</classifier> uncompressed theme.css-->
 </dependency>
 ----
@@ -111,7 +111,7 @@ The default theme comes `compressed`, with `Bootstrap (3.3.7)` embedded and uses
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
 </dependency>
 ----
 
@@ -125,7 +125,7 @@ The `dev` classifier will bring a theme.css *without minification*.
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
     <classifier>dev</classifier>
 </dependency>
 ----
@@ -140,7 +140,7 @@ The `without-bootstrap` classifier will bring a theme.css *without bootstrap emb
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
     <classifier>without-bootstrap</classifier>
 </dependency>
 ----
@@ -156,7 +156,7 @@ The `without-jsf` classifier will bring a theme.css *without JSF resource handli
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
     <classifier>without-jsf</classifier>
 </dependency>
 ----
@@ -174,7 +174,7 @@ So if you want a thinner theme you can use the *no-fonts* classifier:
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
     <classifier>no-fonts</classifier>
 </dependency>
 ----
@@ -193,7 +193,7 @@ To solve this issues you can use a theme classifier called *no-cache*:
 <dependency>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-theme</artifactId>
-    <version>1.0.0-RC18</version>
+    <version>1.0.0-RC19</version>
     <classifier>no-cache</classifier>
 </dependency>
 ----
@@ -205,7 +205,7 @@ This classifier *appends the theme version* to the name of theme so you need to 
 ----
 <context-param>
     <param-name>primefaces.THEME</param-name>
-    <param-value>admin-1.0.0-RC18</param-value>
+    <param-value>admin-1.0.0-RC19</param-value>
 </context-param>
 ----
 
