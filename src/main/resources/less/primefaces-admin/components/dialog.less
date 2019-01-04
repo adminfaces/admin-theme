@@ -18,7 +18,6 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
     overflow: visible;
     border: 0 none;
     .box-shadow(0 1px 4px rgba(0, 0, 0, 0.75));
-    z-index: @dialog-zindex!important;//we need the important because primefaces add z-index directly to component style
 
     &#adminStatusDialog {//ajaxStatus dialog must have higher z-index
                          z-index: 9999!important;
@@ -30,10 +29,6 @@ body .ui-dialog.ui-widget-content, body .ui-dialog {
     }
     a.ui-dialog-titlebar-icon {
         padding: 1px !important;
-    }
-
-    &.ui-dialog-maximized {
-        z-index: @dialog-zindex!important;
     }
 
     .ui-dialog-titlebar {
