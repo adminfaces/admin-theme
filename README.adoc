@@ -163,7 +163,7 @@ The `without-jsf` classifier will bring a theme.css *without JSF resource handli
 
 === No Fonts classifier
 
-Since `v1.0.0-RC16` web fonts such as `glyphicons` and `Source Sans Pro` are embedded inside the theme instead of being queried from a https://en.wikipedia.org/wiki/Content_delivery_network[CDN^]. 
+Since `v1.0.0-RC16` web fonts such as `glyphicons` and `Source Sans Pro` were embedded inside the theme instead of being queried from a https://en.wikipedia.org/wiki/Content_delivery_network[CDN^]. 
 
 This makes the theme work offline or in environments with limited access to the internet but on the other hand results in a larger jar file, `~1MB` against `~200kb` when fonts are not in the theme.
 
