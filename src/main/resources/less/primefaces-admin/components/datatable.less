@@ -303,6 +303,10 @@ body .ui-datatable, body .ui-treetable {
 
     th.ui-state-default[role="columnheader"] {
         background: transparent none;
+
+        .ui-chkbox-box.ui-state-active {
+            border: 1px solid #d2d6de;
+        }
     }
 
 }
@@ -325,6 +329,12 @@ body .ui-datatable, body .ui-treetable {
         border-top: #f4f4f4 !important;
     }
 
+
+    tr.ui-datatable-selectable.ui-state-highlight {
+        div.ui-chkbox-box.ui-state-active {
+            border-color: @brand-primary;
+        }
+    }
 
 }
 
