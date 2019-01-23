@@ -1,7 +1,16 @@
-/*Datepicker*/
+/*DatePicker & Calendar */
 body .ui-datepicker {
   padding: 0;
   border: none;
+
+  .ui-widget-content {
+    border: none;
+  }
+
+  &.ui-datepicker-inline {
+    border: 0;
+    .box-shadow(0 5px 10px rgba(0,0,0,0.8))
+  }
 
   span.ui-icon-circle-triangle-e {
     background-image: none;
@@ -48,10 +57,12 @@ body .ui-datepicker {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+    -webkit-border-radius: @default-border-radius;
+    -moz-border-radius: @default-border-radius;
+    border-radius: @default-border-radius;
     border: 1px solid darken(@light-blue, 5%);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 
     &.ui-state-hover {
       border: 0;
@@ -59,7 +70,7 @@ body .ui-datepicker {
     }
   }
 
-  .ui-monthpicker-month, .ui-datepicker-calendar {
+   .ui-datepicker-calendar {
     a.ui-state-active {
       background-color: @light-blue;
       color: #fff;
@@ -69,6 +80,13 @@ body .ui-datepicker {
 
     span.ui-state-disabled {
       border: none;
+    }
+  }
+
+  a.ui-monthpicker-month {
+    &.ui-state-active {
+      background-color: @light-blue;
+      color: #fff;
     }
   }
 
@@ -99,6 +117,7 @@ body .ui-datepicker {
     font-size: .9em;
     border-collapse: collapse;
     margin: -1px 0 0 0 !important;
+    border-spacing: 0;
   }
 
   th {
@@ -398,8 +417,8 @@ span.p-datepicker {
 
 body .ui-datepicker tbody td {
   box-sizing: border-box;
-  padding: 0;
-  border: 0;
+  padding: 0!important;
+  border: 0!important;
 }
 
 body .ui-datepicker tbody td a {
