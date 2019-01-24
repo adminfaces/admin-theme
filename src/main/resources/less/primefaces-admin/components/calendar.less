@@ -252,21 +252,6 @@ body .ui-datepicker {
         display: none;
     }
 
-    td.ui-datepicker-current-day {
-        a.ui-state-active, a.ui-state-default, a.ui-state-hover, a.ui-state-active.ui-state-highlight {
-            background: @calendar-selected-background-color;
-            filter: none;
-            color: @calendar-selected-color;
-            transform: scale(0.9);
-            border-radius: 50%;
-
-            &.ui-state-hover, &:hover {
-                background-color: @hover-color;
-            }
-        }
-
-    }
-
     .ui-datepicker-today {
         a.ui-state-highlight, span.ui-state-highlight {
             text-shadow: none;
@@ -274,17 +259,15 @@ body .ui-datepicker {
             transform: scale(0.9);
             border-radius: 50%;
             background: #fff;
-            border: 1px solid #3c8dbc !important;
+            border: 1px solid @light-blue;
             &.ui-state-active {
                 color: @calendar-selected-color;
                 background: @light-blue;
-                &.ui-state-hover, &:hover {
-                    background-color: @hover-color;
-                }
             }
-            &.ui-state-hover, &:hover {
-                background-color: @hover-color;
-            }
+        }
+
+        a.ui-state-hover, a:hover {
+            background-color: @hover-color;
         }
     }
 
