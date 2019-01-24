@@ -402,24 +402,32 @@ div.ui-selectmanymenu {
         }
     }
 
-    .ui-selectlistbox-filter-container .ui-icon-search {
-        background-image: none !important;
-        display: inline;
-        text-indent: initial;
-        top: 7px;
-        right: 16%;
-        width: 20px;
+    .ui-selectlistbox-filter-container {
 
-        &:before {
-            font-family: FontAwesome;
-            color: @admin-text-color;
-            display: inline !important;
-            position: relative;
-            font-size: @font-awesome-icon-size;
-            margin-left: 5px;
-            top: -3px;
-            overflow: hidden;
-            content: "\f002" !important;
+        input.ui-selectlistbox-filter {
+            width: 100%;
+        }
+
+        .ui-icon-search {
+            background-image: none !important;
+            display: inline;
+            text-indent: initial;
+            top: 7px;
+            right: 0;
+            width: 20px;
+
+            &:before {
+                font-family: FontAwesome;
+                color: @admin-text-color;
+                display: inline !important;
+                position: relative;
+                font-size: @font-awesome-icon-size;
+                margin-left: 5px;
+                top: -3px;
+                overflow: hidden;
+                content: "\f002" !important;
+            }
+
         }
 
     }
