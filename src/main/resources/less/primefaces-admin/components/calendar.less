@@ -70,7 +70,7 @@ body .ui-datepicker {
     }
   }
 
-   .ui-datepicker-calendar {
+  .ui-datepicker-calendar {
     a.ui-state-active {
       background-color: @light-blue;
       color: #fff;
@@ -263,12 +263,18 @@ body .ui-datepicker {
 
   }
 
-  .ui-datepicker-today a.ui-state-highlight {
-    text-shadow: none;
-    color: #222;
-
-    &.ui-state-active {
-      color: @calendar-selected-color;
+  .ui-datepicker-today {
+    a.ui-state-highlight, span.ui-state-highlight {
+      text-shadow: none;
+      color: #222;
+      transform: scale(0.9);
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid #3c8dbc !important;
+      &.ui-state-active {
+        color: @calendar-selected-color;
+        background: @light-blue;
+      }
     }
   }
 
