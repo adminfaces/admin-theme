@@ -686,3 +686,20 @@ td.ui-editable-column .ui-cell-editor-input {
     }
 
 }
+
+/* no-border */
+body .ui-datatable.no-border, body .ui-treetable.no-border {
+
+    th[role="columnheader"], tbody, .ui-datatable-header, .ui-paginator, td[role="gridcell"] {
+        border:transparent!important;
+    }
+
+    tfoot td {
+        border-left: transparent!important;
+        border-right: transparent!important;
+    }
+    tr[role="row"] {
+        border-left: transparent!important;
+        border-right: transparent!important;
+    }
+}
