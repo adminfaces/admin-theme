@@ -161,15 +161,15 @@ body .ui-datatable, body .ui-treetable {
         div.ui-selectcheckboxmenu {
             min-width: auto;
         }
-        
+
         .ui-spinner-button span.ui-icon.icon-ripple:before {
             margin-left: -14px;
         }
-        
+
         div.ui-selectonemenu div.ui-selectonemenu-trigger .icon-ripple.ui-icon-triangle-1-s {
             margin-left: 2px;
         }
-        
+
         div.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger .ui-icon.icon-ripple {
             left: 3px;
         }
@@ -320,7 +320,7 @@ body .ui-datatable, body .ui-treetable {
 
         @media (max-width: @screen-xs-max) {
             width: 10% !important;
-            
+
         }
 
     }
@@ -369,15 +369,15 @@ body .ui-treetable .ui-treetable-data {
             content: "\e259" !important;
         }
     }
-    
+
     tr[aria-selected="true"]:not(.ui-treetable-partialselected) {
-        
+
         .ui-icon-triangle-1-s, .ui-icon-triangle-1-e {
             &:before {
                 color:#fff;
             }
         }
-        
+
     }
 
 }
@@ -388,13 +388,13 @@ body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chk
     top:1px;
 }
 
- @-moz-document url-prefix() {
-     @media (max-width: @screen-xm) {
-         body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chkbox-icon.ui-icon-check:before {
-             top:0px; //checkbox is not centered on firefox on small screens
-         }
-     }
- }
+@-moz-document url-prefix() {
+    @media (max-width: @screen-xm) {
+        body .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection .ui-chkbox-icon.ui-icon-check:before {
+            top:0px; //checkbox is not centered on firefox on small screens
+        }
+    }
+}
 
 body .ui-treetable  {
 
@@ -690,16 +690,34 @@ td.ui-editable-column .ui-cell-editor-input {
 /* no-border */
 body .ui-datatable.no-border, body .ui-treetable.no-border {
 
-    th[role="columnheader"], tbody, .ui-datatable-header, .ui-paginator, td[role="gridcell"] {
+    th[role="columnheader"], tbody, .ui-datatable-header, .ui-treetable-header, .ui-paginator, td[role="gridcell"] {
         border:transparent!important;
-    }
+		border-top: none!important;
+		border-bottom: none!important;
 
+		&.ui-editable-column {
+			.ui-selectonemenu, .ui-inputfield, .ui-autocomplete {
+				border-left: transparent!important;
+				border-right: transparent!important;
+				border-radius: 0!important;
+				&.ui-state-hover {
+					border-top-color: transparent!important;
+					border-bottom-color: transparent!important;
+					border-radius: 0!important;
+				}
+			} 
+		}
+    }
     tfoot td {
         border-left: transparent!important;
         border-right: transparent!important;
     }
-    tr[role="row"] {
-        border-left: transparent!important;
-        border-right: transparent!important;
-    }
+    tr[role="row"], tr[role="row"].ui-widget-content {
+		border-left: transparent!important;
+		border-right: transparent!important;
+		&.ui-state-hover {
+		    border-top: 1px solid #dde3e7!important;
+			border-bottom: 1px solid #dde3e7!important;
+		}
+	} 
 }
