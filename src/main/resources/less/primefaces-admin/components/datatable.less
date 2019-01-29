@@ -630,6 +630,10 @@ td.ui-editable-column .ui-cell-editor-input {
     .ui-inputfield {
         width: 100%;
     }
+    
+   &:hover, .ui-inputfield:hover {
+        background-color: @datatable-row-hover-color;
+    }   
 }
 
 .ui-row-editor  {
@@ -690,7 +694,7 @@ td.ui-editable-column .ui-cell-editor-input {
 /* no-border */
 body .ui-datatable.no-border, body .ui-treetable.no-border {
 
-    th[role="columnheader"], tbody, .ui-datatable-header, .ui-treetable-header, .ui-paginator, td[role="gridcell"] {
+    th[role="columnheader"], tbody, .ui-datatable-header, .ui-datatable-subtable-header, .ui-treetable-header, .ui-paginator, td {
         border:transparent!important;
 		border-top: none!important;
 		border-bottom: none!important;
@@ -705,19 +709,19 @@ body .ui-datatable.no-border, body .ui-treetable.no-border {
 					border-bottom-color: transparent!important;
 					border-radius: 0!important;
 				}
-			} 
+			}
 		}
     }
     tfoot td {
         border-left: transparent!important;
         border-right: transparent!important;
     }
-    tr[role="row"], tr[role="row"].ui-widget-content {
+    tr, tr.ui-widget-content {
 		border-left: transparent!important;
 		border-right: transparent!important;
 		&.ui-state-hover {
-		    border-top: 1px solid #dde3e7!important;
-			border-bottom: 1px solid #dde3e7!important;
+		    border-top: 1px solid @datatable-row-border-color!important;
+			border-bottom: 1px solid @datatable-row-border-color!important;
 		}
 	} 
 }
