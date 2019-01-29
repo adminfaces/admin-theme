@@ -630,6 +630,10 @@ td.ui-editable-column .ui-cell-editor-input {
     .ui-inputfield {
         width: 100%;
     }
+    
+   &:hover, .ui-inputfield:hover {
+        background-color: @datatable-row-hover-color;
+    }   
 }
 
 .ui-row-editor  {
@@ -705,7 +709,7 @@ body .ui-datatable.no-border, body .ui-treetable.no-border {
 					border-bottom-color: transparent!important;
 					border-radius: 0!important;
 				}
-			} 
+			}
 		}
     }
     tfoot td {
@@ -716,8 +720,8 @@ body .ui-datatable.no-border, body .ui-treetable.no-border {
 		border-left: transparent!important;
 		border-right: transparent!important;
 		&.ui-state-hover {
-		    border-top: 1px solid #dde3e7!important;
-			border-bottom: 1px solid #dde3e7!important;
+		    border-top: 1px solid @datatable-row-border-color!important;
+			border-bottom: 1px solid @datatable-row-border-color!important;
 		}
 	} 
 }
