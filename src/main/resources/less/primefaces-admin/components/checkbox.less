@@ -12,8 +12,12 @@ div.ui-chkbox {
             background: transparent;
         }
 
-        &.ui-state-focus span.ui-chkbox-icon.ui-icon-check:before {
-            color: @admin-text-color;
+        &.ui-state-focus span.ui-chkbox-icon {
+			&.ui-icon-check, &.ui-icon-closethick, &.ui-icon-close {
+				&:before {
+					color: @admin-text-color;
+				}
+			} 
         }
 
         &.ui-state-active {
