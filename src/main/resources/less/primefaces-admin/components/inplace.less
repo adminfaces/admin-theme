@@ -1,0 +1,59 @@
+/* Inplace */
+.ui-inplace {
+    
+    .ui-inplace-display.ui-state-highlight {
+        background-color: @light-blue;
+        padding: 3px;
+        border-radius: 3px;
+    }
+
+    .ui-inplace-content {
+        width: 100%;
+        display:block;
+    }
+    button.ui-inplace-save {
+        background: @light-blue;    
+        position: relative;   
+        border: none;
+        height: 32px;
+        top:-1px;
+        .btn-interactions(@light-blue);
+        .ui-icon-check {
+            background-image: none;
+            &:before {
+                color: #fff;
+                text-indent: initial;
+                font-family: 'Glyphicons Halflings';
+                position: relative;
+                font-size: @font-awesome-icon-size - 1;
+                overflow: visible;
+                display: block;
+                content: "\e013"!important;
+                top: -3px;
+            }
+        }
+    }
+
+    button.ui-inplace-cancel {
+        background-color: @red;
+        position: relative;   
+        border: none;
+        height: 32px;
+        top:-1px;
+        .btn-interactions(@red);
+        .ui-icon-close {
+            background-image: none;
+             &:before {
+                color: #fff;
+                text-indent: initial;
+                font-family: 'Glyphicons Halflings';
+                position: relative;
+                font-size: @font-awesome-icon-size - 1;
+                overflow: visible;
+                display: block;
+                content: "\e014"!important;
+                top: -3px;
+            }
+        }
+    }
+}
