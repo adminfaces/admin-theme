@@ -1,6 +1,6 @@
 /* Inplace */
 .ui-inplace {
-    
+
     .ui-inplace-display.ui-state-highlight {
         background-color: @light-blue;
         padding: 3px;
@@ -43,7 +43,7 @@
         .btn-interactions(@red);
         .ui-icon-close {
             background-image: none;
-             &:before {
+            &:before {
                 color: #fff;
                 text-indent: initial;
                 font-family: 'Glyphicons Halflings';
@@ -56,4 +56,24 @@
             }
         }
     }
+}
+
+//inplace-fuild
+
+.ui-fluid .ui-inplace {
+
+    input, .ui-inputtext, .ui-inputfield {
+        width: 80%;
+        @media (max-width: @screen-sm) {
+            width: 75%;
+        }
+
+        @media (max-width: @screen-xs) {
+            width: 70%;
+        }
+    }
+    button.ui-inplace-save, button.ui-inplace-cancel {
+        width: 33px;
+    }
+
 }
