@@ -777,10 +777,54 @@ a.ui-rowgroup-toggler {
 
 }
 
-@supports (-ms-ime-align: auto) {          
+@supports (-ms-ime-align: auto) {
     body a.ui-rowgroup-toggler .ui-rowgroup-toggler-icon {
-        &.ui-icon-circle-triangle-s,  &.ui-icon-circle-triangle-e { 
-            display: ruby-base;             
-        }        
-    } 
+        &.ui-icon-circle-triangle-s,  &.ui-icon-circle-triangle-e {
+            display: ruby-base;
+        }
+    }
+}
+
+//row expansion
+div.ui-row-toggler {
+    background-image: none;
+    display: inline;
+    outline: none;
+
+    &.ui-icon-circle-triangle-e {
+        &:before {
+            font-family: 'Glyphicons Halflings';
+            color: @admin-text-color;
+            position: relative;
+            font-weight: bold;
+            top: -2px;
+            font-size: @glyphicon-icon-size!important;
+            overflow: hidden;
+            content: "\e258" !important;
+        }
+
+        &.icon-ripple:before {
+            left: -4px;
+        }
+
+    }
+
+    &.ui-icon-circle-triangle-s {
+        &:before {
+            font-family: 'Glyphicons Halflings';
+            color: @admin-text-color;
+            position: relative;
+            font-weight: bold;
+            top: -2px;
+            font-size: @glyphicon-icon-size !important;
+            overflow: hidden;
+            content: "\e259" !important;
+        }
+
+        &.icon-ripple:before {
+            left: -4px;
+        }
+
+    }
+
 }
