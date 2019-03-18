@@ -626,7 +626,6 @@ body .ui-treetable .ui-selection .ui-chkbox-box {
 
 /* Editable */
 
-
 td.ui-editable-column .ui-cell-editor-input {
     background-color: #fff;
 
@@ -675,6 +674,21 @@ td.ui-editable-column .ui-cell-editor-input {
 
 }
 
+//adjust hover on row selection pluseditable row
+tr.ui-datatable-selectable.ui-row-editing {
+    &.ui-state-highlight {
+        .ui-cell-editor-input {
+            &:hover, .ui-inputfield:hover {
+                background-color: @datatable-row-hover-color;
+            }
+        } 
+    }
+    div.ui-cell-editor-input {
+        &:hover, .ui-inputfield:hover {
+            background-color: #fff;
+        }
+    }
+}
 
 @media (max-width: @screen-xs) {
 
@@ -831,5 +845,3 @@ div.ui-row-toggler {
     }
 
 }
-
-
