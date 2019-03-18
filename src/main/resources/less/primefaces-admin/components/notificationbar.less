@@ -1,0 +1,44 @@
+/* notification bar */
+body .ui-notificationbar {
+    z-index: @dialog-zindex;
+    background: @light-blue;
+    color: #fff;
+    border: none;
+
+    @media (max-width: @screen-xm) {
+        height: 60px;
+        padding: 5px;
+    }
+
+    &.box-danger {
+        background: @red;
+    }
+
+    &.box-fatal {
+        background: @dark-red;
+    }
+
+    &.box-warning {
+        background: @yellow;
+    }
+
+    &.box-success {
+        background: @green;
+    }
+
+    &.box-info {
+        background: @aqua;
+    }
+
+    &.box-teal {
+        background: @admin-teal;
+    }
+
+    &.card {
+        background: #fff;
+        color: #444;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    }
+}
