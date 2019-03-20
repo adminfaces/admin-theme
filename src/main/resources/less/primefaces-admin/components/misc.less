@@ -212,6 +212,28 @@ body hr.ui-separator.ui-state-default {
     }
 }
 
+.mobile-header {
+    display: block;
+    text-align: center;
+    color: white;
+    height: 100%;
+    margin-top: 15px;
+    @media (min-width: (@screen-xm + 1)) {
+        display: none;
+    }
+    i, span {
+        font-weight: bold;
+    }
+}
+
+body.layout-top-nav .mobile-header {
+    margin-top: -10px;
+}
+
+body:not(.layout-top-nav) .mobile-header {
+    margin-left: 100px;
+}
+
 //template breadcrumb icon
 body .content-header>.breadcrumb {
 
