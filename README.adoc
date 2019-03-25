@@ -16,7 +16,7 @@
 
 [quote]
 ____
-A PrimeFaces theme to rule them all!
+A PrimeFaces theme to `admin` them all!
 ____
 
 image:https://travis-ci.org/adminfaces/admin-theme.svg[Build Status (Travis CI), link=https://travis-ci.org/adminfaces/admin-theme]
@@ -55,7 +55,7 @@ This theme is a css file containing Admin LTE and Bootstrap as well as customize
 </context-param>
 ----
 
-TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add this project to your classpath neither the web.xml entry.
+TIP: If you use https://github.com/adminfaces/admin-template[Admin Template^] there is no need to add admin-theme to your classpath neither the web.xml entry.
 
 == Architecture
 
