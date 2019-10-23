@@ -75,7 +75,7 @@ button.ui-button {
             height: 20px;
             margin-top:-8px;
             &:before {
-                font-size: @font-awesome-icon2x-size 
+                font-size: @font-awesome-icon2x-size
             }
         }
 
@@ -242,10 +242,10 @@ body .ui-splitbutton {
             overflow: hidden;
             content: "\e259" !important;
         }
-        
+
        @media (max-width: @screen-xs) {
              &:before {
-                 font-size: @glyphicon-icon-size + 1; 
+                 font-size: @glyphicon-icon-size + 1;
              }
        }
 
@@ -430,6 +430,10 @@ body .ui-flat .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
 
 .ui-selectbooleanbutton.ui-button.ui-state-active .ui-icon {
     background-image: url("#{resource['primefaces-admin:images/ui-icons_ffffff_256x240.png']}");
+}
+
+div.ui-selectmanybutton div.ui-button.ui-state-default {
+    .border-radius(0px);
 }
 
 /* delimit ripple effect */
@@ -688,7 +692,7 @@ body button, body button.ui-button.ui-widget  {
             color: rgba(0,0,0,.87);
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: rgba(0,0,0,.87);
         }
     }
@@ -699,7 +703,7 @@ body button, body button.ui-button.ui-widget  {
             color: @light-blue;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @light-blue!important;
         }
     }
@@ -710,7 +714,7 @@ body button, body button.ui-button.ui-widget  {
             color: @red;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @red!important;
         }
     }
@@ -721,7 +725,7 @@ body button, body button.ui-button.ui-widget  {
             color: @dark-red;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @dark-red!important;
         }
     }
@@ -732,7 +736,7 @@ body button, body button.ui-button.ui-widget  {
             color: @yellow;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @yellow!important;
         }
     }
@@ -743,7 +747,7 @@ body button, body button.ui-button.ui-widget  {
             color: @green;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @green!important;
         }
     }
@@ -754,7 +758,7 @@ body button, body button.ui-button.ui-widget  {
             color: @admin-teal;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @admin-teal!important;
         }
     }
@@ -765,7 +769,7 @@ body button, body button.ui-button.ui-widget  {
             color: @aqua;
         }
 
-        > button.ui-button { 
+        > button.ui-button {
             color: @aqua!important;
         }
     }
@@ -801,7 +805,7 @@ body button, body button.ui-button.ui-widget  {
     }
 
     &.btn-lg {
-        padding: 8px 30px;  
+        padding: 8px 30px;
         &.ui-button-text-icon-right, &.ui-button-text-icon-left  {
             padding: 4px 30px;
 
@@ -909,7 +913,7 @@ body button, body button.ui-button.ui-widget  {
 button.btn-states {
     &.ui-state-hover {
         opacity: .9;
-    } 
+    }
     &.ui-state-focus {
         opacity: .8;
     }
