@@ -290,6 +290,16 @@ body .ui-splitbutton {
             color: #fff;
         }
     }
+    &.btn-teal > button {
+      color: #fff !important;
+      background-color: @admin-teal !important;;
+      border-color: darken(@admin-teal, 5%) !important;;
+      .btn-interactions(@admin-teal);
+
+      span.ui-icon {
+        color: #fff;
+      }
+    }
     &.btn-info > button {
         .btn-info;
         .btn-interactions(@aqua);
@@ -352,6 +362,16 @@ body .ui-splitbutton {
             span.ui-icon {
                 color: @light-blue;
             }
+        }
+
+        &.btn-teal > button {
+          .btn-interactions(@btn-background-color);
+          color: @admin-teal !important;
+
+          span.ui-icon {
+            color: @admin-teal;
+          }
+
         }
     }
 
