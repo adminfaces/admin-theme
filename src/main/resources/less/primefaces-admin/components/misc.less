@@ -243,7 +243,7 @@ body:not(.layout-top-nav) .mobile-header {
 }
 
 //template breadcrumb icon
-body .content-header>.breadcrumb {
+body .content-header > .breadcrumb {
 
     >li+li {
         &:before {
@@ -251,7 +251,6 @@ body .content-header>.breadcrumb {
             font-family: 'Glyphicons Halflings';
             font-size: 8px;
         }
-
     }
 
     i.fa-home {
@@ -261,7 +260,6 @@ body .content-header>.breadcrumb {
     a:hover:not(#link-home) {
         opacity: .7;
     }
-
 }
 
 .scroll-top {
@@ -284,4 +282,25 @@ body .content-header>.breadcrumb {
         position:relative;
         top: -2px
     }
+}
+
+/* content-header customizations */
+
+body section.content-header {
+
+  h1 {
+    display: inline;
+    @media (max-width: @screen-sm) {
+      display: block;
+    }
+  }
+
+  ol.breadcrumb {
+    display: inline;
+    position: initial;
+    @media (max-width: @screen-sm) {
+      position: relative;
+      display: block;
+    }
+  }
 }
