@@ -1,5 +1,44 @@
 /* schedule */
-body .fc {
+body .fc, body .fc-unthemed {
+
+    div.fc-toolbar {
+
+        button.fc-button {
+            color: @admin-text-color;
+            background: @btn-background-color none;
+            border: 1px solid #ddd;
+
+            &:not(:disabled) {
+                .btn-interactions(@btn-background-color);
+            }
+
+            &:hover, &:focus, &:active, &:focus:active {
+                .box-shadow(none);
+                border: 1px solid #ddd;
+                color: @admin-text-color;
+            }
+
+            &.fc-button-active, &.fc-button-primary.fc-button-active {
+                color: #fff;
+                border: 1px solid #ddd;
+                background: @light-blue;
+
+                &:not(:disabled) {
+                    .btn-interactions(@light-blue);
+                }
+
+                &:hover, &:focus, &:active {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .fc-bg {
+        background: #fff;
+    }
+
+
     .fc-event {
         line-height: 1.4;
         background-color: @schedule-event-color;
@@ -31,7 +70,7 @@ body .fc {
         }
 
         &.fc-next-button {
-             span.ui-icon-circle-triangle-e {
+            span.ui-icon-circle-triangle-e {
                 position: relative;
                 background-image: none;
                 display: inline;
@@ -45,7 +84,7 @@ body .fc {
                 }
             }
         }
-        
+
         &.ui-state-active {
             .btn-primary();
         }
