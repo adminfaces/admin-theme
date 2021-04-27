@@ -780,6 +780,40 @@
             </build>
         </profile>
 
+        <profile>
+            <id>showcase</id>
+            <!-- this profile is used when making changes in the theme and make them available in quarkus-admin-showcase (running in quarkus:dev mode)
+            It assumes quarkus-admin-showcase is in the same folder as admin-theme project -->
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>biz.gabrys.maven.plugins</groupId>
+                        <artifactId>lesscss-maven-plugin</artifactId>
+                        <version>1.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>primefaces</id>
+                                <configuration>
+                                    <sourceDirectory>src/main/resources/less/primefaces-admin
+                                    </sourceDirectory>
+                                    <outputDirectory>
+                                        ../quarkus-admin-showcase/target/classes/META-INF/resources/primefaces-admin
+                                    </outputDirectory>
+                                    <includes>
+                                        <include>theme.less</include>
+                                    </includes>
+                                    <compress>false</compress>
+                                </configuration>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
     <distributionManagement>
