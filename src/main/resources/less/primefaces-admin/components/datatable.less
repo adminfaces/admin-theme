@@ -62,7 +62,7 @@ body .ui-datatable, body .ui-treetable {
       }
     }
 
-    tr.ui-state-hover, tr.ui-state-hover td {
+    tr.ui-state-hover:not(.ui-state-highlight), tr.ui-state-hover:not(.ui-state-highlight) td {
         background-color: @datatable-row-hover-color;
     }
 
@@ -332,20 +332,22 @@ body .ui-datatable, body .ui-treetable {
 
     }
 
-    tr.ui-widget-content.ui-state-hover {
+    tr {
+      &.ui-widget-content.ui-state-hover {
         border-bottom: #f4f4f4 !important;
         border-top: #f4f4f4 !important;
-    }
+      }
 
+      &.ui-datatable-selectable.ui-state-highlight {
 
-    tr.ui-datatable-selectable.ui-state-highlight {
         div.ui-chkbox-box.ui-state-active {
-            border-color: @brand-primary;
+          border-color: @brand-primary;
         }
-
         .ui-icon:before {
-            color: #fff;
+          color: #fff;
         }
+      }
+
     }
 
 }
