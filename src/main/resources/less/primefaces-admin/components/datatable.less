@@ -27,17 +27,39 @@ body .ui-datatable, body .ui-treetable {
         color: #444;
     }
 
-    tbody > tr.ui-widget-content {
-        border-color: @datatable-border-color;
-    }
+    tbody {
 
-    tbody > tr > td > a {
+      > tr.ui-widget-content {
+        border-color: @datatable-border-color;
+      }
+
+      > tr > td > a {
         cursor: pointer;
         color: @light-blue;
+
         &:hover {
-            text-decoration: underline;
-            cursor: pointer;
+          text-decoration: underline;
+          cursor: pointer;
         }
+      }
+
+      > tr {
+        &.ui-widget-content {
+          border-top-color: @datatable-row-border-color;
+          border-bottom-color: @datatable-row-border-color;
+          border-left: @datatable-border-color;
+          border-right: @datatable-border-color;
+        }
+
+        &.ui-widget-content.ui-state-hover {
+          border-color: @datatable-row-border-color !important;
+        }
+
+        &.ui-widget-header > td {
+          border-color: @datatable-border-color !important;
+          font-weight: 600;
+        }
+      }
     }
 
     tr.ui-state-hover, tr.ui-state-hover td {
@@ -48,6 +70,10 @@ body .ui-datatable, body .ui-treetable {
         border-collapse: collapse;
         width: 100%;
         table-layout: fixed;
+
+      thead.ui-datatable-scrollable-theadclone {
+        visibility: hidden;
+      }
     }
 
     .ui-datatable-header, .ui-treetable-header, .ui-datatable-footer, .ui-treetable-footer {
@@ -76,24 +102,6 @@ body .ui-datatable, body .ui-treetable {
         position: relative;
         a {
             position: relative;
-        }
-    }
-
-    tbody > tr {
-        &.ui-widget-content {
-            border-top-color: @datatable-row-border-color;
-            border-bottom-color: @datatable-row-border-color;
-            border-left: @datatable-border-color;
-            border-right: @datatable-border-color;
-        }
-
-        &.ui-widget-content.ui-state-hover {
-            border-color: @datatable-row-border-color !important;
-        }
-
-        &.ui-widget-header > td {
-            border-color: @datatable-border-color !important;
-            font-weight: 600;
         }
     }
 
@@ -681,7 +689,7 @@ tr.ui-datatable-selectable.ui-row-editing {
             &:hover, .ui-inputfield:hover {
                 background-color: @datatable-row-hover-color;
             }
-        } 
+        }
     }
     div.ui-cell-editor-input {
         &:hover, .ui-inputfield:hover {
