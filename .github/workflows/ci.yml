@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK
-        uses: actions/setup-java@main
+        uses: actions/setup-java@v2.5.0
         with:
           distribution: 'adopt'
           java-version: '8'
@@ -26,13 +26,44 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: build & deploy
-        if: "contains(github.ref, 'master')"
-        run: |
-          chmod +x "${GITHUB_WORKSPACE}/maven-install.sh"
-          "${GITHUB_WORKSPACE}/maven-install.sh"
       - name: build
-        if: "!contains(github.ref, 'master')"
         run: |
           chmod +x "${GITHUB_WORKSPACE}/maven-install-local.sh"
           "${GITHUB_WORKSPACE}/maven-install-local.sh"
+
+  release:
+    name: Release Admin theme to maven central
+    runs-on: ubuntu-18.04
+    needs: build
+    env:
+      user: ${{ secrets.user }}
+      pass: ${{ secrets.pass }}
+      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2.5.0
+        with:
+          distribution: 'adopt'
+          java-version: '8'
+          server-id: releases
+          server-username: user
+          server-password: pass
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: GPG_PASSPHRASE
+      - uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Deploy snapshots
+        if: "contains(github.ref, 'master') && !contains(github.event.head_commit.message, 'prepare release')"
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/release-snapshots.sh"
+          "${GITHUB_WORKSPACE}/release-snapshots.sh"
+      - name: Release
+        if: "contains(github.ref, 'master') && contains(github.event.head_commit.message, 'prepare release')"
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/release.sh"
+          "${GITHUB_WORKSPACE}/release.sh"
