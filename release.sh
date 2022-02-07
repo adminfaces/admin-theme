@@ -1,13 +1,5 @@
 #!/bin/sh
 
-mvn clean package deploy -Prelease --settings settings.xml
-mvn clean package deploy -Pdev -Prelease --settings settings.xml
-mvn clean package deploy -Pno-cache -Prelease --settings settings.xml
-mvn clean package deploy -Pno-cache-dev -Prelease --settings settings.xml
-mvn clean package deploy -Pwithout-bootstrap -Prelease --settings settings.xml
-mvn clean package deploy -Pwithout-bootstrap-dev -Prelease --settings settings.xml
-mvn clean package deploy -Pno-fonts -Prelease --settings settings.xml
-mvn clean package deploy -Pno-fonts-dev -Prelease --settings settings.xml
-mvn clean install -Pno-cache-no-fonts -Prelease --settings settings.xml
-mvn clean package deploy -Pwithout-jsf -Prelease --settings settings.xml
-mvn clean package deploy -Pwithout-jsf-dev -Prelease --settings settings.xml
+mvn clean install -Prelease && mvn install -Pdev -Prelease && mvn install -Pno-cache -Prelease mvn install -Pno-cache-dev -Prelease \
+ && mvn install -Pwithout-jsf -Prelease && mvn install -Pwithout-jsf-dev -Prelease && mvn install -Pno-fonts -Prelease && mvn install -Pno-fonts-dev -Prelease \
+ && mvn install -Pno-cache-no-fonts -Prelease && mvn deploy -Prelease

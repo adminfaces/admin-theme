@@ -108,6 +108,32 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -126,24 +152,143 @@
             <build>
                 <plugins>
                     <plugin>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.8</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>releases</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
                     </plugin>
                     <plugin>
-                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>3.3.0</version>
                         <executions>
                             <execution>
-                                <id>attach-javadocs</id>
+                                <id>attach-instrumented-jar</id>
+                                <phase>install</phase>
                                 <goals>
-                                    <goal>jar</goal>
+                                    <goal>attach-artifact</goal>
                                 </goals>
+                                <configuration>
+                                    <artifacts>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-dev.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-dev.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-cache.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>no-cache</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-cache.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>no-cache</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-cache-dev.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>no-cache-dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-cache-dev.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>no-cache-dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-without-jsf.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>without-jsf</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-without-jsf.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>without-jsf</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-without-jsf-dev.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>without-jsf-dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-without-jsf-dev.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>without-jsf-dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-fonts.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>no-fonts</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-fonts.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>no-fonts</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-fonts-dev.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>no-fonts-dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-fonts-dev.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>no-fonts-dev</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-cache-no-fonts.jar
+                                            </file>
+                                            <type>jar</type>
+                                            <classifier>no-cache-no-fonts</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>
+                                                ${project.build.directory}/admin-theme-no-cache-no-fonts.jar.asc
+                                            </file>
+                                            <type>jar.asc</type>
+                                            <classifier>no-cache-no-fonts</classifier>
+                                        </artifact>
+                                    </artifacts>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -157,7 +302,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>3.0.1</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -178,7 +323,6 @@
                 </plugins>
             </build>
         </profile>
-
         <profile>
             <id>dev</id>
             <properties>

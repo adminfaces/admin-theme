@@ -14,15 +14,6 @@
             <username>${user}</username>
             <password>${pass}</password>
         </server>
-        <server>
-            <id>releases</id>
-            <username>${user}</username>
-            <password>${pass}</password>
-        </server>
-        <server>
-            <id>gpg.passphrase</id>
-            <passphrase>${GPG_PASSPHRASE}</passphrase>
-        </server>
     </servers>
     <mirrors/>
     <proxies/>

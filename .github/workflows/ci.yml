@@ -10,9 +10,6 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-18.04
-    env:
-      user: ${{ secrets.user }}
-      pass: ${{ secrets.pass }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK
@@ -27,18 +24,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
       - name: build
-        run: |
-          chmod +x "${GITHUB_WORKSPACE}/maven-install-local.sh"
-          "${GITHUB_WORKSPACE}/maven-install-local.sh"
+        run: mvn clean package
 
   release:
     name: Release Admin theme to maven central
     runs-on: ubuntu-18.04
     needs: build
     env:
-      user: ${{ secrets.user }}
-      pass: ${{ secrets.pass }}
-      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      user: ${{ secrets.USER }}
+      pass: ${{ secrets.PASS }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK
@@ -67,3 +61,7 @@ jobs:
         run: |
           chmod +x "${GITHUB_WORKSPACE}/release.sh"
           "${GITHUB_WORKSPACE}/release.sh"
+        env:
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASS }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
