@@ -6,6 +6,8 @@
     
     <name>admin_theme_fragment</name>
 
+    <distributable />
+
     <context-param>
         <param-name>primefaces.FONT_AWESOME</param-name>
         <param-value>true</param-value>
