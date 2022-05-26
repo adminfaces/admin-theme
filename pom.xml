@@ -92,6 +92,7 @@
                                 <include>${themeFile}</include>
                             </includes>
                             <compress>${compressCss}</compress>
+                            <force>true</force>
                         </configuration>
                         <goals>
                             <goal>compile</goal>
@@ -528,6 +529,7 @@
                                         <include>${themeFile}</include>
                                     </includes>
                                     <compress>${compressCss}</compress>
+                                    <force>true</force>
                                 </configuration>
                                 <goals>
                                     <goal>compile</goal>
@@ -668,6 +670,7 @@
                                         <include>${themeFile}</include>
                                     </includes>
                                     <compress>${compressCss}</compress>
+                                    <force>true</force>
                                 </configuration>
                                 <goals>
                                     <goal>compile</goal>
@@ -884,6 +887,7 @@
                                         <include>theme-no-fonts.less</include>
                                     </includes>
                                     <compress>true</compress>
+                                    <force>true</force>
                                 </configuration>
                                 <goals>
                                     <goal>compile</goal>
@@ -1000,6 +1004,7 @@
                                         <include>theme.less</include>
                                     </includes>
                                     <compress>false</compress>
+                                    <force>true</force>
                                 </configuration>
                                 <goals>
                                     <goal>compile</goal>
